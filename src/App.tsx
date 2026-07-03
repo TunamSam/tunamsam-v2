@@ -11,6 +11,8 @@ import { TechnicalSupportBanner } from './components/generated/TechnicalSupportB
 import { WhyUs } from './components/generated/WhyUs';
 import { DesignChoices } from './components/generated/DesignChoices';
 import { AdditionalServices } from './components/generated/AdditionalServices';
+import { SuccessCtaSection } from './components/SuccessCtaSection';
+import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/generated/Footer';
 
 function AppContent() {
@@ -29,6 +31,8 @@ function AppContent() {
       <DesignChoices />
       <Process />
       <AdditionalServices />
+      <SuccessCtaSection />
+      <FaqSection />
       <Footer />
     </div>
   );
