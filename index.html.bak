@@ -1,0 +1,2401 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TunamSam | Agensi Web Development & Design Modern</title>
+    <meta name="description"
+        content="TunamSam membantu bisnis berkembang melalui website modern, cepat, dan elegan. Jasa pembuatan website, aplikasi web, dan UI/UX design.">
+
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#026937',
+                            light: '#00bf63',
+                            dark: '#004d28',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Roboto Slab', 'serif'],
+                    },
+                    maxWidth: {
+                        '8xl': '1440px',
+                    },
+                    animation: {
+                        'slider-progress': 'slider-progress 5s linear forwards',
+                    },
+                    keyframes: {
+                        'slider-progress': {
+                            '0%': { width: '0%' },
+                            '100%': { width: '100%' },
+                        }
+                    }
+
+                }
+            }
+        }
+    </script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #333333;
+            overflow-x: clip;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #008f4a 0%, #00bf63 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+            transform: scale(1.02);
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: scale(1);
+            z-index: 10;
+        }
+
+        .wave-container {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .wave-container svg {
+            position: relative;
+            display: block;
+            width: 200%;
+            height: 300px;
+        }
+
+        /* Wave Animation - Perfectly Seamless Flow */
+        .wave-path-1 {
+            animation: wave-flow 4s linear infinite;
+        }
+
+        .wave-path-2 {
+            animation: wave-flow 8s linear infinite;
+        }
+
+        .wave-path-3 {
+            animation: wave-flow 12s linear infinite;
+        }
+
+        @keyframes wave-flow {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+
+
+        /* Language Dropdown Custom Styles */
+        .lang-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 0.5rem;
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            min-width: 120px;
+            z-index: 200;
+            overflow: hidden;
+        }
+
+        .lang-dropdown.show {
+            display: block;
+            animation: fadeInScale 0.2s ease-out forwards;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.95) translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        /* Marquee Animation */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .marquee-content {
+            display: inline-flex;
+            animation: marquee-scroll 40s linear infinite;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @keyframes marquee-scroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .marquee-container:hover .marquee-content {
+            animation-play-state: paused;
+        }
+
+        .animate-marquee-slow {
+            animation: marquee-scroll 60s linear infinite !important;
+        }
+
+        /* TunamSam Contextual Collage Styling - Ultra Smooth & Lazy */
+        .collage-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 1500px;
+        }
+
+        .elementor-absolute {
+            position: absolute !important;
+            transition: transform 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+            will-change: transform;
+        }
+
+        .collage-container img {
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            height: auto;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            animation: floating 8s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* Variant 1: Standard Spread */
+        .collage-v1 .img-1 {
+            width: 35%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            transition-delay: 0.1s;
+        }
+
+        .collage-v1 .img-2 {
+            width: 45%;
+            top: 5%;
+            right: 0;
+            z-index: 2;
+            transition-delay: 0s;
+        }
+
+        .collage-v1 .img-3 {
+            width: 72%;
+            top: 15%;
+            left: 8%;
+            z-index: 5;
+            transition-delay: 0.05s;
+        }
+
+        .collage-v1 .img-4 {
+            width: 40%;
+            bottom: 5%;
+            right: -5%;
+            z-index: 4;
+            transition-delay: 0.15s;
+        }
+
+        .collage-v1 .img-5 {
+            width: 38%;
+            bottom: 0;
+            left: -8%;
+            z-index: 3;
+            transition-delay: 0.2s;
+        }
+
+        .collage-v1:hover .img-1 {
+            transform: translate(-60px, -40px) rotate(-6deg);
+        }
+
+        .collage-v1:hover .img-2 {
+            transform: translate(80px, -80px) rotate(8deg);
+        }
+
+        .collage-v1:hover .img-3 {
+            transform: scale(1.1) translate(0, 20px);
+        }
+
+        .collage-v1:hover .img-4 {
+            transform: translate(100px, 80px) rotate(-5deg);
+        }
+
+        .collage-v1:hover .img-5 {
+            transform: translate(-80px, 70px) rotate(9deg);
+        }
+
+        /* Variant 2: Horizontal Scattered */
+        .collage-v2 .img-1 {
+            width: 40%;
+            top: 10%;
+            left: -10%;
+            z-index: 2;
+        }
+
+        .collage-v2 .img-2 {
+            width: 40%;
+            bottom: 10%;
+            left: 10%;
+            z-index: 1;
+        }
+
+        .collage-v2 .img-3 {
+            width: 65%;
+            top: 20%;
+            right: 5%;
+            z-index: 5;
+        }
+
+        .collage-v2 .img-4 {
+            width: 30%;
+            top: -5%;
+            right: 20%;
+            z-index: 3;
+        }
+
+        .collage-v2 .img-5 {
+            width: 35%;
+            bottom: -5%;
+            right: 0%;
+            z-index: 4;
+        }
+
+        .collage-v2:hover .img-1 {
+            transform: translate(-80px, 20px) rotate(-4deg);
+        }
+
+        .collage-v2:hover .img-2 {
+            transform: translate(-40px, 80px) rotate(5deg);
+        }
+
+        .collage-v2:hover .img-3 {
+            transform: scale(1.15) translate(30px, 0);
+        }
+
+        .collage-v2:hover .img-4 {
+            transform: translate(20px, -60px) rotate(-8deg);
+        }
+
+        .collage-v2:hover .img-5 {
+            transform: translate(60px, 40px) rotate(4deg);
+        }
+
+        /* Variant 3: Vertical Stack */
+        .collage-v3 .img-1 {
+            width: 45%;
+            top: 0;
+            left: 20%;
+            z-index: 1;
+        }
+
+        .collage-v3 .img-2 {
+            width: 55%;
+            top: 25%;
+            left: 0%;
+            z-index: 3;
+        }
+
+        .collage-v3 .img-3 {
+            width: 50%;
+            top: 35%;
+            right: 0%;
+            z-index: 5;
+        }
+
+        .collage-v3 .img-4 {
+            width: 60%;
+            bottom: 0;
+            left: 15%;
+            z-index: 2;
+        }
+
+        .collage-v3 .img-5 {
+            width: 30%;
+            top: 15%;
+            right: 10%;
+            z-index: 4;
+        }
+
+        .collage-v3:hover .img-1 {
+            transform: translateY(-80px) rotate(-4deg);
+        }
+
+        .collage-v3:hover .img-2 {
+            transform: translateX(-60px) rotate(6deg);
+        }
+
+        .collage-v3:hover .img-3 {
+            transform: translateX(60px) scale(1.15);
+        }
+
+        .collage-v3:hover .img-4 {
+            transform: translateY(80px) rotate(-3deg);
+        }
+
+        .collage-v3:hover .img-5 {
+            transform: translate(40px, -40px) rotate(8deg);
+        }
+
+        /* Variant 4: Exploded Grid */
+        .collage-v4 .img-1 {
+            width: 35%;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        .collage-v4 .img-2 {
+            width: 35%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .collage-v4 .img-3 {
+            width: 80%;
+            top: 25%;
+            left: 10%;
+            z-index: 5;
+        }
+
+        .collage-v4 .img-4 {
+            width: 35%;
+            bottom: 0;
+            left: 0;
+            z-index: 3;
+        }
+
+        .collage-v4 .img-5 {
+            width: 35%;
+            bottom: 0;
+            right: 0;
+            z-index: 4;
+        }
+
+        .collage-v4:hover .img-1 {
+            transform: translate(100px, -100px) rotate(8deg);
+        }
+
+        .collage-v4:hover .img-2 {
+            transform: translate(-100px, -100px) rotate(-8deg);
+        }
+
+        .collage-v4:hover .img-3 {
+            transform: scale(1.12);
+        }
+
+        .collage-v4:hover .img-4 {
+            transform: translate(-100px, 100px) rotate(8deg);
+        }
+
+        .collage-v4:hover .img-5 {
+            transform: translate(100px, 100px) rotate(-8deg);
+        }
+
+        h2 {
+            line-height: 1.2 !important;
+            /* Force global consistency for headings */
+        }
+
+        /* Criteria Scroll Animation Styles */
+        .criteria-section {
+            height: 400vh;
+            position: relative;
+        }
+
+        .criteria-sticky {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            overflow: hidden;
+            background: white;
+            padding-top: 2rem;
+        }
+
+        .laptop-mockup-container {
+            position: relative;
+            width: 100%;
+            max-width: 1400px;
+            margin-top: 3rem;
+            transform-origin: center;
+            transition: transform 0.1s ease-out;
+            z-index: 10;
+        }
+
+        .criteria-card-reveal {
+            position: absolute;
+            background: white;
+            padding: 2rem;
+            border-radius: 2rem;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.05);
+            width: 550px;
+            min-height: 260px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            border: 1px solid #999999;
+            z-index: 20;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: #f8f9fa;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: #111;
+        }
+
+        .criteria-card-reveal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Refined Positions for the new 1.0 Final Scale */
+        @media (min-width: 1024px) {
+            .card-top-left {
+                top: 10%;
+                left: 1px;
+            }
+
+            .card-top-right {
+                top: 10%;
+                right: 1px;
+            }
+
+            .card-bottom-left {
+                bottom: 8%;
+                left: 138px;
+            }
+
+            .card-bottom-right {
+                bottom: 8%;
+                right: 138px;
+            }
+        }
+
+        .criteria-card-reveal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Fixed translateY animation that doesn't mess with horizontal pixel positions */
+        @media (min-width: 1024px) {
+            #card-1.active {
+                transform: translateY(-20px);
+            }
+
+            #card-2.active {
+                transform: translateY(-20px);
+            }
+
+            #card-3.active {
+                transform: translateY(20px);
+            }
+
+            #card-4.active {
+                transform: translateY(20px);
+            }
+        }
+
+        /* Mobile Adjustments (Stacks nicely) */
+        @media (max-width: 1023px) {
+            .criteria-section {
+                height: auto;
+            }
+
+            .criteria-sticky {
+                position: relative;
+                height: auto;
+                padding: 2rem 0;
+            }
+
+            .laptop-mockup-container {
+                transform: scale(1) !important;
+                margin: 2rem 0;
+            }
+
+            .criteria-card-reveal {
+                position: relative;
+                opacity: 1;
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                bottom: auto !important;
+                width: 100%;
+                max-width: 500px;
+                margin: 1rem auto;
+            }
+        }
+
+        .btn-black {
+            background: #000;
+            color: #fff;
+            padding: 14px 36px;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-black:hover {
+            background: #026937;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(2, 105, 55, 0.2);
+        }
+
+        /* Scroll Reveal Animations */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .reveal-visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        .stagger-1 {
+            transition-delay: 0.1s;
+        }
+
+        .stagger-2 {
+            transition-delay: 0.2s;
+        }
+
+        .stagger-3 {
+            transition-delay: 0.3s;
+        }
+
+        .stagger-4 {
+            transition-delay: 0.4s;
+        }
+
+        .content-image {
+            border-radius: 1.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased">
+    <!-- Main Header -->
+    <header class="bg-brand text-white">
+        <div class="max-w-8xl mx-auto px-6 md:px-12 py-6">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-4">
+                <!-- Logo Container (Extra large with no layout impact) -->
+                <div class="relative h-16 w-80 flex items-center">
+                    <img src="assets/logo/tunamsam.png" alt="TunamSam Logo"
+                        class="absolute -top-12 left-0 h-48 w-auto object-contain z-50 transform hover:scale-105 transition-transform cursor-pointer" />
+                </div>
+
+                <!-- Contact Info Section -->
+                <div
+                    class="hidden lg:flex items-center lg:space-x-6 xl:space-x-10 text-[14px] font-medium whitespace-nowrap">
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-white opacity-80"></i>
+                        <span>Jl. Wonorejo, Wates, Kab. Kediri</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="mail" class="w-4 h-4 text-white opacity-80"></i>
+                        <span>tunamsam@gmail.com</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="phone" class="w-4 h-4 text-white opacity-80"></i>
+                        <span>+62 856-5563-9206</span>
+                    </div>
+                </div>
+
+                <!-- Social Media Icons (Using Font Awesome Brands) -->
+                <div class="flex items-center space-x-2">
+                    <a href="https://www.instagram.com/tunamsam/"
+                        class="w-10 h-10 bg-white text-brand rounded-full flex items-center justify-center hover:bg-brand-light hover:text-white transition-all shadow-md">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@tunamsam"
+                        class="w-10 h-10 bg-white text-brand rounded-full flex items-center justify-center hover:bg-brand-light hover:text-white transition-all shadow-md">
+                        <i class="fa-brands fa-tiktok text-lg"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/tunamsam"
+                        class="w-10 h-10 bg-white text-brand rounded-full flex items-center justify-center hover:bg-brand-light hover:text-white transition-all shadow-md">
+                        <i class="fa-brands fa-linkedin-in text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center pt-6">
+                <nav
+                    class="flex flex-wrap justify-center md:justify-start items-center gap-6 lg:gap-10 text-[13px] font-bold uppercase tracking-wider mb-6 md:mb-0">
+                    <a href="#home" class="hover:opacity-70 transition-opacity" data-i18n="home">Beranda</a>
+                    <a href="#services" class="hover:opacity-70 transition-opacity" data-i18n="services">Layanan</a>
+                    <a href="#portfolio" class="hover:opacity-70 transition-opacity" data-i18n="portfolio">Portfolio</a>
+                    <a href="#about" class="hover:opacity-70 transition-opacity" data-i18n="profile">Profil</a>
+                    <a href="#contact" class="hover:opacity-70 transition-opacity" data-i18n="contact">Kontak</a>
+                </nav>
+
+                <div class="flex items-center space-x-6">
+                    <!-- Language Selector Main Header -->
+                    <div class="relative group">
+                        <div id="lang-toggle-header"
+                            class="flex items-center space-x-2 text-[13px] font-bold uppercase cursor-pointer hover:opacity-80 transition-opacity">
+                            <img id="current-flag-header" src="https://flagcdn.com/w20/id.png" alt="ID"
+                                class="w-5 h-auto">
+                            <span id="current-lang-header">ID</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </div>
+                        <div id="lang-menu-header" class="lang-dropdown">
+                            <div class="py-1">
+                                <div onclick="changeLang('ID', 'https://flagcdn.com/w20/id.png')"
+                                    class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-800 text-[12px] font-bold">
+                                    <img src="https://flagcdn.com/w20/id.png" alt="ID" class="w-5 h-auto">
+                                    <span>ID - Indonesia</span>
+                                </div>
+                                <div onclick="changeLang('EN', 'https://flagcdn.com/w20/gb.png')"
+                                    class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-800 text-[12px] font-bold">
+                                    <img src="https://flagcdn.com/w20/gb.png" alt="EN" class="w-5 h-auto">
+                                    <span>EN - English</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/+6285655639206"
+                        class="px-8 py-2 bg-brand-light hover:bg-white hover:text-brand-light text-white text-[13px] font-bold rounded-full flex items-center space-x-3 shadow-xl transition-all">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span data-i18n="contact_us">Hubungi Kami</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-brand pb-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-20">
+            <div class="relative">
+                <div
+                    class="slider-container aspect-video md:aspect-[16/7] rounded-[2.5rem] overflow-hidden shadow-2xl bg-black">
+                    <div class="slide active">
+                        <img src="/assets/1.png" alt="Slide 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/2.png" alt="Slide 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/3.png" alt="Slide 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/4.png" alt="Slide 4" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-30">
+                    <div
+                        class="slide-dot cursor-pointer transition-all duration-300 relative overflow-hidden rounded-full">
+                    </div>
+                    <div
+                        class="slide-dot cursor-pointer transition-all duration-300 relative overflow-hidden rounded-full">
+                    </div>
+                    <div
+                        class="slide-dot cursor-pointer transition-all duration-300 relative overflow-hidden rounded-full">
+                    </div>
+                    <div
+                        class="slide-dot cursor-pointer transition-all duration-300 relative overflow-hidden rounded-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wave-container">
+            <svg viewBox="0 0 1920 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="wave-path-3" fill="#ffffff" fill-opacity="0.3"
+                    d="M0,160 C320,300 640,20 960,160 C1280,300 1600,20 1920,160 L1920,320 L0,320 Z"></path>
+                <path class="wave-path-2" fill="#ffffff" fill-opacity="0.6"
+                    d="M0,160 C320,20 640,300 960,160 C1280,20 1600,300 1920,160 L1920,320 L0,320 Z"></path>
+                <path class="wave-path-1" fill="#ffffff"
+                    d="M0,192 C240,320 720,64 960,192 C1200,320 1680,64 1920,192 L1920,320 L0,320 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="pt-32 pb-32 bg-white">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-gray-500 font-sans mb-10" data-i18n="trusted_by">Telah dipercaya oleh:</p>
+
+            <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-10 md:gap-x-16 lg:gap-x-20">
+                <img src="assets/logo/nasi-goreng-mbak-win.png" alt="Client 1" style="width: 110px; height: auto;"
+                    class="grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem & Solution Sections (4 Blocks Total) -->
+    <section class="py-24 bg-white overflow-hidden">
+        <div class="max-w-8xl mx-auto px-6 md:px-12 space-y-40">
+
+            <!-- Block 1: Problem Website (Text Left, Image Right) -->
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="lg:w-1/2 space-y-6">
+                    <h2 class="text-3xl lg:text-5xl font-heading leading-[1.3]" data-i18n="p1_title">Website Tanpa
+                        Strategi
+                        Akan Sulit Berkembang</h2>
+                    <div class="space-y-4 text-md leading-relaxed">
+                        <p data-i18n="p1_desc1">Tidak semua website mampu menghasilkan traffic dan pelanggan. Tanpa SEO,
+                            struktur yang baik, dan pengalaman pengguna yang nyaman, website akan sulit bersaing di
+                            tengah banyaknya kompetitor digital saat ini.</p>
+                        <p data-i18n="p1_desc2">Begitu juga dengan dunia online. Website yang hanya ada tanpa strategi
+                            yang matang dan desain yang user-friendly akan sulit menarik perhatian, apalagi menghasilkan
+                            penjualan.</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="collage-container collage-v1">
+                        <!-- Disorganized/Draft Vibes -->
+                        <div class="elementor-element elementor-absolute img-1">
+                            <img src="assets/section-2/problem1.jpg" alt="Wireframe Draft">
+                        </div>
+                        <div class="elementor-element elementor-absolute img-2">
+                            <img src="assets/section-2/problem2.jpg" alt="Error Screen">
+                        </div>
+                        <div class="elementor-element elementor-absolute img-3">
+                            <img src="assets/section-2/problem3.jpg" alt="Frustrated Dev">
+                        </div>
+                        <div class="elementor-element elementor-absolute img-4">
+                            <img src="assets/section-2/problem4.jpg" alt="Unorganized UI">
+                        </div>
+                        <div class="elementor-element elementor-absolute img-5">
+                            <img src="assets/section-2/problem5.jpg" alt="Loading State">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Block 2: Solution Website (Image Left, Text Right) -->
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-20">
+                <div class="lg:w-1/2 space-y-6">
+                    <h2 class="text-3xl lg:text-5xl font-heading leading-[1.3]" data-i18n="s1_title">Lebih Dari Sekadar
+                        Tampilan Menarik</h2>
+                    <div class="space-y-6">
+                        <p class="text-md leading-relaxed" data-i18n="s1_desc">Website profesional dirancang untuk
+                            membantu bisnis Anda tumbuh. Mulai dari desain modern, navigasi yang jelas, hingga optimasi
+                            SEO, semuanya berperan penting dalam meningkatkan kredibilitas dan menjangkau lebih banyak
+                            pelanggan.</p>
+                        <button class="btn-black" data-i18n="s1_btn">Bikin website</button>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="collage-container collage-v2">
+                        <!-- Premium/Modern UI Vibes -->
+                        <div class="elementor-element elementor-absolute img-1">
+                            <img src="assets/section-2/view1.png" alt="Mobile UI">
+                        </div>
+                        <div class="elementor-element elementor-absolute img-2">
+                            <img src="assets/section-2/view2.jpg" alt="Dashboard View">
+                        </div>
+                        <div class="elementor-element elementor-absolute img-3">
+                            <img src="assets/section-2/view3.png" alt="Finished Web Project">
+                        </div>
+                        <div class="elementor-element elementor-absolute img-4">
+                            <img src="assets/section-2/view4.jpg" alt="Design System">
+                        </div>
+                        <div class="elementor-element elementor-absolute img-5">
+                            <img src="assets/section-2/view5.jpg" alt="UI Kit">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- Website Criteria Section (Shrink & Reveal Animation) -->
+    <section class="criteria-section" id="criteria-trigger">
+        <div class="criteria-sticky">
+            <h2 class="text-3xl lg:text-5xl font-heading text-gray-900 leading-[1.2] text-center max-w-6xl mx-auto"
+                data-i18n="criteria_title">
+                Website Anda perlu memiliki aspek berikut agar mampu menarik perhatian serta mempertahankan pengunjung
+                dengan lebih efektif.
+            </h2>
+
+            <div class="max-w-8xl mx-auto px-6 relative">
+                <div class="laptop-mockup-container" id="laptop-mockup">
+                    <!-- Laptop Mockup -->
+                    <img src="assets/ mockup.png" alt="MacBook Mockup" class="w-full h-auto">
+
+                    <!-- Criteria Cards (Absolute around laptop) -->
+                    <!-- Card 1: Top Left -->
+                    <div class="criteria-card-reveal card-top-left" id="card-1">
+                        <div class="feature-icon">
+                            <i data-lucide="file-search" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-2xl mb-2" data-i18n="c1_title">SEO Friendly</h3>
+                        <p class="text-md leading-relaxed" data-i18n="c1_desc">
+                            Membantu website Anda lebih mudah ditemukan di mesin pencari seperti Google. Website yang
+                            dioptimalkan dengan baik
+                            memiliki peluang lebih besar untuk menjangkau calon pelanggan secara online.
+                        </p>
+                    </div>
+
+                    <!-- Card 2: Top Right -->
+                    <div class="criteria-card-reveal card-top-right" id="card-2">
+                        <div class="feature-icon">
+                            <i data-lucide="monitor-smartphone" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-2xl mb-2" data-i18n="c2_title">Cepat dan Responsif</h3>
+                        <p class="text-md leading-relaxed" data-i18n="c2_desc">
+                            Website yang cepat dan responsif memberikan pengalaman yang lebih nyaman di berbagai
+                            perangkat, termasuk mobile.
+                            Pengunjung cenderung meninggalkan website yang lambat atau sulit digunakan.
+                        </p>
+                    </div>
+
+                    <!-- Card 3: Bottom Left -->
+                    <div class="criteria-card-reveal card-bottom-left" id="card-3">
+                        <div class="feature-icon">
+                            <i data-lucide="network" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-2xl mb-2" data-i18n="c3_title">Navigasi Terstruktur</h3>
+                        <p class="text-md leading-relaxed" data-i18n="c3_desc">
+                            Struktur yang rapi dan navigasi yang jelas membantu pengunjung menemukan informasi dengan
+                            lebih mudah dan nyaman
+                            saat menjelajahi website Anda.
+                        </p>
+                    </div>
+
+                    <!-- Card 4: Bottom Right -->
+                    <div class="criteria-card-reveal card-bottom-right" id="card-4">
+                        <div class="feature-icon">
+                            <i data-lucide="palette" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-2xl mb-2" data-i18n="c4_title">Desain Modern</h3>
+                        <p class="text-md leading-relaxed" data-i18n="c4_desc">
+                            Tampilan yang modern dan konsisten membantu membangun kesan profesional serta meningkatkan
+                            kepercayaan pengunjung
+                            terhadap bisnis Anda.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Packages Section -->
+    <section id="pricing" class="py-32 bg-[#fafafa]">
+        <div class="max-w-8xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center max-w-4xl mx-auto mb-20 reveal-on-scroll">
+                <h2 class="text-4xl lg:text-6xl font-heading text-gray-900 mb-8 leading-tight" data-i18n="pkg_title">
+                    Paket jasa pembuatan website sesuai kebutuhan bisnis Anda
+                </h2>
+                <p class="text-lg leading-relaxed font-sans" data-i18n="pkg_subtitle">
+                    Jasa pembuatan website TunamSam yang terpercaya memahami bahwa setiap bisnis memiliki kebutuhan yang
+                    berbeda, kami siap bekerja sama dengan Anda.
+                </p>
+            </div>
+
+            <!-- Package Card -->
+            <div class="reveal-on-scroll">
+                <!-- Top Row: Price & Description -->
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-12">
+                    <!-- Left: Pricing & CTA -->
+                    <div class="lg:w-1/3 space-y-8">
+                        <div>
+                            <h3 class="text-5xl font-heading text-gray-900 mb-6">Landing Page</h3>
+                            <div class="space-y-1">
+                                <p class="text-lg">Mulai dari <span class="line-through text-gray-400">Rp.
+                                        2.750.000</span></p>
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-gray-900 text-lg">Rp</span>
+                                    <span class="text-4xl text-gray-900">1,5 Juta</span>
+                                    <span class="text-gray-500 text-lg">/ Tahun</span>
+                                </div>
+                                <p class="text-gray-400 text-sm italic">*konversi perbulan : Rp. 125.000/bulan</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/+6285655639206"
+                            class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg hover:bg-gray-800 transition-all shadow-xl shadow-black/10">
+                            Buat Landingpage sekarang!
+                        </a>
+                    </div>
+
+                    <!-- Right: Badge & Long Desc -->
+                    <div class="lg:w-2/3">
+                        <div class="flex flex-col items-start gap-8">
+                            <!-- Badge -->
+                            <div
+                                class="bg-brand rounded-xl p-4 text-white flex items-center gap-6 shadow-lg shadow-brand/20">
+                                <span
+                                    class="text-xs font-bold leading-tight font-heading uppercase text-white/90">Best<br>Choice</span>
+                                <div class="w-px h-10 bg-white/20"></div>
+                                <div class="flex items-baseline gap-1">
+                                    <span class="text-5xl font-black font-heading">45%</span>
+                                    <span class="text-xl font-bold font-heading text-white/80 uppercase">Off</span>
+                                </div>
+                            </div>
+                            <!-- Description -->
+                            <p class="text-lg leading-relaxed font-sans" data-i18n="pkg_desc">
+                                Paket ini ideal untuk bisnis pemula yang ingin mulai berjualan secara online dengan
+                                biaya terjangkau. Landing page kami fokus pada konversi, memastikan setiap pengunjung
+                                diarahkan untuk mengambil tindakan yang Anda inginkan, seperti mendaftar, membeli
+                                produk, atau menghubungi Anda. Solusi yang cepat dan efektif ini sangat cocok untuk
+                                peluncuran produk, promosi khusus, atau kampanye pemasaran yang berfokus pada satu
+                                tujuan utama.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middle Row: Previews & Feature 1 -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+                    <!-- Previews (2/3 width) -->
+                    <div
+                        class="lg:col-span-2 bg-white rounded-[2rem] border-2 border-gray-300 p-6 flex items-center overflow-hidden relative marquee-container">
+                        <div class="flex gap-8 marquee-content animate-marquee-slow whitespace-nowrap">
+                            <!-- Web Previews Track -->
+                            <div class="flex gap-8 items-center">
+                                <div
+                                    class="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                    <img src="assets/products/landing-page/1.png" alt="Web 1" class="w-full h-auto">
+                                </div>
+                                <div
+                                    class="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                    <img src="assets/products/landing-page/2.png" alt="Web 2" class="w-full h-auto">
+                                </div>
+                                <div
+                                    class="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                    <img src="assets/products/landing-page/3.png" alt="Web 3" class="w-full h-auto">
+                                </div>
+                                <div
+                                    class="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                    <img src="assets/products/landing-page/4.png" alt="Web 4" class="w-full h-auto">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Gradient Overlays for Fade Effect -->
+                        <div
+                            class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white via-white/80 to-transparent z-10">
+                        </div>
+                        <div
+                            class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-10">
+                        </div>
+                    </div>
+
+                    <!-- Feature Card 1 (1/3 width) -->
+                    <div class="bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                        <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
+                            <i data-lucide="maximize" class="w-6 h-6 text-gray-900"></i>
+                        </div>
+                        <h4 class="text-2xl font-heading mb-4">Sederhana dan Efektif</h4>
+                        <p class="text-md leading-relaxed font-sans">Ideal untuk kampanye promosi produk atau layanan
+                            tunggal dengan desain yang fokus pada satu tujuan spesifik.</p>
+                    </div>
+                </div>
+
+                <!-- Bottom Row: Features 2 & 3 (1/2 width each) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Feature Card 2 -->
+                    <div class="bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                        <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
+                            <i data-lucide="target" class="w-6 h-6 text-gray-900"></i>
+                        </div>
+                        <h4 class="text-2xl font-heading mb-4">Optimal untuk Konversi</h4>
+                        <p class="text-md leading-relaxed font-sans">Setiap elemen pada landing page didesain untuk
+                            mengarahkan pengunjung melakukan tindakan tertentu, seperti mengisi formulir, mendaftar,
+                            atau melakukan pembelian.</p>
+                    </div>
+
+                    <!-- Feature Card 3 -->
+                    <div class="bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                        <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
+                            <i data-lucide="book-open" class="w-6 h-6 text-gray-900"></i>
+                        </div>
+                        <h4 class="text-2xl font-heading mb-4">Cocok untuk Pemula</h4>
+                        <p class="text-md leading-relaxed font-sans">Dengan biaya yang lebih rendah dibanding website
+                            lengkap, landing page adalah solusi cepat dan efisien untuk memulai kehadiran digital Anda.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="h-px bg-gray-200 my-24"></div>
+
+            <!-- Package Card 2: Company Profile -->
+            <div class="reveal-on-scroll">
+                <!-- Top Row: Price & Description -->
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-12">
+                    <!-- Left: Pricing & CTA -->
+                    <div class="lg:w-1/3 space-y-8">
+                        <div>
+                            <h3 class="text-5xl font-heading text-gray-900 mb-6">Company Profile</h3>
+                            <div class="space-y-1">
+                                <p class="text-lg">Mulai dari <span class="line-through text-gray-400">Rp.
+                                        2.900.000</span></p>
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-gray-900 text-lg">Rp</span>
+                                    <span class="text-4xl text-gray-900">1,595,000</span>
+                                    <span class="text-gray-500 text-lg">/ Tahun</span>
+                                </div>
+                                <p class="text-gray-400 text-sm italic">*konversi perbulan : Rp. 133.000/bulan</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/+6285655639206"
+                            class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg hover:bg-gray-800 transition-all shadow-xl shadow-black/10">
+                            Buat Company Profile sekarang!
+                        </a>
+                    </div>
+
+                    <!-- Right: Badges & Long Desc -->
+                    <div class="lg:w-2/3">
+                        <div class="flex flex-col items-start gap-8">
+                            <!-- Badges Row -->
+                            <div class="flex flex-wrap gap-4">
+                                <!-- Translation Badge -->
+                                <div
+                                    class="bg-brand rounded-xl p-4 text-white flex items-center gap-4 shadow-lg shadow-brand/20">
+                                    <i data-lucide="languages" class="w-8 h-8 text-white/90"></i>
+                                    <span
+                                        class="text-sm font-bold leading-tight font-heading uppercase text-white/90">Terjemahan<br>Bahasa
+                                        Gratis</span>
+                                </div>
+                                <!-- Discount Badge -->
+                                <div
+                                    class="bg-brand rounded-xl p-4 text-white flex items-center gap-6 shadow-lg shadow-brand/20">
+                                    <span
+                                        class="text-xs font-bold leading-tight font-heading uppercase text-white/90">Best<br>Choice</span>
+                                    <div class="w-px h-10 bg-white/20"></div>
+                                    <div class="flex items-baseline gap-1">
+                                        <span class="text-5xl font-black font-heading">45%</span>
+                                        <span class="text-xl font-bold font-heading text-white/80 uppercase">Off</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Description -->
+                            <p class="text-lg leading-relaxed font-sans" data-i18n="pkg_desc_cp">
+                                Website company profile kami dirancang untuk meningkatkan kredibilitas perusahaan dan
+                                membuat bisnis Anda lebih terpercaya serta dikenal luas. Dengan tampilan profesional dan
+                                informasi yang terstruktur, paket ini membantu Anda membangun kepercayaan di antara
+                                calon pelanggan, mitra bisnis, dan investor. Solusi ini cocok bagi perusahaan yang ingin
+                                memperkuat kehadiran digital mereka dan memberikan citra profesional yang solid.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middle Row: Previews & Feature 1 -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+                    <!-- Previews (2/3 width) -->
+                    <div
+                        class="lg:col-span-2 bg-white rounded-[2rem] border-2 border-gray-300 p-6 flex items-center overflow-hidden relative marquee-container">
+                        <div class="flex gap-8 marquee-content animate-marquee-slow whitespace-nowrap">
+                            <div class="flex gap-8 items-center">
+                                <div
+                                    class="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                    <img src="assets/products/company-profile/1.png" alt="Web CP 1"
+                                        class="w-full h-auto">
+                                </div>
+                                <div
+                                    class="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                    <img src="assets/products/company-profile/2.png" alt="Web CP 2"
+                                        class="w-full h-auto">
+                                </div>
+                                <div
+                                    class="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                    <img src="assets/products/company-profile/3.png" alt="Web CP 3"
+                                        class="w-full h-auto">
+                                </div>
+                                <div
+                                    class="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                    <img src="assets/products/company-profile/4.png" alt="Web CP 4"
+                                        class="w-full h-auto">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white via-white/80 to-transparent z-10">
+                        </div>
+                        <div
+                            class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-10">
+                        </div>
+                    </div>
+
+                    <!-- Feature Card 1 (1/3 width) -->
+                    <div class="bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                        <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
+                            <i data-lucide="gem" class="w-6 h-6 text-gray-900"></i>
+                        </div>
+                        <h4 class="text-2xl font-heading mb-4">Citra Profesional</h4>
+                        <p class="text-md leading-relaxed font-sans">Mencerminkan profesionalisme dan nilai-nilai
+                            perusahaan Anda, membantu meningkatkan kepercayaan calon klien.</p>
+                    </div>
+                </div>
+
+                <!-- Bottom Row: Features 2 & 3 (1/2 width each) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Feature Card 2 -->
+                    <div class="bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                        <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
+                            <i data-lucide="network" class="w-6 h-6 text-gray-900"></i>
+                        </div>
+                        <h4 class="text-2xl font-heading mb-4">Informasi Terstruktur</h4>
+                        <p class="text-md leading-relaxed font-sans">Memberikan informasi penting tentang perusahaan,
+                            mulai dari sejarah, visi, misi, hingga portofolio layanan atau produk yang Anda tawarkan.
+                        </p>
+                    </div>
+
+                    <!-- Feature Card 3 -->
+                    <div class="bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                        <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
+                            <i data-lucide="globe" class="w-6 h-6 text-gray-900"></i>
+                        </div>
+                        <h4 class="text-2xl font-heading mb-4">Dikenal Lebih Luas</h4>
+                        <p class="text-md leading-relaxed font-sans">Dengan kehadiran online, perusahaan Anda dapat
+                            menjangkau pasar yang lebih besar dan memperkuat posisi di industri.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="h-px bg-gray-200 my-24"></div>
+
+            <!-- Package Card 3: Toko Online -->
+            <div class="reveal-on-scroll">
+                <!-- Top Row: Price & Description -->
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-12">
+                    <!-- Left: Pricing & CTA -->
+                    <div class="lg:w-1/3 space-y-8">
+                        <div>
+                            <h3 class="text-5xl font-heading text-gray-900 mb-6">Toko Online</h3>
+                            <div class="space-y-1">
+                                <p class="text-lg">Mulai dari <span class="line-through text-gray-400">Rp.
+                                        4.500.000</span></p>
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-gray-900 text-lg">Rp</span>
+                                    <span class="text-4xl text-gray-900">2,469,000</span>
+                                    <span class="text-gray-500 text-lg">/ Tahun</span>
+                                </div>
+                                <p class="text-gray-400 text-sm italic">*konversi perbulan : Rp. 206.000/bulan</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/+6285655639206"
+                            class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg hover:bg-gray-800 transition-all shadow-xl shadow-black/10">
+                            Buat Toko Online sekarang!
+                        </a>
+                    </div>
+
+                    <!-- Right: Badges & Long Desc -->
+                    <div class="lg:w-2/3">
+                        <div class="flex flex-col items-start gap-8">
+                            <!-- Badges Row -->
+                            <div class="flex flex-wrap gap-4">
+                                <!-- Translation Badge -->
+                                <div
+                                    class="bg-brand rounded-xl p-4 text-white flex items-center gap-4 shadow-lg shadow-brand/20">
+                                    <i data-lucide="languages" class="w-8 h-8 text-white/90"></i>
+                                    <span
+                                        class="text-sm font-bold leading-tight font-heading uppercase text-white/90">Terjemahan<br>Bahasa
+                                        Gratis</span>
+                                </div>
+                                <!-- Discount Badge -->
+                                <div
+                                    class="bg-brand rounded-xl p-4 text-white flex items-center gap-6 shadow-lg shadow-brand/20">
+                                    <span
+                                        class="text-xs font-bold leading-tight font-heading uppercase text-white/90">Best<br>Choice</span>
+                                    <div class="w-px h-10 bg-white/20"></div>
+                                    <div class="flex items-baseline gap-1">
+                                        <span class="text-5xl font-black font-heading">45%</span>
+                                        <span class="text-xl font-bold font-heading text-white/80 uppercase">Off</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Description -->
+                            <p class="text-lg leading-relaxed font-sans" data-i18n="pkg_desc_to">
+                                Bagi bisnis atau UKM yang menjual produk atau jasa langsung ke konsumen, seperti
+                                kuliner, properti, konveksi, atau travel, paket Toko Online kami adalah solusi yang
+                                tepat. Website ini dilengkapi dengan sistem e-commerce lengkap untuk mengelola produk,
+                                transaksi, dan pengiriman, sehingga memudahkan bisnis Anda dalam menjual secara online
+                                dan meningkatkan omzet melalui pengalaman belanja yang nyaman bagi pelanggan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middle Row: Previews & Feature 1 -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+                    <!-- Previews (2/3 width) -->
+                    <div
+                        class="lg:col-span-2 bg-white rounded-[2rem] border-2 border-gray-300 p-6 flex items-center overflow-hidden relative marquee-container">
+                        <div class="flex gap-8 marquee-content animate-marquee-slow whitespace-nowrap">
+                            <div class="flex gap-8 items-center">
+                                <div
+                                    class="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                    <img src="assets/products/toko-online/1.png" alt="Web TO 1" class="w-full h-auto">
+                                </div>
+                                <div
+                                    class="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                    <img src="assets/products/toko-online/2.png" alt="Web TO 2" class="w-full h-auto">
+                                </div>
+                                <div
+                                    class="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                    <img src="assets/products/toko-online/3.png" alt="Web TO 3" class="w-full h-auto">
+                                </div>
+                                <div
+                                    class="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                    <img src="assets/products/toko-online/4.png" alt="Web TO 4" class="w-full h-auto">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white via-white/80 to-transparent z-10">
+                        </div>
+                        <div
+                            class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-10">
+                        </div>
+                    </div>
+
+                    <!-- Feature Card 1 (1/3 width) -->
+                    <div class="bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                        <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
+                            <i data-lucide="shopping-bag" class="w-6 h-6 text-gray-900"></i>
+                        </div>
+                        <h4 class="text-2xl font-heading mb-4">Solusi E-commerce Lengkap</h4>
+                        <p class="text-md leading-relaxed font-sans">Website toko online kami mendukung fitur
+                            pengelolaan produk, keranjang belanja, pembayaran, dan pengiriman secara terintegrasi.</p>
+                    </div>
+                </div>
+
+                <!-- Bottom Row: Features 2 & 3 (1/2 width each) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Feature Card 2 -->
+                    <div class="bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                        <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
+                            <i data-lucide="building" class="w-6 h-6 text-gray-900"></i>
+                        </div>
+                        <h4 class="text-2xl font-heading mb-4">Cocok untuk Bisnis Retail</h4>
+                        <p class="text-md leading-relaxed font-sans">Sangat direkomendasikan bagi bisnis yang menjual
+                            produk fisik atau layanan langsung kepada pelanggan, memudahkan proses transaksi online.</p>
+                    </div>
+
+                    <!-- Feature Card 3 -->
+                    <div class="bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                        <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
+                            <i data-lucide="credit-card" class="w-6 h-6 text-gray-900"></i>
+                        </div>
+                        <h4 class="text-2xl font-heading mb-4">Optimasi untuk Penjualan</h4>
+                        <p class="text-md leading-relaxed font-sans">Fitur checkout yang mudah digunakan dan integrasi
+                            dengan metode pembayaran lokal membuat pengalaman belanja lebih nyaman bagi konsumen.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="h-px bg-gray-200 my-24"></div>
+
+            <!-- Package Card 4: Custom Website -->
+            <div class="reveal-on-scroll">
+                <!-- Top Row: Price & Description -->
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-12">
+                    <!-- Left: Pricing & CTA -->
+                    <div class="lg:w-1/3 space-y-8">
+                        <div>
+                            <h3 class="text-5xl font-heading text-gray-900 mb-6">Custom website</h3>
+                            <div class="space-y-1">
+                                <h4 class="text-4xl font-heading text-gray-900">Harga Khusus</h4>
+                                <p class="text-gray-400 text-sm italic">*Diskusikan dengan kami untuk harga sesuai
+                                    permintaan anda</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/+6285655639206"
+                            class="inline-block bg-black text-white px-10 py-4 rounded-full text-lg hover:bg-gray-800 transition-all shadow-xl shadow-black/10">
+                            Buat Website Custom sekarang!
+                        </a>
+                    </div>
+
+                    <!-- Right: Badges & Long Desc -->
+                    <div class="lg:w-2/3">
+                        <div class="flex flex-col items-start gap-8">
+                            <!-- Badges Row -->
+                            <div class="flex flex-wrap gap-4">
+                                <!-- Translation Badge -->
+                                <div
+                                    class="bg-brand rounded-xl p-4 text-white flex items-center gap-4 shadow-lg shadow-brand/20">
+                                    <i data-lucide="languages" class="w-8 h-8 text-white/90"></i>
+                                    <span
+                                        class="text-sm font-bold leading-tight font-heading uppercase text-white/90">Terjemahan<br>Bahasa
+                                        Gratis</span>
+                                </div>
+                            </div>
+                            <!-- Description -->
+                            <p class="text-lg leading-relaxed font-sans" data-i18n="pkg_desc_custom">
+                                Layanan custom kami dirancang untuk memenuhi kebutuhan unik dan spesifik dari bisnis
+                                Anda. Apapun visi dan kebutuhan Anda, kami siap merealisasikannya dengan solusi website
+                                yang sepenuhnya disesuaikan. Cocok bagi bisnis yang membutuhkan integrasi sistem
+                                tertentu, desain dan fungsi yang sangat spesifik, atau fitur yang tidak tercakup dalam
+                                paket standar. Paket ini menawarkan fleksibilitas tanpa batas, menjadikannya ideal untuk
+                                perusahaan yang memerlukan solusi khusus untuk mendukung operasional mereka.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middle Row: Previews & Feature 1 -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+                    <!-- Previews (2/3 width) -->
+                    <div
+                        class="lg:col-span-2 bg-white rounded-[2rem] border-2 border-gray-300 p-6 flex items-center overflow-hidden relative marquee-container">
+                        <div class="flex gap-8 marquee-content animate-marquee-slow whitespace-nowrap">
+                            <div class="flex gap-8 items-center">
+                                <div
+                                    class="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                    <img src="assets/products/custom-website/1.png" alt="Custom Web 1"
+                                        class="w-full h-auto">
+                                </div>
+                                <div
+                                    class="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                    <img src="assets/products/custom-website/2.png" alt="Custom Web 2"
+                                        class="w-full h-auto">
+                                </div>
+                                <div
+                                    class="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                    <img src="assets/products/custom-website/3.png" alt="Custom Web 3"
+                                        class="w-full h-auto">
+                                </div>
+                                <div
+                                    class="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                    <img src="assets/products/custom-website/4.png" alt="Custom Web 4"
+                                        class="w-full h-auto">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white via-white/80 to-transparent z-10">
+                        </div>
+                        <div
+                            class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-10">
+                        </div>
+                    </div>
+
+                    <!-- Feature Card 1 (1/3 width) -->
+                    <div class="bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                        <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
+                            <i data-lucide="palette" class="w-6 h-6 text-gray-900"></i>
+                        </div>
+                        <h4 class="text-2xl font-heading mb-4">Desain dan Fitur Sepenuhnya Kustom</h4>
+                        <p class="text-md leading-relaxed font-sans">Solusi yang fleksibel dan dirancang khusus untuk
+                            memenuhi kebutuhan dan tujuan spesifik bisnis Anda.</p>
+                    </div>
+                </div>
+
+                <!-- Bottom Row: Features 2 & 3 (1/2 width each) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Feature Card 2 -->
+                    <div class="bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                        <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
+                            <i data-lucide="crosshair" class="w-6 h-6 text-gray-900"></i>
+                        </div>
+                        <h4 class="text-2xl font-heading mb-4">Integrasi Sistem yang Komprehensif</h4>
+                        <p class="text-md leading-relaxed font-sans">Dapat diintegrasikan dengan sistem manajemen
+                            perusahaan, seperti ERP, CRM, atau platform teknologi lainnya untuk mendukung efisiensi
+                            operasional.</p>
+                    </div>
+
+                    <!-- Feature Card 3 -->
+                    <div class="bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                        <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
+                            <i data-lucide="shopping-basket" class="w-6 h-6 text-gray-900"></i>
+                        </div>
+                        <h4 class="text-2xl font-heading mb-4">Ideal untuk Bisnis dengan Kebutuhan Khusus</h4>
+                        <p class="text-md leading-relaxed font-sans">Direkomendasikan bagi perusahaan yang memerlukan
+                            desain, fungsionalitas, atau integrasi yang sangat spesifik, serta solusi yang mampu
+                            berkembang sesuai kebutuhan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Support Banner -->
+    <section class="relative h-[600px] flex items-center overflow-hidden sticky top-0 z-0">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-[-1] bg-[url('assets/technical-support-banner.png')] bg-cover bg-center">
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        <!-- Decorative Wavy Lines (SVG) -->
+        <svg class="absolute right-0 top-0 h-full w-auto text-brand/20 z-0 opacity-50 pointer-events-none"
+            viewBox="0 0 400 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M400 0C300 100 200 50 100 200C0 350 150 500 50 700C-50 900 100 800 100 800H400V0Z"
+                fill="currentColor" />
+            <path d="M400 100C320 180 240 140 160 260C80 380 200 500 120 660C40 820 160 740 160 740H400V100Z"
+                stroke="currentColor" stroke-width="2" fill="none" />
+        </svg>
+
+        <!-- Content -->
+        <div class="max-w-8xl mx-auto px-6 w-full relative z-10">
+            <div class="max-w-3xl reveal-on-scroll">
+                <h2 class="text-4xl lg:text-6xl font-heading font-bold text-white mb-8 leading-tight">
+                    Kami membantu membuat website, mengelola, dan menyelesaikan hal teknis.
+                </h2>
+                <p class="text-xl text-white/80 font-sans leading-relaxed">
+                    TunamSam menyediakan layanan pembuatan dan pengelolaan website lengkap, serta menangani hal teknis
+                    agar bisnis Anda tumbuh dengan kehadiran online yang kuat dan efisien.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mengapa TunamSam Section -->
+    <section id="why-us" class="py-32 bg-white overflow-hidden relative z-10">
+        <div class="max-w-8xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-8 mb-16 reveal-on-scroll">
+                <h2 class="text-4xl lg:text-5xl font-bold font-heading text-gray-900 lg:w-1/2 leading-tight">Mengapa
+                    harus<br>TunamSam?</h2>
+                <p class="text-gray-600 text-lg font-sans lg:w-1/2">
+                    TunamSam jasa pembuatan website professional yang layaknya sebagai partner bisnis anda untuk
+                    menciptakan website berkualitas dan sesuai tujuan bisnis.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 relative reveal-on-scroll">
+
+                <!-- Card 1 -->
+                <div
+                    class="lg:col-span-2 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <i data-lucide="award" class="w-8 h-8 text-gray-900 mb-6"></i>
+                    <h4 class="text-xl font-heading font-bold text-gray-900 mb-3">Lebih dari 10 tahun pengalaman</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed font-sans">Berpengalaman lebih dari 10+ tahun dalam
+                        transformasi digital di Indonesia. Ahli pada bidang pengembangan web dan digital marketing.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="lg:col-span-4 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <i data-lucide="hand-heart" class="w-8 h-8 text-gray-900 mb-6"></i>
+                    <h4 class="text-xl font-heading font-bold text-gray-900 mb-3">Pendekatan Berorientasi Hasil</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed font-sans">Tidak hanya membuat situs web, tapi juga
+                        menciptakan pengalaman online yang menghasilkan hasil yang terukur untuk bisnis Anda, dan juga
+                        memberikan bantuan dalam mengarahkan lalu lintas dan mengonversi lalu lintas tersebut menjadi
+                        pencapaian tujuan online mereka, seperti prospek, kontak, pembelian, dan tampilan.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="lg:col-span-2 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <i data-lucide="user-check" class="w-8 h-8 text-gray-900 mb-6"></i>
+                    <h4 class="text-xl font-heading font-bold text-gray-900 mb-3">User Centric dan Desain kekinian</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed font-sans">Menciptakan tampilan visual website yang
+                        menawan dan memastikan setiap elemen website memberikan pengalaman pengguna yang menyenangkan
+                        dan efektif.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="lg:col-span-2 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <i data-lucide="atom" class="w-8 h-8 text-gray-900 mb-6"></i>
+                    <h4 class="text-xl font-heading font-bold text-gray-900 mb-3">Pengembangan yang efisien</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed font-sans">Komunikasi yang terbuka dan transparan
+                        dengan memastikan klien selalu mendapatkan informasi pada setiap tahap pengembangan dengan
+                        mengirimkan pemberitahuan melalui email dan WhatsApp.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div
+                    class="lg:col-span-2 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <i data-lucide="fingerprint" class="w-8 h-8 text-gray-900 mb-6"></i>
+                    <h4 class="text-xl font-heading font-bold text-gray-900 mb-3">Inovasi keamanan Cyber dan Persiapan
+                        masa depan</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed font-sans">Menjaga website Anda tetap aman dan
+                        terdepan dengan mencakup cadangan web berkala, pembaharuan domain dan hosting, dan penerapan
+                        keamanan teknologi hosting.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div
+                    class="lg:col-span-3 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <i data-lucide="users" class="w-8 h-8 text-gray-900 mb-6"></i>
+                    <h4 class="text-xl font-heading font-bold text-gray-900 mb-3">Kolaborasi</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed font-sans">Visi Anda, keahlian kami - Pendekatan
+                        kolaboratif yang memastikan keterlibatan aktif Anda dalam proses pengembangan situs web untuk
+                        hasil yang sempurna. Kami juga sangat peduli dengan Unique Selling Point (USP) bisnis klien agar
+                        kami dapat menciptakan imajinasi dan pengalaman bisnis yang lebih baik.</p>
+                </div>
+
+                <!-- Card 7 -->
+                <div
+                    class="lg:col-span-3 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <i data-lucide="life-buoy" class="w-8 h-8 text-gray-900 mb-6"></i>
+                    <h4 class="text-xl font-heading font-bold text-gray-900 mb-3">Dukungan berkelanjutan</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed font-sans">Kami menawarkan layanan dukungan dan
+                        pemeliharaan berkelanjutan untuk menjaga situs web Anda berjalan lancar dan kontennya tetap
+                        mengikuti tren terbaru. Kami akan selalu berada di sisi Anda. Biarkan Anda menjalankan bisnis
+                        mereka dengan tenang, sementara kami mengelola kehadiran online mereka.</p>
+                </div>
+
+                <!-- Card 8 -->
+                <div
+                    class="lg:col-span-2 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <i data-lucide="coins" class="w-8 h-8 text-gray-900 mb-6"></i>
+                    <h4 class="text-xl font-heading font-bold text-gray-900 mb-3">Kualitas dengan harga yang transparan
+                    </h4>
+                    <p class="text-gray-500 text-sm leading-relaxed font-sans">Membangun kepercayaan Anda dengan
+                        menyediakan layanan pengembangan situs web kelas atas dengan harga yang kompetitif dan
+                        transparan.</p>
+                </div>
+
+                <!-- Card 9 -->
+                <div
+                    class="lg:col-span-2 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <i data-lucide="bot" class="w-8 h-8 text-gray-900 mb-6"></i>
+                    <h4 class="text-xl font-heading font-bold text-gray-900 mb-3">Teknologi berbasis AI</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed font-sans">Memanfaatkan teknologi AI terkini untuk
+                        memastikan konten situs web Anda dibuat sebaik mungkin serta mengoreksi dan menyempurnakan
+                        konten situs web.</p>
+                </div>
+
+                <!-- Card 10 -->
+                <div
+                    class="lg:col-span-2 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <i data-lucide="headset" class="w-8 h-8 text-gray-900 mb-6"></i>
+                    <h4 class="text-xl font-heading font-bold text-gray-900 mb-3">Customer Support yang Responsif</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed font-sans">Kami selalu berusaha responsif untuk
+                        memenuhi kebutuhan Anda dengan cepat dan efektif.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilihan Desain Section -->
+    <section id="pilihan-desain" class="py-32 bg-black overflow-hidden relative z-10">
+        <div class="max-w-8xl mx-auto px-6">
+            <!-- Header -->
+            <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-16 reveal-on-scroll">
+                <h2 class="text-4xl lg:text-5xl font-heading font-bold text-white lg:w-1/2 leading-tight">
+                    Pilihan Desain website yang memukau langkah awal menuju kesuksesan
+                </h2>
+                <p class="text-gray-400 text-md lg:text-lg leading-relaxed lg:w-1/2">
+                    Tampilan visual yang mengesankan dan pengalaman pengguna yang menyenangkan adalah kunci untuk
+                    meninggalkan kesan positif dan mendalam. Setiap elemen dari desain kami, dipilih dengan hati-hati
+                    untuk memastikan bahwa website Anda tidak hanya terlihat profesional, tetapi juga efektif dalam
+                    mencapai tujuan bisnis Anda.
+                </p>
+            </div>
+
+            <!-- Video Grid -->
+            <div class="flex flex-col gap-6 reveal-on-scroll">
+                <!-- Video 1: Landingpage (Full width) -->
+                <div
+                    class="relative rounded-3xl overflow-hidden aspect-[16/9] lg:aspect-[21/9] bg-gray-900 group cursor-pointer">
+                    <video autoplay loop muted playsinline
+                        class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500">
+                        <source src="assets/videos/landingpage.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <!-- Unified Overlay -->
+                    <div class="absolute bottom-0 left-0 w-full">
+                        <!-- Dark Gradient -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                        </div>
+                        <!-- Solid Green -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-brand-dark to-brand-light opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                        <!-- Content -->
+                        <div class="relative z-10 w-full p-8 lg:p-10 flex items-center gap-3">
+                            <h3 class="text-white text-2xl lg:text-4xl font-sans">
+                                Landingpage
+                            </h3>
+                            <i data-lucide="arrow-up-right"
+                                class="w-8 h-8 lg:w-10 lg:h-10 text-white border-2 border-white rounded-full p-1.5 transition-transform duration-500 group-hover:rotate-45"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom row: Company Profile & Toko Online -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Video 2: Company Profile -->
+                    <div class="relative rounded-3xl overflow-hidden aspect-video bg-gray-900 group cursor-pointer">
+                        <video autoplay loop muted playsinline
+                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500">
+                            <source src="assets/videos/company-profile.mp4" type="video/mp4">
+                        </video>
+                        <div class="absolute bottom-0 left-0 w-full">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                            </div>
+                            <!-- Solid Green -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-brand-dark to-brand-light opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div class="relative z-10 w-full p-8 flex items-center gap-3">
+                                <h3 class="text-white text-xl lg:text-3xl font-sans">
+                                    Company Profile
+                                </h3>
+                                <i data-lucide="arrow-up-right"
+                                    class="w-6 h-6 lg:w-8 lg:h-8 text-white border-2 border-white rounded-full p-1 transition-transform duration-500 group-hover:rotate-45"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 3: Toko Online -->
+                    <div class="relative rounded-3xl overflow-hidden aspect-video bg-gray-900 group cursor-pointer">
+                        <video autoplay loop muted playsinline
+                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500">
+                            <source src="assets/videos/toko-online.mp4" type="video/mp4">
+                        </video>
+                        <div class="absolute bottom-0 left-0 w-full">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                            </div>
+                            <!-- Solid Green -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-brand-dark to-brand-light opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div class="relative z-10 w-full p-8 flex items-center gap-3">
+                                <h3 class="text-white text-xl lg:text-3xl font-sans">
+                                    Toko Online
+                                </h3>
+                                <i data-lucide="arrow-up-right"
+                                    class="w-6 h-6 lg:w-8 lg:h-8 text-white border-2 border-white rounded-full p-1 transition-transform duration-500 group-hover:rotate-45"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="text-center mt-16 reveal-on-scroll">
+                <a href="#"
+                    class="inline-block bg-white text-black px-8 py-3 rounded-full text-sm font-bold hover:bg-gray-200 transition-colors">
+                    Lihat pilihan desain lainnya
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Bagaimana Proses Section -->
+    <section id="process" class="bg-[#0a0a0a] relative z-10">
+        <!-- Sticky Header -->
+        <div id="process-header" class="sticky top-0 z-50 bg-[#0a0a0a] pt-16 pb-6 px-6">
+            <div class="max-w-8xl mx-auto">
+                <div class="flex flex-col lg:flex-row gap-8 lg:gap-24 mb-10">
+                    <h2 class="text-3xl lg:text-5xl font-heading font-bold text-white lg:w-1/2 leading-tight">
+                        Bagaimana proses kami <br>membuat website
+                    </h2>
+                    <p class="text-gray-400 text-sm lg:text-base leading-relaxed lg:w-1/2">
+                        Kami mengutamakan kualitas dan kepuasan klien dalam setiap langkah proses. Jasa pembuatan
+                        website yang murah dan terpercaya, memulai pembuatan website dengan analisis mendalam terhadap
+                        kebutuhan dan visi bisnis Anda untuk memastikan hasil akhir yang memuaskan.
+                    </p>
+                </div>
+                <!-- Timeline dots -->
+                <div class="flex items-center w-full">
+                    <div class="flex items-center gap-0 w-full">
+                        <div class="flex items-center flex-1">
+                            <div id="step-dot-1" data-step="1"
+                                class="process-dot w-14 h-14 rounded-full border-2 border-gray-600 text-gray-500 text-xl font-bold flex items-center justify-center flex-shrink-0 bg-[#0a0a0a] transition-all duration-300">
+                                1</div>
+                            <div id="step-line-1" data-step="1"
+                                class="process-line h-[4px] flex-1 bg-gray-700 transition-all duration-500"></div>
+                        </div>
+                        <div class="flex items-center flex-1">
+                            <div id="step-dot-2" data-step="2"
+                                class="process-dot w-14 h-14 rounded-full border-2 border-gray-600 text-gray-500 text-xl font-bold flex items-center justify-center flex-shrink-0 bg-[#0a0a0a] transition-all duration-300">
+                                2</div>
+                            <div id="step-line-2" data-step="2"
+                                class="process-line h-[4px] flex-1 bg-gray-700 transition-all duration-500"></div>
+                        </div>
+                        <div class="flex items-center flex-1">
+                            <div id="step-dot-3" data-step="3"
+                                class="process-dot w-14 h-14 rounded-full border-2 border-gray-600 text-gray-500 text-xl font-bold flex items-center justify-center flex-shrink-0 bg-[#0a0a0a] transition-all duration-300">
+                                3</div>
+                            <div id="step-line-3" data-step="3"
+                                class="process-line h-[4px] flex-1 bg-gray-700 transition-all duration-500"></div>
+                        </div>
+                        <div class="flex items-center flex-1">
+                            <div id="step-dot-4" data-step="4"
+                                class="process-dot w-14 h-14 rounded-full border-2 border-gray-600 text-gray-500 text-xl font-bold flex items-center justify-center flex-shrink-0 bg-[#0a0a0a] transition-all duration-300">
+                                4</div>
+                            <div id="step-line-4" data-step="4"
+                                class="process-line h-[4px] flex-1 bg-gray-700 transition-all duration-500"></div>
+                        </div>
+                        <div class="flex items-center">
+                            <div id="step-dot-5" data-step="5"
+                                class="process-dot w-14 h-14 rounded-full border-2 border-gray-600 text-gray-500 text-xl font-bold flex items-center justify-center flex-shrink-0 bg-[#0a0a0a] transition-all duration-300">
+                                5</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stacked Steps Container -->
+        <div class="max-w-8xl mx-auto px-6 pb-32">
+
+            <!-- Step 1: Konsultasi -->
+            <div class="process-step sticky z-[11] mb-3" data-step="1" style="top: var(--process-header-height, 220px)">
+                <div class="relative rounded-3xl overflow-hidden h-72 lg:h-[380px]">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=1400"
+                        alt="Konsultasi" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/55"></div>
+                    <div class="absolute bottom-0 left-0 p-10 lg:p-14">
+                        <i data-lucide="hand-coins" class="w-10 h-10 text-white mb-5"></i>
+                        <h3 class="text-3xl lg:text-4xl font-heading text-white mb-3">Konsultasi</h3>
+                        <p class="text-gray-300 text-md lg:text-lg leading-relaxed max-w-xl font-sans">Tim profesional
+                            Kami memulai dengan berdiskusi untuk memahami kebutuhan, tujuan, dan gambaran website yang Anda inginkan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Perencanaan -->
+            <div class="process-step sticky z-[12] mb-3" data-step="2"
+                style="top: calc(var(--process-header-height, 220px) + 18px)">
+                <div class="relative rounded-3xl overflow-hidden h-72 lg:h-[380px]">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1400"
+                        alt="Perencanaan" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/55"></div>
+                    <div class="absolute bottom-0 left-0 p-10 lg:p-14">
+                        <i data-lucide="folder-open" class="w-10 h-10 text-white mb-5"></i>
+                        <h3 class="text-2xl lg:text-3xl font-heading text-white mb-3">Perencanaan</h3>
+                        <p class="text-gray-300 text-md lg:text-lg leading-relaxed max-w-xl font-sans">Setelah memahami kebutuhan Anda, kami menyusun konsep, fitur, serta rencana pengerjaan yang sesuai dengan bisnis Anda.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Pengerjaan -->
+            <div class="process-step sticky z-[13] mb-3" data-step="3"
+                style="top: calc(var(--process-header-height, 220px) + 36px)">
+                <div class="relative rounded-3xl overflow-hidden h-72 lg:h-[380px]">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1400"
+                        alt="Pengerjaan" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/55"></div>
+                    <div class="absolute bottom-0 left-0 p-10 lg:p-14">
+                        <i data-lucide="code-2" class="w-10 h-10 text-white mb-5"></i>
+                        <h3 class="text-2xl lg:text-3xl font-heading text-white mb-3">Pengerjaan</h3>
+                        <p class="text-gray-300 text-md lg:text-lg leading-relaxed max-w-xl font-sans">Tim kami mulai mengerjakan website dengan fokus pada tampilan yang menarik, cepat, dan nyaman digunakan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4: Review -->
+            <div class="process-step sticky z-[14] mb-3" data-step="4"
+                style="top: calc(var(--process-header-height, 220px) + 54px)">
+                <div class="relative rounded-3xl overflow-hidden h-72 lg:h-[380px]">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1400"
+                        alt="Review" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/55"></div>
+                    <div class="absolute bottom-0 left-0 p-10 lg:p-14">
+                        <i data-lucide="sparkles" class="w-10 h-10 text-white mb-5"></i>
+                        <h3 class="text-2xl lg:text-3xl font-heading text-white mb-3">Review</h3>
+                        <p class="text-gray-300 text-md lg:text-lg leading-relaxed max-w-xl font-sans">Anda dapat melihat hasil website dan memberikan masukan. Kami akan melakukan penyesuaian agar hasilnya sesuai harapan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5: Website Siap Digunakan -->
+            <div class="process-step sticky z-[15] mb-3" data-step="5"
+                style="top: calc(var(--process-header-height, 220px) + 72px)">
+                <div class="relative rounded-3xl overflow-hidden h-72 lg:h-[380px]">
+                    <img src="assets/step-section/5.png"
+                        alt="Website Siap Digunakan" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/55"></div>
+                    <div class="absolute bottom-0 left-0 p-10 lg:p-14">
+                        <i data-lucide="globe" class="w-10 h-10 text-white mb-5"></i>
+                        <h3 class="text-2xl lg:text-3xl font-heading text-white mb-3">Website Siap Digunakan</h3>
+                        <p class="text-gray-300 text-md lg:text-lg leading-relaxed max-w-xl font-sans">Setelah semuanya disetujui, website akan dipublikasikan dan siap digunakan untuk mendukung bisnis Anda.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Layanan Tambahan Section -->
+    <section id="layanan-tambahan" class="py-32 bg-white relative z-10">
+        <div class="max-w-8xl mx-auto px-6">
+            <!-- Header -->
+            <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-20 reveal-on-scroll">
+                <h2 class="text-3xl lg:text-5xl font-heading font-bold text-gray-900 lg:w-1/2 leading-tight">
+                    Layanan Tambahan untuk Optimasi website Anda
+                </h2>
+                <p class="text-gray-500 text-sm lg:text-base leading-relaxed lg:w-1/2 self-center">
+                    Kami menyediakan berbagai layanan tambahan yang dirancang untuk meningkatkan performa dan
+                    efektivitas website Anda. Berikut adalah beberapa pilihan layanan ekstra yang dapat Anda tambahkan.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 reveal-on-scroll">
+
+                <!-- Card 1: Perbaikan Website -->
+                <div class="flex flex-col gap-5">
+                    <i data-lucide="settings-2" class="w-8 h-8 text-gray-800"></i>
+                    <h3 class="text-xl font-heading font-bold text-gray-900">Perbaikan Website</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed font-sans">
+                        Kami menawarkan layanan perbaikan untuk memastikan website Anda selalu berjalan optimal. Mulai
+                        dari memperbaiki bug, mengatasi masalah performa, hingga mengatasi error coding, tim kami akan
+                        memastikan website Anda berfungsi dengan lancar.
+                    </p>
+                    <div>
+                        <a href="#contact"
+                            class="inline-block border border-gray-900 text-gray-900 text-sm font-bold px-6 py-2.5 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300">
+                            Dapatkan Layanan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: SEO -->
+                <div class="flex flex-col gap-5">
+                    <i data-lucide="search" class="w-8 h-8 text-gray-800"></i>
+                    <h3 class="text-xl font-heading font-bold text-gray-900">SEO (Search Engine Optimization)</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed font-sans">
+                        Dapatkan peringkat terbaik di mesin pencari dengan layanan SEO kami. Kami melakukan optimasi
+                        pada konten dan struktur situs web Anda untuk meningkatkan visibilitas di Google dan
+                        mendatangkan lebih banyak lalu lintas organik ke website Anda.
+                    </p>
+                    <div>
+                        <a href="#contact"
+                            class="inline-block border border-gray-900 text-gray-900 text-sm font-bold px-6 py-2.5 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300">
+                            Dapatkan Layanan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Maintenance Website -->
+                <div class="flex flex-col gap-5">
+                    <i data-lucide="sliders-horizontal" class="w-8 h-8 text-gray-800"></i>
+                    <h3 class="text-xl font-heading font-bold text-gray-900">Maintenance Website</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed font-sans">
+                        Jaga website Anda selalu up-to-date dan aman dengan layanan maintenance kami. Kami menawarkan
+                        pembaruan rutin, backup data, serta optimasi keamanan untuk memastikan situs Anda berjalan
+                        stabil dan terlindungi dari ancaman siber.
+                    </p>
+                    <div>
+                        <a href="#contact"
+                            class="inline-block border border-gray-900 text-gray-900 text-sm font-bold px-6 py-2.5 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300">
+                            Dapatkan Layanan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Manajemen Media Sosial -->
+                <div class="flex flex-col gap-5">
+                    <i data-lucide="share-2" class="w-8 h-8 text-gray-800"></i>
+                    <h3 class="text-xl font-heading font-bold text-gray-900">Manajemen Media Sosial (Sosmed)</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed font-sans">
+                        Optimalkan kehadiran bisnis Anda di media sosial. Kami membantu Anda dalam mengelola akun-akun
+                        media sosial, menciptakan konten yang relevan, serta menghubungkan media sosial dengan website
+                        untuk meningkatkan engagement dan brand awareness.
+                    </p>
+                    <div>
+                        <a href="#contact"
+                            class="inline-block border border-gray-900 text-gray-900 text-sm font-bold px-6 py-2.5 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300">
+                            Dapatkan Layanan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 5: Manajemen Iklan Digital -->
+                <div class="flex flex-col gap-5">
+                    <i data-lucide="layout-dashboard" class="w-8 h-8 text-gray-800"></i>
+                    <h3 class="text-xl font-heading font-bold text-gray-900">Manajemen Iklan Digital (Ads)</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed font-sans">
+                        Tingkatkan hasil pemasaran online Anda dengan layanan manajemen iklan digital. Kami mengelola
+                        kampanye iklan di platform seperti Google Ads dan media sosial, memastikan bahwa anggaran iklan
+                        Anda digunakan secara efektif untuk menghasilkan ROI yang optimal.
+                    </p>
+                    <div>
+                        <a href="#contact"
+                            class="inline-block border border-gray-900 text-gray-900 text-sm font-bold px-6 py-2.5 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300">
+                            Dapatkan Layanan
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Footer -->
+    <footer id="contact" class="pt-24 pb-12 bg-gray-900 text-white relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Column 1: Brand -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-2">
+                        <img src="assets/logo/tunamsam.png" alt="TunamSam Logo" class="h-10">
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed font-sans" data-i18n="footer_about">
+                        Agensi pengembangan teknologi terpercaya yang fokus pada inovasi dan kualitas tinggi untuk
+                        pertumbuhan bisnis Anda di era digital.
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <a href="https://www.instagram.com/tunamsam/"
+                            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-light transition-all">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/tunamsam"
+                            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-light transition-all">
+                            <i class="fa-brands fa-linkedin-in text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Layanan -->
+                <div>
+                    <h4 class="text-white font-heading font-bold mb-6 uppercase tracking-wider" data-i18n="services">
+                        Layanan</h4>
+                    <ul class="space-y-4 text-sm text-gray-400 font-sans">
+                        <li class="hover:text-brand-light cursor-pointer transition-colors">Web Development</li>
+                        <li class="hover:text-brand-light cursor-pointer transition-colors">IT Outsourcing</li>
+                        <li class="hover:text-brand-light cursor-pointer transition-colors">UI/UX Design</li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Profil -->
+                <div>
+                    <h4 class="text-white font-heading font-bold mb-6 uppercase tracking-wider" data-i18n="profile">
+                        Profil</h4>
+                    <ul class="space-y-4 text-sm text-gray-400 font-sans">
+                        <li class="hover:text-brand-light cursor-pointer transition-colors">Tentang Kami</li>
+                        <li class="hover:text-brand-light cursor-pointer transition-colors" data-i18n="portfolio">
+                            Portfolio</li>
+                        <li class="hover:text-brand-light cursor-pointer transition-colors">Karir</li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Kontak -->
+                <div>
+                    <h4 class="text-white font-heading font-bold mb-6 uppercase tracking-wider" data-i18n="contact">
+                        Kontak</h4>
+                    <ul class="space-y-4 text-sm text-gray-400 font-sans">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-brand-light"></i>
+                            <span>tunamsam@gmail.com</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-light"></i>
+                            <span>Jakarta, Indonesia</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-brand-light"></i>
+                            <span>+62 856-5563-9206</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 text-xs text-gray-500 text-center font-sans">
+                <p data-i18n="footer_rights">© 2024 TunamSam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Lucide Icons Initialization
+        lucide.createIcons();
+
+        // Translation System
+        const translations = {
+            ID: {
+                home: "Beranda",
+                services: "Layanan",
+                portfolio: "Portfolio",
+                profile: "Profil",
+                contact: "Kontak",
+                contact_us: "Hubungi Kami",
+                trusted_by: "Telah dipercaya oleh:",
+                p1_title: "Website Tanpa Strategi Akan Sulit Berkembang",
+                p1_desc1: "Tidak semua website mampu menghasilkan traffic dan pelanggan. Tanpa SEO, struktur yang baik, dan pengalaman pengguna yang nyaman, website akan sulit bersaing di tengah banyaknya kompetitor digital saat ini.",
+                p1_desc2: "",
+                s1_title: "Lebih Dari Sekadar Tampilan Menarik",
+                s1_desc: "Website profesional dirancang untuk membantu bisnis Anda tumbuh. Mulai dari desain modern, navigasi yang jelas, hingga optimasi SEO, semuanya berperan penting dalam meningkatkan kredibilitas dan menjangkau lebih banyak pelanggan.",
+                s1_btn: "Bikin website",
+                p2_title: "Sulit Mencari Talenta IT yang Tepat?",
+                p2_desc1: "Proses rekrutmen yang panjang, biaya overhead yang tinggi, dan risiko turnover seringkali menghambat inovasi perusahaan Anda. Menemukan tim yang tidak hanya bisa ngoding, tapi benar-benar mengerti visi bisnis Anda adalah tantangan besar.",
+                p2_desc2: "Banyak bisnis kehilangan waktu dan biaya besar hanya karena kesalahan dalam memilih partner teknologi atau kegagalan dalam menjaga stabilitas tim IT internal.",
+                s2_title: "TunamSam: IT Outsourcing & Talent Sourcing",
+                s2_desc: "Tingkatkan kapasitas bisnis Anda dengan tenaga ahli IT yang berdedikasi. Kami menyediakan pengembang, desainer, dan ahli IT yang sudah terkurasi dan siap bergabung dengan tim Anda. Dengan model outsourcing kami, Anda bisa fokus pada strategi bisnis utama sementara kami menangani talenta teknologi terbaik.",
+                s2_btn: "Cari Talenta IT",
+                criteria_title: "Website Anda perlu memiliki aspek berikut agar mampu menarik perhatian serta mempertahankan pengunjung dengan lebih efektif.",
+                c1_title: "SEO Friendly",
+                c1_desc: "Membantu website Anda lebih mudah ditemukan di mesin pencari seperti Google. Website yang dioptimalkan dengan baik memiliki peluang lebih besar untuk menjangkau calon pelanggan secara online.",
+                c2_title: "Cepat dan Responsif",
+                c2_desc: "Website yang cepat dan responsif memberikan pengalaman yang lebih nyaman di berbagai perangkat, termasuk mobile. Pengunjung cenderung meninggalkan website yang lambat atau sulit digunakan.",
+                c3_title: "Navigasi Terstruktur",
+                c3_desc: "Struktur yang rapi dan navigasi yang jelas membantu pengunjung menemukan informasi dengan lebih mudah dan nyaman saat menjelajahi website Anda.",
+                c4_title: "Desain Modern",
+                c4_desc: "Tampilan yang modern dan konsisten membantu membangun kesan profesional serta meningkatkan kepercayaan pengunjung terhadap bisnis Anda.",
+                pkg_title: "Paket jasa pembuatan website sesuai kebutuhan bisnis Anda",
+                pkg_subtitle: "Pilih paket yang paling sesuai dengan tujuan bisnis Anda. Kami menawarkan transparansi harga dan fitur lengkap untuk setiap tingkat pertumbuhan.",
+                pkg_desc: "Paket ini ideal untuk bisnis pemula yang ingin mulai berjualan secara online dengan biaya terjangkau. Landing page kami fokus pada konversi, memastikan setiap pengunjung diarahkan untuk mengambil tindakan yang Anda inginkan, seperti mendaftar, membeli produk, atau menghubungi Anda. Solusi yang cepat dan efektif ini sangat cocok untuk peluncuran produk, promosi khusus, atau kampanye pemasaran yang berfokus pada satu tujuan utama.",
+                pkg_desc_cp: "Website company profile kami dirancang untuk meningkatkan kredibilitas perusahaan dan membuat bisnis Anda lebih terpercaya serta dikenal luas. Dengan tampilan profesional dan informasi yang terstruktur, paket ini membantu Anda membangun kepercayaan di antara calon pelanggan, mitra bisnis, dan investor. Solusi ini cocok bagi perusahaan yang ingin memperkuat kehadiran digital mereka dan memberikan citra profesional yang solid.",
+                pkg_desc_to: "Bagi bisnis atau UKM yang menjual produk atau jasa langsung ke konsumen, seperti kuliner, properti, konveksi, atau travel, paket Toko Online kami adalah solusi yang tepat. Website ini dilengkapi dengan sistem e-commerce lengkap untuk mengelola produk, transaksi, dan pengiriman, sehingga memudahkan bisnis Anda dalam menjual secara online dan meningkatkan omzet melalui pengalaman belanja yang nyaman bagi pelanggan.",
+                pkg_desc_custom: "Layanan custom kami dirancang untuk memenuhi kebutuhan unik dan spesifik dari bisnis Anda. Apapun visi dan kebutuhan Anda, kami siap merealisasikannya dengan solusi website yang sepenuhnya disesuaikan. Cocok bagi bisnis yang membutuhkan integrasi sistem tertentu, desain dan fungsi yang sangat spesifik, atau fitur yang tidak tercakup dalam paket standar. Paket ini menawarkan fleksibilitas tanpa batas, menjadikannya ideal untuk perusahaan yang memerlukan solusi khusus untuk mendukung operasional mereka.",
+                process: "Our Process",
+                proc_title: "Bagaimana Kami Membangun Kesuksesan Anda",
+                step1_title: "Discovery",
+                step1_desc: "Kami mendalami visi bisnis Anda, memahami target audiens, dan mengidentifikasi tantangan yang perlu diselesaikan.",
+                step2_title: "Strategy",
+                step2_desc: "Menyusun roadmap teknologi yang tepat, struktur website yang optimal, dan desain yang memikat hati pengunjung.",
+                step3_title: "Development",
+                step3_desc: "Membangun website Anda dengan standar coding terbaik, performa tinggi, dan keamanan yang terjamin.",
+                step4_title: "Launch & Support",
+                step4_desc: "Kami mendampingi proses peluncuran dan memberikan dukungan berkelanjutan untuk memastikan website Anda berjalan maksimal.",
+                footer_tag: "Membangun masa depan digital yang lebih cerah, satu website dalam satu waktu.",
+                footer_quick: "Tautan Cepat",
+                footer_connect: "Terhubung",
+                footer_rights: "Hak Cipta Dilindungi.",
+                footer_about: "Agensi pengembangan teknologi terpercaya yang fokus pada inovasi dan kualitas tinggi untuk pertumbuhan bisnis Anda di era digital."
+            },
+            EN: {
+                home: "Home",
+                services: "Services",
+                portfolio: "Portfolio",
+                profile: "Profile",
+                contact: "Contact",
+                contact_us: "Contact Us",
+                trusted_by: "Trusted by:",
+                p1_title: "A Website Without Strategy Will Struggle to Grow",
+                p1_desc1: "Not all websites are capable of generating traffic and customers. Without SEO, a good structure, and a comfortable user experience, a website will find it hard to compete amidst today's digital competitors.",
+                p1_desc2: "",
+                s1_title: "More Than Just an Attractive Appearance",
+                s1_desc: "A professional website is designed to help your business grow. From modern design, clear navigation, to SEO optimization, everything plays an important role in increasing credibility and reaching more customers.",
+                s1_btn: "Create a website",
+                p2_title: "Finding the Right IT Talent is Hard?",
+                p2_desc1: "Long recruitment processes, high overhead costs, and turnover risks often hinder your company's innovation. Finding a team that doesn't just code, but truly understands your business vision is a major challenge.",
+                p2_desc2: "Many businesses lose a lot of time and money just because of choosing the wrong technology partner or failing to maintain internal IT team stability.",
+                s2_title: "TunamSam: IT Outsourcing & Talent Sourcing",
+                s2_desc: "Increase your business capacity with dedicated IT experts. We provide curated developers, designers, and IT experts ready to join your team. With our outsourcing model, you can focus on your core business strategy while we handle the best technology talents.",
+                s2_btn: "Find IT Talents",
+                criteria_title: "Your website needs the following elements to attract attention and retain visitors more effectively.",
+                c1_title: "SEO Friendly",
+                c1_desc: "Ensures your business is easily discoverable on search engines like Google. A well-optimized website significantly improves your chances of reaching more potential customers and outperforming your digital competitors.",
+                c2_title: "Fast and Responsive",
+                c2_desc: "Fast loading speeds and a responsive layout ensure a seamless experience across all devices, including mobile. This prevents visitors from leaving your site due to slow performance or poor usability on smartphones.",
+                c3_title: "Structured Navigation",
+                c3_desc: "A clean structure and intuitive navigation help visitors find exactly what they are looking for with minimal effort. Well-organized content keeps users engaged and encourages them to explore your website further.",
+                c4_title: "Modern Design",
+                c4_desc: "A modern, clean design that accurately reflects your brand identity creates a strong first impression. It signals to your visitors that your business is professional, trustworthy, and committed to high quality.",
+                pkg_title: "Website creation packages according to your business needs",
+                pkg_subtitle: "TunamSam's trusted website creation service understands that every business has different needs, we are ready to work with you.",
+                pkg_desc: "This package is ideal for start-up businesses that want to start selling online at an affordable cost. Our landing pages focus on conversion, ensuring every visitor is directed to take the action you want, such as registering, buying a product, or contacting you. This fast and effective solution is perfect for product launches, special promotions, or marketing campaigns focused on a single primary goal.",
+                process: "Our Process",
+                proc_title: "How We Build Your Success",
+                step1_title: "Discovery",
+                step1_desc: "We dive deep into your vision, understand your audience, and identify challenges.",
+                step2_title: "Strategy",
+                step2_desc: "Crafting the right roadmap, optimal structure, and captivating designs.",
+                step3_title: "Development",
+                step3_desc: "Our expert team builds your solution with high-quality code and fast performance.",
+                step4_title: "Launch & Support",
+                step4_desc: "We accompany the launch process and provide ongoing support to ensure your website runs at its maximum potential.",
+                footer_about: "A trusted technology development agency focusing on innovation and high quality for your business growth in the digital era.",
+                footer_tag: "Building a brighter digital future, one website at a time.",
+                footer_quick: "Quick Links",
+                footer_connect: "Connect",
+                footer_rights: "© 2024 TunamSam. All rights reserved."
+            }
+        };
+
+        // Criteria Shrink Animation Logic
+        window.addEventListener('scroll', () => {
+            const criteriaSection = document.querySelector('.criteria-section');
+            const laptop = document.querySelector('.laptop-mockup-container');
+            const cards = [
+                document.getElementById('card-1'),
+                document.getElementById('card-2'),
+                document.getElementById('card-3'),
+                document.getElementById('card-4')
+            ];
+
+            if (!criteriaSection || !laptop) return;
+
+            const sectionTop = criteriaSection.offsetTop;
+            const sectionHeight = criteriaSection.offsetHeight;
+            const scrollY = window.scrollY;
+
+            // Only animate when sticky section is active
+            if (scrollY < sectionTop || scrollY > sectionTop + sectionHeight - window.innerHeight) {
+                if (scrollY < sectionTop) {
+                    laptop.style.transform = `scale(1.1)`;
+                    cards.forEach(c => c && c.classList.remove('active'));
+                }
+                return;
+            }
+
+            // Added 800px offset for a long "dead zone" so the laptop stays static first
+            const startOffset = 500;
+            let scrollProgress = (scrollY - (sectionTop + startOffset)) / (sectionHeight - window.innerHeight - startOffset);
+            scrollProgress = Math.max(0, Math.min(1, scrollProgress));
+
+            // Shrink Laptop: From scale 1.1 to 1.0
+            const scale = 1.1 - (scrollProgress * 0.1);
+            laptop.style.transform = `scale(${scale})`;
+
+            // Reveal Cards with significantly delayed thresholds (50% and 80%)
+            if (scrollProgress > 0.5) {
+                if (cards[0]) cards[0].classList.add('active');
+                if (cards[1]) cards[1].classList.add('active');
+            } else {
+                if (cards[0]) cards[0].classList.remove('active');
+                if (cards[1]) cards[1].classList.remove('active');
+            }
+
+            if (scrollProgress > 0.8) {
+                if (cards[2]) cards[2].classList.add('active');
+                if (cards[3]) cards[3].classList.add('active');
+            } else {
+                if (cards[2]) cards[2].classList.remove('active');
+                if (cards[3]) cards[3].classList.remove('active');
+            }
+        });
+
+        function changeLang(lang, flagUrl) {
+            // Update Toggle UI
+            if (document.getElementById('current-flag-header')) {
+                document.getElementById('current-flag-header').src = flagUrl;
+                document.getElementById('current-flag-header').alt = lang;
+            }
+            if (document.getElementById('current-lang-header')) {
+                document.getElementById('current-lang-header').innerText = lang;
+            }
+
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerText = translations[lang][key];
+                }
+            });
+
+            // Close menus
+            document.querySelectorAll('.lang-dropdown').forEach(m => m.classList.remove('show'));
+        }
+
+        // Language Switcher Logic
+        function toggleLangMenu(id) {
+            const menu = document.getElementById(id);
+            const allMenus = document.querySelectorAll('.lang-dropdown');
+            allMenus.forEach(m => {
+                if (m.id !== id) m.classList.remove('show');
+            });
+            menu.classList.toggle('show');
+        }
+
+        document.getElementById('lang-toggle-header').addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleLangMenu('lang-menu-header');
+        });
+
+        window.addEventListener('click', () => {
+            document.querySelectorAll('.lang-dropdown').forEach(m => m.classList.remove('show'));
+        });
+
+        // Slider
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slide-dot');
+        let currentSlide = 0;
+        let slideInterval;
+
+        function updateSlider(index) {
+            slides.forEach(s => s.classList.remove('active'));
+            dots.forEach(d => {
+                d.className = 'slide-dot cursor-pointer transition-all duration-300 relative overflow-hidden rounded-full bg-[#d4d4d4] w-3 h-3';
+                d.innerHTML = '';
+            });
+
+            slides[index].classList.add('active');
+            dots[index].className = 'slide-dot cursor-pointer transition-all duration-300 relative overflow-hidden rounded-full bg-[#d4d4d4] w-12 h-3';
+            dots[index].innerHTML = '<div class="absolute top-0 left-0 h-full bg-brand animate-slider-progress"></div>';
+        }
+
+        function startSlideInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(() => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                updateSlider(currentSlide);
+            }, 5000);
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                updateSlider(currentSlide);
+                startSlideInterval();
+            });
+        });
+
+        updateSlider(0);
+        startSlideInterval();
+
+        // Scroll Reveal Observer
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => revealObserver.observe(el));
+
+        // Process Step Scroll Tracker
+        (function () {
+            const processHeader = document.getElementById('process-header');
+            const processSection = document.getElementById('process');
+            const processSteps = document.querySelectorAll('.process-step[data-step]');
+            const processDots = document.querySelectorAll('.process-dot');
+            const processLines = document.querySelectorAll('.process-line');
+
+            if (!processHeader || processSteps.length === 0) return;
+
+            // Set CSS var for sticky top positions based on actual header height
+            function updateHeaderHeight() {
+                const h = processHeader.offsetHeight;
+                document.documentElement.style.setProperty('--process-header-height', h + 'px');
+            }
+            updateHeaderHeight();
+            window.addEventListener('resize', updateHeaderHeight);
+
+            function setActiveDot(activeStep) {
+                processDots.forEach(dot => {
+                    const step = parseInt(dot.getAttribute('data-step'));
+                    if (step <= activeStep) {
+                        dot.style.borderColor = 'white';
+                        dot.style.color = 'white';
+                    } else {
+                        dot.style.borderColor = '#4b5563';
+                        dot.style.color = '#6b7280';
+                    }
+                    // Active (current) step gets a filled white circle
+                    if (step === activeStep) {
+                        dot.style.background = 'white';
+                        dot.style.color = '#0a0a0a';
+                        dot.style.fontWeight = '900';
+                    } else if (step < activeStep) {
+                        dot.style.background = 'white';
+                        dot.style.color = 'black';
+                    } else {
+                        dot.style.background = '#0a0a0a';
+                    }
+                });
+                processLines.forEach(line => {
+                    const step = parseInt(line.getAttribute('data-step'));
+                    line.style.backgroundColor = step < activeStep ? 'white' : '#374151';
+                });
+            }
+
+            window.addEventListener('scroll', () => {
+                if (!processSection) return;
+                const sectionRect = processSection.getBoundingClientRect();
+                // Not in view
+                if (sectionRect.bottom < 0 || sectionRect.top > window.innerHeight) return;
+
+                let activeStep = 1;
+                processSteps.forEach(step => {
+                    const rect = step.getBoundingClientRect();
+                    const headerH = processHeader.offsetHeight;
+                    // Card is considered "active" when its top is at or above center of sticky header
+                    if (rect.top <= headerH + 80) {
+                        activeStep = parseInt(step.getAttribute('data-step'));
+                    }
+                });
+                setActiveDot(activeStep);
+            }, { passive: true });
+
+            // Initialize
+            setActiveDot(1);
+        })();
+    </script>
+</body>
+
+</html>
