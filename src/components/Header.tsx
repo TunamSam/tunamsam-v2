@@ -42,7 +42,7 @@ export function Header() {
           <div className="hidden lg:flex items-center lg:space-x-6 xl:space-x-10 text-[14px] font-medium whitespace-nowrap">
             <div className="flex items-center space-x-2">
               <MapPin className="w-4 h-4 text-white opacity-80" />
-              <span>Jl. Wonorejo, Wates, Kab. Kediri</span>
+              <span>Kediri, Indonesia</span>
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4 text-white opacity-80" />

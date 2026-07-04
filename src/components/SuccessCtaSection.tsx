@@ -96,7 +96,7 @@ export function SuccessCtaSection() {
               transition: 'opacity 0.1s linear, transform 0.1s linear',
             }}
           >
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight max-w-4xl mb-6">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading text-white leading-tight max-w-4xl mb-6">
               Raih Kesuksesan dengan Website Berkelas
             </h2>
             <p className="text-white/70 text-sm md:text-base lg:text-lg leading-relaxed max-w-2xl mb-10 font-sans">

@@ -98,11 +98,11 @@ export function Process() {
       <div ref={headerRef} id="process-header" className="sticky top-0 z-50 bg-[#0a0a0a] pt-16 pb-6 px-6">
         <div className="max-w-8xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-24 mb-10">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white lg:w-1/2 leading-tight">
+            <h2 className="text-3xl lg:text-5xl font-heading text-white lg:w-1/2 leading-tight">
               Bagaimana proses kami <br />
               membuat website
             </h2>
-            <p className="text-gray-400 text-sm lg:text-base leading-relaxed lg:w-1/2">
+            <p className="text-gray-400 text-md lg:text-lg leading-relaxed lg:w-1/2">
               Kami mengutamakan kualitas dan kepuasan klien dalam setiap langkah proses. Jasa pembuatan website yang
               murah dan terpercaya, memulai pembuatan website dengan analisis mendalam terhadap kebutuhan dan visi bisnis
               Anda untuk memastikan hasil akhir yang memuaskan.

@@ -7,7 +7,7 @@ export function DesignChoices() {
               <div className="max-w-8xl mx-auto px-6">
                   
                   <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-16 reveal-on-scroll">
-                      <h2 className="text-4xl lg:text-5xl font-heading font-bold text-white lg:w-1/2 leading-tight">
+                      <h2 className="text-4xl lg:text-5xl font-heading text-white lg:w-1/2 leading-tight">
                           Pilihan Desain website yang memukau langkah awal menuju kesuksesan
                       </h2>
                       <p className="text-gray-400 text-md lg:text-lg leading-relaxed lg:w-1/2">

@@ -9,8 +9,8 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
-            <div className="flex items-center gap-2">
-              <img src="/assets/logo/tunamsam.png" alt="TunamSam Logo" className="h-10" />
+            <div className="relative h-12 flex items-center mb-4">
+              <img src="/assets/logo/tunamsam.png" alt="TunamSam Logo" className="absolute -top-12 -left-4 h-36 w-auto object-contain max-w-none" />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed font-sans">{t('footer_about')}</p>
             <div className="flex items-center space-x-4">
@@ -32,8 +32,13 @@ export function Footer() {
           <div>
             <h4 className="text-white font-heading font-bold mb-6 uppercase tracking-wider">{t('services')}</h4>
             <ul className="space-y-4 text-sm text-gray-400 font-sans">
-              <li className="hover:text-brand-light cursor-pointer transition-colors">Pembuatan Website</li>
-              <li className="hover:text-brand-light cursor-pointer transition-colors">IT Outsourcing</li>
+              <li className="hover:text-brand-light cursor-pointer transition-colors">Website Development</li>
+              <li className="hover:text-brand-light cursor-pointer transition-colors">Landing Page</li>
+              <li className="hover:text-brand-light cursor-pointer transition-colors">Company Profile</li>
+              <li className="hover:text-brand-light cursor-pointer transition-colors">E-Commerce Website</li>
+              <li className="hover:text-brand-light cursor-pointer transition-colors">Custom Web App</li>
+              <li className="hover:text-brand-light cursor-pointer transition-colors">Website Maintenance</li>
+              <li className="hover:text-brand-light cursor-pointer transition-colors">Website Redesign</li>
               <li className="hover:text-brand-light cursor-pointer transition-colors">UI/UX Design</li>
             </ul>
           </div>
@@ -56,7 +61,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-brand-light" />
-                <span>Jakarta, Indonesia</span>
+                <span>Kediri, Indonesia</span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-brand-light" />

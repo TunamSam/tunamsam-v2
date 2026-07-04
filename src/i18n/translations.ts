@@ -122,7 +122,7 @@ export const translations: Record<Lang, Partial<Record<TranslationKey, string>>>
     footer_connect: 'Terhubung',
     footer_rights: 'Hak Cipta Dilindungi.',
     footer_about:
-      'Agensi pengembangan teknologi terpercaya yang fokus pada inovasi dan kualitas tinggi untuk pertumbuhan bisnis Anda di era digital.',
+      'Kami membantu bisnis membangun website modern yang cepat, profesional, dan dirancang untuk meningkatkan kredibilitas serta pertumbuhan bisnis di era digital.',
   },
   EN: {
     home: 'Home',
@@ -135,7 +135,8 @@ export const translations: Record<Lang, Partial<Record<TranslationKey, string>>>
     p1_title: 'A Website Without Strategy Will Struggle to Grow',
     p1_desc1:
       'Not all websites are capable of generating traffic and customers. Without SEO, a good structure, and a comfortable user experience, a website will find it hard to compete amidst today\'s digital competitors.',
-    p1_desc2: '',
+    p1_desc2:
+      'The same goes for the online world. A website that merely exists without a mature strategy and user-friendly design will struggle to attract attention, let alone generate sales.',
     s1_title: 'More Than Just an Attractive Appearance',
     s1_desc:
       'A professional website is designed to help your business grow. From modern design, clear navigation, to SEO optimization, everything plays an important role in increasing credibility and reaching more customers.',
@@ -168,6 +169,12 @@ export const translations: Record<Lang, Partial<Record<TranslationKey, string>>>
       "TunamSam's trusted website creation service understands that every business has different needs, we are ready to work with you.",
     pkg_desc:
       'This package is ideal for start-up businesses that want to start selling online at an affordable cost. Our landing pages focus on conversion, ensuring every visitor is directed to take the action you want, such as registering, buying a product, or contacting you. This fast and effective solution is perfect for product launches, special promotions, or marketing campaigns focused on a single primary goal.',
+    pkg_desc_cp:
+      'Our company profile website is designed to enhance corporate credibility and make your business more trusted and widely known. With a professional appearance and structured information, this package helps you build trust among potential customers, business partners, and investors. This solution is suitable for companies looking to strengthen their digital presence and project a solid professional image.',
+    pkg_desc_to:
+      'For businesses or SMEs selling products or services directly to consumers, such as culinary, property, apparel, or travel, our Online Store package is the perfect solution. This website comes with a complete e-commerce system to manage products, transactions, and shipping, making it easier for your business to sell online and increase revenue through a seamless shopping experience for customers.',
+    pkg_desc_custom:
+      'Our custom service is designed to meet the unique and specific needs of your business. Whatever your vision and requirements, we are ready to realize them with a fully customized website solution. Suitable for businesses that require specific system integrations, highly specific designs and functions, or features not covered in standard packages. This package offers unlimited flexibility, making it ideal for companies needing specialized solutions to support their operations.',
     process: 'Our Process',
     proc_title: 'How We Build Your Success',
     step1_title: 'Discovery',
@@ -180,7 +187,7 @@ export const translations: Record<Lang, Partial<Record<TranslationKey, string>>>
     step4_desc:
       'We accompany the launch process and provide ongoing support to ensure your website runs at its maximum potential.',
     footer_about:
-      'A trusted technology development agency focusing on innovation and high quality for your business growth in the digital era.',
+      'We help businesses build modern, fast, and professional websites designed to enhance credibility and drive business growth in the digital era.',
     footer_tag: 'Building a brighter digital future, one website at a time.',
     footer_quick: 'Quick Links',
     footer_connect: 'Connect',
