@@ -4,11 +4,12 @@ import { useI18n } from '../context/I18nContext';
 import { FLAG_URLS, type Lang } from '../i18n/translations';
 
 const NAV_LINKS = [
-  { href: '#home', key: 'home' as const },
-  { href: '#services', key: 'services' as const },
-  { href: '#portfolio', key: 'portfolio' as const },
-  { href: '#about', key: 'profile' as const },
+  { href: '#', key: 'home' as const },
+  { href: '#pilihan-desain', key: 'nav_design' as const },
+  { href: '#pricing', key: 'nav_pricing' as const },
+  { href: '#about', key: 'nav_about' as const },
   { href: '#contact', key: 'contact' as const },
+  { href: '/blog', key: 'nav_blog' as const },
 ];
 
 const LANGUAGES: { lang: Lang; label: string }[] = [
@@ -33,9 +34,9 @@ export function Header() {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-4">
           <div className="relative h-16 w-80 flex items-center">
             <img
-              src="/assets/logo/tunamsam.png"
+              src="/assets/logo/tunamsam.webp"
               alt="TunamSam Logo"
-              className="absolute -top-12 left-0 h-48 w-auto object-contain z-50 transform hover:scale-105 transition-transform cursor-pointer"
+              className="absolute -top-12 left-0 h-48 w-auto object-contain z-50"
             />
           </div>
 
@@ -77,9 +78,9 @@ export function Header() {
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-6">
-          <nav className="flex flex-wrap justify-center md:justify-start items-center gap-6 lg:gap-10 text-[13px] font-bold uppercase tracking-wider mb-6 md:mb-0">
+          <nav className="relative z-[60] flex flex-wrap justify-center md:justify-start items-center gap-6 lg:gap-10 text-[13px] font-bold uppercase tracking-wider mb-6 md:mb-0">
             {NAV_LINKS.map((link) => (
-              <a key={link.key} href={link.href} className="hover:opacity-70 transition-opacity">
+              <a key={link.key} href={link.href} className="hover:opacity-70 transition-opacity cursor-pointer" style={{ cursor: 'pointer' }}>
                 {t(link.key)}
               </a>
             ))}

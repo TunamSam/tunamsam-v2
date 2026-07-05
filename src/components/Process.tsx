@@ -1,58 +1,55 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import { Icon } from './Icon';
-
-const STEPS = [
-  {
-    step: 1,
-    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=1400',
-    icon: 'hand-coins',
-    title: 'Konsultasi',
-    description:
-      'Tim profesional Kami memulai dengan berdiskusi untuk memahami kebutuhan, tujuan, dan gambaran website yang Anda inginkan.',
-    titleSize: 'text-3xl lg:text-4xl',
-  },
-  {
-    step: 2,
-    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1400',
-    icon: 'folder-open',
-    title: 'Perencanaan',
-    description:
-      'Setelah memahami kebutuhan Anda, kami menyusun konsep, fitur, serta rencana pengerjaan yang sesuai dengan bisnis Anda.',
-    titleSize: 'text-2xl lg:text-3xl',
-  },
-  {
-    step: 3,
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1400',
-    icon: 'code-2',
-    title: 'Pengerjaan',
-    description:
-      'Tim kami mulai mengerjakan website dengan fokus pada tampilan yang menarik, cepat, dan nyaman digunakan.',
-    titleSize: 'text-2xl lg:text-3xl',
-  },
-  {
-    step: 4,
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1400',
-    icon: 'sparkles',
-    title: 'Review',
-    description:
-      'Anda dapat melihat hasil website dan memberikan masukan. Kami akan melakukan penyesuaian agar hasilnya sesuai harapan.',
-    titleSize: 'text-2xl lg:text-3xl',
-  },
-  {
-    step: 5,
-    image: '/assets/step-section/5.png',
-    icon: 'globe',
-    title: 'Website Siap Digunakan',
-    description:
-      'Setelah semuanya disetujui, website akan dipublikasikan dan siap digunakan untuk mendukung bisnis Anda.',
-    titleSize: 'text-2xl lg:text-3xl',
-  },
-];
+import { useI18n } from '../context/I18nContext';
 
 export function Process() {
+  const { t } = useI18n();
   const headerRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const [activeStep, setActiveStep] = useState(1);
+
+  const STEPS = useMemo(() => [
+    {
+      step: 1,
+      image: '/assets/step-section/1.webp',
+      icon: 'hand-coins',
+      title: t('proc_step1_title'),
+      description: t('proc_step1_desc'),
+      titleSize: 'text-3xl lg:text-4xl',
+    },
+    {
+      step: 2,
+      image: '/assets/step-section/2.webp',
+      icon: 'folder-open',
+      title: t('proc_step2_title'),
+      description: t('proc_step2_desc'),
+      titleSize: 'text-2xl lg:text-3xl',
+    },
+    {
+      step: 3,
+      image: '/assets/step-section/3.webp',
+      icon: 'code-2',
+      title: t('proc_step3_title'),
+      description: t('proc_step3_desc'),
+      titleSize: 'text-2xl lg:text-3xl',
+    },
+    {
+      step: 4,
+      image: '/assets/step-section/4.webp',
+      icon: 'sparkles',
+      title: t('proc_step4_title'),
+      description: t('proc_step4_desc'),
+      titleSize: 'text-2xl lg:text-3xl',
+    },
+    {
+      step: 5,
+      image: '/assets/step-section/5.webp',
+      icon: 'globe',
+      title: t('proc_step5_title'),
+      description: t('proc_step5_desc'),
+      titleSize: 'text-2xl lg:text-3xl',
+    },
+  ], [t]);
 
   useEffect(() => {
     const processHeader = headerRef.current;
@@ -65,6 +62,10 @@ export function Process() {
 
     updateHeaderHeight();
     window.addEventListener('resize', updateHeaderHeight);
+
+    // Watch for header height changes when language switches (text reflow)
+    const ro = new ResizeObserver(updateHeaderHeight);
+    ro.observe(processHeader);
 
     const handleScroll = () => {
       const sectionRect = processSection.getBoundingClientRect();
@@ -90,6 +91,7 @@ export function Process() {
     return () => {
       window.removeEventListener('resize', updateHeaderHeight);
       window.removeEventListener('scroll', handleScroll);
+      ro.disconnect();
     };
   }, []);
 
@@ -99,18 +101,15 @@ export function Process() {
         <div className="max-w-8xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-24 mb-10">
             <h2 className="text-3xl lg:text-5xl font-heading text-white lg:w-1/2 leading-tight">
-              Bagaimana proses kami <br />
-              membuat website
+              {t('proc_title')}
             </h2>
             <p className="text-gray-400 text-md lg:text-lg leading-relaxed lg:w-1/2">
-              Kami mengutamakan kualitas dan kepuasan klien dalam setiap langkah proses. Jasa pembuatan website yang
-              murah dan terpercaya, memulai pembuatan website dengan analisis mendalam terhadap kebutuhan dan visi bisnis
-              Anda untuk memastikan hasil akhir yang memuaskan.
+              {t('proc_desc')}
             </p>
           </div>
 
-          <div className="flex items-center w-full">
-            <div className="flex items-center gap-0 w-full">
+          <div className="flex items-center w-full overflow-x-auto hide-scrollbar pb-4">
+            <div className="flex items-center gap-0 min-w-[600px] lg:min-w-0 w-full">
               {STEPS.map((step, index) => (
                 <div key={step.step} className={`flex items-center${index < STEPS.length - 1 ? ' flex-1' : ''}`}>
                   <div

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 
-const SLIDE_IMAGES = ['/assets/1.png', '/assets/2.png', '/assets/3.png', '/assets/4.png'];
+const SLIDE_IMAGES = ['/assets/1.webp', '/assets/2.webp', '/assets/3.webp', '/assets/4.webp'];
 const INTERVAL_MS = 5000;
 
 export function Hero() {
@@ -36,9 +36,8 @@ export function Hero() {
                 type="button"
                 aria-label={`Go to slide ${index + 1}`}
                 onClick={() => goToSlide(index)}
-                className={`slide-dot cursor-pointer transition-all duration-300 relative overflow-hidden rounded-full bg-[#d4d4d4] ${
-                  index === currentSlide ? 'w-12 h-3' : 'w-3 h-3'
-                }`}
+                className={`slide-dot cursor-pointer transition-all duration-300 relative overflow-hidden rounded-full bg-[#d4d4d4] ${index === currentSlide ? 'w-12 h-3' : 'w-3 h-3'
+                  }`}
               >
                 {index === currentSlide && (
                   <div className="absolute top-0 left-0 h-full bg-brand animate-slider-progress" />

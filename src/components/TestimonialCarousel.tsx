@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
+import { useI18n } from '../context/I18nContext';
 
 type Testimonial = {
   quote: string;
@@ -38,6 +39,7 @@ const TESTIMONIALS: Testimonial[] = [
 const AUTO_INTERVAL_MS = 6000;
 
 export function TestimonialCarousel() {
+  const { t } = useI18n();
   const [activeIndex, setActiveIndex] = useState(0);
 
   const goToSlide = useCallback((index: number) => {
@@ -57,11 +59,10 @@ export function TestimonialCarousel() {
     <div className="mt-24 reveal-on-scroll">
       <div className="text-center max-w-4xl mx-auto mb-12">
         <h3 className="text-3xl lg:text-5xl font-heading text-gray-900 leading-tight mb-6">
-          Bukti TunamSam telah dipercaya oleh pemilik bisnis se-Indonesia
+          {t('testi_title')}
         </h3>
         <p className="text-gray-500 text-sm lg:text-base leading-relaxed font-sans">
-          Jasa pembuatan website TunamSam telah menjadi solusi digital bagi pelaku bisnis di seluruh Indonesia,
-          membantu mereka bertransformasi ke era digital dengan layanan yang terpercaya dan hasil yang memuaskan.
+          {t('testi_desc')}
         </p>
       </div>
 

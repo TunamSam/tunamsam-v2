@@ -10,6 +10,10 @@ body {
     overflow-x: clip;
 }
 
+a {
+    cursor: pointer;
+}
+
 .text-gradient {
     background: linear-gradient(135deg, #008f4a 0%, #00bf63 100%);
     -webkit-background-clip: text;
@@ -155,6 +159,13 @@ body {
     align-items: center;
     justify-content: center;
     perspective: 1500px;
+}
+
+@media (max-width: 1023px) {
+    .collage-container {
+        height: 350px;
+        transform: scale(0.85);
+    }
 }
 
 .elementor-absolute {
@@ -607,5 +618,13 @@ h2 {
 .content-image {
     border-radius: 1.5rem;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
     

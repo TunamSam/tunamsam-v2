@@ -9,7 +9,7 @@ export function TrustedBy() {
                   <p className="text-gray-500 font-sans mb-10">{t('trusted_by')}</p>
       
                   <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-10 md:gap-x-16 lg:gap-x-20">
-                      <img src="/assets/logo/nasi-goreng-mbak-win.png" alt="Client 1" style={{ width: '110px', height: 'auto' }}
+                      <img src="/assets/logo/nasi-goreng-mbak-win.webp" alt="Client 1" style={{ width: '110px', height: 'auto' }}
                           className="grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer" />
                   </div>
               </div>

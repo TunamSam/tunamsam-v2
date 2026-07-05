@@ -1,25 +1,26 @@
 import { useEffect, useRef, useState } from 'react';
+import { useI18n } from '../context/I18nContext';
 
 const TOP_STRIP_IMAGES = [
-  '/assets/products/landing-page/1.png',
-  '/assets/products/landing-page/2.png',
-  '/assets/products/company-profile/1.png',
-  '/assets/products/company-profile/2.png',
-  '/assets/products/toko-online/1.png',
-  '/assets/products/custom-website/1.png',
-  '/assets/products/landing-page/3.png',
-  '/assets/products/company-profile/3.png',
+  '/assets/products/landing-page/1.webp',
+  '/assets/products/landing-page/2.webp',
+  '/assets/products/company-profile/1.webp',
+  '/assets/products/company-profile/2.webp',
+  '/assets/products/toko-online/1.webp',
+  '/assets/products/custom-website/1.webp',
+  '/assets/products/landing-page/3.webp',
+  '/assets/products/company-profile/3.webp',
 ];
 
 const BOTTOM_STRIP_IMAGES = [
-  '/assets/products/toko-online/2.png',
-  '/assets/products/custom-website/2.png',
-  '/assets/products/landing-page/4.png',
-  '/assets/products/company-profile/4.png',
-  '/assets/products/toko-online/3.png',
-  '/assets/products/custom-website/3.png',
-  '/assets/products/landing-page/2.png',
-  '/assets/products/toko-online/4.png',
+  '/assets/products/toko-online/2.webp',
+  '/assets/products/custom-website/2.webp',
+  '/assets/products/landing-page/4.webp',
+  '/assets/products/company-profile/4.webp',
+  '/assets/products/toko-online/3.webp',
+  '/assets/products/custom-website/3.webp',
+  '/assets/products/landing-page/2.webp',
+  '/assets/products/toko-online/4.webp',
 ];
 
 function lerp(start: number, end: number, t: number) {
@@ -46,6 +47,7 @@ function ImageStrip({ images, className = '' }: { images: string[]; className?: 
 }
 
 export function SuccessCtaSection() {
+  const { t } = useI18n();
   const sectionRef = useRef<HTMLElement>(null);
   const [progress, setProgress] = useState(0);
 
@@ -97,18 +99,17 @@ export function SuccessCtaSection() {
             }}
           >
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading text-white leading-tight max-w-4xl mb-6">
-              Raih Kesuksesan dengan Website Berkelas
+              {t('cta_title')}
             </h2>
             <p className="text-white/70 text-sm md:text-base lg:text-lg leading-relaxed max-w-2xl mb-10 font-sans">
-              Website yang dirancang dengan hati, dikembangkan dengan keahlian, dan dioptimalkan untuk pengalaman
-              pengguna yang luar biasa
+              {t('cta_desc')}
             </p>
             <a
               href="https://wa.me/+6285655639206"
               className="inline-flex items-center gap-3 bg-white text-gray-900 px-8 py-3.5 rounded-full text-sm md:text-base font-bold hover:bg-gray-100 transition-colors shadow-xl"
             >
               <i className="fa-brands fa-whatsapp text-xl text-brand" />
-              Buat website sekarang
+              {t('cta_btn')}
             </a>
           </div>
 

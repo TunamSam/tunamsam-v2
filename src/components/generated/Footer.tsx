@@ -10,7 +10,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
             <div className="relative h-12 flex items-center mb-4">
-              <img src="/assets/logo/tunamsam.png" alt="TunamSam Logo" className="absolute -top-12 -left-4 h-36 w-auto object-contain max-w-none" />
+              <img src="/assets/logo/tunamsam.webp" alt="TunamSam Logo" className="absolute -top-12 -left-4 h-36 w-auto object-contain max-w-none" />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed font-sans">{t('footer_about')}</p>
             <div className="flex items-center space-x-4">
