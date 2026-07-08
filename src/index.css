@@ -60,6 +60,13 @@ a {
     height: 300px;
 }
 
+@media (max-width: 768px) {
+    .wave-container svg {
+        width: 400%;
+        height: 200px;
+    }
+}
+
 /* Wave Animation - Perfectly Seamless Flow */
 .wave-path-1 {
     animation: wave-flow 4s linear infinite;
@@ -128,7 +135,7 @@ a {
 .marquee-content {
     display: inline-flex;
     animation: marquee-scroll 40s linear infinite;
-    gap: 4rem;
+    gap: 0;
     align-items: center;
 }
 
@@ -147,7 +154,7 @@ a {
 }
 
 .animate-marquee-slow {
-    animation: marquee-scroll 60s linear infinite !important;
+    animation: marquee-scroll 10s linear infinite !important;
 }
 
 /* TunamSam Contextual Collage Styling - Ultra Smooth & Lazy */
@@ -204,12 +211,32 @@ a {
     transition-delay: 0.1s;
 }
 
+@media (max-width: 768px) {
+    .collage-v1 .img-1 {
+        width: 40%;
+        top: -10%;
+        left: 0;
+        z-index: 1;
+        transition-delay: 0.1s;
+    }
+}
+
 .collage-v1 .img-2 {
     width: 45%;
     top: 5%;
     right: 0;
     z-index: 2;
     transition-delay: 0s;
+}
+
+@media (max-width: 768px) {
+    .collage-v1 .img-2 {
+        width: 50%;
+        top: -25%;
+        right: 5%;
+        z-index: 2;
+        transition-delay: 0s;
+    }
 }
 
 .collage-v1 .img-3 {
@@ -220,6 +247,16 @@ a {
     transition-delay: 0.05s;
 }
 
+@media (max-width: 768px) {
+    .collage-v1 .img-3 {
+        width: 80%;
+        top: 30%;
+        left: 8%;
+        z-index: 5;
+        transition-delay: 0.05s;
+    }
+}
+
 .collage-v1 .img-4 {
     width: 40%;
     bottom: 5%;
@@ -228,12 +265,32 @@ a {
     transition-delay: 0.15s;
 }
 
+@media (max-width: 768px) {
+    .collage-v1 .img-4 {
+        width: 50%;
+        bottom: -20%;
+        right: -10%;
+        z-index: 4;
+        transition-delay: 0.15s;
+    }
+}
+
 .collage-v1 .img-5 {
     width: 38%;
     bottom: 0;
     left: -8%;
     z-index: 3;
     transition-delay: 0.2s;
+}
+
+@media (max-width: 768px) {
+    .collage-v1 .img-5 {
+        width: 50%;
+        bottom: -15%;
+        left: 2%;
+        z-index: 3;
+        transition-delay: 0.2s;
+    }
 }
 
 .collage-v1:hover .img-1 {
@@ -264,11 +321,29 @@ a {
     z-index: 2;
 }
 
+@media (max-width: 768px) {
+    .collage-v2 .img-1 {
+        width: 50%;
+        top: 10%;
+        left: 0%;
+        z-index: 2;
+    }
+}
+
 .collage-v2 .img-2 {
     width: 40%;
     bottom: 10%;
     left: 10%;
     z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .collage-v2 .img-2 {
+        width: 60%;
+        bottom: 10%;
+        left: -10%;
+        z-index: 1;
+    }
 }
 
 .collage-v2 .img-3 {
@@ -278,6 +353,15 @@ a {
     z-index: 5;
 }
 
+@media (max-width: 768px) {
+    .collage-v2 .img-3 {
+        width: 65%;
+        top: 20%;
+        right: 5%;
+        z-index: 5;
+    }
+}
+
 .collage-v2 .img-4 {
     width: 30%;
     top: -5%;
@@ -285,11 +369,29 @@ a {
     z-index: 3;
 }
 
+@media (max-width: 768px) {
+    .collage-v2 .img-4 {
+        width: 40%;
+        top: -5%;
+        right: 20%;
+        z-index: 3;
+    }
+}
+
 .collage-v2 .img-5 {
-    width: 35%;
+    width: 55%;
     bottom: -5%;
     right: 0%;
     z-index: 4;
+}
+
+@media (max-width: 768px) {
+    .collage-v2 .img-5 {
+        width: 65%;
+        bottom: -2%;
+        right: -14%;
+        z-index: 4;
+    }
 }
 
 .collage-v2:hover .img-1 {
@@ -555,6 +657,10 @@ h2 {
         margin: 2rem 0;
     }
 
+    .laptop-mockup-container img {
+        transform: scale(1.2);
+    }
+
     .criteria-card-reveal {
         position: relative;
         opacity: 1;
@@ -587,12 +693,6 @@ h2 {
     box-shadow: 0 15px 30px rgba(2, 105, 55, 0.2);
 }
 
-/* Scroll Reveal Animations */
-.reveal-on-scroll {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
 
 .reveal-visible {
     opacity: 1 !important;
@@ -623,8 +723,17 @@ h2 {
 .hide-scrollbar::-webkit-scrollbar {
     display: none;
 }
+
 .hide-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-    
+
+e-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

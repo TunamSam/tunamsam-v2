@@ -97,24 +97,28 @@ export function Process() {
 
   return (
     <section ref={sectionRef} id="process" className="bg-[#0a0a0a] relative z-10">
-      <div ref={headerRef} id="process-header" className="sticky top-0 z-50 bg-[#0a0a0a] pt-16 pb-6 px-6">
-        <div className="max-w-8xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-24 mb-10">
-            <h2 className="text-3xl lg:text-5xl font-heading text-white lg:w-1/2 leading-tight">
-              {t('proc_title')}
-            </h2>
-            <p className="text-gray-400 text-md lg:text-lg leading-relaxed lg:w-1/2">
-              {t('proc_desc')}
-            </p>
-          </div>
+      {/* Title & description — not sticky, scrolls away normally */}
+      <div className="max-w-8xl mx-auto px-6 pt-16 pb-10">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-24">
+          <h2 className="text-3xl lg:text-5xl font-heading text-white lg:w-1/2 leading-tight">
+            {t('proc_title')}
+          </h2>
+          <p className="text-gray-400 text-sm lg:text-lg leading-relaxed lg:w-1/2">
+            {t('proc_desc')}
+          </p>
+        </div>
+      </div>
 
-          <div className="flex items-center w-full overflow-x-auto hide-scrollbar pb-4">
-            <div className="flex items-center gap-0 min-w-[600px] lg:min-w-0 w-full">
+      {/* Sticky: only the dots timeline */}
+      <div ref={headerRef} id="process-header" className="sticky top-0 z-50 bg-[#0a0a0a] py-4 px-6">
+        <div className="max-w-8xl mx-auto">
+          <div className="flex items-center w-full">
+            <div className="flex items-center gap-0 w-full">
               {STEPS.map((step, index) => (
                 <div key={step.step} className={`flex items-center${index < STEPS.length - 1 ? ' flex-1' : ''}`}>
                   <div
                     data-step={step.step}
-                    className="process-dot w-14 h-14 rounded-full border-2 text-xl font-bold flex items-center justify-center flex-shrink-0 transition-all duration-300"
+                    className="process-dot w-8 h-8 lg:w-14 lg:h-14 rounded-full border-2 text-sm lg:text-xl font-bold flex items-center justify-center flex-shrink-0 transition-all duration-300"
                     style={{
                       borderColor: step.step <= activeStep ? 'white' : '#4b5563',
                       color: step.step === activeStep ? '#0a0a0a' : step.step < activeStep ? 'black' : '#6b7280',
@@ -127,7 +131,7 @@ export function Process() {
                   {index < STEPS.length - 1 && (
                     <div
                       data-step={step.step}
-                      className="process-line h-[4px] flex-1 transition-all duration-500"
+                      className="process-line h-[3px] lg:h-[4px] flex-1 transition-all duration-500"
                       style={{ backgroundColor: step.step < activeStep ? 'white' : '#374151' }}
                     />
                   )}

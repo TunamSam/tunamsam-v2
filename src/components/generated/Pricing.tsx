@@ -59,22 +59,32 @@ export function Pricing() {
                             <div
                                 className="lg:col-span-2 bg-white rounded-[2rem] border-2 border-gray-300 p-6 flex items-center overflow-hidden relative marquee-container">
                                 <div className="flex gap-8 marquee-content animate-marquee-slow whitespace-nowrap">
-                                    <div className="flex gap-8 items-center">
-                                        <div
-                                            className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                    <div className="flex gap-8 items-center flex-shrink-0 pr-8">
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
                                             <img src="/assets/products/landing-page/1.webp" alt="Web 1" className="w-full h-auto" />
                                         </div>
-                                        <div
-                                            className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
                                             <img src="/assets/products/landing-page/2.webp" alt="Web 2" className="w-full h-auto" />
                                         </div>
-                                        <div
-                                            className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
                                             <img src="/assets/products/landing-page/3.webp" alt="Web 3" className="w-full h-auto" />
                                         </div>
-                                        <div
-                                            className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
                                             <img src="/assets/products/landing-page/4.webp" alt="Web 4" className="w-full h-auto" />
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-8 items-center flex-shrink-0 pr-8" aria-hidden="true">
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/landing-page/1.webp" alt="" className="w-full h-auto" />
+                                        </div>
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/landing-page/2.webp" alt="" className="w-full h-auto" />
+                                        </div>
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/landing-page/3.webp" alt="" className="w-full h-auto" />
+                                        </div>
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/landing-page/4.webp" alt="" className="w-full h-auto" />
                                         </div>
                                     </div>
                                 </div>
@@ -167,26 +177,32 @@ export function Pricing() {
                             <div
                                 className="lg:col-span-2 bg-white rounded-[2rem] border-2 border-gray-300 p-6 flex items-center overflow-hidden relative marquee-container">
                                 <div className="flex gap-8 marquee-content animate-marquee-slow whitespace-nowrap">
-                                    <div className="flex gap-8 items-center">
-                                        <div
-                                            className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/company-profile/1.webp" alt="Web CP 1"
-                                                className="w-full h-auto" />
+                                    <div className="flex gap-8 items-center flex-shrink-0 pr-8">
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/company-profile/1.webp" alt="Web CP 1" className="w-full h-auto" />
                                         </div>
-                                        <div
-                                            className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/company-profile/2.webp" alt="Web CP 2"
-                                                className="w-full h-auto" />
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/company-profile/2.webp" alt="Web CP 2" className="w-full h-auto" />
                                         </div>
-                                        <div
-                                            className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/company-profile/3.webp" alt="Web CP 3"
-                                                className="w-full h-auto" />
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/company-profile/3.webp" alt="Web CP 3" className="w-full h-auto" />
                                         </div>
-                                        <div
-                                            className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/company-profile/4.webp" alt="Web CP 4"
-                                                className="w-full h-auto" />
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/company-profile/4.webp" alt="Web CP 4" className="w-full h-auto" />
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-8 items-center flex-shrink-0 pr-8" aria-hidden="true">
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/company-profile/1.webp" alt="" className="w-full h-auto" />
+                                        </div>
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/company-profile/2.webp" alt="" className="w-full h-auto" />
+                                        </div>
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/company-profile/3.webp" alt="" className="w-full h-auto" />
+                                        </div>
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/company-profile/4.webp" alt="" className="w-full h-auto" />
                                         </div>
                                     </div>
                                 </div>
@@ -279,22 +295,32 @@ export function Pricing() {
                             <div
                                 className="lg:col-span-2 bg-white rounded-[2rem] border-2 border-gray-300 p-6 flex items-center overflow-hidden relative marquee-container">
                                 <div className="flex gap-8 marquee-content animate-marquee-slow whitespace-nowrap">
-                                    <div className="flex gap-8 items-center">
-                                        <div
-                                            className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                    <div className="flex gap-8 items-center flex-shrink-0 pr-8">
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
                                             <img src="/assets/products/toko-online/1.webp" alt="Web TO 1" className="w-full h-auto" />
                                         </div>
-                                        <div
-                                            className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
                                             <img src="/assets/products/toko-online/2.webp" alt="Web TO 2" className="w-full h-auto" />
                                         </div>
-                                        <div
-                                            className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
                                             <img src="/assets/products/toko-online/3.webp" alt="Web TO 3" className="w-full h-auto" />
                                         </div>
-                                        <div
-                                            className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
                                             <img src="/assets/products/toko-online/4.webp" alt="Web TO 4" className="w-full h-auto" />
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-8 items-center flex-shrink-0 pr-8" aria-hidden="true">
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/toko-online/1.webp" alt="" className="w-full h-auto" />
+                                        </div>
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/toko-online/2.webp" alt="" className="w-full h-auto" />
+                                        </div>
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/toko-online/3.webp" alt="" className="w-full h-auto" />
+                                        </div>
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/toko-online/4.webp" alt="" className="w-full h-auto" />
                                         </div>
                                     </div>
                                 </div>
@@ -347,7 +373,7 @@ export function Pricing() {
                                     </div>
                                 </div>
                                 <a href="https://wa.me/+6285655639206"
-                                    className="inline-block bg-black text-white px-10 py-4 rounded-full text-lg hover:bg-gray-800 transition-all shadow-xl shadow-black/10">
+                                    className="inline-block bg-black text-white px-10 py-4 rounded-full text-md md:text-lg hover:bg-gray-800 transition-all shadow-xl shadow-black/10">
                                     {t('price_btn_custom')}
                                 </a>
                             </div>
@@ -371,26 +397,32 @@ export function Pricing() {
                             <div
                                 className="lg:col-span-2 bg-white rounded-[2rem] border-2 border-gray-300 p-6 flex items-center overflow-hidden relative marquee-container">
                                 <div className="flex gap-8 marquee-content animate-marquee-slow whitespace-nowrap">
-                                    <div className="flex gap-8 items-center">
-                                        <div
-                                            className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/custom-website/1.webp" alt="Custom Web 1"
-                                                className="w-full h-auto" />
+                                    <div className="flex gap-8 items-center flex-shrink-0 pr-8">
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/custom-website/1.webp" alt="Custom Web 1" className="w-full h-auto" />
                                         </div>
-                                        <div
-                                            className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/custom-website/2.webp" alt="Custom Web 2"
-                                                className="w-full h-auto" />
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/custom-website/2.webp" alt="Custom Web 2" className="w-full h-auto" />
                                         </div>
-                                        <div
-                                            className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/custom-website/3.webp" alt="Custom Web 3"
-                                                className="w-full h-auto" />
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/custom-website/3.webp" alt="Custom Web 3" className="w-full h-auto" />
                                         </div>
-                                        <div
-                                            className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/custom-website/4.webp" alt="Custom Web 4"
-                                                className="w-full h-auto" />
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/custom-website/4.webp" alt="Custom Web 4" className="w-full h-auto" />
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-8 items-center flex-shrink-0 pr-8" aria-hidden="true">
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/custom-website/1.webp" alt="" className="w-full h-auto" />
+                                        </div>
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/custom-website/2.webp" alt="" className="w-full h-auto" />
+                                        </div>
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/custom-website/3.webp" alt="" className="w-full h-auto" />
+                                        </div>
+                                        <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
+                                            <img src="/assets/products/custom-website/4.webp" alt="" className="w-full h-auto" />
                                         </div>
                                     </div>
                                 </div>

@@ -10,6 +10,7 @@ export type TranslationKey =
   | 'nav_design'
   | 'nav_pricing'
   | 'nav_about'
+  | 'nav_testimonials'
   | 'nav_blog'
   | 'trusted_by'
   | 'p1_title'
@@ -183,6 +184,7 @@ export const translations: Record<Lang, Partial<Record<TranslationKey, string>>>
     nav_design: 'Pilihan Desain',
     nav_pricing: 'Harga Website',
     nav_about: 'Tentang Kami',
+    nav_testimonials: 'Testimoni',
     nav_blog: 'Blog',
     trusted_by: 'Telah dipercaya oleh:',
     p1_title: 'Website Tanpa Strategi Akan Sulit Berkembang',
@@ -375,6 +377,7 @@ export const translations: Record<Lang, Partial<Record<TranslationKey, string>>>
     nav_design: 'Design Choices',
     nav_pricing: 'Website Pricing',
     nav_about: 'About Us',
+    nav_testimonials: 'Testimonials',
     nav_blog: 'Blog',
     trusted_by: 'Trusted by:',
     p1_title: 'A Website Without Strategy Will Struggle to Grow',

@@ -44,11 +44,15 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-heading font-bold mb-6 uppercase tracking-wider">{t('profile')}</h4>
-            <ul className="space-y-4 text-sm text-gray-400 font-sans">
-              <li className="hover:text-brand-light cursor-pointer transition-colors">Tentang Kami</li>
-              <li className="hover:text-brand-light cursor-pointer transition-colors">{t('portfolio')}</li>
-              <li className="hover:text-brand-light cursor-pointer transition-colors">Karir</li>
+            <h4 className="text-white font-heading font-bold mb-6 uppercase tracking-wider">Konten</h4>
+            <ul className="space-y-4 text-sm text-gray-400 font-sans flex flex-col">
+              <li><a href="#" className="hover:text-brand-light transition-colors">Home</a></li>
+              <li><a href="#pilihan-desain" className="hover:text-brand-light transition-colors">Pilihan Desain</a></li>
+              <li><a href="#pricing" className="hover:text-brand-light transition-colors">Harga Website</a></li>
+              <li><a href="#about" className="hover:text-brand-light transition-colors">Tentang Kami</a></li>
+              <li><a href="#testimonials" className="hover:text-brand-light transition-colors">Testimoni</a></li>
+              <li><a href="#contact" className="hover:text-brand-light transition-colors">Kontak</a></li>
+              <li><a href="/blog" className="hover:text-brand-light transition-colors">Blog</a></li>
             </ul>
           </div>
 

@@ -19,9 +19,9 @@ export function Hero() {
 
   return (
     <section id="home" className="relative bg-brand pb-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-20">
+      <div className="max-w-7xl mx-auto px-6 mt-7 md:mt-7 md:px-12 relative z-20">
         <div className="relative">
-          <div className="slider-container aspect-video md:aspect-[16/7] rounded-[2.5rem] overflow-hidden shadow-2xl bg-black">
+          <div className="slider-container aspect-[21/9] md:aspect-[16/7] rounded-none md:rounded-[2.5rem] overflow-hidden shadow-2xl bg-black">
             {SLIDE_IMAGES.map((src, index) => (
               <div key={src} className={`slide${index === currentSlide ? ' active' : ''}`}>
                 <img src={src} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
@@ -29,15 +29,16 @@ export function Hero() {
             ))}
           </div>
 
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-30">
+          <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-30">
             {SLIDE_IMAGES.map((_, index) => (
               <button
                 key={index}
                 type="button"
                 aria-label={`Go to slide ${index + 1}`}
                 onClick={() => goToSlide(index)}
-                className={`slide-dot cursor-pointer transition-all duration-300 relative overflow-hidden rounded-full bg-[#d4d4d4] ${index === currentSlide ? 'w-12 h-3' : 'w-3 h-3'
-                  }`}
+                className={`slide-dot cursor-pointer transition-all duration-300 relative overflow-hidden rounded-full bg-[#d4d4d4] ${
+                  index === currentSlide ? 'w-8 h-2 md:w-12 md:h-3' : 'w-2 h-2 md:w-3 md:h-3'
+                }`}
               >
                 {index === currentSlide && (
                   <div className="absolute top-0 left-0 h-full bg-brand animate-slider-progress" />
