@@ -20,20 +20,14 @@ Single-page Vite + React 19 + TypeScript landing site for a web studio. No route
 
 ### Component ownership
 
-- **Hand-written** (in `src/components/`): `Header`, `Hero`, `Criteria`, `Process`, `SuccessCtaSection`, `FaqSection`, `TestimonialCarousel`, `Icon`, `SEOHead`
+- **Hand-written** (in `src/components/`): `Header`, `Hero`, `Criteria`, `Process`, `SuccessCtaSection`, `FaqSection`, `TestimonialCarousel`, `Icon`
 - **Generated** (in `src/components/generated/`): `TrustedBy`, `ProblemSolution`, `Pricing`, `TechnicalSupportBanner`, `WhyUs`, `DesignChoices`, `AdditionalServices`, `Footer`
 
 ### SEO metadata
 
-Metadata is managed dynamically via `react-helmet-async` through the `SEOHead` component in `src/components/SEOHead.tsx`. It handles:
-- `<title>` + `<meta name="description">` (i18n-aware, follows active language)
-- `<html lang>` dynamic update (`id`/`en`)
-- Open Graph + Twitter Card tags
-- Canonical URL
-- `Organization` + `WebSite` JSON-LD structured data
-- Apple Touch Icon
+All SEO metadata is static in `index.html` — title, description, canonical, Open Graph, Twitter Card, Organization JSON-LD, WebSite JSON-LD, FAQPage JSON-LD, Google Analytics. No JS needed for crawlers.
 
-`HelmetProvider` wraps the entire app in `App.tsx`. When adding new pages, reuse `SEOHead` or create a similar wrapper.
+`<html lang>` updates dynamically via `useEffect` in `App.tsx` when the user switches language (ID ↔ EN).
 
 ### Generated component workflow
 

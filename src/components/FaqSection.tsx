@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { useI18n } from '../context/I18nContext';
@@ -21,19 +20,6 @@ export function FaqSection() {
     { q: 'faq_10_q' as const, a: 'faq_10_a' as const },
   ];
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqKeys.map(({ q, a }) => ({
-      '@type': 'Question',
-      name: t(q),
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: t(a),
-      },
-    })),
-  };
-
   const faqs = faqKeys.map(({ q, a }) => ({
     question: t(q),
     answer: t(a),
@@ -45,11 +31,6 @@ export function FaqSection() {
 
   return (
     <section className="py-24 bg-white relative z-10">
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
-      </Helmet>
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-4xl lg:text-5xl font-heading text-gray-900 text-center mb-16">
           {t('faq_title')}
