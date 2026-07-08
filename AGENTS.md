@@ -72,7 +72,7 @@ When adding a new translation key:
 
 - Images in `public/assets/` (logos, screenshots, client logos)
 - Referenced as `/assets/...` in components
-- Favicon: `public/assets/logo/tunamsam.webp`
+- Favicon: `/favicon-32x32.png` (all PWA assets live at `/public/` root)
 
 ## SEO Standards
 
