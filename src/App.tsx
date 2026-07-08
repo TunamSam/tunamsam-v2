@@ -1,11 +1,11 @@
-import { HelmetProvider } from 'react-helmet-async';
+import { useEffect } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Criteria } from './components/Criteria';
 import { Process } from './components/Process';
+import { TestimonialCarousel } from './components/TestimonialCarousel';
 import { useRevealOnScroll } from './hooks/useRevealOnScroll';
-import { I18nProvider } from './context/I18nContext';
-import { SEOHead } from './components/SEOHead';
+import { I18nProvider, useI18n } from './context/I18nContext';
 import { TrustedBy } from './components/generated/TrustedBy';
 import { ProblemSolution } from './components/generated/ProblemSolution';
 import { Pricing } from './components/generated/Pricing';
@@ -18,11 +18,15 @@ import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/generated/Footer';
 
 function AppContent() {
+  const { lang } = useI18n();
   useRevealOnScroll();
+
+  useEffect(() => {
+    document.documentElement.lang = lang.toLowerCase();
+  }, [lang]);
 
   return (
     <>
-      <SEOHead />
       <Header />
       <main className="font-sans antialiased">
         <Hero />
@@ -37,6 +41,7 @@ function AppContent() {
         <AdditionalServices />
         <SuccessCtaSection />
         <FaqSection />
+        <TestimonialCarousel />
       </main>
       <Footer />
     </>
@@ -45,10 +50,8 @@ function AppContent() {
 
 export default function App() {
   return (
-    <HelmetProvider>
-      <I18nProvider>
-        <AppContent />
-      </I18nProvider>
-    </HelmetProvider>
+    <I18nProvider>
+      <AppContent />
+    </I18nProvider>
   );
 }
