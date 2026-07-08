@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { useI18n } from '../context/I18nContext';
@@ -7,18 +8,36 @@ export function FaqSection() {
   const { t } = useI18n();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const faqs = [
-    { question: t('faq_1_q'), answer: t('faq_1_a') },
-    { question: t('faq_2_q'), answer: t('faq_2_a') },
-    { question: t('faq_3_q'), answer: t('faq_3_a') },
-    { question: t('faq_4_q'), answer: t('faq_4_a') },
-    { question: t('faq_5_q'), answer: t('faq_5_a') },
-    { question: t('faq_6_q'), answer: t('faq_6_a') },
-    { question: t('faq_7_q'), answer: t('faq_7_a') },
-    { question: t('faq_8_q'), answer: t('faq_8_a') },
-    { question: t('faq_9_q'), answer: t('faq_9_a') },
-    { question: t('faq_10_q'), answer: t('faq_10_a') },
+  const faqKeys = [
+    { q: 'faq_1_q' as const, a: 'faq_1_a' as const },
+    { q: 'faq_2_q' as const, a: 'faq_2_a' as const },
+    { q: 'faq_3_q' as const, a: 'faq_3_a' as const },
+    { q: 'faq_4_q' as const, a: 'faq_4_a' as const },
+    { q: 'faq_5_q' as const, a: 'faq_5_a' as const },
+    { q: 'faq_6_q' as const, a: 'faq_6_a' as const },
+    { q: 'faq_7_q' as const, a: 'faq_7_a' as const },
+    { q: 'faq_8_q' as const, a: 'faq_8_a' as const },
+    { q: 'faq_9_q' as const, a: 'faq_9_a' as const },
+    { q: 'faq_10_q' as const, a: 'faq_10_a' as const },
   ];
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqKeys.map(({ q, a }) => ({
+      '@type': 'Question',
+      name: t(q),
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: t(a),
+      },
+    })),
+  };
+
+  const faqs = faqKeys.map(({ q, a }) => ({
+    question: t(q),
+    answer: t(a),
+  }));
 
   const toggleFaq = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -26,6 +45,11 @@ export function FaqSection() {
 
   return (
     <section className="py-24 bg-white relative z-10">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-4xl lg:text-5xl font-heading text-gray-900 text-center mb-16">
           {t('faq_title')}
@@ -39,7 +63,7 @@ export function FaqSection() {
             >
               <button
                 onClick={() => toggleFaq(index)}
-                className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
+                className="w-full flex items-center justify-between p-6 text-left focus:outline-2 focus:outline-offset-2 focus:outline-brand rounded-xl"
               >
                 <span className="text-2xl font-heading font-sans pr-8">
                   {faq.question}

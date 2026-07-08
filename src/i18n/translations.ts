@@ -1,6 +1,8 @@
 export type Lang = 'ID' | 'EN';
 
 export type TranslationKey =
+  | 'seo_title'
+  | 'seo_description'
   | 'home'
   | 'services'
   | 'portfolio'
@@ -171,10 +173,38 @@ export type TranslationKey =
   | 'footer_quick'
   | 'footer_connect'
   | 'footer_rights'
-  | 'footer_about';
+  | 'footer_about'
+  | 'footer_content'
+  | 'price_landing_page'
+  | 'price_company_profile'
+  | 'price_online_store'
+  | 'price_custom_website'
+  | 'hero_alt_1'
+  | 'hero_alt_2'
+  | 'hero_alt_3'
+  | 'hero_alt_4'
+  | 'pricing_lp_alt_1'
+  | 'pricing_lp_alt_2'
+  | 'pricing_lp_alt_3'
+  | 'pricing_lp_alt_4'
+  | 'pricing_cp_alt_1'
+  | 'pricing_cp_alt_2'
+  | 'pricing_cp_alt_3'
+  | 'pricing_cp_alt_4'
+  | 'pricing_to_alt_1'
+  | 'pricing_to_alt_2'
+  | 'pricing_to_alt_3'
+  | 'pricing_to_alt_4'
+  | 'pricing_cw_alt_1'
+  | 'pricing_cw_alt_2'
+  | 'pricing_cw_alt_3'
+  | 'pricing_cw_alt_4';
 
 export const translations: Record<Lang, Partial<Record<TranslationKey, string>>> = {
   ID: {
+    seo_title: 'TunamSam — Jasa Pembuatan Website & Software House Indonesia',
+    seo_description:
+      'TunamSam adalah Software House Indonesia yang menyediakan jasa pembuatan website, aplikasi web, dashboard, UI/UX design, dan solusi digital untuk bisnis Anda.',
     home: 'Home',
     services: 'Layanan',
     portfolio: 'Portfolio',
@@ -366,8 +396,36 @@ export const translations: Record<Lang, Partial<Record<TranslationKey, string>>>
     footer_rights: 'Hak Cipta Dilindungi.',
     footer_about:
       'Kami membantu bisnis membangun website modern yang cepat, profesional, dan dirancang untuk meningkatkan kredibilitas serta pertumbuhan bisnis di era digital.',
+    footer_content: 'Konten',
+    price_landing_page: 'Landing Page',
+    price_company_profile: 'Company Profile',
+    price_online_store: 'Online Store',
+    price_custom_website: 'Custom Website',
+    hero_alt_1: 'Portfolio website — tampilan landing page modern',
+    hero_alt_2: 'Portfolio website — tampilan company profile profesional',
+    hero_alt_3: 'Portfolio website — tampilan toko online',
+    hero_alt_4: 'Portfolio website — tampilan custom web application',
+    pricing_lp_alt_1: 'Contoh desain landing page — hero section',
+    pricing_lp_alt_2: 'Contoh desain landing page — fitur utama',
+    pricing_lp_alt_3: 'Contoh desain landing page — testimoni klien',
+    pricing_lp_alt_4: 'Contoh desain landing page — call to action',
+    pricing_cp_alt_1: 'Contoh desain company profile — halaman depan',
+    pricing_cp_alt_2: 'Contoh desain company profile — halaman tentang',
+    pricing_cp_alt_3: 'Contoh desain company profile — halaman layanan',
+    pricing_cp_alt_4: 'Contoh desain company profile — halaman kontak',
+    pricing_to_alt_1: 'Contoh desain toko online — halaman produk',
+    pricing_to_alt_2: 'Contoh desain toko online — detail produk',
+    pricing_to_alt_3: 'Contoh desain toko online — keranjang belanja',
+    pricing_to_alt_4: 'Contoh desain toko online — halaman checkout',
+    pricing_cw_alt_1: 'Contoh desain custom website — dashboard',
+    pricing_cw_alt_2: 'Contoh desain custom website — halaman data',
+    pricing_cw_alt_3: 'Contoh desain custom website — halaman laporan',
+    pricing_cw_alt_4: 'Contoh desain custom website — halaman pengaturan',
   },
   EN: {
+    seo_title: 'TunamSam — Website Development & Software House Indonesia',
+    seo_description:
+      'TunamSam is an Indonesian Software House providing website development, web applications, dashboards, UI/UX design, and digital solutions for your business.',
     home: 'Home',
     services: 'Services',
     portfolio: 'Portfolio',
@@ -552,6 +610,31 @@ export const translations: Record<Lang, Partial<Record<TranslationKey, string>>>
     faq_10_a: 'Of course. If our standard packages do not cover all your needs, we offer custom feature development designed specifically to fit your business workflow.',
     footer_about:
       'We help businesses build modern, fast, and professional websites designed to enhance credibility and drive business growth in the digital era.',
+    footer_content: 'Content',
+    price_landing_page: 'Landing Page',
+    price_company_profile: 'Company Profile',
+    price_online_store: 'Online Store',
+    price_custom_website: 'Custom Website',
+    hero_alt_1: 'Portfolio website — modern landing page design',
+    hero_alt_2: 'Portfolio website — professional company profile design',
+    hero_alt_3: 'Portfolio website — online store design',
+    hero_alt_4: 'Portfolio website — custom web application design',
+    pricing_lp_alt_1: 'Landing page design example — hero section',
+    pricing_lp_alt_2: 'Landing page design example — key features',
+    pricing_lp_alt_3: 'Landing page design example — client testimonials',
+    pricing_lp_alt_4: 'Landing page design example — call to action',
+    pricing_cp_alt_1: 'Company profile design example — homepage',
+    pricing_cp_alt_2: 'Company profile design example — about page',
+    pricing_cp_alt_3: 'Company profile design example — services page',
+    pricing_cp_alt_4: 'Company profile design example — contact page',
+    pricing_to_alt_1: 'Online store design example — product page',
+    pricing_to_alt_2: 'Online store design example — product detail',
+    pricing_to_alt_3: 'Online store design example — shopping cart',
+    pricing_to_alt_4: 'Online store design example — checkout page',
+    pricing_cw_alt_1: 'Custom website design example — dashboard',
+    pricing_cw_alt_2: 'Custom website design example — data page',
+    pricing_cw_alt_3: 'Custom website design example — reports page',
+    pricing_cw_alt_4: 'Custom website design example — settings page',
     footer_tag: 'Building a brighter digital future, one website at a time.',
     footer_quick: 'Quick Links',
     footer_connect: 'Connect',

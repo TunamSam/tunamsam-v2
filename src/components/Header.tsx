@@ -62,18 +62,21 @@ export function Header() {
           <div className="hidden lg:flex items-center space-x-2">
             <a
               href="https://www.instagram.com/tunamsam/"
+              aria-label="Instagram"
               className="w-10 h-10 bg-white text-brand rounded-full flex items-center justify-center hover:bg-brand-light hover:text-white transition-all shadow-md"
             >
               <i className="fa-brands fa-instagram text-xl" />
             </a>
             <a
               href="https://www.tiktok.com/@tunamsam"
+              aria-label="TikTok"
               className="w-10 h-10 bg-white text-brand rounded-full flex items-center justify-center hover:bg-brand-light hover:text-white transition-all shadow-md"
             >
               <i className="fa-brands fa-tiktok text-lg" />
             </a>
             <a
               href="https://www.linkedin.com/company/tunamsam"
+              aria-label="LinkedIn"
               className="w-10 h-10 bg-white text-brand rounded-full flex items-center justify-center hover:bg-brand-light hover:text-white transition-all shadow-md"
             >
               <i className="fa-brands fa-linkedin-in text-xl" />
@@ -83,6 +86,7 @@ export function Header() {
           <button
             className="lg:hidden text-white p-2 z-50"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
           </button>
@@ -164,13 +168,13 @@ export function Header() {
             </nav>
 
             <div className="flex items-center space-x-4 pt-4 border-t border-white/20">
-              <a href="https://www.instagram.com/tunamsam/" className="w-10 h-10 bg-white text-brand rounded-full flex items-center justify-center hover:bg-brand-light hover:text-white transition-all shadow-md">
+              <a href="https://www.instagram.com/tunamsam/" aria-label="Instagram" className="w-10 h-10 bg-white text-brand rounded-full flex items-center justify-center hover:bg-brand-light hover:text-white transition-all shadow-md">
                 <i className="fa-brands fa-instagram text-xl" />
               </a>
-              <a href="https://www.tiktok.com/@tunamsam" className="w-10 h-10 bg-white text-brand rounded-full flex items-center justify-center hover:bg-brand-light hover:text-white transition-all shadow-md">
+              <a href="https://www.tiktok.com/@tunamsam" aria-label="TikTok" className="w-10 h-10 bg-white text-brand rounded-full flex items-center justify-center hover:bg-brand-light hover:text-white transition-all shadow-md">
                 <i className="fa-brands fa-tiktok text-lg" />
               </a>
-              <a href="https://www.linkedin.com/company/tunamsam" className="w-10 h-10 bg-white text-brand rounded-full flex items-center justify-center hover:bg-brand-light hover:text-white transition-all shadow-md">
+              <a href="https://www.linkedin.com/company/tunamsam" aria-label="LinkedIn" className="w-10 h-10 bg-white text-brand rounded-full flex items-center justify-center hover:bg-brand-light hover:text-white transition-all shadow-md">
                 <i className="fa-brands fa-linkedin-in text-xl" />
               </a>
             </div>
