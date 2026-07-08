@@ -20,7 +20,7 @@ export function Pricing() {
 
                             <div className="lg:w-1/3 space-y-8">
                                 <div>
-                                    <h3 className="text-5xl font-heading text-gray-900 mb-6">Landing Page</h3>
+                                    <h3 className="text-5xl font-heading text-gray-900 mb-6">{t('price_landing_page')}</h3>
                                     <div className="space-y-1">
                                         <p className="text-lg">{t('price_start_from')} <span className="line-through text-gray-400">Rp.
                                             2.750.000</span></p>
@@ -61,16 +61,16 @@ export function Pricing() {
                                 <div className="flex gap-8 marquee-content animate-marquee-slow whitespace-nowrap">
                                     <div className="flex gap-8 items-center flex-shrink-0 pr-8">
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/landing-page/1.webp" alt="Web 1" className="w-full h-auto" />
+                                            <img src="/assets/products/landing-page/1.webp" alt={t('pricing_lp_alt_1')} className="w-full h-auto" />
                                         </div>
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/landing-page/2.webp" alt="Web 2" className="w-full h-auto" />
+                                            <img src="/assets/products/landing-page/2.webp" alt={t('pricing_lp_alt_2')} className="w-full h-auto" />
                                         </div>
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/landing-page/3.webp" alt="Web 3" className="w-full h-auto" />
+                                            <img src="/assets/products/landing-page/3.webp" alt={t('pricing_lp_alt_3')} className="w-full h-auto" />
                                         </div>
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/landing-page/4.webp" alt="Web 4" className="w-full h-auto" />
+                                            <img src="/assets/products/landing-page/4.webp" alt={t('pricing_lp_alt_4')} className="w-full h-auto" />
                                         </div>
                                     </div>
                                     <div className="flex gap-8 items-center flex-shrink-0 pr-8" aria-hidden="true">
@@ -130,7 +130,7 @@ export function Pricing() {
                         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-12">
                             <div className="lg:w-1/3 space-y-8">
                                 <div>
-                                    <h3 className="text-5xl font-heading text-gray-900 mb-6">Company Profile</h3>
+                                    <h3 className="text-5xl font-heading text-gray-900 mb-6">{t('price_company_profile')}</h3>
                                     <div className="space-y-1">
                                         <p className="text-lg">{t('price_start_from')} <span className="line-through text-gray-400">Rp.
                                             2.900.000</span></p>
@@ -179,16 +179,16 @@ export function Pricing() {
                                 <div className="flex gap-8 marquee-content animate-marquee-slow whitespace-nowrap">
                                     <div className="flex gap-8 items-center flex-shrink-0 pr-8">
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/company-profile/1.webp" alt="Web CP 1" className="w-full h-auto" />
+                                            <img src="/assets/products/company-profile/1.webp" alt={t('pricing_cp_alt_1')} className="w-full h-auto" />
                                         </div>
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/company-profile/2.webp" alt="Web CP 2" className="w-full h-auto" />
+                                            <img src="/assets/products/company-profile/2.webp" alt={t('pricing_cp_alt_2')} className="w-full h-auto" />
                                         </div>
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/company-profile/3.webp" alt="Web CP 3" className="w-full h-auto" />
+                                            <img src="/assets/products/company-profile/3.webp" alt={t('pricing_cp_alt_3')} className="w-full h-auto" />
                                         </div>
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/company-profile/4.webp" alt="Web CP 4" className="w-full h-auto" />
+                                            <img src="/assets/products/company-profile/4.webp" alt={t('pricing_cp_alt_4')} className="w-full h-auto" />
                                         </div>
                                     </div>
                                     <div className="flex gap-8 items-center flex-shrink-0 pr-8" aria-hidden="true">
@@ -248,7 +248,7 @@ export function Pricing() {
                         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-12">
                             <div className="lg:w-1/3 space-y-8">
                                 <div>
-                                    <h3 className="text-5xl font-heading text-gray-900 mb-6">Online Store</h3>
+                                    <h3 className="text-5xl font-heading text-gray-900 mb-6">{t('price_online_store')}</h3>
                                     <div className="space-y-1">
                                         <p className="text-lg">{t('price_start_from')} <span className="line-through text-gray-400">Rp.
                                             4.500.000</span></p>
@@ -297,16 +297,16 @@ export function Pricing() {
                                 <div className="flex gap-8 marquee-content animate-marquee-slow whitespace-nowrap">
                                     <div className="flex gap-8 items-center flex-shrink-0 pr-8">
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/toko-online/1.webp" alt="Web TO 1" className="w-full h-auto" />
+                                            <img src="/assets/products/toko-online/1.webp" alt={t('pricing_to_alt_1')} className="w-full h-auto" />
                                         </div>
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/toko-online/2.webp" alt="Web TO 2" className="w-full h-auto" />
+                                            <img src="/assets/products/toko-online/2.webp" alt={t('pricing_to_alt_2')} className="w-full h-auto" />
                                         </div>
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/toko-online/3.webp" alt="Web TO 3" className="w-full h-auto" />
+                                            <img src="/assets/products/toko-online/3.webp" alt={t('pricing_to_alt_3')} className="w-full h-auto" />
                                         </div>
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/toko-online/4.webp" alt="Web TO 4" className="w-full h-auto" />
+                                            <img src="/assets/products/toko-online/4.webp" alt={t('pricing_to_alt_4')} className="w-full h-auto" />
                                         </div>
                                     </div>
                                     <div className="flex gap-8 items-center flex-shrink-0 pr-8" aria-hidden="true">
@@ -366,7 +366,7 @@ export function Pricing() {
                         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-12">
                             <div className="lg:w-1/3 space-y-8">
                                 <div>
-                                    <h3 className="text-5xl font-heading text-gray-900 mb-6">Custom website</h3>
+                                    <h3 className="text-5xl font-heading text-gray-900 mb-6">{t('price_custom_website')}</h3>
                                     <div className="space-y-1">
                                         <h4 className="text-4xl font-heading text-gray-900">{t('price_custom_price')}</h4>
                                         <p className="text-gray-400 text-sm italic">{t('price_custom_desc')}</p>
@@ -399,16 +399,16 @@ export function Pricing() {
                                 <div className="flex gap-8 marquee-content animate-marquee-slow whitespace-nowrap">
                                     <div className="flex gap-8 items-center flex-shrink-0 pr-8">
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/custom-website/1.webp" alt="Custom Web 1" className="w-full h-auto" />
+                                            <img src="/assets/products/custom-website/1.webp" alt={t('pricing_cw_alt_1')} className="w-full h-auto" />
                                         </div>
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/custom-website/2.webp" alt="Custom Web 2" className="w-full h-auto" />
+                                            <img src="/assets/products/custom-website/2.webp" alt={t('pricing_cw_alt_2')} className="w-full h-auto" />
                                         </div>
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/custom-website/3.webp" alt="Custom Web 3" className="w-full h-auto" />
+                                            <img src="/assets/products/custom-website/3.webp" alt={t('pricing_cw_alt_3')} className="w-full h-auto" />
                                         </div>
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products/custom-website/4.webp" alt="Custom Web 4" className="w-full h-auto" />
+                                            <img src="/assets/products/custom-website/4.webp" alt={t('pricing_cw_alt_4')} className="w-full h-auto" />
                                         </div>
                                     </div>
                                     <div className="flex gap-8 items-center flex-shrink-0 pr-8" aria-hidden="true">

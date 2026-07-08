@@ -1,9 +1,16 @@
 import { useCallback, useEffect, useState } from 'react';
+import { useI18n } from '../context/I18nContext';
 
-const SLIDE_IMAGES = ['/assets/1.webp', '/assets/2.webp', '/assets/3.webp', '/assets/4.webp'];
+const SLIDE_IMAGES = [
+  { src: '/assets/1.webp', altKey: 'hero_alt_1' as const },
+  { src: '/assets/2.webp', altKey: 'hero_alt_2' as const },
+  { src: '/assets/3.webp', altKey: 'hero_alt_3' as const },
+  { src: '/assets/4.webp', altKey: 'hero_alt_4' as const },
+];
 const INTERVAL_MS = 5000;
 
 export function Hero() {
+  const { t } = useI18n();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const goToSlide = useCallback((index: number) => {
@@ -20,11 +27,12 @@ export function Hero() {
   return (
     <section id="home" className="relative bg-brand pb-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mt-7 md:mt-7 md:px-12 relative z-20">
+        <h1 className="sr-only">{t('seo_title')}</h1>
         <div className="relative">
           <div className="slider-container aspect-[21/9] md:aspect-[16/7] rounded-none md:rounded-[2.5rem] overflow-hidden shadow-2xl bg-black">
-            {SLIDE_IMAGES.map((src, index) => (
+            {SLIDE_IMAGES.map(({ src, altKey }, index) => (
               <div key={src} className={`slide${index === currentSlide ? ' active' : ''}`}>
-                <img src={src} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
+                <img src={src} alt={t(altKey)} className="w-full h-full object-cover" />
               </div>
             ))}
           </div>

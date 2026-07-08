@@ -1,0 +1,16 @@
+{
+  "name": "TunamSam — Web Studio",
+  "short_name": "TunamSam",
+  "description": "Software House Indonesia specializing in website development, custom software, web applications, dashboards, UI/UX, and digital solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#026937",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/assets/logo/tunamsam.webp",
+      "sizes": "any",
+      "type": "image/webp"
+    }
+  ]
+}

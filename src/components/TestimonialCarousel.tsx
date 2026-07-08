@@ -56,11 +56,11 @@ export function TestimonialCarousel() {
   const current = TESTIMONIALS[activeIndex];
 
   return (
-    <div id="testimonials" className="mt-24 reveal-on-scroll">
+    <section id="testimonials" className="mt-24 reveal-on-scroll">
       <div className="text-center max-w-4xl mx-auto mb-12">
-        <h3 className="text-3xl lg:text-5xl font-heading text-gray-900 leading-tight mb-6">
+        <h2 className="text-3xl lg:text-5xl font-heading text-gray-900 leading-tight mb-6">
           {t('testi_title')}
-        </h3>
+        </h2>
         <p className="text-gray-500 text-sm lg:text-base leading-relaxed font-sans">
           {t('testi_desc')}
         </p>
@@ -112,6 +112,6 @@ export function TestimonialCarousel() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

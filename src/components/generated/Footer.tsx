@@ -16,12 +16,14 @@ export function Footer() {
             <div className="flex items-center space-x-4">
               <a
                 href="https://www.instagram.com/tunamsam/"
+                aria-label="Instagram"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-light transition-all"
               >
                 <i className="fa-brands fa-instagram text-lg" />
               </a>
               <a
                 href="https://www.linkedin.com/company/tunamsam"
+                aria-label="LinkedIn"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-light transition-all"
               >
                 <i className="fa-brands fa-linkedin-in text-lg" />
@@ -30,7 +32,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-heading font-bold mb-6 uppercase tracking-wider">{t('services')}</h4>
+            <h2 className="text-white font-heading font-bold mb-6 uppercase tracking-wider">{t('services')}</h2>
             <ul className="space-y-4 text-sm text-gray-400 font-sans">
               <li className="hover:text-brand-light cursor-pointer transition-colors">Website Development</li>
               <li className="hover:text-brand-light cursor-pointer transition-colors">Landing Page</li>
@@ -44,7 +46,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-heading font-bold mb-6 uppercase tracking-wider">Konten</h4>
+            <h2 className="text-white font-heading font-bold mb-6 uppercase tracking-wider">{t('footer_content')}</h2>
             <ul className="space-y-4 text-sm text-gray-400 font-sans flex flex-col">
               <li><a href="#" className="hover:text-brand-light transition-colors">Home</a></li>
               <li><a href="#pilihan-desain" className="hover:text-brand-light transition-colors">Pilihan Desain</a></li>
@@ -57,7 +59,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-heading font-bold mb-6 uppercase tracking-wider">{t('contact')}</h4>
+            <h2 className="text-white font-heading font-bold mb-6 uppercase tracking-wider">{t('contact')}</h2>
             <ul className="space-y-4 text-sm text-gray-400 font-sans">
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-brand-light" />
