@@ -7,11 +7,11 @@ export function WhyUs() {
     <>
       <section id="why-us" className="py-32 bg-white overflow-hidden relative z-10">
               <div className="max-w-8xl mx-auto px-6">
-                  <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-16 reveal-on-scroll">
-                      <h2 className="text-4xl lg:text-5xl font-heading text-gray-900 lg:w-1/2 leading-tight">
+                  <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-16 reveal-on-scroll">
+                      <h2 className="text-4xl lg:text-5xl font-heading text-gray-900 md:w-1/2 leading-tight">
                           {t('why_title')}
                       </h2>
-                      <p className="text-gray-600 text-lg font-sans lg:w-1/2">
+                      <p className="text-gray-600 text-lg font-sans md:w-1/2">
                           {t('why_desc')}
                       </p>
                   </div>

@@ -3,7 +3,6 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Criteria } from './components/Criteria';
 import { Process } from './components/Process';
-import { TestimonialCarousel } from './components/TestimonialCarousel';
 import { useRevealOnScroll } from './hooks/useRevealOnScroll';
 import { I18nProvider, useI18n } from './context/I18nContext';
 import { TrustedBy } from './components/generated/TrustedBy';
@@ -41,7 +40,6 @@ function AppContent() {
         <AdditionalServices />
         <SuccessCtaSection />
         <FaqSection />
-        <TestimonialCarousel />
       </main>
       <Footer />
     </>

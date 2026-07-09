@@ -56,7 +56,7 @@ export function Criteria() {
   return (
     <section ref={sectionRef} className="criteria-section" id="criteria-trigger">
       <div className="criteria-sticky">
-        <h2 className="text-3xl lg:text-5xl font-heading text-gray-900 leading-[1.2] text-center max-w-6xl mx-auto">
+        <h2 className="text-3xl lg:text-5xl font-heading text-gray-900 leading-[1.2] text-center max-w-7xl mx-auto px-4 criteria-dynamic-title">
           {t('criteria_title')}
         </h2>
 

@@ -8,11 +8,11 @@ export function DesignChoices() {
       <section id="pilihan-desain" className="py-32 bg-black overflow-hidden relative z-10">
               <div className="max-w-8xl mx-auto px-6">
                   
-                  <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-16 reveal-on-scroll">
-                      <h2 className="text-4xl lg:text-5xl font-heading text-white lg:w-1/2 leading-tight">
+                  <div className="flex flex-col md:flex-row gap-12 lg:gap-24 mb-16 reveal-on-scroll">
+                      <h2 className="text-4xl lg:text-5xl font-heading text-white md:w-1/2 leading-tight">
                           {t('design_title')}
                       </h2>
-                      <p className="text-gray-400 text-md lg:text-lg leading-relaxed lg:w-1/2">
+                      <p className="text-gray-400 text-md lg:text-lg leading-relaxed md:w-1/2">
                           {t('design_desc')}
                       </p>
                   </div>

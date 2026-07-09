@@ -52,7 +52,6 @@ export function Footer() {
               <li><a href="#pilihan-desain" className="hover:text-brand-light transition-colors">Pilihan Desain</a></li>
               <li><a href="#pricing" className="hover:text-brand-light transition-colors">Harga Website</a></li>
               <li><a href="#about" className="hover:text-brand-light transition-colors">Tentang Kami</a></li>
-              <li><a href="#testimonials" className="hover:text-brand-light transition-colors">Testimoni</a></li>
               <li><a href="#contact" className="hover:text-brand-light transition-colors">Kontak</a></li>
               <li><a href="/blog" className="hover:text-brand-light transition-colors">Blog</a></li>
             </ul>

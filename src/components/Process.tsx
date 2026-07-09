@@ -97,20 +97,31 @@ export function Process() {
 
   return (
     <section ref={sectionRef} id="process" className="bg-[#0a0a0a] relative z-10">
-      {/* Title & description — not sticky, scrolls away normally */}
-      <div className="max-w-8xl mx-auto px-6 pt-16 pb-10">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-24">
-          <h2 className="text-3xl lg:text-5xl font-heading text-white lg:w-1/2 leading-tight">
+      {/* Mobile Title & description — not sticky, scrolls away normally */}
+      <div className="block lg:hidden max-w-8xl mx-auto px-6 pt-16 pb-6">
+        <div className="flex flex-col gap-4">
+          <h2 className="text-3xl font-heading text-white leading-tight">
             {t('proc_title')}
           </h2>
-          <p className="text-gray-400 text-sm lg:text-lg leading-relaxed lg:w-1/2">
+          <p className="text-gray-400 text-sm leading-relaxed">
             {t('proc_desc')}
           </p>
         </div>
       </div>
 
-      {/* Sticky: only the dots timeline */}
-      <div ref={headerRef} id="process-header" className="sticky top-0 z-50 bg-[#0a0a0a] py-4 px-6">
+      {/* Sticky: Title (desktop only), description (desktop only), and the dots timeline */}
+      <div ref={headerRef} id="process-header" className="sticky top-0 z-50 bg-[#0a0a0a] pt-4 lg:pt-16 pb-4 px-6">
+        <div className="hidden lg:block max-w-8xl mx-auto mb-10">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-24">
+            <h2 className="text-3xl lg:text-5xl font-heading text-white lg:w-1/2 leading-tight">
+              {t('proc_title')}
+            </h2>
+            <p className="text-gray-400 text-sm lg:text-lg leading-relaxed lg:w-1/2">
+              {t('proc_desc')}
+            </p>
+          </div>
+        </div>
+
         <div className="max-w-8xl mx-auto">
           <div className="flex items-center w-full">
             <div className="flex items-center gap-0 w-full">
