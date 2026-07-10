@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Criteria } from './components/Criteria';
@@ -15,14 +15,34 @@ import { AdditionalServices } from './components/generated/AdditionalServices';
 import { SuccessCtaSection } from './components/SuccessCtaSection';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/generated/Footer';
+import { DesignCatalog } from './components/DesignCatalog';
 
 function AppContent() {
   const { lang } = useI18n();
   useRevealOnScroll();
+  const [currentHash, setCurrentHash] = useState(window.location.hash);
+
+  useEffect(() => {
+    const handleHashChange = () => setCurrentHash(window.location.hash);
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   useEffect(() => {
     document.documentElement.lang = lang.toLowerCase();
   }, [lang]);
+
+  if (currentHash === '#katalog-desain') {
+    return (
+      <>
+        <Header />
+        <main className="font-sans antialiased min-h-screen bg-gray-50">
+          <DesignCatalog />
+        </main>
+        <Footer />
+      </>
+    );
+  }
 
   return (
     <>

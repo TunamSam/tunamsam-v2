@@ -6,7 +6,7 @@ import { FLAG_URLS, type Lang } from '../i18n/translations';
 
 const NAV_LINKS = [
   { href: '#', key: 'home' as const },
-  { href: '#pilihan-desain', key: 'nav_design' as const },
+  { href: '#katalog-desain', key: 'nav_design' as const },
   { href: '#pricing', key: 'nav_pricing' as const },
   { href: '#about', key: 'nav_about' as const },
   { href: '#testimonials', key: 'nav_testimonials' as const },
