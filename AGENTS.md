@@ -74,40 +74,8 @@ When adding a new translation key:
 - Referenced as `/assets/...` in components
 - Favicon: `/favicon-32x32.png` (all PWA assets live at `/public/` root)
 
-## SEO Standards
+## Branding
 
-Before creating or modifying any page:
+Always refer to the company as **Tunamsam** (not TunamSam or other variants).
 
-- Always preserve semantic HTML.
-- Only one H1 per page.
-- Every image must have an appropriate alt attribute.
-- Every page must have unique metadata.
-- Use reusable SEO component.
-- Keep Organization Schema valid.
-- Never remove structured data.
-- Preserve robots.txt and sitemap.xml.
-- Maintain Lighthouse:
-  - SEO >= 100
-  - Accessibility >= 95
-  - Best Practices = 100
-  - Performance >= 90
-
-## Accessibility Standards
-
-- All interactive elements must be keyboard accessible.
-- All icon-only buttons require aria-label.
-- Decorative images use empty alt.
-- Visible focus state must remain.
-- Use semantic HTML whenever possible.
-
-## Branding Standards
-
-Always refer to the company consistently as:
-
-Tunamsam
-
-Preferred description:
-
-Software House Indonesia specializing in website development, custom software, web applications, dashboards, UI/UX, and digital solutions.
-
-Avoid inconsistent naming.
+Preferred description: *Software House Indonesia specializing in website development, custom software, web applications, dashboards, UI/UX, and digital solutions.*

@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback } from 'react';
-import { useI18n } from '../context/I18nContext';
 import { ArrowUpRight, Monitor, ShoppingCart, Layout, ChevronLeft, ChevronRight } from 'lucide-react';
 import { SuccessCtaSection } from './SuccessCtaSection';
 import { FaqSection } from './FaqSection';
@@ -42,7 +41,6 @@ const CATEGORIES: Category[] = ['Semua', 'Landing Page', 'Company Profile', 'Onl
 const ITEMS_PER_PAGE = 6;
 
 export function DesignCatalog() {
-  const { t } = useI18n();
   const [activeCategory, setActiveCategory] = useState<Category>('Semua');
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
