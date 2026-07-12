@@ -201,7 +201,7 @@ export function PricingPage() {
     return (
         <div className="w-full bg-white pb-24 text-gray-900">
             {/* Header Section */}
-            <div className="pt-24 md:pt-32 pb-6 md:pb-8 bg-white">
+            <div className="pt-8 md:pt-16 pb-6 md:pb-8 bg-white">
                 <div className="text-center max-w-4xl mx-auto px-6">
                     <h1 className="text-3xl md:text-5xl lg:text-5xl font-heading mb-4 text-gray-900">
                         Paket Harga Jasa Pembuatan Website TunamSam
@@ -234,9 +234,9 @@ export function PricingPage() {
                     {PACKAGES.map((pkg) => (
                         <div key={pkg.id} id={pkg.id} className="scroll-mt-32">
                             {/* Top Row: Info & Previews */}
-                            <div className="flex flex-col lg:flex-row gap-8 md:gap-12 mb-16 md:mb-20 items-start">
+                            <div className="flex flex-col md:flex-row gap-8 md:gap-12 mb-16 md:mb-20 items-start">
                                 {/* Left Column: Pricing Info */}
-                                <div className="lg:w-1/3 flex flex-col items-start gap-4 w-full">
+                                <div className="w-full md:w-1/2 lg:w-1/3 flex flex-col items-start gap-4">
                                     <h3 className="text-4xl md:text-5xl font-heading font-normal text-gray-900">{pkg.title}</h3>
                                     
                                     <div className="flex flex-col gap-1">
@@ -296,18 +296,18 @@ export function PricingPage() {
                                 </div>
 
                                 {/* Right Column: Image Previews */}
-                                <div className="lg:w-2/3 w-full flex items-center overflow-hidden rounded-2xl bg-white border border-gray-100 p-2 shadow-sm relative marquee-container">
+                                <div className="w-full md:w-1/2 lg:w-2/3 flex items-center overflow-hidden rounded-2xl bg-white border border-gray-100 p-2 shadow-sm relative marquee-container">
                                     <div className="flex marquee-content animate-marquee-slow">
                                         <div className="flex gap-3 md:gap-4 items-center flex-shrink-0 pr-3 md:pr-4">
                                             {pkg.images.map((img, idx) => (
-                                                <div key={idx} className="w-[240px] md:w-[350px] lg:w-[400px] rounded-xl overflow-hidden flex-shrink-0 shadow-sm border border-gray-50">
+                                                <div key={idx} className="w-[240px] md:w-[320px] lg:w-[400px] rounded-xl overflow-hidden flex-shrink-0 shadow-sm border border-gray-50">
                                                     <img src={img} alt={`${pkg.title} preview ${idx + 1}`} className="w-full h-auto object-cover" />
                                                 </div>
                                             ))}
                                         </div>
                                         <div className="flex gap-3 md:gap-4 items-center flex-shrink-0 pr-3 md:pr-4" aria-hidden="true">
                                             {pkg.images.map((img, idx) => (
-                                                <div key={`dup-${idx}`} className="w-[240px] md:w-[350px] lg:w-[400px] rounded-xl overflow-hidden flex-shrink-0 shadow-sm border border-gray-50">
+                                                <div key={`dup-${idx}`} className="w-[240px] md:w-[320px] lg:w-[400px] rounded-xl overflow-hidden flex-shrink-0 shadow-sm border border-gray-50">
                                                     <img src={img} alt="" className="w-full h-auto object-cover" />
                                                 </div>
                                             ))}
@@ -323,7 +323,7 @@ export function PricingPage() {
                                 <h3 className="text-2xl md:text-3xl font-heading text-center mb-8 md:mb-10 text-gray-900 px-4">
                                     Alasan {pkg.title} Tepat untuk Anda
                                 </h3>
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                                     {pkg.reasons.map((reason, idx) => (
                                         <div key={idx} className="bg-white border border-gray-100 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow">
                                             <div className="mb-4">

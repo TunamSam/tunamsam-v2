@@ -9,16 +9,16 @@ export function Pricing() {
                 <div className="max-w-8xl mx-auto px-6">
 
                     <div className="text-center max-w-4xl mx-auto mb-20 reveal-on-scroll">
-                        <h2 className="text-4xl lg:text-6xl font-heading text-gray-900 mb-8 leading-tight">{t('pkg_title')}</h2>
+                        <h2 className="text-4xl md:text-6xl font-heading text-gray-900 mb-8 leading-tight">{t('pkg_title')}</h2>
                         <p className="text-lg leading-relaxed font-sans">{t('pkg_subtitle')}</p>
                     </div>
 
 
                     <div className="reveal-on-scroll">
 
-                        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-12">
+                        <div className="flex flex-col md:flex-row gap-12 md:gap-20 mb-12">
 
-                            <div className="lg:w-1/3 space-y-8">
+                            <div className="md:w-1/3 space-y-8">
                                 <div>
                                     <h3 className="text-5xl font-heading text-gray-900 mb-6">{t('price_landing_page')}</h3>
                                     <div className="space-y-1">
@@ -38,7 +38,7 @@ export function Pricing() {
                                 </a>
                             </div>
 
-                            <div className="lg:w-2/3">
+                            <div className="md:w-2/3">
                                 <div className="flex flex-col items-start gap-8">
                                     <div
                                         className="bg-brand rounded-xl p-4 text-white flex items-center gap-6 shadow-lg shadow-brand/20">
@@ -55,9 +55,9 @@ export function Pricing() {
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
+                        <div className="grid grid-cols-1 md:grid-cols-6 gap-8 mb-8">
                             <div
-                                className="md:col-span-2 lg:col-span-4 bg-white rounded-[2rem] border-2 border-gray-300 p-6 flex items-center overflow-hidden relative marquee-container">
+                                className="md:col-span-4 bg-white rounded-[2rem] border-2 border-gray-300 p-6 flex items-center overflow-hidden relative marquee-container">
                                 <div className="flex marquee-content animate-marquee-slow whitespace-nowrap">
                                     <div className="flex gap-8 items-center flex-shrink-0 pr-8">
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
@@ -96,14 +96,14 @@ export function Pricing() {
                                 </div>
                             </div>
 
-                            <div className="lg:col-span-2 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                            <div className="md:col-span-2 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
                                 <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                                     <Icon name="maximize" className="w-6 h-6 text-gray-900" />
                                 </div>
                                 <h4 className="text-2xl font-heading mb-4">{t('lp_f1_t')}</h4>
                                 <p className="text-md leading-relaxed font-sans">{t('lp_f1_d')}</p>
                             </div>
-                            <div className="lg:col-span-3 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                            <div className="md:col-span-3 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
                                 <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                                     <Icon name="target" className="w-6 h-6 text-gray-900" />
                                 </div>
@@ -111,7 +111,7 @@ export function Pricing() {
                                 <p className="text-md leading-relaxed font-sans">{t('lp_f2_d')}</p>
                             </div>
 
-                            <div className="lg:col-span-3 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                            <div className="md:col-span-3 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
                                 <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                                     <Icon name="book-open" className="w-6 h-6 text-gray-900" />
                                 </div>
@@ -124,8 +124,8 @@ export function Pricing() {
                     <div className="h-px bg-gray-200 my-24"></div>
 
                     <div className="reveal-on-scroll">
-                        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-12">
-                            <div className="lg:w-1/3 space-y-8">
+                        <div className="flex flex-col md:flex-row gap-12 md:gap-20 mb-12">
+                            <div className="md:w-1/3 space-y-8">
                                 <div>
                                     <h3 className="text-5xl font-heading text-gray-900 mb-6">{t('price_company_profile')}</h3>
                                     <div className="space-y-1">
@@ -145,7 +145,7 @@ export function Pricing() {
                                 </a>
                             </div>
 
-                            <div className="lg:w-2/3">
+                            <div className="md:w-2/3">
                                 <div className="flex flex-col items-start gap-8">
                                     <div className="flex flex-wrap gap-4">
                                         <div
@@ -170,9 +170,9 @@ export function Pricing() {
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
+                        <div className="grid grid-cols-1 md:grid-cols-6 gap-8 mb-8">
                             <div
-                                className="md:col-span-2 lg:col-span-4 bg-white rounded-[2rem] border-2 border-gray-300 p-6 flex items-center overflow-hidden relative marquee-container">
+                                className="md:col-span-4 bg-white rounded-[2rem] border-2 border-gray-300 p-6 flex items-center overflow-hidden relative marquee-container">
                                 <div className="flex marquee-content animate-marquee-slow whitespace-nowrap">
                                     <div className="flex gap-8 items-center flex-shrink-0 pr-8">
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
@@ -211,14 +211,14 @@ export function Pricing() {
                                 </div>
                             </div>
 
-                            <div className="lg:col-span-2 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                            <div className="md:col-span-2 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
                                 <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                                     <Icon name="gem" className="w-6 h-6 text-gray-900" />
                                 </div>
                                 <h4 className="text-2xl font-heading mb-4">{t('cp_f1_t')}</h4>
                                 <p className="text-md leading-relaxed font-sans">{t('cp_f1_d')}</p>
                             </div>
-                            <div className="lg:col-span-3 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                            <div className="md:col-span-3 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
                                 <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                                     <Icon name="network" className="w-6 h-6 text-gray-900" />
                                 </div>
@@ -226,7 +226,7 @@ export function Pricing() {
                                 <p className="text-md leading-relaxed font-sans">{t('cp_f2_d')}</p>
                             </div>
 
-                            <div className="lg:col-span-3 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                            <div className="md:col-span-3 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
                                 <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                                     <Icon name="globe" className="w-6 h-6 text-gray-900" />
                                 </div>
@@ -239,8 +239,8 @@ export function Pricing() {
                     <div className="h-px bg-gray-200 my-24"></div>
 
                     <div className="reveal-on-scroll">
-                        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-12">
-                            <div className="lg:w-1/3 space-y-8">
+                        <div className="flex flex-col md:flex-row gap-12 md:gap-20 mb-12">
+                            <div className="md:w-1/3 space-y-8">
                                 <div>
                                     <h3 className="text-5xl font-heading text-gray-900 mb-6">{t('price_online_store')}</h3>
                                     <div className="space-y-1">
@@ -260,7 +260,7 @@ export function Pricing() {
                                 </a>
                             </div>
 
-                            <div className="lg:w-2/3">
+                            <div className="md:w-2/3">
                                 <div className="flex flex-col items-start gap-8">
                                     <div className="flex flex-wrap gap-4">
                                         <div
@@ -285,9 +285,9 @@ export function Pricing() {
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
+                        <div className="grid grid-cols-1 md:grid-cols-6 gap-8 mb-8">
                             <div
-                                className="md:col-span-2 lg:col-span-4 bg-white rounded-[2rem] border-2 border-gray-300 p-6 flex items-center overflow-hidden relative marquee-container">
+                                className="md:col-span-4 bg-white rounded-[2rem] border-2 border-gray-300 p-6 flex items-center overflow-hidden relative marquee-container">
                                 <div className="flex marquee-content animate-marquee-slow whitespace-nowrap">
                                     <div className="flex gap-8 items-center flex-shrink-0 pr-8">
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
@@ -326,14 +326,14 @@ export function Pricing() {
                                 </div>
                             </div>
 
-                            <div className="lg:col-span-2 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                            <div className="md:col-span-2 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
                                 <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                                     <Icon name="shopping-bag" className="w-6 h-6 text-gray-900" />
                                 </div>
                                 <h4 className="text-2xl font-heading mb-4">{t('to_f1_t')}</h4>
                                 <p className="text-md leading-relaxed font-sans">{t('to_f1_d')}</p>
                             </div>
-                            <div className="lg:col-span-3 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                            <div className="md:col-span-3 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
                                 <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                                     <Icon name="building" className="w-6 h-6 text-gray-900" />
                                 </div>
@@ -341,7 +341,7 @@ export function Pricing() {
                                 <p className="text-md leading-relaxed font-sans">{t('to_f2_d')}</p>
                             </div>
 
-                            <div className="lg:col-span-3 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                            <div className="md:col-span-3 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
                                 <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                                     <Icon name="credit-card" className="w-6 h-6 text-gray-900" />
                                 </div>
@@ -354,8 +354,8 @@ export function Pricing() {
                     <div className="h-px bg-gray-200 my-24"></div>
 
                     <div className="reveal-on-scroll">
-                        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-12">
-                            <div className="lg:w-1/3 space-y-8">
+                        <div className="flex flex-col md:flex-row gap-12 md:gap-20 mb-12">
+                            <div className="md:w-1/3 space-y-8">
                                 <div>
                                     <h3 className="text-5xl font-heading text-gray-900 mb-6">{t('price_custom_website')}</h3>
                                     <div className="space-y-1">
@@ -369,7 +369,7 @@ export function Pricing() {
                                 </a>
                             </div>
 
-                            <div className="lg:w-2/3">
+                            <div className="md:w-2/3">
                                 <div className="flex flex-col items-start gap-8">
                                     <div className="flex flex-wrap gap-4">
                                         <div
@@ -384,9 +384,9 @@ export function Pricing() {
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
+                        <div className="grid grid-cols-1 md:grid-cols-6 gap-8 mb-8">
                             <div
-                                className="md:col-span-2 lg:col-span-4 bg-white rounded-[2rem] border-2 border-gray-300 p-6 flex items-center overflow-hidden relative marquee-container">
+                                className="md:col-span-4 bg-white rounded-[2rem] border-2 border-gray-300 p-6 flex items-center overflow-hidden relative marquee-container">
                                 <div className="flex marquee-content animate-marquee-slow whitespace-nowrap">
                                     <div className="flex gap-8 items-center flex-shrink-0 pr-8">
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
@@ -425,14 +425,14 @@ export function Pricing() {
                                 </div>
                             </div>
 
-                            <div className="lg:col-span-2 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                            <div className="md:col-span-2 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
                                 <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                                     <Icon name="palette" className="w-6 h-6 text-gray-900" />
                                 </div>
                                 <h4 className="text-2xl font-heading mb-4">{t('cw_f1_t')}</h4>
                                 <p className="text-md leading-relaxed font-sans">{t('cw_f1_d')}</p>
                             </div>
-                            <div className="lg:col-span-3 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                            <div className="md:col-span-3 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
                                 <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                                     <Icon name="crosshair" className="w-6 h-6 text-gray-900" />
                                 </div>
@@ -440,7 +440,7 @@ export function Pricing() {
                                 <p className="text-md leading-relaxed font-sans">{t('cw_f2_d')}</p>
                             </div>
 
-                            <div className="lg:col-span-3 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
+                            <div className="md:col-span-3 bg-white rounded-[2rem] border-2 border-gray-300 p-10">
                                 <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                                     <Icon name="shopping-basket" className="w-6 h-6 text-gray-900" />
                                 </div>
