@@ -1,16 +1,17 @@
 import { ChevronDown, Mail, MapPin, Phone, Menu, X } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { useI18n } from '../context/I18nContext';
 import { FLAG_URLS, type Lang } from '../i18n/translations';
 
 const NAV_LINKS = [
-  { href: '#', key: 'home' as const },
-  { href: '#katalog-desain', key: 'nav_design' as const },
-  { href: '#pricing', key: 'nav_pricing' as const },
-  { href: '#about', key: 'nav_about' as const },
-  { href: '#testimonials', key: 'nav_testimonials' as const },
-  { href: '#contact', key: 'contact' as const },
+  { href: '/', key: 'home' as const },
+  { href: '/katalog-desain', key: 'nav_design' as const },
+  { href: '/harga-website', key: 'nav_pricing' as const },
+  { href: '/#about', key: 'nav_about' as const },
+  { href: '/#testimonials', key: 'nav_testimonials' as const },
+  { href: '/#contact', key: 'contact' as const },
   { href: '/blog', key: 'nav_blog' as const },
 ];
 
@@ -95,9 +96,9 @@ export function Header() {
         <div className="hidden lg:flex flex-col md:flex-row justify-between items-center pt-6">
           <nav className="relative z-[60] flex flex-wrap justify-center md:justify-start items-center gap-6 lg:gap-10 text-[13px] font-bold uppercase tracking-wider mb-6 md:mb-0">
             {NAV_LINKS.map((link) => (
-              <a key={link.key} href={link.href} className="hover:opacity-70 transition-opacity cursor-pointer" style={{ cursor: 'pointer' }}>
+              <Link key={link.key} to={link.href} className="hover:opacity-70 transition-opacity cursor-pointer" style={{ cursor: 'pointer' }}>
                 {t(link.key)}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -155,15 +156,15 @@ export function Header() {
           >
             <nav className="flex flex-col space-y-4 text-[13px] font-bold uppercase tracking-wider">
               {NAV_LINKS.map((link) => (
-                <a
+                <Link
                   key={link.key}
-                  href={link.href}
+                  to={link.href}
                   className="hover:opacity-70 transition-opacity cursor-pointer"
                   style={{ cursor: 'pointer' }}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {t(link.key)}
-                </a>
+                </Link>
               ))}
             </nav>
 

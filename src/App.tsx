@@ -16,34 +16,26 @@ import { SuccessCtaSection } from './components/SuccessCtaSection';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/generated/Footer';
 import { DesignCatalog } from './components/DesignCatalog';
+import { PricingPage } from './components/PricingPage';
 
-function AppContent() {
-  const { lang } = useI18n();
-  useRevealOnScroll();
-  const [currentHash, setCurrentHash] = useState(window.location.hash);
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
+function ScrollToHash() {
+  const { hash } = useLocation();
   useEffect(() => {
-    const handleHashChange = () => setCurrentHash(window.location.hash);
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
+    if (hash) {
+      const element = document.getElementById(hash.replace('#', ''));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [hash]);
+  return null;
+}
 
-  useEffect(() => {
-    document.documentElement.lang = lang.toLowerCase();
-  }, [lang]);
-
-  if (currentHash === '#katalog-desain') {
-    return (
-      <>
-        <Header />
-        <main className="font-sans antialiased min-h-screen bg-gray-50">
-          <DesignCatalog />
-        </main>
-        <Footer />
-      </>
-    );
-  }
-
+function HomePage() {
   return (
     <>
       <Header />
@@ -51,8 +43,8 @@ function AppContent() {
         <Hero />
         <TrustedBy />
         <ProblemSolution />
-        <Criteria />
         <Pricing />
+        <Criteria />
         <TechnicalSupportBanner />
         <WhyUs />
         <DesignChoices />
@@ -63,6 +55,52 @@ function AppContent() {
       </main>
       <Footer />
     </>
+  );
+}
+
+function DesignCatalogRoute() {
+  return (
+    <>
+      <Header />
+      <main className="font-sans antialiased min-h-screen bg-gray-50">
+        <DesignCatalog />
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+function PricingPageRoute() {
+  return (
+    <>
+      <Header />
+      <main className="font-sans antialiased min-h-screen bg-white">
+        <PricingPage />
+        <TechnicalSupportBanner />
+        <FaqSection />
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+function AppContent() {
+  const { lang } = useI18n();
+  useRevealOnScroll();
+
+  useEffect(() => {
+    document.documentElement.lang = lang.toLowerCase();
+  }, [lang]);
+
+  return (
+    <Router>
+      <ScrollToHash />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/katalog-desain" element={<DesignCatalogRoute />} />
+        <Route path="/harga-website" element={<PricingPageRoute />} />
+      </Routes>
+    </Router>
   );
 }
 

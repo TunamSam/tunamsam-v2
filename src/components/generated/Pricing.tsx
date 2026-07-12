@@ -58,7 +58,7 @@ export function Pricing() {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
                             <div
                                 className="md:col-span-2 lg:col-span-4 bg-white rounded-[2rem] border-2 border-gray-300 p-6 flex items-center overflow-hidden relative marquee-container">
-                                <div className="flex gap-8 marquee-content animate-marquee-slow whitespace-nowrap">
+                                <div className="flex marquee-content animate-marquee-slow whitespace-nowrap">
                                     <div className="flex gap-8 items-center flex-shrink-0 pr-8">
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
                                             <img src="/assets/products/landing-page/1.webp" alt={t('pricing_lp_alt_1')} className="w-full h-auto" />
@@ -173,7 +173,7 @@ export function Pricing() {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
                             <div
                                 className="md:col-span-2 lg:col-span-4 bg-white rounded-[2rem] border-2 border-gray-300 p-6 flex items-center overflow-hidden relative marquee-container">
-                                <div className="flex gap-8 marquee-content animate-marquee-slow whitespace-nowrap">
+                                <div className="flex marquee-content animate-marquee-slow whitespace-nowrap">
                                     <div className="flex gap-8 items-center flex-shrink-0 pr-8">
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
                                             <img src="/assets/products/company-profile/1.webp" alt={t('pricing_cp_alt_1')} className="w-full h-auto" />
@@ -288,7 +288,7 @@ export function Pricing() {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
                             <div
                                 className="md:col-span-2 lg:col-span-4 bg-white rounded-[2rem] border-2 border-gray-300 p-6 flex items-center overflow-hidden relative marquee-container">
-                                <div className="flex gap-8 marquee-content animate-marquee-slow whitespace-nowrap">
+                                <div className="flex marquee-content animate-marquee-slow whitespace-nowrap">
                                     <div className="flex gap-8 items-center flex-shrink-0 pr-8">
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
                                             <img src="/assets/products/toko-online/1.webp" alt={t('pricing_to_alt_1')} className="w-full h-auto" />
@@ -387,7 +387,7 @@ export function Pricing() {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
                             <div
                                 className="md:col-span-2 lg:col-span-4 bg-white rounded-[2rem] border-2 border-gray-300 p-6 flex items-center overflow-hidden relative marquee-container">
-                                <div className="flex gap-8 marquee-content animate-marquee-slow whitespace-nowrap">
+                                <div className="flex marquee-content animate-marquee-slow whitespace-nowrap">
                                     <div className="flex gap-8 items-center flex-shrink-0 pr-8">
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
                                             <img src="/assets/products/custom-website/1.webp" alt={t('pricing_cw_alt_1')} className="w-full h-auto" />
