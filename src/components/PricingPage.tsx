@@ -1,5 +1,4 @@
 import { Icon } from './Icon';
-import { useI18n } from '../context/I18nContext';
 import { CheckCircle2 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
