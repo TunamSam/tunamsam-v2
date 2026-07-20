@@ -1,7 +1,7 @@
 import { ChevronDown, Mail, MapPin, Phone, Menu, X } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useI18n } from '../context/I18nContext';
 import { FLAG_URLS, type Lang } from '../i18n/translations';
 
@@ -9,9 +9,9 @@ const NAV_LINKS = [
   { href: '/', key: 'home' as const },
   { href: '/katalog-desain', key: 'nav_design' as const },
   { href: '/harga-website', key: 'nav_pricing' as const },
-  { href: '/#about', key: 'nav_about' as const },
-  { href: '/#testimonials', key: 'nav_testimonials' as const },
-  { href: '/#contact', key: 'contact' as const },
+  { href: '/tentang-kami', key: 'nav_about' as const },
+  { href: '/testimoni', key: 'nav_testimonials' as const },
+  { href: '/kontak', key: 'contact' as const },
   { href: '/blog', key: 'nav_blog' as const },
 ];
 
@@ -24,6 +24,7 @@ export function Header() {
   const { lang, flagUrl, t, changeLang } = useI18n();
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
   const menuRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
@@ -95,11 +96,18 @@ export function Header() {
 
         <div className="hidden lg:flex flex-col md:flex-row justify-between items-center pt-6">
           <nav className="relative z-[60] flex flex-wrap justify-center md:justify-start items-center gap-6 lg:gap-10 text-[13px] font-bold uppercase tracking-wider mb-6 md:mb-0">
-            {NAV_LINKS.map((link) => (
-              <Link key={link.key} to={link.href} className="hover:opacity-70 transition-opacity cursor-pointer" style={{ cursor: 'pointer' }}>
-                {t(link.key)}
-              </Link>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const isActive = location.pathname === link.href || (location.pathname + location.hash) === link.href;
+              return (
+                <Link 
+                  key={link.key} 
+                  to={link.href} 
+                  className={`transition-all cursor-pointer pb-1 border-b-2 ${isActive ? 'border-white opacity-100' : 'border-transparent hover:opacity-70'}`}
+                >
+                  {t(link.key)}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="flex items-center space-x-6">
@@ -155,17 +163,19 @@ export function Header() {
             className="lg:hidden absolute top-full left-0 w-full bg-brand p-6 border-t border-white/20 flex flex-col space-y-6 z-[60] shadow-2xl"
           >
             <nav className="flex flex-col space-y-4 text-[13px] font-bold uppercase tracking-wider">
-              {NAV_LINKS.map((link) => (
-                <Link
-                  key={link.key}
-                  to={link.href}
-                  className="hover:opacity-70 transition-opacity cursor-pointer"
-                  style={{ cursor: 'pointer' }}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {t(link.key)}
-                </Link>
-              ))}
+              {NAV_LINKS.map((link) => {
+                const isActive = location.pathname === link.href || (location.pathname + location.hash) === link.href;
+                return (
+                  <Link
+                    key={link.key}
+                    to={link.href}
+                    className={`transition-all cursor-pointer pb-1 border-b-2 w-max ${isActive ? 'border-white opacity-100' : 'border-transparent hover:opacity-70'}`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {t(link.key)}
+                  </Link>
+                );
+              })}
             </nav>
 
             <div className="flex items-center space-x-4 pt-4 border-t border-white/20">

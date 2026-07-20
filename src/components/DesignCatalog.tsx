@@ -73,69 +73,55 @@ export function DesignCatalog() {
 
   return (
     <div className="w-full bg-gray-50 min-h-screen pb-24">
-      {/* Banner Section */}
-      <div className="max-w-8xl mx-auto px-6 pt-8 md:pt-16 pb-12">
-        <div className="relative w-full h-[250px] md:h-[350px] lg:h-[400px] rounded-3xl overflow-hidden shadow-2xl group bg-black">
-          {/* Slider Background */}
-          <div className="slider-container absolute inset-0 z-0">
-            {SLIDE_IMAGES.map(({ src, alt }, index) => (
-              <div key={src} className={`slide${index === currentSlide ? ' active' : ''}`}>
-                <img src={src} alt={alt} className="w-full h-full object-cover" />
-              </div>
-            ))}
-          </div>
-
+      {/* Header & Banner Section in 2 Columns */}
+      <div className="max-w-8xl mx-auto px-6 pt-12 md:pt-20 pb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           
-          {/* Animated decorative circles */}
-          <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[150%] bg-white/10 rounded-full blur-3xl group-hover:bg-white/20 transition-all duration-700 z-10"></div>
-          <div className="absolute bottom-[-20%] left-[-10%] w-[30%] h-[100%] bg-black/10 rounded-full blur-2xl z-10"></div>
-
-          <div className="relative z-20 h-full flex flex-col justify-center px-8 md:px-16 lg:px-24">
-            <span className="inline-block px-4 py-1.5 bg-white/20 text-white rounded-full text-sm font-semibold mb-4 w-fit backdrop-blur-sm border border-white/30">
-              Koleksi Terbaik Kami
-            </span>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading text-white font-bold max-w-2xl leading-tight mb-4">
-              Temukan Desain Impian Untuk Bisnismu
-            </h1>
-            <p className="text-white/90 text-lg max-w-xl">
-              Eksplorasi berbagai pilihan desain website premium yang siap disesuaikan dengan kebutuhan brand Anda.
+          {/* Section Header (Left on Desktop, Bottom on Mobile) */}
+          <div className="max-w-xl order-2 lg:order-1 text-center lg:text-left">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900 mb-6 leading-tight">
+              Pilih Desain Sesuai Kebutuhan Anda
+            </h2>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              Kami telah menyiapkan berbagai pilihan desain premium yang bisa langsung disesuaikan dengan identitas brand Anda. Gunakan filter di bawah ini untuk menemukan desain yang paling cocok.
             </p>
           </div>
 
-          {/* Slider Dots */}
-          <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 flex space-x-3 z-30">
-            {SLIDE_IMAGES.map((_, index) => (
-              <button
-                key={index}
-                type="button"
-                aria-label={`Go to slide ${index + 1}`}
-                onClick={() => goToSlide(index)}
-                className={`slide-dot cursor-pointer transition-all duration-300 relative overflow-hidden rounded-full bg-white/40 hover:bg-white/70 ${
-                  index === currentSlide ? 'w-8 h-2 md:w-12 md:h-2' : 'w-2 h-2 md:w-2 md:h-2'
-                }`}
-              >
-                {index === currentSlide && (
-                  <div className="absolute top-0 left-0 h-full bg-white animate-slider-progress" />
-                )}
-              </button>
-            ))}
+          {/* Slider (Right on Desktop, Top on Mobile) */}
+          <div className="relative w-full h-[250px] md:h-[350px] lg:h-[250px] rounded-3xl overflow-hidden group bg-black order-1 lg:order-2">
+            {/* Slider Background */}
+            <div className="slider-container absolute inset-0 z-0">
+              {SLIDE_IMAGES.map(({ src, alt }, index) => (
+                <div key={src} className={`slide${index === currentSlide ? ' active' : ''}`}>
+                  <img src={src} alt={alt} className="w-full h-full object-cover" />
+                </div>
+              ))}
+            </div>
+
+            {/* Slider Dots */}
+            <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 flex space-x-3 z-30">
+              {SLIDE_IMAGES.map((_, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  aria-label={`Go to slide ${index + 1}`}
+                  onClick={() => goToSlide(index)}
+                  className={`slide-dot cursor-pointer transition-all duration-300 relative overflow-hidden rounded-full bg-white/40 hover:bg-white/70 ${
+                    index === currentSlide ? 'w-8 h-2 md:w-12 md:h-2' : 'w-2 h-2 md:w-2 md:h-2'
+                  }`}
+                >
+                  {index === currentSlide && (
+                    <div className="absolute top-0 left-0 h-full bg-white animate-slider-progress" />
+                  )}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
       {/* Main Content */}
       <div className="max-w-8xl mx-auto px-6">
-        
-        {/* Section Header */}
-        <div className="mb-8 max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-heading text-gray-900 mb-4">
-            Pilih Desain Sesuai Kebutuhan Anda
-          </h2>
-          <p className="text-gray-600 text-lg leading-relaxed">
-            Kami telah menyiapkan berbagai pilihan desain premium yang bisa langsung disesuaikan dengan identitas brand Anda. Gunakan filter di bawah ini untuk menemukan desain yang paling cocok.
-          </p>
-        </div>
-
         {/* Category Navigation */}
         <div className="flex flex-wrap items-center gap-3 mb-10 pb-4 border-b border-gray-200">
           {CATEGORIES.map(category => (

@@ -17,6 +17,11 @@ import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/generated/Footer';
 import { DesignCatalog } from './components/DesignCatalog';
 import { PricingPage } from './components/PricingPage';
+import { AboutPage } from './components/AboutPage';
+import { TestimonialsPage } from './components/TestimonialsPage';
+import { ContactPage } from './components/ContactPage';
+import { BlogPage } from './components/BlogPage';
+import { BlogPostPage } from './components/BlogPostPage';
 
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
@@ -84,6 +89,75 @@ function PricingPageRoute() {
   );
 }
 
+function AboutPageRoute() {
+  return (
+    <>
+      <Header />
+      <main className="font-sans antialiased min-h-screen bg-white">
+        <AboutPage />
+        <TechnicalSupportBanner />
+        <FaqSection />
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+function TestimonialsPageRoute() {
+  return (
+    <>
+      <Header />
+      <main className="font-sans antialiased min-h-screen bg-white">
+        <TestimonialsPage />
+        <SuccessCtaSection />
+        <FaqSection />
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+function ContactPageRoute() {
+  return (
+    <>
+      <Header />
+      <main className="font-sans antialiased min-h-screen bg-white">
+        <ContactPage />
+        <TechnicalSupportBanner />
+        <FaqSection />
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+function BlogPageRoute() {
+  return (
+    <>
+      <Header />
+      <main className="font-sans antialiased min-h-screen bg-white">
+        <BlogPage />
+        <SuccessCtaSection />
+        <FaqSection />
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+function BlogPostPageRoute() {
+  return (
+    <>
+      <Header />
+      <main className="font-sans antialiased min-h-screen bg-white">
+        <BlogPostPage />
+        <SuccessCtaSection />
+      </main>
+      <Footer />
+    </>
+  );
+}
+
 function AppContent() {
   const { lang } = useI18n();
   useRevealOnScroll();
@@ -99,6 +173,11 @@ function AppContent() {
         <Route path="/" element={<HomePage />} />
         <Route path="/katalog-desain" element={<DesignCatalogRoute />} />
         <Route path="/harga-website" element={<PricingPageRoute />} />
+        <Route path="/tentang-kami" element={<AboutPageRoute />} />
+        <Route path="/testimoni" element={<TestimonialsPageRoute />} />
+        <Route path="/kontak" element={<ContactPageRoute />} />
+        <Route path="/blog" element={<BlogPageRoute />} />
+        <Route path="/blog/:slug" element={<BlogPostPageRoute />} />
       </Routes>
     </Router>
   );

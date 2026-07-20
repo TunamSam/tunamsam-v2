@@ -19,11 +19,27 @@ export default {
       },
       animation: {
         'slider-progress': 'slider-progress 5s linear forwards',
+        'floating': 'floating 6s ease-in-out infinite',
+        'gradient-x': 'gradient-x 3s ease infinite',
       },
       keyframes: {
         'slider-progress': {
           '0%': { width: '0%' },
           '100%': { width: '100%' },
+        },
+        'floating': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-15px)' },
+        },
+        'gradient-x': {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center'
+          },
         },
       },
     },

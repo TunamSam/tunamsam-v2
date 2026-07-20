@@ -200,21 +200,39 @@ export function PricingPage() {
 
     return (
         <div className="w-full bg-white pb-24 text-gray-900">
-            {/* Header Section */}
-            <div className="pt-8 md:pt-16 pb-6 md:pb-8 bg-white">
-                <div className="text-center max-w-4xl mx-auto px-6">
-                    <h1 className="text-3xl md:text-5xl lg:text-5xl font-heading mb-4 text-gray-900">
-                        Paket Harga Jasa Pembuatan Website TunamSam
+            {/* Hero Section */}
+            <div className="pt-20 md:pt-32 pb-16 md:pb-24 bg-white relative overflow-hidden">
+                <div className="max-w-6xl mx-auto px-6 text-center relative z-10 reveal-on-scroll">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading mb-6 text-gray-900 leading-tight">
+                        Jasa Pembuatan Website<br className="hidden md:block" />Profesional untuk Bisnis Anda
                     </h1>
-                    <p className="text-sm md:text-lg max-w-2xl mx-auto">
-                        Kami menyediakan Paket Pembuatan Website sesuai kebutuhan dan kategori bisnis Anda.
+                    <p className="text-lg md:text-xl max-w-3xl mx-auto text-gray-600 font-light leading-relaxed mb-12 md:mb-16">
+                        Kami hadir untuk membantu Anda membangun website yang sesuai kebutuhan dengan harga yang transparan dan fitur premium. Pilih paket jasa pembuatan website yang paling cocok untuk bisnis Anda
                     </p>
                 </div>
+                
+                {/* Hero Image Collage Placeholder */}
+                <div className="max-w-6xl mx-auto px-6 relative z-10 reveal-on-scroll stagger-1">
+                    <div className="relative w-full h-[300px] md:h-[500px] lg:h-[600px] bg-gray-50 md:rounded-[3rem] flex flex-col items-center justify-center text-gray-400">
+                        <img src="/assets/gambar-collage.png" alt="Website Collage" className="w-full h-full object-cover" />
+                    </div>
+                </div>
+                
             </div>
 
             <div className="max-w-8xl mx-auto px-6">
+                {/* Pricing Title */}
+                <div className="text-center max-w-4xl mx-auto pb-8 md:pt-0 md:pb-12 reveal-on-scroll">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading mb-4 text-gray-900">
+                        Paket Harga Jasa Pembuatan Website TunamSam
+                    </h2>
+                    <p className="text-sm md:text-lg max-w-2xl mx-auto text-gray-600">
+                        Kami menyediakan Paket Pembuatan Website sesuai kebutuhan dan kategori bisnis Anda.
+                    </p>
+                </div>
+
                 {/* Anchor Navigation */}
-                <div className="pt-6 pb-4 border-b border-gray-100 flex md:justify-center mb-10 md:mb-16 overflow-x-auto bg-white snap-x">
+                <div className="pt-2 pb-4 border-b border-gray-100 flex md:justify-center mb-10 md:mb-16 overflow-x-auto bg-white snap-x">
                     <div className="flex gap-4 md:gap-8 min-w-max px-2 md:px-0">
                         {PACKAGES.map((pkg) => (
                             <button
