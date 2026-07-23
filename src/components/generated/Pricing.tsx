@@ -23,10 +23,10 @@ export function Pricing() {
                                     <h3 className="text-5xl font-heading text-gray-900 mb-6">{t('price_landing_page')}</h3>
                                     <div className="space-y-1">
                                         <p className="text-lg">{t('price_start_from')} <span className="line-through text-gray-400">Rp.
-                                            2.750.000</span></p>
+                                            2,750,000</span></p>
                                         <div className="flex items-baseline gap-2">
                                             <span className="text-gray-900 text-lg">Rp</span>
-                                            <span className="text-4xl text-gray-900">1,500,000</span>
+                                            <span className="text-4xl text-gray-900">1,999,000</span>
                                             <span className="text-gray-500 text-lg">{t('price_year')}</span>
                                         </div>
                                         <p className="text-gray-400 text-sm italic">{t('price_month_lp')}</p>
@@ -130,10 +130,10 @@ export function Pricing() {
                                     <h3 className="text-5xl font-heading text-gray-900 mb-6">{t('price_company_profile')}</h3>
                                     <div className="space-y-1">
                                         <p className="text-lg">{t('price_start_from')} <span className="line-through text-gray-400">Rp.
-                                            2.900.000</span></p>
+                                            3,500,000</span></p>
                                         <div className="flex items-baseline gap-2">
                                             <span className="text-gray-900 text-lg">Rp</span>
-                                            <span className="text-4xl text-gray-900">1,595,000</span>
+                                            <span className="text-4xl text-gray-900">2,999,000</span>
                                             <span className="text-gray-500 text-lg">{t('price_year')}</span>
                                         </div>
                                         <p className="text-gray-400 text-sm italic">{t('price_month_cp')}</p>
@@ -245,10 +245,10 @@ export function Pricing() {
                                     <h3 className="text-5xl font-heading text-gray-900 mb-6">{t('price_online_store')}</h3>
                                     <div className="space-y-1">
                                         <p className="text-lg">{t('price_start_from')} <span className="line-through text-gray-400">Rp.
-                                            4.500.000</span></p>
+                                            6.500.000</span></p>
                                         <div className="flex items-baseline gap-2">
                                             <span className="text-gray-900 text-lg">Rp</span>
-                                            <span className="text-4xl text-gray-900">2,469,000</span>
+                                            <span className="text-4xl text-gray-900">4,999,000</span>
                                             <span className="text-gray-500 text-lg">{t('price_year')}</span>
                                         </div>
                                         <p className="text-gray-400 text-sm italic">{t('price_month_to')}</p>

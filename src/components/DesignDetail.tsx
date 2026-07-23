@@ -1,0 +1,169 @@
+import { useState } from 'react';
+import { ArrowLeft, Monitor, Smartphone, ChevronLeft, ChevronRight } from 'lucide-react';
+
+export interface Design {
+  id: number;
+  title: string;
+  category: string;
+  icon: any;
+  image?: string;
+  description?: string;
+  images?: string[];
+  previewDesktop?: string;
+  previewMobile?: string;
+}
+
+interface DesignDetailProps {
+  design: Design;
+  onBack: () => void;
+}
+
+export function DesignDetail({ design, onBack }: DesignDetailProps) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [previewMode, setPreviewMode] = useState<'desktop' | 'mobile'>('desktop');
+
+  const images = design.images || [
+    '/assets/design-catalog-assets/design-banner/designbanner1.webp',
+    '/assets/design-catalog-assets/design-banner/designbanner2.webp',
+  ];
+
+  const description = design.description || `Desain website yang ceria dan ramah pengguna, dirancang khusus untuk ${design.category.toLowerCase()}. Desain ini menonjolkan tampilan yang bersih dan modern. Fitur-fitur utama meliputi galeri yang menarik, halaman produk dengan deskripsi lengkap, sistem pencarian yang canggih, serta proses yang mudah digunakan. Template ini sangat cocok untuk bisnis yang ingin memberikan pengalaman online yang nyaman dan menyenangkan bagi para pengunjung.`;
+
+  const nextImage = () => setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  const prevImage = () => setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+
+  return (
+    <div className="w-full bg-white min-h-screen pb-24 pt-12 md:pt-20">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Breadcrumb */}
+        <div className="flex items-center gap-2 text-gray-500 mb-8 text-sm">
+          <button onClick={onBack} className="flex items-center gap-2 hover:text-gray-900 transition-colors">
+            <ArrowLeft className="w-4 h-4" />
+            <span>Pilihan Desain</span>
+          </button>
+          <span>/</span>
+          <span className="font-bold text-gray-900">{design.category}</span>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-20">
+          {/* Image Slider */}
+          <div className="relative bg-gray-100 rounded-2xl overflow-hidden aspect-[4/3] group">
+            <img 
+              src={images[currentImageIndex]} 
+              alt={`${design.title} preview ${currentImageIndex + 1}`}
+              className="w-full h-full object-cover"
+            />
+            
+            {/* Slider Controls */}
+            <div className="absolute inset-0 flex items-center justify-between p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+              <button 
+                onClick={prevImage}
+                className="w-10 h-10 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black transition-colors"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              <button 
+                onClick={nextImage}
+                className="w-10 h-10 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black transition-colors"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+            </div>
+            
+            {/* Dots */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+              {images.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentImageIndex(idx)}
+                  className={`w-2 h-2 rounded-full transition-all ${currentImageIndex === idx ? 'bg-white w-4' : 'bg-white/50'}`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Details */}
+          <div>
+            <h1 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-6">
+              {design.title}
+            </h1>
+            <div className="prose prose-gray max-w-none mb-8">
+              <p className="text-gray-600 leading-relaxed">
+                {description}
+              </p>
+            </div>
+            <a 
+              href="https://wa.me/+6285655639206"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-4 bg-black text-white rounded-full font-bold hover:bg-brand transition-colors"
+            >
+              Bikin website sekarang!
+            </a>
+          </div>
+        </div>
+
+        {/* Full Preview */}
+        <div className="border-t border-gray-200 pt-16">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-gray-900 mb-6">
+              Full Preview
+            </h2>
+            
+            {/* Toggle Desktop/Mobile */}
+            <div className="inline-flex bg-black rounded-full p-1">
+              <button
+                onClick={() => setPreviewMode('desktop')}
+                className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold transition-all ${
+                  previewMode === 'desktop' 
+                    ? 'bg-white text-black' 
+                    : 'text-white hover:text-gray-300'
+                }`}
+              >
+                <Monitor className="w-4 h-4" />
+                Desktop
+              </button>
+              <button
+                onClick={() => setPreviewMode('mobile')}
+                className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold transition-all ${
+                  previewMode === 'mobile' 
+                    ? 'bg-white text-black' 
+                    : 'text-white hover:text-gray-300'
+                }`}
+              >
+                <Smartphone className="w-4 h-4" />
+                Mobile
+              </button>
+            </div>
+          </div>
+
+          {/* Preview Image/Iframe container */}
+          <div className="flex justify-center bg-gray-50 rounded-3xl p-4 md:p-12">
+            <div className={`relative transition-all duration-500 overflow-hidden rounded-lg shadow-2xl bg-white ${
+              previewMode === 'desktop' ? 'w-full max-w-5xl aspect-video' : 'w-[375px] h-[812px]'
+            }`}>
+              {/* Fake Browser header for desktop */}
+              {previewMode === 'desktop' && (
+                <div className="h-8 bg-gray-100 border-b border-gray-200 flex items-center px-4 gap-2">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                  </div>
+                </div>
+              )}
+              
+              <img 
+                src={previewMode === 'desktop' 
+                  ? (design.previewDesktop || '/assets/design-catalog-assets/design-banner/designbanner3.webp') 
+                  : (design.previewMobile || '/assets/design-catalog-assets/design-banner/designbanner4.webp')}
+                alt={`${design.title} full preview`}
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

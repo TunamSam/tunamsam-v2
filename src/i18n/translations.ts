@@ -248,7 +248,7 @@ export const translations: Record<Lang, Partial<Record<TranslationKey, string>>>
     c4_title: 'Desain Modern',
     c4_desc:
       'Tampilan yang modern dan konsisten membantu membangun kesan profesional serta meningkatkan kepercayaan pengunjung terhadap bisnis Anda.',
-    pkg_title: 'Paket jasa pembuatan website sesuai kebutuhan bisnis Anda',
+    pkg_title: 'Pilihan Paket Website yang Tepat untuk Bisnis Anda',
     pkg_subtitle:
       'Pilih paket yang paling sesuai dengan tujuan bisnis Anda. Kami menawarkan transparansi harga dan fitur lengkap untuk setiap tingkat pertumbuhan.',
     pkg_desc:
@@ -321,9 +321,9 @@ export const translations: Record<Lang, Partial<Record<TranslationKey, string>>>
     why_10_desc: 'Kami selalu berusaha responsif untuk memenuhi kebutuhan Anda dengan cepat dan efektif.',
     price_start_from: 'Mulai dari',
     price_year: '/ Tahun',
-    price_month_lp: '*konversi perbulan : Rp. 125.000/bulan',
-    price_month_cp: '*konversi perbulan : Rp. 133.000/bulan',
-    price_month_to: '*konversi perbulan : Rp. 206.000/bulan',
+    price_month_lp: '*konversi perbulan : Rp. 167,000/bulan',
+    price_month_cp: '*konversi perbulan : Rp. 250,000/bulan',
+    price_month_to: '*konversi perbulan : Rp. 417.000/bulan',
     price_btn_lp: 'Buat Landingpage sekarang!',
     price_btn_cp: 'Buat Company Profile sekarang!',
     price_btn_to: 'Buat Toko Online sekarang!',

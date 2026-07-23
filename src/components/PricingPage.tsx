@@ -7,7 +7,8 @@ const PACKAGES = [
     {
         id: 'landing-page',
         title: 'Landing Page',
-        price: '550 ribu',
+        real_price: '2,750,000',
+        price: '1,999,000',
         period: '/ tahun',
         badge: 'Best Choice',
         subtitle: 'Langganan 3 tahun, bayar di awal hemat 27%',
@@ -47,7 +48,8 @@ const PACKAGES = [
     {
         id: 'company-profile',
         title: 'Company Profile',
-        price: '1.5 juta',
+        real_price: '3,500,000',
+        price: '2,999,000',
         period: '/ tahun',
         badge: 'Popular',
         subtitle: 'Langganan 1 tahun, bayar di awal hemat 15%',
@@ -83,7 +85,8 @@ const PACKAGES = [
     {
         id: 'toko-online',
         title: 'Toko Online',
-        price: '2.4 juta',
+        real_price: '6,500,000',
+        price: '4,999,000',
         period: '/ tahun',
         badge: 'Business',
         subtitle: 'Langganan 1 tahun, fitur e-commerce lengkap',
@@ -258,7 +261,9 @@ export function PricingPage() {
                                     <h3 className="text-4xl md:text-5xl font-heading font-normal text-gray-900">{pkg.title}</h3>
                                     
                                     <div className="flex flex-col gap-1">
-                                        <span className="text-base md:text-lg">Mulai dari</span>
+                                        {pkg.price !== 'Hubungi Kami' && (
+                                            <span className="text-base md:text-lg">Mulai dari <span className="text-sm md:text-lg line-through text-gray-400">Rp. {pkg.real_price}</span></span>
+                                        )}
                                         <div className="flex items-center gap-2 flex-wrap">
                                             {pkg.price !== 'Hubungi Kami' && <span className="text-sm md:text-base">Rp</span>}
                                             <span className="text-3xl md:text-4xl tracking-tight">{pkg.price}</span>

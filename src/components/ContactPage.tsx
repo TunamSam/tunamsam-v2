@@ -6,9 +6,6 @@ export function ContactPage() {
             {/* Hero Section */}
             <div className="pt-32 md:pt-40 pb-16 md:pb-24">
                 <div className="max-w-7xl mx-auto px-6 text-center reveal-on-scroll">
-                    <p className="text-brand font-bold text-sm md:text-base tracking-widest mb-4">
-                        Hubungi Kami
-                    </p>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading mb-6 leading-tight text-gray-900">
                         Mulai Perjalanan Digital Anda<br className="hidden md:block" /> Bersama TunamSam
                     </h1>

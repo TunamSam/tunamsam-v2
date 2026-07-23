@@ -87,7 +87,7 @@ export function AboutPage() {
                             <Icon name="lightbulb" className="w-7 h-7" strokeWidth={1.5} />
                         </div>
                         <h4 className="text-xl md:text-2xl font-medium text-gray-900 mb-4">Inovasi</h4>
-                        <p className="text-gray-600 leading-relaxed text-sm md:text-base">Kami terus mengeksplorasi teknologi baru agar solusi yang diberikan relevan dan kompetitif.</p>
+                        <p className="leading-relaxed text-sm md:text-base">Kami terus mengeksplorasi teknologi baru agar solusi yang diberikan relevan dan kompetitif.</p>
                     </div>
 
                     {/* Card 2: Berorientasi Hasil (span 2) */}
@@ -96,7 +96,7 @@ export function AboutPage() {
                             <Icon name="target" className="w-7 h-7" strokeWidth={1.5} />
                         </div>
                         <h4 className="text-xl md:text-2xl font-medium text-gray-900 mb-4">Berorientasi Hasil</h4>
-                        <p className="text-gray-600 leading-relaxed text-sm md:text-base">Fokus kami adalah konversi, efisiensi, dan pertumbuhan nyata untuk klien.</p>
+                        <p className="leading-relaxed text-sm md:text-base">Fokus kami adalah konversi, efisiensi, dan pertumbuhan nyata untuk klien.</p>
                     </div>
 
                     {/* Card 3: Kemitraan (span 2) */}
@@ -105,7 +105,7 @@ export function AboutPage() {
                             <Icon name="share-2" className="w-7 h-7" strokeWidth={1.5} />
                         </div>
                         <h4 className="text-xl md:text-2xl font-medium text-gray-900 mb-4">Kemitraan</h4>
-                        <p className="text-gray-600 leading-relaxed text-sm md:text-base">Kami percaya bisnis terbaik dibangun melalui kolaborasi yang saling memahami.</p>
+                        <p className="leading-relaxed text-sm md:text-base">Kami percaya bisnis terbaik dibangun melalui kolaborasi yang saling memahami.</p>
                     </div>
 
                     {/* Card 4: Keamanan & Kualitas (span 3) */}
@@ -114,7 +114,7 @@ export function AboutPage() {
                             <Icon name="fingerprint" className="w-7 h-7" strokeWidth={1.5} />
                         </div>
                         <h4 className="text-xl md:text-2xl font-medium text-gray-900 mb-4">Keamanan & Kualitas</h4>
-                        <p className="text-gray-600 leading-relaxed text-sm md:text-base">Website Anda dibangun dengan standar keamanan dan kualitas tinggi.</p>
+                        <p className="leading-relaxed text-sm md:text-base">Website Anda dibangun dengan standar keamanan dan kualitas tinggi.</p>
                     </div>
 
                     {/* Card 5: Edukasi & Transparansi (span 3) */}
@@ -123,7 +123,7 @@ export function AboutPage() {
                             <Icon name="handshake" className="w-7 h-7" strokeWidth={1.5} />
                         </div>
                         <h4 className="text-xl md:text-2xl font-medium text-gray-900 mb-4">Edukasi & Transparansi</h4>
-                        <p className="text-gray-600 leading-relaxed text-sm md:text-base">Kami membimbing klien memahami proses dan pilihan mereka.</p>
+                        <p className="leading-relaxed text-sm md:text-base">Kami membimbing klien memahami proses dan pilihan mereka.</p>
                     </div>
                 </div>
             </div>

@@ -48,8 +48,8 @@ function HomePage() {
         <Hero />
         <TrustedBy />
         <ProblemSolution />
-        <Pricing />
         <Criteria />
+        <Pricing />
         <TechnicalSupportBanner />
         <WhyUs />
         <DesignChoices />
