@@ -1,4 +1,5 @@
 import { ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useI18n } from '../../context/I18nContext';
 
 export function DesignChoices() {
@@ -105,10 +106,10 @@ export function DesignChoices() {
 
 
                     <div className="text-center mt-16 reveal-on-scroll">
-                        <a href="#katalog-desain"
+                        <Link to="/katalog-desain"
                             className="inline-block bg-white text-black px-8 py-3 rounded-full text-sm font-bold hover:bg-gray-200 transition-colors">
                             {t('design_btn')}
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </section>

@@ -12,15 +12,16 @@ No lint, format, or test tooling is configured.
 
 ## Architecture
 
-Single-page Vite + React 19 + TypeScript landing site for a web studio. No router — everything is one page with hash-anchor sections.
+Vite + React 19 + TypeScript site. React Router (BrowserRouter) with 8+ routes. The homepage (`/`) renders the original single-page sections top-to-bottom (Hero, TrustedBy, ProblemSolution, etc.). Dedicated pages exist for `/katalog-desain`, `/harga-website`, `/tentang-kami`, `/testimoni`, `/kontak`, `/blog`, `/blog/:slug`.
 
 - `src/main.tsx` — entry point
-- `src/App.tsx` — root component, wraps everything in `I18nProvider`, renders each section top-to-bottom
-- `src/index.css` — Tailwind v3 directives + extensive custom CSS (collage layouts, marquee, wave animations, criteria scroll, reveal-on-scroll)
+- `src/App.tsx` — root component, `I18nProvider` → `BrowserRouter` → `Routes`
+- `src/index.css` — Tailwind v3 directives + extensive custom CSS
+- `src/data/blogData.ts` — blog post content (markdown-like strings)
 
 ### Component ownership
 
-- **Hand-written** (in `src/components/`): `Header`, `Hero`, `Criteria`, `Process`, `SuccessCtaSection`, `FaqSection`, `TestimonialCarousel`, `Icon`
+- **Hand-written** (in `src/components/`): `Header`, `Hero`, `Criteria`, `Process`, `SuccessCtaSection`, `FaqSection`, `TestimonialCarousel`, `Icon`, `DesignCatalog`, `DesignDetail`, `PricingPage`, `AboutPage`, `TestimonialsPage`, `ContactPage`, `BlogPage`, `BlogPostPage`
 - **Generated** (in `src/components/generated/`): `TrustedBy`, `ProblemSolution`, `Pricing`, `TechnicalSupportBanner`, `WhyUs`, `DesignChoices`, `AdditionalServices`, `Footer`
 
 ### SEO metadata
@@ -76,6 +77,6 @@ When adding a new translation key:
 
 ## Branding
 
-Always refer to the company as **Tunamsam** (not TunamSam or other variants).
+Always refer to the company as **Tunamsam** (not TunamSam).
 
-Preferred description: *Software House Indonesia specializing in website development, custom software, web applications, dashboards, UI/UX, and digital solutions.*
+Description: *Software House Indonesia specializing in website development, custom software, web applications, dashboards, UI/UX, and digital solutions.*
