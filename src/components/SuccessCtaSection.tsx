@@ -2,25 +2,25 @@ import { useEffect, useRef, useState } from 'react';
 import { useI18n } from '../context/I18nContext';
 
 const TOP_STRIP_IMAGES = [
-  '/assets/products/landing-page/1.webp',
-  '/assets/products/landing-page/2.webp',
-  '/assets/products/company-profile/1.webp',
-  '/assets/products/company-profile/2.webp',
-  '/assets/products/toko-online/1.webp',
-  '/assets/products/custom-website/1.webp',
-  '/assets/products/landing-page/3.webp',
-  '/assets/products/company-profile/3.webp',
+  '/assets/products-assets/landing-page/1.webp',
+  '/assets/products-assets/landing-page/2.webp',
+  '/assets/products-assets/company-profile/1.webp',
+  '/assets/products-assets/company-profile/2.webp',
+  '/assets/products-assets/toko-online/1.webp',
+  '/assets/products-assets/custom-website/1.webp',
+  '/assets/products-assets/landing-page/3.webp',
+  '/assets/products-assets/company-profile/3.webp',
 ];
 
 const BOTTOM_STRIP_IMAGES = [
-  '/assets/products/toko-online/2.webp',
-  '/assets/products/custom-website/2.webp',
-  '/assets/products/landing-page/4.webp',
-  '/assets/products/company-profile/4.webp',
-  '/assets/products/toko-online/3.webp',
-  '/assets/products/custom-website/3.webp',
-  '/assets/products/landing-page/2.webp',
-  '/assets/products/toko-online/4.webp',
+  '/assets/products-assets/toko-online/2.webp',
+  '/assets/products-assets/custom-website/2.webp',
+  '/assets/products-assets/landing-page/4.webp',
+  '/assets/products-assets/company-profile/4.webp',
+  '/assets/products-assets/toko-online/3.webp',
+  '/assets/products-assets/custom-website/3.webp',
+  '/assets/products-assets/landing-page/2.webp',
+  '/assets/products-assets/toko-online/4.webp',
 ];
 
 function lerp(start: number, end: number, t: number) {

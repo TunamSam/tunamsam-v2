@@ -67,7 +67,7 @@ export function Criteria() {
             id="laptop-mockup"
             style={{ transform: `scale(${laptopScale})` }}
           >
-            <img src="/assets/mockup.webp" alt="MacBook Mockup" className="w-full h-auto" />
+            <img src="/assets/criteria-section-assets/mockup.webp" alt="MacBook Mockup" className="w-full h-auto" />
 
             {CARDS.map((card, index) => (
               <div

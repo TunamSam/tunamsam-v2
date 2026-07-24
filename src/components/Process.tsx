@@ -11,7 +11,7 @@ export function Process() {
   const STEPS = useMemo(() => [
     {
       step: 1,
-      image: '/assets/step-section/1.webp',
+      image: '/assets/step-section-assets/1.webp',
       icon: 'hand-coins',
       title: t('proc_step1_title'),
       description: t('proc_step1_desc'),
@@ -19,7 +19,7 @@ export function Process() {
     },
     {
       step: 2,
-      image: '/assets/step-section/2.webp',
+      image: '/assets/step-section-assets/2.webp',
       icon: 'folder-open',
       title: t('proc_step2_title'),
       description: t('proc_step2_desc'),
@@ -27,7 +27,7 @@ export function Process() {
     },
     {
       step: 3,
-      image: '/assets/step-section/3.webp',
+      image: '/assets/step-section-assets/3.webp',
       icon: 'code-2',
       title: t('proc_step3_title'),
       description: t('proc_step3_desc'),
@@ -35,7 +35,7 @@ export function Process() {
     },
     {
       step: 4,
-      image: '/assets/step-section/4.webp',
+      image: '/assets/step-section-assets/4.webp',
       icon: 'sparkles',
       title: t('proc_step4_title'),
       description: t('proc_step4_desc'),
@@ -43,7 +43,7 @@ export function Process() {
     },
     {
       step: 5,
-      image: '/assets/step-section/5.webp',
+      image: '/assets/step-section-assets/5.webp',
       icon: 'globe',
       title: t('proc_step5_title'),
       description: t('proc_step5_desc'),

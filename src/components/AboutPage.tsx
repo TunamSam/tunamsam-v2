@@ -8,7 +8,7 @@ export function AboutPage() {
             <div className="relative pt-32 md:pt-28 pb-24 md:pb-32 bg-gray-900 text-white overflow-hidden">
                 <div className="absolute inset-0">
                     <img 
-                        src="/assets/about-me.jpg" 
+                        src="/assets/about-me-assets/about-me.webp" 
                         alt="Background TunamSam" 
                         className="w-full h-full object-cover"
                     />
@@ -44,7 +44,7 @@ export function AboutPage() {
                     </div>
                     <div className="rounded-3xl overflow-hidden shadow-lg reveal-on-scroll stagger-1 h-[350px] md:h-[450px]">
                         <img 
-                            src="/assets/about-me2.jpg" 
+                            src="/assets/about-me-assets/about-me2.webp" 
                             alt="Tim berdiskusi" 
                             className="w-full h-full object-cover"
                         />
@@ -55,7 +55,7 @@ export function AboutPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     <div className="order-2 lg:order-1 rounded-3xl overflow-hidden shadow-lg reveal-on-scroll h-[350px] md:h-[450px]">
                         <img 
-                            src="/assets/about-me1.jpg" 
+                            src="/assets/about-me-assets/about-me1.webp" 
                             alt="Jabat tangan" 
                             className="w-full h-full object-cover"
                         />

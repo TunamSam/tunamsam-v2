@@ -100,7 +100,7 @@ export function DesignCatalog() {
           </div>
 
           {/* Slider (Right on Desktop, Top on Mobile) */}
-          <div className="relative w-full h-[250px] md:h-[350px] lg:h-[250px] rounded-3xl overflow-hidden group bg-black order-1 lg:order-2">
+          <div className="relative w-full h-[250px] md:h-[350px] lg:h-[250px] rounded-xl overflow-hidden group bg-black order-1 lg:order-2">
             {/* Slider Background */}
             <div className="slider-container absolute inset-0 z-0">
               {SLIDE_IMAGES.map(({ src, alt }, index) => (

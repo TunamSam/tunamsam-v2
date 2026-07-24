@@ -40,7 +40,7 @@ export function Header() {
         <div className="flex justify-between items-center lg:mb-4">
           <div className="relative h-16 w-48 lg:w-80 flex items-center">
             <img
-              src="/assets/logo/tunamsam.webp"
+              src="/assets/tunamsam-assets/tunamsam.webp"
               alt="TunamSam Logo"
               className="absolute -top-6 lg:-top-12 left-0 h-32 lg:h-48 w-auto object-contain z-50"
             />

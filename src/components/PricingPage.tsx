@@ -17,9 +17,9 @@ const PACKAGES = [
             { period: '1 Tahun', price: 'Rp. 750 ribu', suffix: '/Tahun' }
         ],
         images: [
-            '/assets/products/landing-page/1.webp',
-            '/assets/products/landing-page/2.webp',
-            '/assets/products/landing-page/3.webp',
+            '/assets/products-assets/landing-page/1.webp',
+            '/assets/products-assets/landing-page/2.webp',
+            '/assets/products-assets/landing-page/3.webp',
         ],
         btnText: 'Buat Landing Page sekarang!',
         btnLink: 'https://wa.me/+6285655639206',
@@ -54,9 +54,9 @@ const PACKAGES = [
         badge: 'Popular',
         subtitle: 'Langganan 1 tahun, bayar di awal hemat 15%',
         images: [
-            '/assets/products/company-profile/1.webp',
-            '/assets/products/company-profile/2.webp',
-            '/assets/products/company-profile/3.webp',
+            '/assets/products-assets/company-profile/1.webp',
+            '/assets/products-assets/company-profile/2.webp',
+            '/assets/products-assets/company-profile/3.webp',
         ],
         btnText: 'Buat Company Profile sekarang!',
         btnLink: 'https://wa.me/+6285655639206',
@@ -91,9 +91,9 @@ const PACKAGES = [
         badge: 'Business',
         subtitle: 'Langganan 1 tahun, fitur e-commerce lengkap',
         images: [
-            '/assets/products/toko-online/1.webp',
-            '/assets/products/toko-online/2.webp',
-            '/assets/products/toko-online/3.webp',
+            '/assets/products-assets/toko-online/1.webp',
+            '/assets/products-assets/toko-online/2.webp',
+            '/assets/products-assets/toko-online/3.webp',
         ],
         btnText: 'Buat Toko Online sekarang!',
         btnLink: 'https://wa.me/+6285655639206',
@@ -127,9 +127,9 @@ const PACKAGES = [
         badge: 'Enterprise',
         subtitle: 'Solusi spesifik sesuai kebutuhan sistem Anda',
         images: [
-            '/assets/products/custom-website/1.webp',
-            '/assets/products/custom-website/2.webp',
-            '/assets/products/custom-website/3.webp',
+            '/assets/products-assets/custom-website/1.webp',
+            '/assets/products-assets/custom-website/2.webp',
+            '/assets/products-assets/custom-website/3.webp',
         ],
         btnText: 'Konsultasi Custom Website!',
         btnLink: 'https://wa.me/+6285655639206',
@@ -168,7 +168,7 @@ export function PricingPage() {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY + 200;
-            
+
             // Find the last section that we have scrolled past
             for (let i = PACKAGES.length - 1; i >= 0; i--) {
                 const section = document.getElementById(PACKAGES[i].id);
@@ -213,14 +213,14 @@ export function PricingPage() {
                         Kami hadir untuk membantu Anda membangun website yang sesuai kebutuhan dengan harga yang transparan dan fitur premium. Pilih paket jasa pembuatan website yang paling cocok untuk bisnis Anda
                     </p>
                 </div>
-                
+
                 {/* Hero Image Collage Placeholder */}
                 <div className="max-w-6xl mx-auto px-6 relative z-10 reveal-on-scroll stagger-1">
                     <div className="relative w-full h-[300px] md:h-[500px] lg:h-[600px] bg-gray-50 md:rounded-[3rem] flex flex-col items-center justify-center text-gray-400">
-                        <img src="/assets/gambar-collage.png" alt="Website Collage" className="w-full h-full object-cover" />
+                        <img src="/assets/pricing-assets/pricing-hero.webp" alt="Pricing Hero" className="w-full h-full object-cover" />
                     </div>
                 </div>
-                
+
             </div>
 
             <div className="max-w-8xl mx-auto px-6">
@@ -259,7 +259,7 @@ export function PricingPage() {
                                 {/* Left Column: Pricing Info */}
                                 <div className="w-full md:w-1/2 lg:w-1/3 flex flex-col items-start gap-4">
                                     <h3 className="text-4xl md:text-5xl font-heading font-normal text-gray-900">{pkg.title}</h3>
-                                    
+
                                     <div className="flex flex-col gap-1">
                                         {pkg.price !== 'Hubungi Kami' && (
                                             <span className="text-base md:text-lg">Mulai dari <span className="text-sm md:text-lg line-through text-gray-400">Rp. {pkg.real_price}</span></span>
@@ -268,7 +268,7 @@ export function PricingPage() {
                                             {pkg.price !== 'Hubungi Kami' && <span className="text-sm md:text-base">Rp</span>}
                                             <span className="text-3xl md:text-4xl tracking-tight">{pkg.price}</span>
                                             <span className="text-sm md:text-md">{pkg.period}</span>
-                                            
+
                                             {pkg.badge && (
                                                 <span className="ml-2 bg-[#00a859] text-white text-sm font-bold px-3 py-1 rounded-md tracking-wide">
                                                     {pkg.badge}
@@ -276,12 +276,12 @@ export function PricingPage() {
                                             )}
                                         </div>
                                     </div>
-                                    
+
                                     <p className="text-sm mt-1">{pkg.subtitle}</p>
-                                    
+
                                     <div className="w-full h-[1px] bg-gray-200 my-4"></div>
 
-                                    <button 
+                                    <button
                                         onClick={() => toggleOptions(pkg.id)}
                                         className="text-gray-900 text-sm flex items-center gap-1 font-medium hover:text-brand transition-colors"
                                     >
@@ -291,7 +291,7 @@ export function PricingPage() {
 
                                     <AnimatePresence>
                                         {expandedOptions[pkg.id] && (pkg as any).otherOptions && (
-                                            <motion.div 
+                                            <motion.div
                                                 initial={{ height: 0, opacity: 0, marginTop: 0 }}
                                                 animate={{ height: 'auto', opacity: 1, marginTop: 16 }}
                                                 exit={{ height: 0, opacity: 0, marginTop: 0 }}
@@ -308,8 +308,8 @@ export function PricingPage() {
                                             </motion.div>
                                         )}
                                     </AnimatePresence>
-                                    
-                                    <a 
+
+                                    <a
                                         href={pkg.btnLink}
                                         className="mt-6 inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-md font-medium hover:bg-gray-800 transition-colors"
                                     >
@@ -365,7 +365,7 @@ export function PricingPage() {
                                     Apa yang Anda Dapatkan & Untuk Siapa?
                                 </h3>
                                 <div className="bg-gray-50 rounded-3xl p-6 md:p-12 border border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                                    
+
                                     {/* Yang Anda dapatkan */}
                                     <div>
                                         <h4 className="text-md md:text-lg font-medium mb-4 md:mb-6 border-b border-gray-200 pb-3 md:pb-4">Yang Anda dapatkan</h4>
@@ -406,7 +406,7 @@ export function PricingPage() {
                                         {pkg.title} simpel, cepat jadi, dan langsung bisa dipakai promosi
                                     </p>
                                 </div>
-                                <a 
+                                <a
                                     href={pkg.btnLink}
                                     className="relative z-10 w-full md:w-auto shrink-0 bg-white text-black px-6 py-3 md:py-4 rounded-full text-sm md:text-base font-bold hover:bg-gray-200 transition-colors flex items-center justify-center gap-2"
                                 >

@@ -71,7 +71,7 @@ export function TestimonialsPage() {
                 {/* Hero Image Collage Placeholder */}
                 <div className="max-w-6xl mx-auto px-6 relative z-10 reveal-on-scroll stagger-1">
                     <div className="relative w-full h-[300px] md:h-[500px] lg:h-[600px] bg-gray-50 overflow-hidden flex flex-col items-center justify-center text-gray-400 border-b-0 md:border-b-4 border-black">
-                        <img src="/assets/testimoni.png" alt="Website Collage" className="w-full h-full object-cover" />
+                        <img src="/assets/testimoni-assets/testimoni.webp" alt="Website Collage" className="w-full h-full object-cover" />
                     </div>
                 </div>
             </div>

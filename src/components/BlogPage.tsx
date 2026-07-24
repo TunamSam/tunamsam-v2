@@ -33,7 +33,7 @@ export function BlogPage() {
             <div className="relative pt-32 md:pt-28 pb-24 md:pb-32 bg-gray-900 text-white overflow-hidden">
                 <div className="absolute inset-0">
                     <img 
-                        src="/assets/blog.jpg" 
+                        src="/assets/blog-assets/blog.webp" 
                         alt="Background Blog TunamSam" 
                         className="w-full h-full"
                     />

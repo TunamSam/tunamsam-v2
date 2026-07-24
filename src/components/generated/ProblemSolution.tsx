@@ -1,19 +1,19 @@
 import { useI18n } from '../../context/I18nContext';
 
 const PROBLEM_IMAGES = [
-  { src: '/assets/section-2/problem1.webp', alt: 'Wireframe Draft' },
-  { src: '/assets/section-2/problem2.webp', alt: 'Error Screen' },
-  { src: '/assets/section-2/problem3.webp', alt: 'Frustrated Dev' },
-  { src: '/assets/section-2/problem4.webp', alt: 'Unorganized UI' },
-  { src: '/assets/section-2/problem5.webp', alt: 'Loading State' },
+  { src: '/assets/problem-solution-section-assets/problem-assets/problem1.webp', alt: 'Wireframe Draft' },
+  { src: '/assets/problem-solution-section-assets/problem-assets/problem2.webp', alt: 'Error Screen' },
+  { src: '/assets/problem-solution-section-assets/problem-assets/problem3.webp', alt: 'Frustrated Dev' },
+  { src: '/assets/problem-solution-section-assets/problem-assets/problem4.webp', alt: 'Unorganized UI' },
+  { src: '/assets/problem-solution-section-assets/problem-assets/problem5.webp', alt: 'Loading State' },
 ];
 
 const SOLUTION_IMAGES = [
-  { src: '/assets/section-2/view1.webp', alt: 'Mobile UI' },
-  { src: '/assets/section-2/view2.webp', alt: 'Dashboard View' },
-  { src: '/assets/section-2/view3.webp', alt: 'Finished Web Project' },
-  { src: '/assets/section-2/view4.webp', alt: 'Design System' },
-  { src: '/assets/section-2/view5.webp', alt: 'UI Kit' },
+  { src: '/assets/problem-solution-section-assets/view-assets/view1.webp', alt: 'Mobile UI' },
+  { src: '/assets/problem-solution-section-assets/view-assets/view2.webp', alt: 'Dashboard View' },
+  { src: '/assets/problem-solution-section-assets/view-assets/view3.webp', alt: 'Finished Web Project' },
+  { src: '/assets/problem-solution-section-assets/view-assets/view4.webp', alt: 'Design System' },
+  { src: '/assets/problem-solution-section-assets/view-assets/view5.webp', alt: 'UI Kit' },
 ];
 
 function CollageImages({ variant, images }: { variant: string; images: { src: string; alt: string }[] }) {
