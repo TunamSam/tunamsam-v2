@@ -100,7 +100,7 @@ export function DesignCatalog() {
           </div>
 
           {/* Slider (Right on Desktop, Top on Mobile) */}
-          <div className="relative w-full h-[250px] md:h-[350px] lg:h-[250px] rounded-xl overflow-hidden group bg-black order-1 lg:order-2">
+          <div className="relative w-full aspect-[21/9] md:aspect-auto md:h-[350px] lg:h-[250px] rounded-none md:rounded-xl overflow-hidden group bg-black order-1 lg:order-2">
             {/* Slider Background */}
             <div className="slider-container absolute inset-0 z-0">
               {SLIDE_IMAGES.map(({ src, alt }, index) => (
@@ -118,9 +118,8 @@ export function DesignCatalog() {
                   type="button"
                   aria-label={`Go to slide ${index + 1}`}
                   onClick={() => goToSlide(index)}
-                  className={`slide-dot cursor-pointer transition-all duration-300 relative overflow-hidden rounded-full bg-white/40 hover:bg-white/70 ${
-                    index === currentSlide ? 'w-8 h-2 md:w-12 md:h-2' : 'w-2 h-2 md:w-2 md:h-2'
-                  }`}
+                  className={`slide-dot cursor-pointer transition-all duration-300 relative overflow-hidden rounded-full bg-white/40 hover:bg-white/70 ${index === currentSlide ? 'w-8 h-2 md:w-12 md:h-2' : 'w-2 h-2 md:w-2 md:h-2'
+                    }`}
                 >
                   {index === currentSlide && (
                     <div className="absolute top-0 left-0 h-full bg-white animate-slider-progress" />
@@ -140,11 +139,10 @@ export function DesignCatalog() {
             <button
               key={category}
               onClick={() => handleCategoryChange(category)}
-              className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${
-                activeCategory === category
+              className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${activeCategory === category
                   ? 'bg-brand text-white shadow-lg shadow-brand/30 scale-105'
                   : 'bg-white text-gray-600 hover:bg-gray-100 hover:text-gray-900 border border-gray-200'
-              }`}
+                }`}
             >
               {category}
             </button>
@@ -154,12 +152,12 @@ export function DesignCatalog() {
         {/* Designs Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {paginatedDesigns.map((design, idx) => (
-            <div 
+            <div
               key={`${design.id}-${idx}`}
               className="bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 group transform border border-gray-100"
             >
               <div className="relative aspect-video bg-gray-900 overflow-hidden">
-                <img 
+                <img
                   src={design.image || '/assets/design-catalog-assets/design-banner/designbanner1.webp'}
                   alt={design.title}
                   className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
@@ -169,7 +167,7 @@ export function DesignCatalog() {
                   <ArrowUpRight className="w-5 h-5 text-brand" />
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-3">
                   <div className="p-1.5 bg-brand/10 rounded-lg text-brand">
@@ -185,15 +183,15 @@ export function DesignCatalog() {
                 <p className="text-gray-500 text-sm">
                   Desain responsif dengan performa optimal untuk {design.category.toLowerCase()} Anda.
                 </p>
-                
+
                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
-                  <button 
+                  <button
                     onClick={() => setSelectedDesign(design)}
                     className="text-sm font-bold text-gray-900 hover:text-brand transition-colors flex items-center gap-2"
                   >
                     Lihat Detail
                   </button>
-                  <a 
+                  <a
                     href="https://wa.me/+6285655639206"
                     className="px-4 py-2 bg-gray-900 hover:bg-brand text-white text-xs md:text-md font-bold rounded-full transition-colors"
                   >
@@ -215,16 +213,15 @@ export function DesignCatalog() {
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
-            
+
             {Array.from({ length: totalPages }).map((_, i) => (
               <button
                 key={i}
                 onClick={() => setCurrentPage(i + 1)}
-                className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all ${
-                  currentPage === i + 1
+                className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all ${currentPage === i + 1
                     ? 'bg-brand text-white shadow-md'
                     : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
-                }`}
+                  }`}
               >
                 {i + 1}
               </button>

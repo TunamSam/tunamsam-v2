@@ -27,16 +27,16 @@ export function BlogPostPage() {
     return (
         <div className="w-full bg-white pb-24 text-gray-900">
             {/* Article Header */}
-            <div className="relative pt-32 md:pt-40 pb-16 md:pb-20 bg-gray-50 border-b border-gray-100">
-                <div className="max-w-3xl mx-auto px-6 relative z-10 text-center">
-                    <Link to="/blog" className="inline-flex items-center gap-2 text-brand font-bold hover:underline mb-8 reveal-on-scroll">
+            <div className="relative pt-32 md:pt-40 pb-16 md:pb-20">
+                <div className="max-w-5xl mx-auto px-6 relative z-10 text-center">
+                    <Link to="/blog" className="inline-flex items-center gap-2 text-brand font-bold mb-8 reveal-on-scroll">
                         <Icon name="arrow-left" className="w-4 h-4" />
                         Kembali ke Blog
                     </Link>
                     <h1 className="text-3xl md:text-5xl font-heading mb-6 reveal-on-scroll stagger-1 leading-tight text-gray-900">
                         {post.title}
                     </h1>
-                    <div className="flex items-center justify-center gap-6 text-sm text-gray-500 reveal-on-scroll stagger-2">
+                    <div className="flex items-center justify-center gap-6 text-md reveal-on-scroll stagger-2">
                         <div className="flex items-center gap-2">
                             <Icon name="calendar" className="w-4 h-4" />
                             <span>{post.date}</span>
@@ -57,9 +57,9 @@ export function BlogPostPage() {
             </div>
 
             {/* Article Content */}
-            <div className="max-w-3xl mx-auto px-6 py-16 md:py-24">
+            <div className="max-w-5xl mx-auto px-6 py-16 md:py-24">
                 <div 
-                    className="prose prose-lg prose-brand max-w-none text-gray-700 font-light leading-relaxed [&>h3]:text-2xl [&>h3]:font-bold [&>h3]:font-heading [&>h3]:text-gray-900 [&>h3]:mt-12 [&>h3]:mb-4 [&>p]:mb-6"
+                    className="prose prose-lg prose-brand max-w-none font-light leading-relaxed [&>h3]:text-2xl [&>h3]:font-bold [&>h3]:font-heading [&>h3]:mt-12 [&>h3]:mb-4 [&>p]:mb-6 [&>p]:text-lg"
                     dangerouslySetInnerHTML={{ __html: post.content }}
                 />
             </div>

@@ -22,10 +22,10 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [previewMode, setPreviewMode] = useState<'desktop' | 'mobile'>('desktop');
 
-  const images = design.images || [
+  const images = design.images || (design.image ? [design.image] : [
     '/assets/design-catalog-assets/design-banner/designbanner1.webp',
     '/assets/design-catalog-assets/design-banner/designbanner2.webp',
-  ];
+  ]);
 
   const description = design.description || `Desain website yang ceria dan ramah pengguna, dirancang khusus untuk ${design.category.toLowerCase()}. Desain ini menonjolkan tampilan yang bersih dan modern. Fitur-fitur utama meliputi galeri yang menarik, halaman produk dengan deskripsi lengkap, sistem pencarian yang canggih, serta proses yang mudah digunakan. Template ini sangat cocok untuk bisnis yang ingin memberikan pengalaman online yang nyaman dan menyenangkan bagi para pengunjung.`;
 
@@ -36,18 +36,18 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
     <div className="w-full bg-white min-h-screen pb-24 pt-12 md:pt-20">
       <div className="max-w-7xl mx-auto px-6">
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-gray-500 mb-8 text-sm">
+        <div className="flex items-center gap-2 text-gray-500 mb-8 text-md">
           <button onClick={onBack} className="flex items-center gap-2 hover:text-gray-900 transition-colors">
             <ArrowLeft className="w-4 h-4" />
             <span>Pilihan Desain</span>
           </button>
           <span>/</span>
-          <span className="font-bold text-gray-900">{design.category}</span>
+          <span className="font-bold text-gray-900">{design.category} Detail</span>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start mb-20">
           {/* Image Slider */}
-          <div className="relative bg-gray-100 rounded-2xl overflow-hidden aspect-[4/3] group">
+          <div className="lg:col-span-3 relative bg-gray-100 rounded-2xl overflow-hidden aspect-video group">
             <img 
               src={images[currentImageIndex]} 
               alt={`${design.title} preview ${currentImageIndex + 1}`}
@@ -83,7 +83,7 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
           </div>
 
           {/* Details */}
-          <div>
+          <div className="lg:col-span-2">
             <h1 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-6">
               {design.title}
             </h1>
@@ -138,9 +138,9 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
           </div>
 
           {/* Preview Image/Iframe container */}
-          <div className="flex justify-center bg-gray-50 rounded-3xl p-4 md:p-12">
+          <div className="flex justify-center rounded-3xl p-4 md:p-12">
             <div className={`relative transition-all duration-500 overflow-hidden rounded-lg shadow-2xl bg-white ${
-              previewMode === 'desktop' ? 'w-full max-w-5xl aspect-video' : 'w-[375px] h-[812px]'
+              previewMode === 'desktop' ? 'w-full max-w-5xl aspect-video' : 'w-full max-w-[375px] aspect-[9/16]'
             }`}>
               {/* Fake Browser header for desktop */}
               {previewMode === 'desktop' && (
@@ -153,13 +153,15 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
                 </div>
               )}
               
-              <img 
-                src={previewMode === 'desktop' 
-                  ? (design.previewDesktop || '/assets/design-catalog-assets/design-banner/designbanner3.webp') 
-                  : (design.previewMobile || '/assets/design-catalog-assets/design-banner/designbanner4.webp')}
-                alt={`${design.title} full preview`}
-                className="w-full h-full object-cover object-top"
-              />
+              <div className="w-full h-full flex flex-col items-center justify-center bg-gray-100 text-gray-400 p-6 text-center">
+                <div className="w-16 h-16 mb-4 opacity-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6.936 10.134A2.25 2.25 0 0110.12 7.73l1.83 2.112A2.25 2.25 0 0113.882 13H15.75a2.25 2.25 0 012.25 2.25v2.25A2.25 2.25 0 0115.75 19.5H8.25a2.25 2.25 0 01-2.25-2.25v-2.25A2.25 2.25 0 018.25 12.75v-1.636a2.25 2.25 0 01-.19-.48l-1.124-2.5zM12 2.25A2.25 2.25 0 0114.25 4.5v1.5a2.25 2.25 0 01-4.5 0v-1.5A2.25 2.25 0 0112 2.25zM4.5 10.5A2.25 2.25 0 016.75 12.75v1.5a2.25 2.25 0 01-4.5 0v-1.5A2.25 2.25 0 014.5 10.5zm15 0a2.25 2.25 0 012.25 2.25v1.5a2.25 2.25 0 01-4.5 0v-1.5A2.25 2.25 0 0119.5 10.5z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl md:text-2xl font-heading font-bold text-gray-600 mb-2">Under Development</h3>
+                <p className="text-sm md:text-base">Tampilan preview lengkap sedang dalam tahap pengembangan.</p>
+              </div>
             </div>
           </div>
         </div>

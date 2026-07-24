@@ -152,6 +152,7 @@ function BlogPostPageRoute() {
       <main className="font-sans antialiased min-h-screen bg-white">
         <BlogPostPage />
         <SuccessCtaSection />
+        <FaqSection />
       </main>
       <Footer />
     </>

@@ -9,12 +9,13 @@ const PACKAGES = [
         title: 'Landing Page',
         real_price: '2,750,000',
         price: '1,999,000',
-        period: '/ tahun',
+        period: '/ 3 tahun',
         badge: 'Best Choice',
-        subtitle: 'Langganan 3 tahun, bayar di awal hemat 27%',
+        subtitle: 'Bayar di awal untuk 3 tahun dan hemat 27%',
         otherOptions: [
-            { period: '2 Tahun', price: 'Rp. 650 ribu', suffix: '/Tahun (Hemat 14%)' },
-            { period: '1 Tahun', price: 'Rp. 750 ribu', suffix: '/Tahun' }
+            { period: '3 Tahun', price: 'Rp. 1,999,000', suffix: 'Hemat 27%' },
+            { period: '2 Tahun', price: 'Rp. 1,300,000', suffix: '(Rp. 650.000 / tahun)' },
+            { period: '1 Tahun', price: 'Rp. 750,000'},
         ],
         images: [
             '/assets/products-assets/landing-page/1.webp',
@@ -50,9 +51,13 @@ const PACKAGES = [
         title: 'Company Profile',
         real_price: '3,500,000',
         price: '2,999,000',
-        period: '/ tahun',
+        period: '/ 2 tahun',
         badge: 'Popular',
-        subtitle: 'Langganan 1 tahun, bayar di awal hemat 15%',
+        subtitle: 'Bayar di awal untuk 2 tahun dan hemat 15%',
+        otherOptions: [
+            { period: '2 Tahun', price: 'Rp. 2,999,000', suffix: 'hemat 15%' },
+            { period: '1 Tahun', price: 'Rp. 1,750,000'},
+        ],
         images: [
             '/assets/products-assets/company-profile/1.webp',
             '/assets/products-assets/company-profile/2.webp',
@@ -87,9 +92,13 @@ const PACKAGES = [
         title: 'Toko Online',
         real_price: '6,500,000',
         price: '4,999,000',
-        period: '/ tahun',
+        period: '/ 2 tahun',
         badge: 'Business',
-        subtitle: 'Langganan 1 tahun, fitur e-commerce lengkap',
+        subtitle: 'Bayar di awal untuk 2 tahun dan hemat 23%',
+        otherOptions: [
+            { period: '2 Tahun', price: 'Rp. 4,999,000', suffix: 'hemat 23%' },
+            { period: '1 Tahun', price: 'Rp. 3,250,000'},
+        ],
         images: [
             '/assets/products-assets/toko-online/1.webp',
             '/assets/products-assets/toko-online/2.webp',
