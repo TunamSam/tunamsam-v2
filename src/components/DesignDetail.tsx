@@ -48,28 +48,28 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start mb-20">
           {/* Image Slider */}
           <div className="lg:col-span-3 relative bg-gray-100 rounded-2xl overflow-hidden aspect-video group">
-            <img 
-              src={images[currentImageIndex]} 
+            <img
+              src={images[currentImageIndex]}
               alt={`${design.title} preview ${currentImageIndex + 1}`}
               className="w-full h-full object-cover"
             />
-            
+
             {/* Slider Controls */}
             <div className="absolute inset-0 flex items-center justify-between p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-              <button 
+              <button
                 onClick={prevImage}
                 className="w-10 h-10 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black transition-colors"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
-              <button 
+              <button
                 onClick={nextImage}
                 className="w-10 h-10 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black transition-colors"
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
             </div>
-            
+
             {/* Dots */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
               {images.map((_, idx) => (
@@ -92,7 +92,7 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
                 {description}
               </p>
             </div>
-            <a 
+            <a
               href="https://wa.me/+6285655639206"
               target="_blank"
               rel="noopener noreferrer"
@@ -109,27 +109,25 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
             <h2 className="text-2xl md:text-3xl font-heading font-bold text-gray-900 mb-6">
               Full Preview
             </h2>
-            
+
             {/* Toggle Desktop/Mobile */}
             <div className="inline-flex bg-black rounded-full p-1">
               <button
                 onClick={() => setPreviewMode('desktop')}
-                className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold transition-all ${
-                  previewMode === 'desktop' 
-                    ? 'bg-white text-black' 
+                className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold transition-all ${previewMode === 'desktop'
+                    ? 'bg-white text-black'
                     : 'text-white hover:text-gray-300'
-                }`}
+                  }`}
               >
                 <Monitor className="w-4 h-4" />
                 Desktop
               </button>
               <button
                 onClick={() => setPreviewMode('mobile')}
-                className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold transition-all ${
-                  previewMode === 'mobile' 
-                    ? 'bg-white text-black' 
+                className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold transition-all ${previewMode === 'mobile'
+                    ? 'bg-white text-black'
                     : 'text-white hover:text-gray-300'
-                }`}
+                  }`}
               >
                 <Smartphone className="w-4 h-4" />
                 Mobile
@@ -139,9 +137,8 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
 
           {/* Preview Image/Iframe container */}
           <div className="flex justify-center rounded-3xl p-4 md:p-12">
-            <div className={`relative transition-all duration-500 overflow-hidden rounded-lg shadow-2xl bg-white ${
-              previewMode === 'desktop' ? 'w-full max-w-5xl aspect-video' : 'w-full max-w-[375px] aspect-[9/16]'
-            }`}>
+            <div className={`relative transition-all duration-500 overflow-hidden rounded-lg shadow-2xl bg-white ${previewMode === 'desktop' ? 'w-full max-w-5xl aspect-video' : 'w-[375px] h-[812px]'
+              }`}>
               {/* Fake Browser header for desktop */}
               {previewMode === 'desktop' && (
                 <div className="h-8 bg-gray-100 border-b border-gray-200 flex items-center px-4 gap-2">
@@ -152,7 +149,7 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
                   </div>
                 </div>
               )}
-              
+
               <div className="w-full h-full flex flex-col items-center justify-center bg-gray-100 text-gray-400 p-6 text-center">
                 <div className="w-16 h-16 mb-4 opacity-50">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">

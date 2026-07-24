@@ -38,15 +38,15 @@ export function Header() {
     <header className="bg-brand text-white relative z-50">
       <div className="max-w-8xl mx-auto px-6 md:px-12 py-6">
         <div className="flex justify-between items-center lg:mb-4">
-          <div className="relative h-16 w-48 lg:w-80 flex items-center">
+          <div className="relative h-16 w-48 lg:w-64 xl:w-80 flex items-center">
             <img
               src="/assets/tunamsam-assets/tunamsam.webp"
               alt="TunamSam Logo"
-              className="absolute -top-6 lg:-top-12 left-0 h-32 lg:h-48 w-auto object-contain z-50"
+              className="absolute -top-6 lg:-top-10 xl:-top-12 left-0 h-32 lg:h-40 xl:h-48 w-auto object-contain z-50"
             />
           </div>
 
-          <div className="hidden lg:flex items-center lg:space-x-6 xl:space-x-10 text-[14px] font-medium whitespace-nowrap">
+          <div className="hidden lg:flex items-center lg:space-x-4 xl:space-x-10 text-[13px] xl:text-[14px] font-medium whitespace-nowrap">
             <div className="flex items-center space-x-2">
               <MapPin className="w-4 h-4 text-white opacity-80" />
               <span>Kediri, Indonesia</span>
@@ -61,27 +61,27 @@ export function Header() {
             </div>
           </div>
 
-          <div className="hidden lg:flex items-center space-x-2">
+          <div className="hidden lg:flex items-center space-x-1 xl:space-x-2">
             <a
               href="https://www.instagram.com/tunamsam/"
               aria-label="Instagram"
-              className="w-10 h-10 bg-white text-brand rounded-full flex items-center justify-center hover:bg-brand-light hover:text-white transition-all shadow-md"
+              className="w-8 h-8 xl:w-10 xl:h-10 bg-white text-brand rounded-full flex items-center justify-center hover:bg-brand-light hover:text-white transition-all shadow-md"
             >
-              <i className="fa-brands fa-instagram text-xl" />
+              <i className="fa-brands fa-instagram text-lg xl:text-xl" />
             </a>
             <a
               href="https://www.tiktok.com/@tunamsam"
               aria-label="TikTok"
-              className="w-10 h-10 bg-white text-brand rounded-full flex items-center justify-center hover:bg-brand-light hover:text-white transition-all shadow-md"
+              className="w-8 h-8 xl:w-10 xl:h-10 bg-white text-brand rounded-full flex items-center justify-center hover:bg-brand-light hover:text-white transition-all shadow-md"
             >
-              <i className="fa-brands fa-tiktok text-lg" />
+              <i className="fa-brands fa-tiktok text-base xl:text-lg" />
             </a>
             <a
               href="https://www.linkedin.com/company/tunamsam"
               aria-label="LinkedIn"
-              className="w-10 h-10 bg-white text-brand rounded-full flex items-center justify-center hover:bg-brand-light hover:text-white transition-all shadow-md"
+              className="w-8 h-8 xl:w-10 xl:h-10 bg-white text-brand rounded-full flex items-center justify-center hover:bg-brand-light hover:text-white transition-all shadow-md"
             >
-              <i className="fa-brands fa-linkedin-in text-xl" />
+              <i className="fa-brands fa-linkedin-in text-lg xl:text-xl" />
             </a>
           </div>
 
@@ -95,13 +95,13 @@ export function Header() {
         </div>
 
         <div className="hidden lg:flex flex-col md:flex-row justify-between items-center pt-6">
-          <nav className="relative z-[60] flex flex-wrap justify-center md:justify-start items-center gap-6 lg:gap-10 text-[13px] font-bold uppercase tracking-wider mb-6 md:mb-0">
+          <nav className="relative z-[60] flex flex-wrap justify-center md:justify-start items-center gap-4 xl:gap-10 text-[12px] xl:text-[13px] font-bold uppercase tracking-wider mb-6 md:mb-0">
             {NAV_LINKS.map((link) => {
               const isActive = location.pathname === link.href || (location.pathname + location.hash) === link.href;
               return (
-                <Link 
-                  key={link.key} 
-                  to={link.href} 
+                <Link
+                  key={link.key}
+                  to={link.href}
                   className={`transition-all cursor-pointer pb-1 border-b-2 ${isActive ? 'border-white opacity-100' : 'border-transparent hover:opacity-70'}`}
                 >
                   {t(link.key)}

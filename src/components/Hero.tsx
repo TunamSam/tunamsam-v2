@@ -25,8 +25,8 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative bg-brand pb-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 mt-7 md:mt-7 md:px-12 relative z-20">
+    <section id="home" className="relative bg-brand pb-24 lg:pb-16 xl:pb-24 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 mt-7 md:mt-7 lg:mt-4 xl:mt-7 md:px-12 lg:px-24 xl:px-12 relative z-20">
         <h1 className="sr-only">{t('seo_title')}</h1>
         <div className="relative">
           <div className="slider-container aspect-[21/9] md:aspect-[16/7] rounded-none md:rounded-[2.5rem] overflow-hidden shadow-2xl bg-black">
@@ -44,9 +44,8 @@ export function Hero() {
                 type="button"
                 aria-label={`Go to slide ${index + 1}`}
                 onClick={() => goToSlide(index)}
-                className={`slide-dot cursor-pointer transition-all duration-300 relative overflow-hidden rounded-full bg-[#d4d4d4] ${
-                  index === currentSlide ? 'w-8 h-2 md:w-12 md:h-3' : 'w-2 h-2 md:w-3 md:h-3'
-                }`}
+                className={`slide-dot cursor-pointer transition-all duration-300 relative overflow-hidden rounded-full bg-[#d4d4d4] ${index === currentSlide ? 'w-8 h-2 md:w-12 md:h-3' : 'w-2 h-2 md:w-3 md:h-3'
+                  }`}
               >
                 {index === currentSlide && (
                   <div className="absolute top-0 left-0 h-full bg-brand animate-slider-progress" />
