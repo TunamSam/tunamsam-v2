@@ -1,8 +1,15 @@
 import { Icon } from '../Icon';
 import { useI18n } from '../../context/I18nContext';
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export function Pricing() {
     const { t } = useI18n();
+    const [expandedOptions, setExpandedOptions] = useState<Record<string, boolean>>({});
+
+    const toggleOptions = (id: string) => {
+        setExpandedOptions(prev => ({ ...prev, [id]: !prev[id] }));
+    };
     return (
         <>
             <section id="pricing" className="py-32 bg-[#fafafa]">
@@ -27,9 +34,47 @@ export function Pricing() {
                                         <div className="flex items-baseline gap-2">
                                             <span className="text-gray-900 text-lg">Rp</span>
                                             <span className="text-4xl text-gray-900">1,999,000</span>
-                                            <span className="text-gray-500 text-lg">{t('price_year')}</span>
+                                            <span className="text-gray-500 text-lg">/ 3 tahun</span>
                                         </div>
-                                        <p className="text-gray-400 text-sm italic">{t('price_month_lp')}</p>
+                                        <p className="text-gray-400 text-sm italic mb-4">Bayar di awal untuk 3 tahun dan hemat 27%</p>
+                                        
+                                        <div className="w-full h-[1px] bg-gray-200 my-4"></div>
+
+                                        <button
+                                            onClick={() => toggleOptions('landing-page')}
+                                            className="text-gray-900 text-sm flex items-center gap-1 font-medium hover:text-brand transition-colors"
+                                        >
+                                            {expandedOptions['landing-page'] ? 'Sembunyikan opsi' : 'Lihat opsi lainnya'}
+                                            <Icon name={expandedOptions['landing-page'] ? 'chevron-up' : 'chevron-down'} className="w-4 h-4 text-gray-500" />
+                                        </button>
+
+                                        <AnimatePresence>
+                                            {expandedOptions['landing-page'] && (
+                                                <motion.div
+                                                    initial={{ height: 0, opacity: 0, marginTop: 0 }}
+                                                    animate={{ height: 'auto', opacity: 1, marginTop: 16 }}
+                                                    exit={{ height: 0, opacity: 0, marginTop: 0 }}
+                                                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                                                    className="flex flex-col gap-3 text-sm md:text-base text-gray-800 overflow-hidden"
+                                                >
+                                                    <div className="flex items-center gap-1">
+                                                        <span className="w-16">3 Tahun</span>
+                                                        <span className="font-bold">Rp. 1,999,000</span>
+                                                        <span>Hemat 27%</span>
+                                                    </div>
+                                                    <div className="flex items-center gap-1">
+                                                        <span className="w-16">2 Tahun</span>
+                                                        <span className="font-bold">Rp. 1,300,000</span>
+                                                        <span>(Rp. 650.000 / tahun)</span>
+                                                    </div>
+                                                    <div className="flex items-center gap-1">
+                                                        <span className="w-16">1 Tahun</span>
+                                                        <span className="font-bold">Rp. 750,000</span>
+                                                        <span></span>
+                                                    </div>
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
                                     </div>
                                 </div>
                                 <a href="https://wa.me/+6285655639206"
@@ -46,7 +91,7 @@ export function Pricing() {
                                             className="text-xs font-bold leading-tight font-heading uppercase text-white/90">{t('price_best_choice')}</span>
                                         <div className="w-px h-10 bg-white/20"></div>
                                         <div className="flex items-baseline gap-1">
-                                            <span className="text-5xl font-black font-heading">45%</span>
+                                            <span className="text-5xl font-black font-heading">27%</span>
                                             <span className="text-xl font-bold font-heading text-white/80 uppercase">Off</span>
                                         </div>
                                     </div>
@@ -134,9 +179,42 @@ export function Pricing() {
                                         <div className="flex items-baseline gap-2">
                                             <span className="text-gray-900 text-lg">Rp</span>
                                             <span className="text-4xl text-gray-900">2,999,000</span>
-                                            <span className="text-gray-500 text-lg">{t('price_year')}</span>
+                                            <span className="text-gray-500 text-lg">/ 2 tahun</span>
                                         </div>
-                                        <p className="text-gray-400 text-sm italic">{t('price_month_cp')}</p>
+                                        <p className="text-gray-400 text-sm italic mb-4">Bayar di awal untuk 2 tahun dan hemat 15%</p>
+                                        
+                                        <div className="w-full h-[1px] bg-gray-200 my-4"></div>
+
+                                        <button
+                                            onClick={() => toggleOptions('company-profile')}
+                                            className="text-gray-900 text-sm flex items-center gap-1 font-medium hover:text-brand transition-colors"
+                                        >
+                                            {expandedOptions['company-profile'] ? 'Sembunyikan opsi' : 'Lihat opsi lainnya'}
+                                            <Icon name={expandedOptions['company-profile'] ? 'chevron-up' : 'chevron-down'} className="w-4 h-4 text-gray-500" />
+                                        </button>
+
+                                        <AnimatePresence>
+                                            {expandedOptions['company-profile'] && (
+                                                <motion.div
+                                                    initial={{ height: 0, opacity: 0, marginTop: 0 }}
+                                                    animate={{ height: 'auto', opacity: 1, marginTop: 16 }}
+                                                    exit={{ height: 0, opacity: 0, marginTop: 0 }}
+                                                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                                                    className="flex flex-col gap-3 text-sm md:text-base text-gray-800 overflow-hidden"
+                                                >
+                                                    <div className="flex items-center gap-1">
+                                                        <span className="w-16">2 Tahun</span>
+                                                        <span className="font-bold">Rp. 2,999,000</span>
+                                                        <span>Hemat 15%</span>
+                                                    </div>
+                                                    <div className="flex items-center gap-1">
+                                                        <span className="w-16">1 Tahun</span>
+                                                        <span className="font-bold">Rp. 1,750,000</span>
+                                                        <span></span>
+                                                    </div>
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
                                     </div>
                                 </div>
                                 <a href="https://wa.me/+6285655639206"
@@ -160,7 +238,7 @@ export function Pricing() {
                                                 className="text-xs font-bold leading-tight font-heading uppercase text-white/90">{t('price_best_choice')}</span>
                                             <div className="w-px h-10 bg-white/20"></div>
                                             <div className="flex items-baseline gap-1">
-                                                <span className="text-5xl font-black font-heading">45%</span>
+                                                <span className="text-5xl font-black font-heading">15%</span>
                                                 <span className="text-xl font-bold font-heading text-white/80 uppercase">Off</span>
                                             </div>
                                         </div>
@@ -249,9 +327,42 @@ export function Pricing() {
                                         <div className="flex items-baseline gap-2">
                                             <span className="text-gray-900 text-lg">Rp</span>
                                             <span className="text-4xl text-gray-900">4,999,000</span>
-                                            <span className="text-gray-500 text-lg">{t('price_year')}</span>
+                                            <span className="text-gray-500 text-lg">/ 2 tahun</span>
                                         </div>
-                                        <p className="text-gray-400 text-sm italic">{t('price_month_to')}</p>
+                                        <p className="text-gray-400 text-sm italic mb-4">Bayar di awal untuk 2 tahun dan hemat 23%</p>
+                                        
+                                        <div className="w-full h-[1px] bg-gray-200 my-4"></div>
+
+                                        <button
+                                            onClick={() => toggleOptions('toko-online')}
+                                            className="text-gray-900 text-sm flex items-center gap-1 font-medium hover:text-brand transition-colors"
+                                        >
+                                            {expandedOptions['toko-online'] ? 'Sembunyikan opsi' : 'Lihat opsi lainnya'}
+                                            <Icon name={expandedOptions['toko-online'] ? 'chevron-up' : 'chevron-down'} className="w-4 h-4 text-gray-500" />
+                                        </button>
+
+                                        <AnimatePresence>
+                                            {expandedOptions['toko-online'] && (
+                                                <motion.div
+                                                    initial={{ height: 0, opacity: 0, marginTop: 0 }}
+                                                    animate={{ height: 'auto', opacity: 1, marginTop: 16 }}
+                                                    exit={{ height: 0, opacity: 0, marginTop: 0 }}
+                                                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                                                    className="flex flex-col gap-3 text-sm md:text-base text-gray-800 overflow-hidden"
+                                                >
+                                                    <div className="flex items-center gap-1">
+                                                        <span className="w-16">2 Tahun</span>
+                                                        <span className="font-bold">Rp. 4,999,000</span>
+                                                        <span>Hemat 23%</span>
+                                                    </div>
+                                                    <div className="flex items-center gap-1">
+                                                        <span className="w-16">1 Tahun</span>
+                                                        <span className="font-bold">Rp. 3,250,000</span>
+                                                        <span></span>
+                                                    </div>
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
                                     </div>
                                 </div>
                                 <a href="https://wa.me/+6285655639206"
@@ -275,7 +386,7 @@ export function Pricing() {
                                                 className="text-xs font-bold leading-tight font-heading uppercase text-white/90">{t('price_best_choice')}</span>
                                             <div className="w-px h-10 bg-white/20"></div>
                                             <div className="flex items-baseline gap-1">
-                                                <span className="text-5xl font-black font-heading">45%</span>
+                                                <span className="text-5xl font-black font-heading">23%</span>
                                                 <span className="text-xl font-bold font-heading text-white/80 uppercase">Off</span>
                                             </div>
                                         </div>
