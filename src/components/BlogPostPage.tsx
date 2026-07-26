@@ -1,11 +1,13 @@
 import { useParams, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Icon } from './Icon';
-import { BLOG_POSTS } from '../data/blogData';
+import { getBlogPost } from '../data/blogData';
+import { useI18n } from '../context/I18nContext';
 
 export function BlogPostPage() {
+    const { t, lang } = useI18n();
     const { slug } = useParams<{ slug: string }>();
-    const post = BLOG_POSTS.find(p => p.slug === slug);
+    const post = slug ? getBlogPost(slug, lang) : undefined;
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -15,10 +17,10 @@ export function BlogPostPage() {
         return (
             <div className="w-full min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6 text-center">
                 <Icon name="search" className="w-16 h-16 text-gray-300 mb-6" />
-                <h1 className="text-3xl font-bold font-heading text-gray-900 mb-4">Artikel Tidak Ditemukan</h1>
-                <p className="text-gray-600 mb-8 max-w-md">Maaf, artikel yang Anda cari tidak tersedia atau mungkin telah dipindahkan.</p>
+                <h1 className="text-3xl font-bold font-heading text-gray-900 mb-4">{t('blog_notfound_title')}</h1>
+                <p className="text-gray-600 mb-8 max-w-md">{t('blog_notfound_desc')}</p>
                 <Link to="/blog" className="bg-brand text-white px-8 py-3 rounded-full font-bold hover:bg-brand-dark transition-colors">
-                    Kembali ke Blog
+                    {t('blog_back')}
                 </Link>
             </div>
         );
@@ -31,7 +33,7 @@ export function BlogPostPage() {
                 <div className="max-w-5xl mx-auto px-6 relative z-10 text-center">
                     <Link to="/blog" className="inline-flex items-center gap-2 text-brand font-bold mb-8 reveal-on-scroll">
                         <Icon name="arrow-left" className="w-4 h-4" />
-                        Kembali ke Blog
+                        {t('blog_back')}
                     </Link>
                     <h1 className="text-3xl md:text-5xl font-heading mb-6 reveal-on-scroll stagger-1 leading-tight text-gray-900">
                         {post.title}
@@ -52,7 +54,7 @@ export function BlogPostPage() {
             {/* Featured Image */}
             <div className="max-w-5xl mx-auto px-6 -mt-10 md:-mt-12 relative z-20 reveal-on-scroll">
                 <div className="w-full h-[300px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
-                    <img src={post.imageUrl} alt={post.title} className="w-full h-full object-cover" />
+                    <img src={post.imageUrl} alt={t('blog_badge')} className="w-full h-full object-cover" />
                 </div>
             </div>
 
@@ -66,7 +68,7 @@ export function BlogPostPage() {
             
             {/* Share & CTA */}
             <div className="max-w-3xl mx-auto px-6 pb-12 border-t border-gray-100 pt-12 text-center">
-                <h3 className="text-2xl font-bold font-heading text-gray-900 mb-6">Bagikan Artikel Ini</h3>
+                <h3 className="text-2xl font-bold font-heading text-gray-900 mb-6">{t('blog_share_title')}</h3>
                 <div className="flex justify-center gap-4">
                     <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`} target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-50 text-brand rounded-full flex items-center justify-center hover:bg-brand hover:text-white transition-all shadow-sm">
                         <i className="fa-brands fa-facebook-f text-lg" />

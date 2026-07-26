@@ -1,6 +1,8 @@
+import { useI18n } from '../context/I18nContext';
 import { Icon } from './Icon';
 
 export function AboutPage() {
+  const { t } = useI18n();
 
     return (
         <div className="w-full bg-white pb-24 text-gray-900">
@@ -18,10 +20,10 @@ export function AboutPage() {
                 <div className="max-w-8xl mx-auto px-6 relative z-10">
                     <div className="max-w-6xl">
                         <p className="text-brand-light font-bold text-sm md:text-base uppercase tracking-widest mb-4 reveal-on-scroll">
-                            Tentang Kami
+                            {t('about_badge')}
                         </p>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading mb-6 reveal-on-scroll stagger-1 leading-tight text-white/95">
-                            Merancang Solusi Digital, Mengatasi Kendala Teknis, dan Bersinergi Sebagai Mitra Bisnis Jangka Panjang Anda.
+                            {t('about_title')}
                         </h1>
                     </div>
                 </div>
@@ -33,13 +35,13 @@ export function AboutPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20 md:mb-32">
                     <div className="reveal-on-scroll">
                         <h2 className="text-3xl md:text-5xl font-heading mb-6 leading-tight text-gray-900">
-                            Visi dan Misi
+                            {t('about_visimisi_title')}
                         </h2>
                         <h3 className="text-xl md:text-2xl font-medium text-gray-800 mb-6 leading-snug">
-                            Menjadikan pelaku usaha Go Digital dan mempunyai identitas Online.
+                            {t('about_visimisi_sub')}
                         </h3>
                         <p className="text-lg text-gray-600 leading-relaxed">
-                            TunamSam berkomitmen mendukung transformasi digital bagi pelaku usaha melalui layanan pembuatan website yang modern dan responsif. Kami menyediakan platform yang mudah digunakan untuk memperkuat kehadiran online mereka, membantu mereka mengadopsi teknologi digital dengan efisien dan efektif. Dengan fokus pada kebutuhan unik setiap bisnis, kami membangun website yang mencerminkan identitas mereka, memastikan mereka menonjol di pasar digital.
+                            {t('about_visimisi_desc')}
                         </p>
                     </div>
                     <div className="rounded-3xl overflow-hidden shadow-lg reveal-on-scroll stagger-1 h-[350px] md:h-[450px]">
@@ -62,13 +64,13 @@ export function AboutPage() {
                     </div>
                     <div className="order-1 lg:order-2 reveal-on-scroll stagger-1">
                         <h2 className="text-3xl md:text-5xl font-heading mb-6 leading-tight text-gray-900">
-                            Komitmen Kami
+                            {t('about_komitmen_title')}
                         </h2>
                         <h3 className="text-xl md:text-2xl font-medium text-gray-800 mb-6 leading-snug">
-                            Kami ingin menjadi partner jangka panjang Anda bukan hanya vendor sekali pakai.
+                            {t('about_komitmen_sub')}
                         </h3>
                         <p className="text-lg text-gray-600 leading-relaxed">
-                            Kami memahami bahwa website adalah investasi penting dalam pertumbuhan bisnis. Maka, setiap proyek kami kerjakan dengan pendekatan strategis dan rasa tanggung jawab tinggi.
+                            {t('about_komitmen_desc')}
                         </p>
                     </div>
                 </div>
@@ -77,7 +79,7 @@ export function AboutPage() {
             {/* Core Values */}
             <div className="max-w-8xl mx-auto px-6 py-20 md:py-32">
                 <div className="text-center mb-16 reveal-on-scroll">
-                    <h2 className="text-3xl md:text-5xl font-heading text-gray-900">Nilai Utama Perusahaan</h2>
+                    <h2 className="text-3xl md:text-5xl font-heading text-gray-900">{t('about_corevalues_title')}</h2>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-6 gap-6 md:gap-8">
@@ -86,8 +88,8 @@ export function AboutPage() {
                         <div className="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center mb-6 text-gray-900">
                             <Icon name="lightbulb" className="w-7 h-7" strokeWidth={1.5} />
                         </div>
-                        <h4 className="text-xl md:text-2xl font-medium text-gray-900 mb-4">Inovasi</h4>
-                        <p className="leading-relaxed text-sm md:text-base">Kami terus mengeksplorasi teknologi baru agar solusi yang diberikan relevan dan kompetitif.</p>
+                        <h4 className="text-xl md:text-2xl font-medium text-gray-900 mb-4">{t('about_value_1_title')}</h4>
+                        <p className="leading-relaxed text-sm md:text-base">{t('about_value_1_desc')}</p>
                     </div>
 
                     {/* Card 2: Berorientasi Hasil (span 2) */}
@@ -95,8 +97,8 @@ export function AboutPage() {
                         <div className="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center mb-6 text-gray-900">
                             <Icon name="target" className="w-7 h-7" strokeWidth={1.5} />
                         </div>
-                        <h4 className="text-xl md:text-2xl font-medium text-gray-900 mb-4">Berorientasi Hasil</h4>
-                        <p className="leading-relaxed text-sm md:text-base">Fokus kami adalah konversi, efisiensi, dan pertumbuhan nyata untuk klien.</p>
+                        <h4 className="text-xl md:text-2xl font-medium text-gray-900 mb-4">{t('about_value_2_title')}</h4>
+                        <p className="leading-relaxed text-sm md:text-base">{t('about_value_2_desc')}</p>
                     </div>
 
                     {/* Card 3: Kemitraan (span 2) */}
@@ -104,8 +106,8 @@ export function AboutPage() {
                         <div className="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center mb-6 text-gray-900">
                             <Icon name="share-2" className="w-7 h-7" strokeWidth={1.5} />
                         </div>
-                        <h4 className="text-xl md:text-2xl font-medium text-gray-900 mb-4">Kemitraan</h4>
-                        <p className="leading-relaxed text-sm md:text-base">Kami percaya bisnis terbaik dibangun melalui kolaborasi yang saling memahami.</p>
+                        <h4 className="text-xl md:text-2xl font-medium text-gray-900 mb-4">{t('about_value_3_title')}</h4>
+                        <p className="leading-relaxed text-sm md:text-base">{t('about_value_3_desc')}</p>
                     </div>
 
                     {/* Card 4: Keamanan & Kualitas (span 3) */}
@@ -113,8 +115,8 @@ export function AboutPage() {
                         <div className="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center mb-6 text-gray-900">
                             <Icon name="fingerprint" className="w-7 h-7" strokeWidth={1.5} />
                         </div>
-                        <h4 className="text-xl md:text-2xl font-medium text-gray-900 mb-4">Keamanan & Kualitas</h4>
-                        <p className="leading-relaxed text-sm md:text-base">Website Anda dibangun dengan standar keamanan dan kualitas tinggi.</p>
+                        <h4 className="text-xl md:text-2xl font-medium text-gray-900 mb-4">{t('about_value_4_title')}</h4>
+                        <p className="leading-relaxed text-sm md:text-base">{t('about_value_4_desc')}</p>
                     </div>
 
                     {/* Card 5: Edukasi & Transparansi (span 3) */}
@@ -122,8 +124,8 @@ export function AboutPage() {
                         <div className="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center mb-6 text-gray-900">
                             <Icon name="handshake" className="w-7 h-7" strokeWidth={1.5} />
                         </div>
-                        <h4 className="text-xl md:text-2xl font-medium text-gray-900 mb-4">Edukasi & Transparansi</h4>
-                        <p className="leading-relaxed text-sm md:text-base">Kami membimbing klien memahami proses dan pilihan mereka.</p>
+                        <h4 className="text-xl md:text-2xl font-medium text-gray-900 mb-4">{t('about_value_5_title')}</h4>
+                        <p className="leading-relaxed text-sm md:text-base">{t('about_value_5_desc')}</p>
                     </div>
                 </div>
             </div>

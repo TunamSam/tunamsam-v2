@@ -2,20 +2,24 @@ import { Icon } from './Icon';
 import { CheckCircle2 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useI18n } from '../context/I18nContext';
+import type { TranslationKey } from '../i18n/translations';
 
 const PACKAGES = [
     {
         id: 'landing-page',
+        titleKey: 'price_landing_page',
         title: 'Landing Page',
         real_price: '2,750,000',
         price: '1,999,000',
         period: '/ 3 tahun',
         badge: 'Best Choice',
-        subtitle: 'Bayar di awal untuk 3 tahun dan hemat 27%',
+        subtitleKey: 'pricing_lp_subtitle',
+        btnKey: 'price_btn_lp',
         otherOptions: [
-            { period: '3 Tahun', price: 'Rp. 1,999,000', suffix: 'Hemat 27%' },
-            { period: '2 Tahun', price: 'Rp. 1,300,000', suffix: '(Rp. 650.000 / tahun)' },
-            { period: '1 Tahun', price: 'Rp. 750,000'},
+            { periodKey: 'pricing_lp_opt_3th', price: 'Rp. 1,999,000', suffixKey: 'pricing_lp_opt_3th_suffix' },
+            { periodKey: 'pricing_lp_opt_2th', price: 'Rp. 1,300,000', suffixKey: 'pricing_lp_opt_2th_suffix' },
+            { periodKey: 'pricing_lp_opt_1th', price: 'Rp. 750,000', suffixKey: '' },
         ],
         images: [
             '/assets/products-assets/landing-page/1.webp',
@@ -25,38 +29,40 @@ const PACKAGES = [
         btnText: 'Buat Landing Page sekarang!',
         btnLink: 'https://wa.me/+6285655639206',
         reasons: [
-            { icon: 'maximize', title: 'Sederhana dan Efektif', desc: 'Ideal untuk kampanye promosi produk atau layanan tunggal dengan desain yang fokus pada satu tujuan spesifik.' },
-            { icon: 'target', title: 'Optimal untuk Konversi', desc: 'Setiap elemen pada landing page didesain untuk mengarahkan pengunjung melakukan tindakan tertentu, seperti mengisi formulir, mendaftar, atau melakukan pembelian.' },
-            { icon: 'book-open', title: 'Cocok untuk Pemula', desc: 'Dengan biaya yang lebih rendah dibanding website lengkap, landing page adalah solusi cepat dan efisien untuk memulai kehadiran digital Anda.' },
+            { icon: 'maximize', titleKey: 'lp_f1_t', descKey: 'pricing_lp_reason_1_desc' },
+            { icon: 'target', titleKey: 'lp_f2_t', descKey: 'pricing_lp_reason_2_desc' },
+            { icon: 'book-open', titleKey: 'lp_f3_t', descKey: 'pricing_lp_reason_3_desc' },
         ],
         gets: [
-            '1 halaman landing page dengan desain eksklusif',
-            '3x revisi desain sebelum launching',
-            'Gratis hosting & domain 1 tahun',
-            'Optimasi Mobile-Friendly & SEO dasar',
-            'Formulir kontak atau CTA (Call-to-Action) sesuai kebutuhan',
-            'Integrasi Google Analytics & Facebook Pixel untuk tracking performa',
+            'pricing_lp_get_1',
+            'pricing_lp_get_2',
+            'pricing_lp_get_3',
+            'pricing_lp_get_4',
+            'pricing_lp_get_5',
+            'pricing_lp_get_6',
         ],
         targets: [
-            'Promosi Produk Baru',
-            'Pre-Order atau Launching Campaign',
-            'Kampanye Iklan Digital (Google Ads/FB Ads)',
-            'Event atau Webinar',
-            'Pebisnis yang Baru Mulai Online',
-            'Startup atau UMKM yang Baru Memulai Kehadiran Digital',
+            'pricing_lp_target_1',
+            'pricing_lp_target_2',
+            'pricing_lp_target_3',
+            'pricing_lp_target_4',
+            'pricing_lp_target_5',
+            'pricing_lp_target_6',
         ]
     },
     {
         id: 'company-profile',
+        titleKey: 'price_company_profile',
         title: 'Company Profile',
         real_price: '3,500,000',
         price: '2,999,000',
         period: '/ 2 tahun',
         badge: 'Popular',
-        subtitle: 'Bayar di awal untuk 2 tahun dan hemat 15%',
+        subtitleKey: 'pricing_cp_subtitle',
+        btnKey: 'price_btn_cp',
         otherOptions: [
-            { period: '2 Tahun', price: 'Rp. 2,999,000', suffix: 'hemat 15%' },
-            { period: '1 Tahun', price: 'Rp. 1,750,000'},
+            { periodKey: 'pricing_cp_opt_2th', price: 'Rp. 2,999,000', suffixKey: 'pricing_cp_opt_2th_suffix' },
+            { periodKey: 'pricing_cp_opt_1th', price: 'Rp. 1,750,000', suffixKey: '' },
         ],
         images: [
             '/assets/products-assets/company-profile/1.webp',
@@ -66,38 +72,40 @@ const PACKAGES = [
         btnText: 'Buat Company Profile sekarang!',
         btnLink: 'https://wa.me/+6285655639206',
         reasons: [
-            { icon: 'gem', title: 'Profesional & Terpercaya', desc: 'Membangun citra profesional yang kuat untuk bisnis Anda di mata klien dan mitra kerja.' },
-            { icon: 'network', title: 'Informasi Terstruktur', desc: 'Menampilkan portofolio, layanan, dan informasi perusahaan dengan rapi dan mudah diakses.' },
-            { icon: 'globe', title: 'Jangkauan Lebih Luas', desc: 'Memperluas jangkauan bisnis Anda ke pasar yang lebih besar melalui kehadiran digital yang solid.' },
+            { icon: 'gem', titleKey: 'cp_f1_t', descKey: 'pricing_cp_reason_1_desc' },
+            { icon: 'network', titleKey: 'cp_f2_t', descKey: 'pricing_cp_reason_2_desc' },
+            { icon: 'globe', titleKey: 'cp_f3_t', descKey: 'pricing_cp_reason_3_desc' },
         ],
         gets: [
-            'Hingga 5 halaman (Home, About, Services, Portfolio, Contact)',
-            'Desain kustom sesuai identitas brand',
-            'Gratis hosting & domain 1 tahun',
-            'Optimasi SEO on-page',
-            'Integrasi media sosial',
-            'Dukungan teknis selama 3 bulan',
+            'pricing_cp_get_1',
+            'pricing_cp_get_2',
+            'pricing_cp_get_3',
+            'pricing_cp_get_4',
+            'pricing_cp_get_5',
+            'pricing_cp_get_6',
         ],
         targets: [
-            'Perusahaan B2B & B2C',
-            'Agensi Kreatif & Konsultan',
-            'Klinik & Rumah Sakit',
-            'Firma Hukum & Akuntan',
-            'Kontraktor & Properti',
-            'Lembaga Pendidikan',
+            'pricing_cp_target_1',
+            'pricing_cp_target_2',
+            'pricing_cp_target_3',
+            'pricing_cp_target_4',
+            'pricing_cp_target_5',
+            'pricing_cp_target_6',
         ]
     },
     {
         id: 'toko-online',
+        titleKey: 'price_online_store',
         title: 'Toko Online',
         real_price: '6,500,000',
         price: '4,999,000',
         period: '/ 2 tahun',
         badge: 'Business',
-        subtitle: 'Bayar di awal untuk 2 tahun dan hemat 23%',
+        subtitleKey: 'pricing_to_subtitle',
+        btnKey: 'price_btn_to',
         otherOptions: [
-            { period: '2 Tahun', price: 'Rp. 4,999,000', suffix: 'hemat 23%' },
-            { period: '1 Tahun', price: 'Rp. 3,250,000'},
+            { periodKey: 'pricing_to_opt_2th', price: 'Rp. 4,999,000', suffixKey: 'pricing_to_opt_2th_suffix' },
+            { periodKey: 'pricing_to_opt_1th', price: 'Rp. 3,250,000', suffixKey: '' },
         ],
         images: [
             '/assets/products-assets/toko-online/1.webp',
@@ -107,34 +115,36 @@ const PACKAGES = [
         btnText: 'Buat Toko Online sekarang!',
         btnLink: 'https://wa.me/+6285655639206',
         reasons: [
-            { icon: 'shopping-bag', title: 'Belanja 24/7', desc: 'Toko Anda buka 24 jam sehari, 7 hari seminggu, tanpa batasan waktu dan lokasi.' },
-            { icon: 'building', title: 'Manajemen Produk Mudah', desc: 'Sistem pengelolaan stok, harga, dan varian produk yang mudah dipahami.' },
-            { icon: 'credit-card', title: 'Integrasi Pembayaran', desc: 'Terhubung dengan berbagai metode pembayaran (transfer bank, e-wallet, kartu kredit) dan kurir.' },
+            { icon: 'shopping-bag', titleKey: 'to_f1_t', descKey: 'pricing_to_reason_1_desc' },
+            { icon: 'building', titleKey: 'to_f2_t', descKey: 'pricing_to_reason_2_desc' },
+            { icon: 'credit-card', titleKey: 'to_f3_t', descKey: 'pricing_to_reason_3_desc' },
         ],
         gets: [
-            'Sistem E-Commerce lengkap (Cart, Checkout, Payment Gateway)',
-            'Upload hingga 50 produk awal',
-            'Gratis hosting & domain 1 tahun',
-            'Kalkulasi ongkos kirim otomatis',
-            'Laporan penjualan dasar',
-            'Pelatihan penggunaan sistem',
+            'pricing_to_get_1',
+            'pricing_to_get_2',
+            'pricing_to_get_3',
+            'pricing_to_get_4',
+            'pricing_to_get_5',
+            'pricing_to_get_6',
         ],
         targets: [
-            'Toko Retail & Fashion',
-            'Penjual Gadget & Elektronik',
-            'Toko Buku & Alat Tulis',
-            'Kosmetik & Skincare',
-            'F&B (Makanan & Minuman Kemasan)',
-            'Distributor Produk',
+            'pricing_to_target_1',
+            'pricing_to_target_2',
+            'pricing_to_target_3',
+            'pricing_to_target_4',
+            'pricing_to_target_5',
+            'pricing_to_target_6',
         ]
     },
     {
         id: 'custom-website',
+        titleKey: 'price_custom_website',
         title: 'Custom Website',
         price: 'Hubungi Kami',
         period: '',
         badge: 'Enterprise',
-        subtitle: 'Solusi spesifik sesuai kebutuhan sistem Anda',
+        subtitleKey: 'pricing_cw_subtitle',
+        btnKey: 'price_btn_custom',
         images: [
             '/assets/products-assets/custom-website/1.webp',
             '/assets/products-assets/custom-website/2.webp',
@@ -143,30 +153,31 @@ const PACKAGES = [
         btnText: 'Konsultasi Custom Website!',
         btnLink: 'https://wa.me/+6285655639206',
         reasons: [
-            { icon: 'palette', title: 'Desain Unik', desc: 'Tampilan visual yang dibuat dari nol, 100% eksklusif untuk brand Anda.' },
-            { icon: 'crosshair', title: 'Fitur Spesifik', desc: 'Pengembangan fitur khusus yang tidak ada di platform standar (misal: sistem booking kompleks, portal member).' },
-            { icon: 'shopping-basket', title: 'Skalabilitas Tinggi', desc: 'Dibangun dengan arsitektur yang siap menampung pertumbuhan trafik dan data di masa depan.' },
+            { icon: 'palette', titleKey: 'cw_f1_t', descKey: 'pricing_cw_reason_1_desc' },
+            { icon: 'crosshair', titleKey: 'cw_f2_t', descKey: 'pricing_cw_reason_2_desc' },
+            { icon: 'shopping-basket', titleKey: 'cw_f3_t', descKey: 'pricing_cw_reason_3_desc' },
         ],
         gets: [
-            'Analisis kebutuhan sistem mendalam',
-            'UI/UX Design eksklusif (Figma prototype)',
-            'Pengembangan fitur custom (Frontend & Backend)',
-            'Pengujian keamanan dan performa',
-            'Server setup & deployment',
-            'Maintenance & Support jangka panjang',
+            'pricing_cw_get_1',
+            'pricing_cw_get_2',
+            'pricing_cw_get_3',
+            'pricing_cw_get_4',
+            'pricing_cw_get_5',
+            'pricing_cw_get_6',
         ],
         targets: [
-            'Startup Teknologi',
-            'Marketplace Niche',
-            'Portal Berita & Media Berskala Besar',
-            'Sistem Manajemen Internal (ERP/CRM mini)',
-            'Platform E-Learning',
-            'Sistem Booking & Reservasi Kompleks',
+            'pricing_cw_target_1',
+            'pricing_cw_target_2',
+            'pricing_cw_target_3',
+            'pricing_cw_target_4',
+            'pricing_cw_target_5',
+            'pricing_cw_target_6',
         ]
     }
 ];
 
 export function PricingPage() {
+    const { t } = useI18n();
     const [activeSection, setActiveSection] = useState('landing-page');
     const [expandedOptions, setExpandedOptions] = useState<Record<string, boolean>>({});
 
@@ -178,7 +189,6 @@ export function PricingPage() {
         const handleScroll = () => {
             const scrollPosition = window.scrollY + 200;
 
-            // Find the last section that we have scrolled past
             for (let i = PACKAGES.length - 1; i >= 0; i--) {
                 const section = document.getElementById(PACKAGES[i].id);
                 if (section && section.offsetTop <= scrollPosition) {
@@ -189,7 +199,6 @@ export function PricingPage() {
         };
 
         window.addEventListener('scroll', handleScroll);
-        // Initial check
         handleScroll();
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -197,7 +206,7 @@ export function PricingPage() {
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
         if (element) {
-            const offset = 100; // offset for header
+            const offset = 100;
             const bodyRect = document.body.getBoundingClientRect().top;
             const elementRect = element.getBoundingClientRect().top;
             const elementPosition = elementRect - bodyRect;
@@ -216,10 +225,10 @@ export function PricingPage() {
             <div className="pt-20 md:pt-32 pb-16 md:pb-24 bg-white relative overflow-hidden">
                 <div className="max-w-6xl mx-auto px-6 text-center relative z-10 reveal-on-scroll">
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading mb-6 text-gray-900 leading-tight">
-                        Jasa Pembuatan Website<br className="hidden md:block" />Profesional untuk Bisnis Anda
+                        {t('pricing_hero_title')}
                     </h1>
                     <p className="text-lg md:text-xl max-w-3xl mx-auto text-gray-600 font-light leading-relaxed mb-12 md:mb-16">
-                        Kami hadir untuk membantu Anda membangun website yang sesuai kebutuhan dengan harga yang transparan dan fitur premium. Pilih paket jasa pembuatan website yang paling cocok untuk bisnis Anda
+                        {t('pricing_hero_desc')}
                     </p>
                 </div>
 
@@ -236,10 +245,10 @@ export function PricingPage() {
                 {/* Pricing Title */}
                 <div className="text-center max-w-4xl mx-auto pb-8 md:pt-0 md:pb-12 reveal-on-scroll">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading mb-4 text-gray-900">
-                        Paket Harga Jasa Pembuatan Website TunamSam
+                        {t('pricing_section_title')}
                     </h2>
                     <p className="text-sm md:text-lg max-w-2xl mx-auto text-gray-600">
-                        Kami menyediakan Paket Pembuatan Website sesuai kebutuhan dan kategori bisnis Anda.
+                        {t('pricing_section_desc')}
                     </p>
                 </div>
 
@@ -252,7 +261,7 @@ export function PricingPage() {
                                 onClick={() => scrollToSection(pkg.id)}
                                 className={`px-2 py-2 text-sm md:text-md font-medium hover:text-brand transition-colors relative group ${activeSection === pkg.id ? 'text-brand' : 'text-gray-500'}`}
                             >
-                                {pkg.title}
+                                {t(pkg.titleKey as TranslationKey)}
                                 <div className={`absolute bottom-0 left-0 w-full h-[2px] bg-brand transition-transform origin-left ${activeSection === pkg.id ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></div>
                             </button>
                         ))}
@@ -267,11 +276,11 @@ export function PricingPage() {
                             <div className="flex flex-col md:flex-row gap-8 md:gap-12 mb-16 md:mb-20 items-start">
                                 {/* Left Column: Pricing Info */}
                                 <div className="w-full md:w-1/2 lg:w-1/3 flex flex-col items-start gap-4">
-                                    <h3 className="text-4xl md:text-5xl font-heading font-normal text-gray-900">{pkg.title}</h3>
+                                    <h3 className="text-4xl md:text-5xl font-heading font-normal text-gray-900">{t(pkg.titleKey as TranslationKey)}</h3>
 
                                     <div className="flex flex-col gap-1">
                                         {pkg.price !== 'Hubungi Kami' && (
-                                            <span className="text-base md:text-lg">Mulai dari <span className="text-sm md:text-lg line-through text-gray-400">Rp. {pkg.real_price}</span></span>
+                                            <span className="text-base md:text-lg">{t('price_start_from')} <span className="text-sm md:text-lg line-through text-gray-400">Rp. {pkg.real_price}</span></span>
                                         )}
                                         <div className="flex items-center gap-2 flex-wrap">
                                             {pkg.price !== 'Hubungi Kami' && <span className="text-sm md:text-base">Rp</span>}
@@ -286,7 +295,7 @@ export function PricingPage() {
                                         </div>
                                     </div>
 
-                                    <p className="text-sm mt-1">{pkg.subtitle}</p>
+                                    <p className="text-sm mt-1">{t(pkg.subtitleKey as TranslationKey)}</p>
 
                                     <div className="w-full h-[1px] bg-gray-200 my-4"></div>
 
@@ -294,7 +303,7 @@ export function PricingPage() {
                                         onClick={() => toggleOptions(pkg.id)}
                                         className="text-gray-900 text-sm flex items-center gap-1 font-medium hover:text-brand transition-colors"
                                     >
-                                        {expandedOptions[pkg.id] ? 'Sembunyikan opsi' : 'Lihat opsi lainnya'}
+                                        {expandedOptions[pkg.id] ? t('pricing_hide_options') : t('pricing_show_options')}
                                         <Icon name={expandedOptions[pkg.id] ? 'chevron-up' : 'chevron-down'} className="w-4 h-4 text-gray-500" />
                                     </button>
 
@@ -309,9 +318,9 @@ export function PricingPage() {
                                             >
                                                 {(pkg as any).otherOptions.map((opt: any, i: number) => (
                                                     <div key={i} className="flex items-center gap-1">
-                                                        <span className="w-16">{opt.period}</span>
+                                                        <span className="w-16">{t(opt.periodKey as TranslationKey)}</span>
                                                         <span className="font-bold">{opt.price}</span>
-                                                        <span>{opt.suffix}</span>
+                                                        <span>{opt.suffixKey ? t(opt.suffixKey as TranslationKey) : ''}</span>
                                                     </div>
                                                 ))}
                                             </motion.div>
@@ -322,7 +331,7 @@ export function PricingPage() {
                                         href={pkg.btnLink}
                                         className="mt-6 inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-md font-medium hover:bg-gray-800 transition-colors"
                                     >
-                                        {pkg.btnText}
+                                        {t(pkg.btnKey as TranslationKey)}
                                         <Icon name="rocket" className="w-4 h-4" />
                                     </a>
                                 </div>
@@ -333,7 +342,7 @@ export function PricingPage() {
                                         <div className="flex gap-3 md:gap-4 items-center flex-shrink-0 pr-3 md:pr-4">
                                             {pkg.images.map((img, idx) => (
                                                 <div key={idx} className="w-[240px] md:w-[320px] lg:w-[400px] rounded-xl overflow-hidden flex-shrink-0 shadow-sm border border-gray-50">
-                                                    <img src={img} alt={`${pkg.title} preview ${idx + 1}`} className="w-full h-auto object-cover" />
+                                                    <img src={img} alt={`${t(pkg.titleKey as TranslationKey)} preview ${idx + 1}`} className="w-full h-auto object-cover" />
                                                 </div>
                                             ))}
                                         </div>
@@ -353,7 +362,7 @@ export function PricingPage() {
                             {/* Reasons Section */}
                             <div className="mb-16 md:mb-20">
                                 <h3 className="text-2xl md:text-3xl font-heading text-center mb-8 md:mb-10 text-gray-900 px-4">
-                                    Alasan {pkg.title} Tepat untuk Anda
+                                    {t('pricing_alasan_title').replace('{pkg}', t(pkg.titleKey as TranslationKey))}
                                 </h3>
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                                     {pkg.reasons.map((reason, idx) => (
@@ -361,8 +370,8 @@ export function PricingPage() {
                                             <div className="mb-4">
                                                 <Icon name={reason.icon as any} className="w-8 h-8 text-gray-900" strokeWidth={1.5} />
                                             </div>
-                                            <h4 className="text-xl font-medium text-gray-900 mb-2">{reason.title}</h4>
-                                            <p className="text-md leading-relaxed">{reason.desc}</p>
+                                            <h4 className="text-xl font-medium text-gray-900 mb-2">{t(reason.titleKey as TranslationKey)}</h4>
+                                            <p className="text-md leading-relaxed">{t(reason.descKey as TranslationKey)}</p>
                                         </div>
                                     ))}
                                 </div>
@@ -371,18 +380,18 @@ export function PricingPage() {
                             {/* Features & Target Section */}
                             <div className="mb-16 md:mb-20">
                                 <h3 className="text-2xl md:text-3xl font-heading text-center mb-8 md:mb-10 px-4">
-                                    Apa yang Anda Dapatkan & Untuk Siapa?
+                                    {t('pricing_dapat_title')}
                                 </h3>
                                 <div className="bg-gray-50 rounded-3xl p-6 md:p-12 border border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
 
                                     {/* Yang Anda dapatkan */}
                                     <div>
-                                        <h4 className="text-md md:text-lg font-medium mb-4 md:mb-6 border-b border-gray-200 pb-3 md:pb-4">Yang Anda dapatkan</h4>
+                                        <h4 className="text-md md:text-lg font-medium mb-4 md:mb-6 border-b border-gray-200 pb-3 md:pb-4">{t('pricing_dapat_label')}</h4>
                                         <ul className="space-y-4">
                                             {pkg.gets.map((item, idx) => (
                                                 <li key={idx} className="flex items-start gap-3 text-sm">
                                                     <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
-                                                    <span className="leading-relaxed">{item}</span>
+                                                    <span className="leading-relaxed">{t(item as TranslationKey)}</span>
                                                 </li>
                                             ))}
                                         </ul>
@@ -390,12 +399,12 @@ export function PricingPage() {
 
                                     {/* Cocok untuk industri */}
                                     <div>
-                                        <h4 className="text-md md:text-lg font-medium mb-4 md:mb-6 border-b border-gray-200 pb-3 md:pb-4">Cocok untuk berbagai Industri</h4>
+                                        <h4 className="text-md md:text-lg font-medium mb-4 md:mb-6 border-b border-gray-200 pb-3 md:pb-4">{t('pricing_target_label')}</h4>
                                         <ul className="space-y-4">
                                             {pkg.targets.map((item, idx) => (
                                                 <li key={idx} className="flex items-start gap-3 text-sm">
                                                     <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
-                                                    <span className="leading-relaxed">{item}</span>
+                                                    <span className="leading-relaxed">{t(item as TranslationKey)}</span>
                                                 </li>
                                             ))}
                                         </ul>
@@ -409,17 +418,17 @@ export function PricingPage() {
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-brand/20 blur-[100px] rounded-full"></div>
                                 <div className="relative z-10">
                                     <h3 className="text-white text-xl md:text-3xl font-heading font-medium mb-2 md:mb-3">
-                                        Mulai dari Sini, Bawa Bisnismu ke Dunia Digital.
+                                        {t('pricing_cta_title')}
                                     </h3>
                                     <p className="text-gray-400 text-sm md:text-md">
-                                        {pkg.title} simpel, cepat jadi, dan langsung bisa dipakai promosi
+                                        {t('pricing_cta_desc').replace('{pkg}', t(pkg.titleKey as TranslationKey))}
                                     </p>
                                 </div>
                                 <a
                                     href={pkg.btnLink}
                                     className="relative z-10 w-full md:w-auto shrink-0 bg-white text-black px-6 py-3 md:py-4 rounded-full text-sm md:text-base font-bold hover:bg-gray-200 transition-colors flex items-center justify-center gap-2"
                                 >
-                                    {pkg.btnText}
+                                    {t(pkg.btnKey as TranslationKey)}
                                     <Icon name="arrow-up-right" className="w-4 h-4" />
                                 </a>
                             </div>

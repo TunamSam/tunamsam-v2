@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ArrowLeft, Monitor, Smartphone, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useI18n } from '../context/I18nContext';
 
 export interface Design {
   id: number;
@@ -19,6 +20,7 @@ interface DesignDetailProps {
 }
 
 export function DesignDetail({ design, onBack }: DesignDetailProps) {
+  const { t } = useI18n();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [previewMode, setPreviewMode] = useState<'desktop' | 'mobile'>('desktop');
 
@@ -27,7 +29,7 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
     '/assets/design-catalog-assets/design-banner/designbanner2.webp',
   ]);
 
-  const description = design.description || `Desain website yang ceria dan ramah pengguna, dirancang khusus untuk ${design.category.toLowerCase()}. Desain ini menonjolkan tampilan yang bersih dan modern. Fitur-fitur utama meliputi galeri yang menarik, halaman produk dengan deskripsi lengkap, sistem pencarian yang canggih, serta proses yang mudah digunakan. Template ini sangat cocok untuk bisnis yang ingin memberikan pengalaman online yang nyaman dan menyenangkan bagi para pengunjung.`;
+  const description = design.description || t('design_default_desc').replace('{category}', design.category.toLowerCase());
 
   const nextImage = () => setCurrentImageIndex((prev) => (prev + 1) % images.length);
   const prevImage = () => setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
@@ -39,10 +41,10 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
         <div className="flex items-center gap-2 text-gray-500 mb-8 text-md">
           <button onClick={onBack} className="flex items-center gap-2 hover:text-gray-900 transition-colors">
             <ArrowLeft className="w-4 h-4" />
-            <span>Pilihan Desain</span>
+            <span>{t('design_back')}</span>
           </button>
           <span>/</span>
-          <span className="font-bold text-gray-900">{design.category} Detail</span>
+          <span className="font-bold text-gray-900">{design.category}</span>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start mb-20">
@@ -98,7 +100,7 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-black text-white rounded-full font-bold hover:bg-brand transition-colors"
             >
-              Bikin website sekarang!
+              {t('design_cta')}
             </a>
           </div>
         </div>
@@ -107,7 +109,7 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
         <div className="border-t border-gray-200 pt-16">
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-heading font-bold text-gray-900 mb-6">
-              Full Preview
+              {t('design_preview_title')}
             </h2>
 
             {/* Toggle Desktop/Mobile */}
@@ -120,7 +122,7 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
                   }`}
               >
                 <Monitor className="w-4 h-4" />
-                Desktop
+                {t('design_preview_desktop')}
               </button>
               <button
                 onClick={() => setPreviewMode('mobile')}
@@ -130,7 +132,7 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
                   }`}
               >
                 <Smartphone className="w-4 h-4" />
-                Mobile
+                {t('design_preview_mobile')}
               </button>
             </div>
           </div>
@@ -156,8 +158,8 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6.936 10.134A2.25 2.25 0 0110.12 7.73l1.83 2.112A2.25 2.25 0 0113.882 13H15.75a2.25 2.25 0 012.25 2.25v2.25A2.25 2.25 0 0115.75 19.5H8.25a2.25 2.25 0 01-2.25-2.25v-2.25A2.25 2.25 0 018.25 12.75v-1.636a2.25 2.25 0 01-.19-.48l-1.124-2.5zM12 2.25A2.25 2.25 0 0114.25 4.5v1.5a2.25 2.25 0 01-4.5 0v-1.5A2.25 2.25 0 0112 2.25zM4.5 10.5A2.25 2.25 0 016.75 12.75v1.5a2.25 2.25 0 01-4.5 0v-1.5A2.25 2.25 0 014.5 10.5zm15 0a2.25 2.25 0 012.25 2.25v1.5a2.25 2.25 0 01-4.5 0v-1.5A2.25 2.25 0 0119.5 10.5z" />
                   </svg>
                 </div>
-                <h3 className="text-xl md:text-2xl font-heading font-bold text-gray-600 mb-2">Under Development</h3>
-                <p className="text-sm md:text-base">Tampilan preview lengkap sedang dalam tahap pengembangan.</p>
+                <h3 className="text-xl md:text-2xl font-heading font-bold text-gray-600 mb-2">{t('design_underdev_title')}</h3>
+                <p className="text-sm md:text-base">{t('design_underdev_desc')}</p>
               </div>
             </div>
           </div>

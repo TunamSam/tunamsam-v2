@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useI18n } from '../context/I18nContext';
+import type { TranslationKey } from '../i18n/translations';
 
 type Testimonial = {
-  quote: string;
+  quoteKey: TranslationKey;
   author: string;
   website: string;
   websiteUrl?: string;
@@ -10,29 +11,9 @@ type Testimonial = {
 
 const TESTIMONIALS: Testimonial[] = [
   {
-    quote:
-      'Overall semuanya masih bagus dan sangat memuaskan. Pengerjaan lumayan cepat dan tanggap, saya sudah beberapa kali meminta bantuan, hasilnya sangat memuaskan.',
-    author: 'Adur',
-    website: 'www.kurniaphone.id',
-    websiteUrl: 'https://www.kurniaphone.id',
-  },
-  {
-    quote:
-      'Website company profile kami jadi terlihat jauh lebih profesional. Tim TunamSam responsif dan mudah diajak diskusi dari awal hingga launching.',
+    quoteKey: 'testi_carousel_quote',
     author: 'Mbak Win',
     website: 'Nasi Goreng Mbak Win',
-  },
-  {
-    quote:
-      'Toko online kami langsung bisa berjalan dengan lancar. Fitur pembayaran dan pengelolaan produknya mudah dipahami, sangat membantu penjualan.',
-    author: 'Rizky',
-    website: 'www.tokorizky.id',
-  },
-  {
-    quote:
-      'Landing page yang dibuat fokus ke konversi dan hasilnya terasa. Banyak pengunjung yang langsung menghubungi lewat WhatsApp setelah website live.',
-    author: 'Dewi',
-    website: 'www.dewiconsulting.com',
   },
 ];
 
@@ -78,7 +59,7 @@ export function TestimonialCarousel() {
 
           <div className="relative z-10 text-center max-w-3xl transition-opacity duration-500">
             <p className="text-white text-lg md:text-2xl lg:text-3xl leading-relaxed font-sans mb-10">
-              &ldquo;{current.quote}&rdquo;
+              &ldquo;{t(current.quoteKey)}&rdquo;
             </p>
             <p className="text-brand-light text-xl md:text-2xl font-heading font-bold mb-2">{current.author}</p>
             {current.websiteUrl ? (
@@ -100,7 +81,7 @@ export function TestimonialCarousel() {
               <button
                 key={index}
                 type="button"
-                aria-label={`Testimoni ${index + 1}`}
+                aria-label={`Testimonial ${index + 1}`}
                 onClick={() => goToSlide(index)}
                 className={`rounded-full transition-all duration-300 ${
                   index === activeIndex

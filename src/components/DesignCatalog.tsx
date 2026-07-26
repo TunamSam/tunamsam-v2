@@ -3,6 +3,8 @@ import { ArrowUpRight, Monitor, ShoppingCart, Layout, ChevronLeft, ChevronRight 
 import { SuccessCtaSection } from './SuccessCtaSection';
 import { FaqSection } from './FaqSection';
 import { DesignDetail } from './DesignDetail';
+import { useI18n } from '../context/I18nContext';
+import type { TranslationKey } from '../i18n/translations';
 
 type Category = 'Semua' | 'Landing Page' | 'Company Profile' | 'Online Store';
 
@@ -39,9 +41,21 @@ const MOCK_DESIGNS = [
 ];
 
 const CATEGORIES: Category[] = ['Semua', 'Landing Page', 'Company Profile', 'Online Store'];
+const CATEGORY_KEYS: Record<string, TranslationKey> = {
+  'Landing Page': 'design_landing',
+  'Company Profile': 'design_company',
+  'Online Store': 'design_toko',
+};
+const CATEGORY_LABELS: Record<string, TranslationKey> = {
+  'Semua': 'design_cat_all',
+  'Landing Page': 'design_landing',
+  'Company Profile': 'design_company',
+  'Online Store': 'design_toko',
+};
 const ITEMS_PER_PAGE = 6;
 
 export function DesignCatalog() {
+  const { t } = useI18n();
   const [activeCategory, setActiveCategory] = useState<Category>('Semua');
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
@@ -92,10 +106,10 @@ export function DesignCatalog() {
           {/* Section Header (Left on Desktop, Bottom on Mobile) */}
           <div className="max-w-xl order-2 lg:order-1 text-center lg:text-left">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900 mb-6 leading-tight">
-              Pilih Desain Sesuai Kebutuhan Anda
+              {t('design_catalog_title')}
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Kami telah menyiapkan berbagai pilihan desain premium yang bisa langsung disesuaikan dengan identitas brand Anda. Gunakan filter di bawah ini untuk menemukan desain yang paling cocok.
+              {t('design_catalog_desc')}
             </p>
           </div>
 
@@ -144,7 +158,7 @@ export function DesignCatalog() {
                   : 'bg-white text-gray-600 hover:bg-gray-100 hover:text-gray-900 border border-gray-200'
                 }`}
             >
-              {category}
+              {t(CATEGORY_LABELS[category])}
             </button>
           ))}
         </div>
@@ -174,14 +188,14 @@ export function DesignCatalog() {
                     <design.icon className="w-4 h-4" />
                   </div>
                   <span className="text-xs font-bold text-brand uppercase tracking-wider">
-                    {design.category}
+                    {t(CATEGORY_KEYS[design.category])}
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {design.title}
                 </h3>
                 <p className="text-gray-500 text-sm">
-                  Desain responsif dengan performa optimal untuk {design.category.toLowerCase()} Anda.
+                  {t('design_card_desc')} {design.category.toLowerCase()}.
                 </p>
 
                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
@@ -189,13 +203,13 @@ export function DesignCatalog() {
                     onClick={() => setSelectedDesign(design)}
                     className="text-sm font-bold text-gray-900 hover:text-brand transition-colors flex items-center gap-2"
                   >
-                    Lihat Detail
+                    {t('design_lihat_detail')}
                   </button>
                   <a
                     href="https://wa.me/+6285655639206"
                     className="px-4 py-2 bg-gray-900 hover:bg-brand text-white text-xs md:text-md font-bold rounded-full transition-colors"
                   >
-                    Pesan Desain
+                    {t('design_pesan_desain')}
                   </a>
                 </div>
               </div>

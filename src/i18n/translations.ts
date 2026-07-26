@@ -97,7 +97,6 @@ export type TranslationKey =
   | 'why_9_desc'
   | 'why_10_title'
   | 'why_10_desc'
-  | 'why_10_desc'
   | 'price_start_from'
   | 'price_year'
   | 'price_month_lp'
@@ -198,7 +197,201 @@ export type TranslationKey =
   | 'pricing_cw_alt_1'
   | 'pricing_cw_alt_2'
   | 'pricing_cw_alt_3'
-  | 'pricing_cw_alt_4';
+  | 'pricing_cw_alt_4'
+  /* AboutPage */
+  | 'about_badge'
+  | 'about_title'
+  | 'about_visimisi_title'
+  | 'about_visimisi_sub'
+  | 'about_visimisi_desc'
+  | 'about_komitmen_title'
+  | 'about_komitmen_sub'
+  | 'about_komitmen_desc'
+  | 'about_corevalues_title'
+  | 'about_value_1_title'
+  | 'about_value_1_desc'
+  | 'about_value_2_title'
+  | 'about_value_2_desc'
+  | 'about_value_3_title'
+  | 'about_value_3_desc'
+  | 'about_value_4_title'
+  | 'about_value_4_desc'
+  | 'about_value_5_title'
+  | 'about_value_5_desc'
+  /* BlogPage */
+  | 'blog_badge'
+  | 'blog_title'
+  | 'blog_cat_all'
+  | 'blog_cat_tek'
+  | 'blog_cat_web'
+  | 'blog_cat_dm'
+  | 'blog_read_more'
+  | 'blog_empty'
+  | 'blog_default_cat'
+  /* BlogPostPage */
+  | 'blog_notfound_title'
+  | 'blog_notfound_desc'
+  | 'blog_share_title'
+  | 'blog_back'
+  /* ContactPage */
+  | 'contact_hero_title'
+  | 'contact_hero_desc'
+  | 'contact_sales_title'
+  | 'contact_sales_desc'
+  | 'contact_sales_btn'
+  | 'contact_support_title'
+  | 'contact_support_desc'
+  | 'contact_support_btn'
+  | 'contact_form_title'
+  | 'contact_form_desc'
+  | 'contact_form_email_placeholder'
+  | 'contact_form_name_placeholder'
+  | 'contact_form_message_placeholder'
+  | 'contact_form_submit'
+  /* TestimonialsPage */
+  | 'testi_page_title'
+  | 'testi_page_desc'
+  | 'testi_section_title'
+  | 'testi_section_desc'
+  | 'testi_quote'
+  | 'testi_author'
+  /* TestimonialCarousel */
+  | 'testi_carousel_quote'
+  /* DesignCatalog */
+  | 'design_catalog_title'
+  | 'design_catalog_desc'
+  | 'design_cat_all'
+  | 'design_card_desc'
+  | 'design_lihat_detail'
+  | 'design_pesan_desain'
+  /* DesignDetail */
+  | 'design_back'
+  | 'design_cta'
+  | 'design_preview_title'
+  | 'design_preview_desktop'
+  | 'design_preview_mobile'
+  | 'design_underdev_title'
+  | 'design_underdev_desc'
+  | 'design_default_desc'
+  /* PricingPage - hero & sections */
+  | 'pricing_hero_title'
+  | 'pricing_hero_desc'
+  | 'pricing_section_title'
+  | 'pricing_section_desc'
+  | 'pricing_alasan_title'
+  | 'pricing_dapat_title'
+  | 'pricing_dapat_label'
+  | 'pricing_target_label'
+  | 'pricing_cta_title'
+  | 'pricing_cta_desc'
+  | 'pricing_hide_options'
+  | 'pricing_show_options'
+  /* PricingPage - Landing Page */
+  | 'pricing_lp_subtitle'
+  | 'pricing_lp_reason_1_desc'
+  | 'pricing_lp_reason_2_desc'
+  | 'pricing_lp_reason_3_desc'
+  | 'pricing_lp_get_1'
+  | 'pricing_lp_get_2'
+  | 'pricing_lp_get_3'
+  | 'pricing_lp_get_4'
+  | 'pricing_lp_get_5'
+  | 'pricing_lp_get_6'
+  | 'pricing_lp_target_1'
+  | 'pricing_lp_target_2'
+  | 'pricing_lp_target_3'
+  | 'pricing_lp_target_4'
+  | 'pricing_lp_target_5'
+  | 'pricing_lp_target_6'
+  | 'pricing_lp_opt_3th'
+  | 'pricing_lp_opt_3th_suffix'
+  | 'pricing_lp_opt_2th'
+  | 'pricing_lp_opt_2th_suffix'
+  | 'pricing_lp_opt_1th'
+  /* PricingPage - Company Profile */
+  | 'pricing_cp_subtitle'
+  | 'pricing_cp_reason_1_desc'
+  | 'pricing_cp_reason_2_desc'
+  | 'pricing_cp_reason_3_desc'
+  | 'pricing_cp_get_1'
+  | 'pricing_cp_get_2'
+  | 'pricing_cp_get_3'
+  | 'pricing_cp_get_4'
+  | 'pricing_cp_get_5'
+  | 'pricing_cp_get_6'
+  | 'pricing_cp_target_1'
+  | 'pricing_cp_target_2'
+  | 'pricing_cp_target_3'
+  | 'pricing_cp_target_4'
+  | 'pricing_cp_target_5'
+  | 'pricing_cp_target_6'
+  | 'pricing_cp_opt_2th'
+  | 'pricing_cp_opt_2th_suffix'
+  | 'pricing_cp_opt_1th'
+  /* PricingPage - Toko Online */
+  | 'pricing_to_subtitle'
+  | 'pricing_to_reason_1_desc'
+  | 'pricing_to_reason_2_desc'
+  | 'pricing_to_reason_3_desc'
+  | 'pricing_to_get_1'
+  | 'pricing_to_get_2'
+  | 'pricing_to_get_3'
+  | 'pricing_to_get_4'
+  | 'pricing_to_get_5'
+  | 'pricing_to_get_6'
+  | 'pricing_to_target_1'
+  | 'pricing_to_target_2'
+  | 'pricing_to_target_3'
+  | 'pricing_to_target_4'
+  | 'pricing_to_target_5'
+  | 'pricing_to_target_6'
+  | 'pricing_to_opt_2th'
+  | 'pricing_to_opt_2th_suffix'
+  | 'pricing_to_opt_1th'
+  /* PricingPage - Custom Website */
+  | 'pricing_cw_subtitle'
+  | 'pricing_cw_reason_1_desc'
+  | 'pricing_cw_reason_2_desc'
+  | 'pricing_cw_reason_3_desc'
+  | 'pricing_cw_get_1'
+  | 'pricing_cw_get_2'
+  | 'pricing_cw_get_3'
+  | 'pricing_cw_get_4'
+  | 'pricing_cw_get_5'
+  | 'pricing_cw_get_6'
+  | 'pricing_cw_target_1'
+  | 'pricing_cw_target_2'
+  | 'pricing_cw_target_3'
+  | 'pricing_cw_target_4'
+  | 'pricing_cw_target_5'
+  | 'pricing_cw_target_6'
+  /* PricingPage - CTA */
+  | 'pricing_cta_lp'
+  | 'pricing_cta_cp'
+  | 'pricing_cta_to'
+  | 'pricing_cta_cw'
+  /* Footer */
+  | 'footer_service_webdev'
+  | 'footer_service_landing'
+  | 'footer_service_cp'
+  | 'footer_service_ecom'
+  | 'footer_service_custom'
+  | 'footer_service_maintenance'
+  | 'footer_service_redesign'
+  | 'footer_service_uiux'
+  | 'footer_nav_home'
+  | 'footer_nav_design'
+  | 'footer_nav_pricing'
+  | 'footer_nav_about'
+  | 'footer_nav_contact'
+  | 'footer_nav_blog'
+  /* generated Pricing.tsx */
+  | 'pricing_pay_early_lp'
+  | 'pricing_pay_early_cp'
+  | 'pricing_pay_early_to'
+  | 'pricing_save_27'
+  | 'pricing_save_15'
+  | 'pricing_save_23';
 
 export const translations: Record<Lang, Partial<Record<TranslationKey, string>>> = {
   ID: {
@@ -421,6 +614,200 @@ export const translations: Record<Lang, Partial<Record<TranslationKey, string>>>
     pricing_cw_alt_2: 'Contoh desain custom website — halaman data',
     pricing_cw_alt_3: 'Contoh desain custom website — halaman laporan',
     pricing_cw_alt_4: 'Contoh desain custom website — halaman pengaturan',
+    /* AboutPage */
+    about_badge: 'Tentang Kami',
+    about_title: 'Merancang Solusi Digital, Mengatasi Kendala Teknis, dan Bersinergi Sebagai Mitra Bisnis Jangka Panjang Anda.',
+    about_visimisi_title: 'Visi dan Misi',
+    about_visimisi_sub: 'Menjadikan pelaku usaha Go Digital dan mempunyai identitas Online.',
+    about_visimisi_desc: 'TunamSam berkomitmen mendukung transformasi digital bagi pelaku usaha melalui layanan pembuatan website yang modern dan responsif. Kami menyediakan platform yang mudah digunakan untuk memperkuat kehadiran online mereka, membantu mereka mengadopsi teknologi digital dengan efisien dan efektif. Dengan fokus pada kebutuhan unik setiap bisnis, kami membangun website yang mencerminkan identitas mereka, memastikan mereka menonjol di pasar digital.',
+    about_komitmen_title: 'Komitmen Kami',
+    about_komitmen_sub: 'Kami ingin menjadi partner jangka panjang Anda bukan hanya vendor sekali pakai.',
+    about_komitmen_desc: 'Kami memahami bahwa website adalah investasi penting dalam pertumbuhan bisnis. Maka, setiap proyek kami kerjakan dengan pendekatan strategis dan rasa tanggung jawab tinggi.',
+    about_corevalues_title: 'Nilai Utama Perusahaan',
+    about_value_1_title: 'Inovasi',
+    about_value_1_desc: 'Kami terus mengeksplorasi teknologi baru agar solusi yang diberikan relevan dan kompetitif.',
+    about_value_2_title: 'Berorientasi Hasil',
+    about_value_2_desc: 'Fokus kami adalah konversi, efisiensi, dan pertumbuhan nyata untuk klien.',
+    about_value_3_title: 'Kemitraan',
+    about_value_3_desc: 'Kami percaya bisnis terbaik dibangun melalui kolaborasi yang saling memahami.',
+    about_value_4_title: 'Keamanan & Kualitas',
+    about_value_4_desc: 'Website Anda dibangun dengan standar keamanan dan kualitas tinggi.',
+    about_value_5_title: 'Edukasi & Transparansi',
+    about_value_5_desc: 'Kami membimbing klien memahami proses dan pilihan mereka.',
+    /* BlogPage */
+    blog_badge: 'Blog & Artikel',
+    blog_title: 'Temukan Inspirasi, Strategi, dan Solusi Digital Terbaik untuk Pertumbuhan Bisnis Anda.',
+    blog_cat_all: 'Semua',
+    blog_cat_tek: 'Teknologi',
+    blog_cat_web: 'Website',
+    blog_cat_dm: 'Digital Marketing',
+    blog_read_more: 'Baca Selengkapnya',
+    blog_empty: 'Belum ada artikel untuk kategori ini.',
+    blog_default_cat: 'Artikel',
+    /* BlogPostPage */
+    blog_notfound_title: 'Artikel Tidak Ditemukan',
+    blog_notfound_desc: 'Maaf, artikel yang Anda cari tidak tersedia atau mungkin telah dipindahkan.',
+    blog_share_title: 'Bagikan Artikel Ini',
+    blog_back: 'Kembali ke Blog',
+    /* ContactPage */
+    contact_hero_title: 'Mulai Perjalanan Digital Anda Bersama TunamSam',
+    contact_hero_desc: 'Kami siap membantu Anda membangun website profesional yang sesuai kebutuhan bisnis. Baik untuk konsultasi awal, pertanyaan teknis, atau penawaran kerjasama — kami siap mendengar.',
+    contact_sales_title: 'Sales',
+    contact_sales_desc: 'Hubungi tim sales kami untuk konsultasi pembuatan website, informasi paket layanan, atau penawaran kerja sama. Kami siap membantu Anda memilih solusi terbaik sesuai kebutuhan bisnis.',
+    contact_sales_btn: 'Chat Admin',
+    contact_support_title: 'Support',
+    contact_support_desc: 'Punya kendala teknis atau butuh bantuan seputar website Anda? Tim support kami siap memberikan bantuan teknis dengan cepat dan efisien.',
+    contact_support_btn: 'Bantuan Teknis',
+    contact_form_title: 'Ajukan Penawaran, Tanyakan Kebutuhan, atau Mulai Konsultasi Website Anda',
+    contact_form_desc: 'Isi formulir berikut untuk mendiskusikan pembuatan website, permintaan penawaran, atau pertanyaan teknis. Tim TunamSam siap membantu Anda.',
+    contact_form_email_placeholder: 'Email',
+    contact_form_name_placeholder: 'Nama Anda',
+    contact_form_message_placeholder: 'Tulis Pesan Anda',
+    contact_form_submit: 'Kirim Pesan',
+    /* TestimonialsPage */
+    testi_page_title: 'Apa Kata Mereka Tentang Kami?',
+    testi_page_desc: 'Kepercayaan dan kepuasan klien adalah prioritas utama kami. Berikut adalah pengalaman mereka berkolaborasi dengan TunamSam.',
+    testi_section_title: 'Kisah Sukses Bersama TunamSam',
+    testi_section_desc: 'Bukan sekadar janji, ini adalah bukti nyata dari mereka yang telah mempercayakan perjalanan digitalnya kepada kami.',
+    testi_quote: 'Website company profile kami jadi terlihat jauh lebih profesional. Tim TunamSam responsif dan mudah diajak diskusi dari awal hingga launching.',
+    testi_author: 'Mbak Win',
+    /* TestimonialCarousel */
+    testi_carousel_quote: 'Website company profile kami jadi terlihat jauh lebih profesional. Tim TunamSam responsif dan mudah diajak diskusi dari awal hingga launching.',
+    /* DesignCatalog */
+    design_catalog_title: 'Pilih Desain Sesuai Kebutuhan Anda',
+    design_catalog_desc: 'Kami telah menyiapkan berbagai pilihan desain premium yang bisa langsung disesuaikan dengan identitas brand Anda. Gunakan filter di bawah ini untuk menemukan desain yang paling cocok.',
+    design_cat_all: 'Semua',
+    design_card_desc: 'Desain responsif dengan performa optimal untuk',
+    design_lihat_detail: 'Lihat Detail',
+    design_pesan_desain: 'Pesan Desain',
+    /* DesignDetail */
+    design_back: 'Pilihan Desain',
+    design_cta: 'Bikin website sekarang!',
+    design_preview_title: 'Full Preview',
+    design_preview_desktop: 'Desktop',
+    design_preview_mobile: 'Mobile',
+    design_underdev_title: 'Under Development',
+    design_underdev_desc: 'Tampilan preview lengkap sedang dalam tahap pengembangan.',
+    design_default_desc: 'Desain website yang ceria dan ramah pengguna, dirancang khusus untuk {category}. Desain ini menonjolkan tampilan yang bersih dan modern. Fitur-fitur utama meliputi galeri yang menarik, halaman produk dengan deskripsi lengkap, sistem pencarian yang canggih, serta proses yang mudah digunakan. Template ini sangat cocok untuk bisnis yang ingin memberikan pengalaman online yang nyaman dan menyenangkan bagi para pengunjung.',
+    /* PricingPage - hero & sections */
+    pricing_hero_title: 'Jasa Pembuatan Website Profesional untuk Bisnis Anda',
+    pricing_hero_desc: 'Kami hadir untuk membantu Anda membangun website yang sesuai kebutuhan dengan harga yang transparan dan fitur premium. Pilih paket jasa pembuatan website yang paling cocok untuk bisnis Anda',
+    pricing_section_title: 'Paket Harga Jasa Pembuatan Website TunamSam',
+    pricing_section_desc: 'Kami menyediakan Paket Pembuatan Website sesuai kebutuhan dan kategori bisnis Anda.',
+    pricing_alasan_title: 'Alasan {pkg} Tepat untuk Anda',
+    pricing_dapat_title: 'Apa yang Anda Dapatkan & Untuk Siapa?',
+    pricing_dapat_label: 'Yang Anda dapatkan',
+    pricing_target_label: 'Cocok untuk berbagai Industri',
+    pricing_cta_title: 'Mulai dari Sini, Bawa Bisnismu ke Dunia Digital.',
+    pricing_cta_desc: '{pkg} simpel, cepat jadi, dan langsung bisa dipakai promosi',
+    pricing_hide_options: 'Sembunyikan opsi',
+    pricing_show_options: 'Lihat opsi lainnya',
+    /* PricingPage - Landing Page */
+    pricing_lp_subtitle: 'Bayar di awal untuk 3 tahun dan hemat 27%',
+    pricing_lp_reason_1_desc: 'Ideal untuk kampanye promosi produk atau layanan tunggal dengan desain yang fokus pada satu tujuan spesifik.',
+    pricing_lp_reason_2_desc: 'Setiap elemen pada landing page didesain untuk mengarahkan pengunjung melakukan tindakan tertentu, seperti mengisi formulir, mendaftar, atau melakukan pembelian.',
+    pricing_lp_reason_3_desc: 'Dengan biaya yang lebih rendah dibanding website lengkap, landing page adalah solusi cepat dan efisien untuk memulai kehadiran digital Anda.',
+    pricing_lp_get_1: '1 halaman landing page dengan desain eksklusif',
+    pricing_lp_get_2: '3x revisi desain sebelum launching',
+    pricing_lp_get_3: 'Gratis hosting & domain 1 tahun',
+    pricing_lp_get_4: 'Optimasi Mobile-Friendly & SEO dasar',
+    pricing_lp_get_5: 'Formulir kontak atau CTA (Call-to-Action) sesuai kebutuhan',
+    pricing_lp_get_6: 'Integrasi Google Analytics & Facebook Pixel untuk tracking performa',
+    pricing_lp_target_1: 'Promosi Produk Baru',
+    pricing_lp_target_2: 'Pre-Order atau Launching Campaign',
+    pricing_lp_target_3: 'Kampanye Iklan Digital (Google Ads/FB Ads)',
+    pricing_lp_target_4: 'Event atau Webinar',
+    pricing_lp_target_5: 'Pebisnis yang Baru Mulai Online',
+    pricing_lp_target_6: 'Startup atau UMKM yang Baru Memulai Kehadiran Digital',
+    pricing_lp_opt_3th: '3 Tahun',
+    pricing_lp_opt_3th_suffix: 'Hemat 27%',
+    pricing_lp_opt_2th: '2 Tahun',
+    pricing_lp_opt_2th_suffix: '(Rp. 650.000 / tahun)',
+    pricing_lp_opt_1th: '1 Tahun',
+    /* PricingPage - Company Profile */
+    pricing_cp_subtitle: 'Bayar di awal untuk 2 tahun dan hemat 15%',
+    pricing_cp_reason_1_desc: 'Membangun citra profesional yang kuat untuk bisnis Anda di mata klien dan mitra kerja.',
+    pricing_cp_reason_2_desc: 'Menampilkan portofolio, layanan, dan informasi perusahaan dengan rapi dan mudah diakses.',
+    pricing_cp_reason_3_desc: 'Memperluas jangkauan bisnis Anda ke pasar yang lebih besar melalui kehadiran digital yang solid.',
+    pricing_cp_get_1: 'Hingga 5 halaman (Home, About, Services, Portfolio, Contact)',
+    pricing_cp_get_2: 'Desain kustom sesuai identitas brand',
+    pricing_cp_get_3: 'Gratis hosting & domain 1 tahun',
+    pricing_cp_get_4: 'Optimasi SEO on-page',
+    pricing_cp_get_5: 'Integrasi media sosial',
+    pricing_cp_get_6: 'Dukungan teknis selama 3 bulan',
+    pricing_cp_target_1: 'Perusahaan B2B & B2C',
+    pricing_cp_target_2: 'Agensi Kreatif & Konsultan',
+    pricing_cp_target_3: 'Klinik & Rumah Sakit',
+    pricing_cp_target_4: 'Firma Hukum & Akuntan',
+    pricing_cp_target_5: 'Kontraktor & Properti',
+    pricing_cp_target_6: 'Lembaga Pendidikan',
+    pricing_cp_opt_2th: '2 Tahun',
+    pricing_cp_opt_2th_suffix: 'Hemat 15%',
+    pricing_cp_opt_1th: '1 Tahun',
+    /* PricingPage - Toko Online */
+    pricing_to_subtitle: 'Bayar di awal untuk 2 tahun dan hemat 23%',
+    pricing_to_reason_1_desc: 'Toko Anda buka 24 jam sehari, 7 hari seminggu, tanpa batasan waktu dan lokasi.',
+    pricing_to_reason_2_desc: 'Sistem pengelolaan stok, harga, dan varian produk yang mudah dipahami.',
+    pricing_to_reason_3_desc: 'Terhubung dengan berbagai metode pembayaran (transfer bank, e-wallet, kartu kredit) dan kurir.',
+    pricing_to_get_1: 'Sistem E-Commerce lengkap (Cart, Checkout, Payment Gateway)',
+    pricing_to_get_2: 'Upload hingga 50 produk awal',
+    pricing_to_get_3: 'Gratis hosting & domain 1 tahun',
+    pricing_to_get_4: 'Kalkulasi ongkos kirim otomatis',
+    pricing_to_get_5: 'Laporan penjualan dasar',
+    pricing_to_get_6: 'Pelatihan penggunaan sistem',
+    pricing_to_target_1: 'Toko Retail & Fashion',
+    pricing_to_target_2: 'Penjual Gadget & Elektronik',
+    pricing_to_target_3: 'Toko Buku & Alat Tulis',
+    pricing_to_target_4: 'Kosmetik & Skincare',
+    pricing_to_target_5: 'F&B (Makanan & Minuman Kemasan)',
+    pricing_to_target_6: 'Distributor Produk',
+    pricing_to_opt_2th: '2 Tahun',
+    pricing_to_opt_2th_suffix: 'Hemat 23%',
+    pricing_to_opt_1th: '1 Tahun',
+    /* PricingPage - Custom Website */
+    pricing_cw_subtitle: 'Solusi spesifik sesuai kebutuhan sistem Anda',
+    pricing_cw_reason_1_desc: 'Tampilan visual yang dibuat dari nol, 100% eksklusif untuk brand Anda.',
+    pricing_cw_reason_2_desc: 'Pengembangan fitur khusus yang tidak ada di platform standar (misal: sistem booking kompleks, portal member).',
+    pricing_cw_reason_3_desc: 'Dibangun dengan arsitektur yang siap menampung pertumbuhan trafik dan data di masa depan.',
+    pricing_cw_get_1: 'Analisis kebutuhan sistem mendalam',
+    pricing_cw_get_2: 'UI/UX Design eksklusif (Figma prototype)',
+    pricing_cw_get_3: 'Pengembangan fitur custom (Frontend & Backend)',
+    pricing_cw_get_4: 'Pengujian keamanan dan performa',
+    pricing_cw_get_5: 'Server setup & deployment',
+    pricing_cw_get_6: 'Maintenance & Support jangka panjang',
+    pricing_cw_target_1: 'Startup Teknologi',
+    pricing_cw_target_2: 'Marketplace Niche',
+    pricing_cw_target_3: 'Portal Berita & Media Berskala Besar',
+    pricing_cw_target_4: 'Sistem Manajemen Internal (ERP/CRM mini)',
+    pricing_cw_target_5: 'Platform E-Learning',
+    pricing_cw_target_6: 'Sistem Booking & Reservasi Kompleks',
+    /* PricingPage - CTA */
+    pricing_cta_lp: 'Buat Landingpage sekarang!',
+    pricing_cta_cp: 'Buat Company Profile sekarang!',
+    pricing_cta_to: 'Buat Toko Online sekarang!',
+    pricing_cta_cw: 'Konsultasi Custom Website!',
+    /* Footer */
+    footer_service_webdev: 'Website Development',
+    footer_service_landing: 'Landing Page',
+    footer_service_cp: 'Company Profile',
+    footer_service_ecom: 'E-Commerce Website',
+    footer_service_custom: 'Custom Web App',
+    footer_service_maintenance: 'Website Maintenance',
+    footer_service_redesign: 'Website Redesign',
+    footer_service_uiux: 'UI/UX Design',
+    footer_nav_home: 'Home',
+    footer_nav_design: 'Pilihan Desain',
+    footer_nav_pricing: 'Harga Website',
+    footer_nav_about: 'Tentang Kami',
+    footer_nav_contact: 'Kontak',
+    footer_nav_blog: 'Blog',
+    /* generated Pricing.tsx */
+    pricing_pay_early_lp: 'Bayar di awal untuk 3 tahun dan hemat 27%',
+    pricing_pay_early_cp: 'Bayar di awal untuk 2 tahun dan hemat 15%',
+    pricing_pay_early_to: 'Bayar di awal untuk 2 tahun dan hemat 23%',
+    pricing_save_27: 'Hemat 27%',
+    pricing_save_15: 'Hemat 15%',
+    pricing_save_23: 'Hemat 23%',
   },
   EN: {
     seo_title: 'TunamSam — Website Development & Software House Indonesia',
@@ -639,6 +1026,200 @@ export const translations: Record<Lang, Partial<Record<TranslationKey, string>>>
     footer_quick: 'Quick Links',
     footer_connect: 'Connect',
     footer_rights: '© 2024 TunamSam. All rights reserved.',
+    /* AboutPage */
+    about_badge: 'About Us',
+    about_title: 'Designing Digital Solutions, Overcoming Technical Challenges, and Synergizing as Your Long-Term Business Partner.',
+    about_visimisi_title: 'Vision and Mission',
+    about_visimisi_sub: 'Empowering businesses to Go Digital and have an Online identity.',
+    about_visimisi_desc: 'TunamSam is committed to supporting digital transformation for business owners through modern and responsive website creation services. We provide an easy-to-use platform to strengthen their online presence, helping them adopt digital technology efficiently and effectively. With a focus on each business\'s unique needs, we build websites that reflect their identity, ensuring they stand out in the digital market.',
+    about_komitmen_title: 'Our Commitment',
+    about_komitmen_sub: 'We want to be your long-term partner, not just a one-time vendor.',
+    about_komitmen_desc: 'We understand that a website is an important investment in business growth. Therefore, we approach every project with a strategic mindset and a strong sense of responsibility.',
+    about_corevalues_title: 'Core Values',
+    about_value_1_title: 'Innovation',
+    about_value_1_desc: 'We continuously explore new technologies to ensure our solutions remain relevant and competitive.',
+    about_value_2_title: 'Result-Oriented',
+    about_value_2_desc: 'Our focus is on conversion, efficiency, and real growth for our clients.',
+    about_value_3_title: 'Partnership',
+    about_value_3_desc: 'We believe the best businesses are built through collaboration and mutual understanding.',
+    about_value_4_title: 'Security & Quality',
+    about_value_4_desc: 'Your website is built with high security and quality standards.',
+    about_value_5_title: 'Education & Transparency',
+    about_value_5_desc: 'We guide our clients to understand the process and their choices.',
+    /* BlogPage */
+    blog_badge: 'Blog & Articles',
+    blog_title: 'Find Inspiration, Strategies, and the Best Digital Solutions for Your Business Growth.',
+    blog_cat_all: 'All',
+    blog_cat_tek: 'Technology',
+    blog_cat_web: 'Website',
+    blog_cat_dm: 'Digital Marketing',
+    blog_read_more: 'Read More',
+    blog_empty: 'No articles yet for this category.',
+    blog_default_cat: 'Article',
+    /* BlogPostPage */
+    blog_notfound_title: 'Article Not Found',
+    blog_notfound_desc: 'Sorry, the article you\'re looking for is not available or may have been moved.',
+    blog_share_title: 'Share This Article',
+    blog_back: 'Back to Blog',
+    /* ContactPage */
+    contact_hero_title: 'Start Your Digital Journey with TunamSam',
+    contact_hero_desc: 'We are ready to help you build a professional website that suits your business needs. Whether for initial consultation, technical questions, or partnership inquiries — we are ready to listen.',
+    contact_sales_title: 'Sales',
+    contact_sales_desc: 'Contact our sales team for website creation consultations, service package information, or partnership offers. We are ready to help you choose the best solution for your business needs.',
+    contact_sales_btn: 'Chat Admin',
+    contact_support_title: 'Support',
+    contact_support_desc: 'Having technical issues or need help with your website? Our support team is ready to provide technical assistance quickly and efficiently.',
+    contact_support_btn: 'Technical Support',
+    contact_form_title: 'Submit a Proposal, Ask About Your Needs, or Start Your Website Consultation',
+    contact_form_desc: 'Fill out the following form to discuss website creation, requests for proposals, or technical questions. The TunamSam team is ready to help you.',
+    contact_form_email_placeholder: 'Email',
+    contact_form_name_placeholder: 'Your Name',
+    contact_form_message_placeholder: 'Write Your Message',
+    contact_form_submit: 'Send Message',
+    /* TestimonialsPage */
+    testi_page_title: 'What Are They Saying About Us?',
+    testi_page_desc: 'Client trust and satisfaction are our top priorities. Here are their experiences collaborating with TunamSam.',
+    testi_section_title: 'Success Stories with TunamSam',
+    testi_section_desc: 'More than just promises, these are real testimonials from those who have entrusted their digital journey to us.',
+    testi_quote: 'Our company profile website looks much more professional now. The TunamSam team is responsive and easy to discuss with from start to launch.',
+    testi_author: 'Mbak Win',
+    /* TestimonialCarousel */
+    testi_carousel_quote: 'Our company profile website looks much more professional now. The TunamSam team is responsive and easy to discuss with from start to launch.',
+    /* DesignCatalog */
+    design_catalog_title: 'Choose a Design That Fits Your Needs',
+    design_catalog_desc: 'We have prepared a variety of premium design options that can be customized to your brand identity. Use the filters below to find the most suitable design.',
+    design_cat_all: 'All',
+    design_card_desc: 'Responsive design with optimal performance for your',
+    design_lihat_detail: 'View Details',
+    design_pesan_desain: 'Order Design',
+    /* DesignDetail */
+    design_back: 'Design Choices',
+    design_cta: 'Create a website now!',
+    design_preview_title: 'Full Preview',
+    design_preview_desktop: 'Desktop',
+    design_preview_mobile: 'Mobile',
+    design_underdev_title: 'Under Development',
+    design_underdev_desc: 'Full preview display is currently under development.',
+    design_default_desc: 'A cheerful and user-friendly website design, specially crafted for {category}. This design highlights a clean and modern look. Key features include an attractive gallery, product pages with complete descriptions, an advanced search system, and an easy-to-use process. This template is perfect for businesses that want to provide a comfortable and enjoyable online experience for their visitors.',
+    /* PricingPage - hero & sections */
+    pricing_hero_title: 'Professional Website Creation Service for Your Business',
+    pricing_hero_desc: 'We are here to help you build a website that suits your needs with transparent pricing and premium features. Choose the website creation package that best fits your business.',
+    pricing_section_title: 'TunamSam Website Creation Price Packages',
+    pricing_section_desc: 'We provide Website Creation Packages tailored to your business needs and category.',
+    pricing_alasan_title: 'Why {pkg} is Right for You',
+    pricing_dapat_title: 'What You Get & Who Is It For?',
+    pricing_dapat_label: 'What You Get',
+    pricing_target_label: 'Suitable for Various Industries',
+    pricing_cta_title: 'Start Here, Take Your Business to the Digital World.',
+    pricing_cta_desc: '{pkg} simple, quick to build, and ready for promotion',
+    pricing_hide_options: 'Hide options',
+    pricing_show_options: 'View other options',
+    /* PricingPage - Landing Page */
+    pricing_lp_subtitle: 'Pay upfront for 3 years and save 27%',
+    pricing_lp_reason_1_desc: 'Ideal for promoting a single product or service campaign with a design focused on a specific goal.',
+    pricing_lp_reason_2_desc: 'Every element on the landing page is designed to direct visitors to take a specific action, such as filling out a form, signing up, or making a purchase.',
+    pricing_lp_reason_3_desc: 'With a lower cost than a full website, a landing page is a quick and efficient solution to start your digital presence.',
+    pricing_lp_get_1: '1 landing page with exclusive design',
+    pricing_lp_get_2: '3x design revisions before launch',
+    pricing_lp_get_3: 'Free hosting & domain for 1 year',
+    pricing_lp_get_4: 'Mobile-Friendly optimization & basic SEO',
+    pricing_lp_get_5: 'Contact form or CTA (Call-to-Action) as needed',
+    pricing_lp_get_6: 'Google Analytics & Facebook Pixel integration for performance tracking',
+    pricing_lp_target_1: 'New Product Promotions',
+    pricing_lp_target_2: 'Pre-Order or Launch Campaigns',
+    pricing_lp_target_3: 'Digital Ad Campaigns (Google Ads/FB Ads)',
+    pricing_lp_target_4: 'Events or Webinars',
+    pricing_lp_target_5: 'Businesses Just Starting Online',
+    pricing_lp_target_6: 'Startups or SMEs Beginning Their Digital Presence',
+    pricing_lp_opt_3th: '3 Years',
+    pricing_lp_opt_3th_suffix: 'Save 27%',
+    pricing_lp_opt_2th: '2 Years',
+    pricing_lp_opt_2th_suffix: '(Rp. 650,000 / year)',
+    pricing_lp_opt_1th: '1 Year',
+    /* PricingPage - Company Profile */
+    pricing_cp_subtitle: 'Pay upfront for 2 years and save 15%',
+    pricing_cp_reason_1_desc: 'Builds a strong professional image for your business in the eyes of clients and partners.',
+    pricing_cp_reason_2_desc: 'Displays portfolio, services, and company information neatly and accessibly.',
+    pricing_cp_reason_3_desc: 'Expands your business reach to a larger market through a solid digital presence.',
+    pricing_cp_get_1: 'Up to 5 pages (Home, About, Services, Portfolio, Contact)',
+    pricing_cp_get_2: 'Custom design according to brand identity',
+    pricing_cp_get_3: 'Free hosting & domain for 1 year',
+    pricing_cp_get_4: 'On-page SEO optimization',
+    pricing_cp_get_5: 'Social media integration',
+    pricing_cp_get_6: 'Technical support for 3 months',
+    pricing_cp_target_1: 'B2B & B2C Companies',
+    pricing_cp_target_2: 'Creative Agencies & Consultants',
+    pricing_cp_target_3: 'Clinics & Hospitals',
+    pricing_cp_target_4: 'Law Firms & Accountants',
+    pricing_cp_target_5: 'Contractors & Property',
+    pricing_cp_target_6: 'Educational Institutions',
+    pricing_cp_opt_2th: '2 Years',
+    pricing_cp_opt_2th_suffix: 'Save 15%',
+    pricing_cp_opt_1th: '1 Year',
+    /* PricingPage - Toko Online */
+    pricing_to_subtitle: 'Pay upfront for 2 years and save 23%',
+    pricing_to_reason_1_desc: 'Your store is open 24 hours a day, 7 days a week, with no time or location limits.',
+    pricing_to_reason_2_desc: 'An easy-to-understand system for managing stock, prices, and product variants.',
+    pricing_to_reason_3_desc: 'Connected to various payment methods (bank transfer, e-wallet, credit card) and couriers.',
+    pricing_to_get_1: 'Complete E-Commerce system (Cart, Checkout, Payment Gateway)',
+    pricing_to_get_2: 'Upload up to 50 initial products',
+    pricing_to_get_3: 'Free hosting & domain for 1 year',
+    pricing_to_get_4: 'Automatic shipping cost calculation',
+    pricing_to_get_5: 'Basic sales reports',
+    pricing_to_get_6: 'System usage training',
+    pricing_to_target_1: 'Retail & Fashion Stores',
+    pricing_to_target_2: 'Gadget & Electronics Sellers',
+    pricing_to_target_3: 'Bookstores & Stationery',
+    pricing_to_target_4: 'Cosmetics & Skincare',
+    pricing_to_target_5: 'F&B (Packaged Food & Beverages)',
+    pricing_to_target_6: 'Product Distributors',
+    pricing_to_opt_2th: '2 Years',
+    pricing_to_opt_2th_suffix: 'Save 23%',
+    pricing_to_opt_1th: '1 Year',
+    /* PricingPage - Custom Website */
+    pricing_cw_subtitle: 'Specific solutions tailored to your system needs',
+    pricing_cw_reason_1_desc: 'Visual design created from scratch, 100% exclusive to your brand.',
+    pricing_cw_reason_2_desc: 'Development of unique features not available on standard platforms (e.g., complex booking systems, member portals).',
+    pricing_cw_reason_3_desc: 'Built with an architecture ready to accommodate future traffic and data growth.',
+    pricing_cw_get_1: 'In-depth system needs analysis',
+    pricing_cw_get_2: 'Exclusive UI/UX Design (Figma prototype)',
+    pricing_cw_get_3: 'Custom feature development (Frontend & Backend)',
+    pricing_cw_get_4: 'Security and performance testing',
+    pricing_cw_get_5: 'Server setup & deployment',
+    pricing_cw_get_6: 'Long-term Maintenance & Support',
+    pricing_cw_target_1: 'Technology Startups',
+    pricing_cw_target_2: 'Niche Marketplaces',
+    pricing_cw_target_3: 'Large-Scale News Portals & Media',
+    pricing_cw_target_4: 'Internal Management Systems (mini ERP/CRM)',
+    pricing_cw_target_5: 'E-Learning Platforms',
+    pricing_cw_target_6: 'Complex Booking & Reservation Systems',
+    /* PricingPage - CTA */
+    pricing_cta_lp: 'Create Landing Page now!',
+    pricing_cta_cp: 'Create Company Profile now!',
+    pricing_cta_to: 'Create Online Store now!',
+    pricing_cta_cw: 'Consult Custom Website!',
+    /* Footer */
+    footer_service_webdev: 'Website Development',
+    footer_service_landing: 'Landing Page',
+    footer_service_cp: 'Company Profile',
+    footer_service_ecom: 'E-Commerce Website',
+    footer_service_custom: 'Custom Web App',
+    footer_service_maintenance: 'Website Maintenance',
+    footer_service_redesign: 'Website Redesign',
+    footer_service_uiux: 'UI/UX Design',
+    footer_nav_home: 'Home',
+    footer_nav_design: 'Design Choices',
+    footer_nav_pricing: 'Website Pricing',
+    footer_nav_about: 'About Us',
+    footer_nav_contact: 'Contact',
+    footer_nav_blog: 'Blog',
+    /* generated Pricing.tsx */
+    pricing_pay_early_lp: 'Pay upfront for 3 years and save 27%',
+    pricing_pay_early_cp: 'Pay upfront for 2 years and save 15%',
+    pricing_pay_early_to: 'Pay upfront for 2 years and save 23%',
+    pricing_save_27: 'Save 27%',
+    pricing_save_15: 'Save 15%',
+    pricing_save_23: 'Save 23%',
   },
 };
 

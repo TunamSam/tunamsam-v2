@@ -36,7 +36,7 @@ export function Pricing() {
                                             <span className="text-4xl text-gray-900">1,999,000</span>
                                             <span className="text-gray-500 text-lg">/ 3 tahun</span>
                                         </div>
-                                        <p className="text-gray-400 text-sm italic mb-4">Bayar di awal untuk 3 tahun dan hemat 27%</p>
+                                        <p className="text-gray-400 text-sm italic mb-4">{t('pricing_pay_early_lp')}</p>
                                         
                                         <div className="w-full h-[1px] bg-gray-200 my-4"></div>
 
@@ -44,7 +44,7 @@ export function Pricing() {
                                             onClick={() => toggleOptions('landing-page')}
                                             className="text-gray-900 text-sm flex items-center gap-1 font-medium hover:text-brand transition-colors"
                                         >
-                                            {expandedOptions['landing-page'] ? 'Sembunyikan opsi' : 'Lihat opsi lainnya'}
+                                            {expandedOptions['landing-page'] ? t('pricing_hide_options') : t('pricing_show_options')}
                                             <Icon name={expandedOptions['landing-page'] ? 'chevron-up' : 'chevron-down'} className="w-4 h-4 text-gray-500" />
                                         </button>
 
@@ -58,17 +58,17 @@ export function Pricing() {
                                                     className="flex flex-col gap-3 text-sm md:text-base text-gray-800 overflow-hidden"
                                                 >
                                                     <div className="flex items-center gap-1">
-                                                        <span className="w-16">3 Tahun</span>
+                                                        <span className="w-16">{t('pricing_lp_opt_3th')}</span>
                                                         <span className="font-bold">Rp. 1,999,000</span>
-                                                        <span>Hemat 27%</span>
+                                                        <span>{t('pricing_lp_opt_3th_suffix')}</span>
                                                     </div>
                                                     <div className="flex items-center gap-1">
-                                                        <span className="w-16">2 Tahun</span>
+                                                        <span className="w-16">{t('pricing_lp_opt_2th')}</span>
                                                         <span className="font-bold">Rp. 1,300,000</span>
-                                                        <span>(Rp. 650.000 / tahun)</span>
+                                                        <span>{t('pricing_lp_opt_2th_suffix')}</span>
                                                     </div>
                                                     <div className="flex items-center gap-1">
-                                                        <span className="w-16">1 Tahun</span>
+                                                        <span className="w-16">{t('pricing_lp_opt_1th')}</span>
                                                         <span className="font-bold">Rp. 750,000</span>
                                                         <span></span>
                                                     </div>
@@ -181,7 +181,7 @@ export function Pricing() {
                                             <span className="text-4xl text-gray-900">2,999,000</span>
                                             <span className="text-gray-500 text-lg">/ 2 tahun</span>
                                         </div>
-                                        <p className="text-gray-400 text-sm italic mb-4">Bayar di awal untuk 2 tahun dan hemat 15%</p>
+                                        <p className="text-gray-400 text-sm italic mb-4">{t('pricing_pay_early_cp')}</p>
                                         
                                         <div className="w-full h-[1px] bg-gray-200 my-4"></div>
 
@@ -189,7 +189,7 @@ export function Pricing() {
                                             onClick={() => toggleOptions('company-profile')}
                                             className="text-gray-900 text-sm flex items-center gap-1 font-medium hover:text-brand transition-colors"
                                         >
-                                            {expandedOptions['company-profile'] ? 'Sembunyikan opsi' : 'Lihat opsi lainnya'}
+                                            {expandedOptions['company-profile'] ? t('pricing_hide_options') : t('pricing_show_options')}
                                             <Icon name={expandedOptions['company-profile'] ? 'chevron-up' : 'chevron-down'} className="w-4 h-4 text-gray-500" />
                                         </button>
 
@@ -203,12 +203,12 @@ export function Pricing() {
                                                     className="flex flex-col gap-3 text-sm md:text-base text-gray-800 overflow-hidden"
                                                 >
                                                     <div className="flex items-center gap-1">
-                                                        <span className="w-16">2 Tahun</span>
+                                                        <span className="w-16">{t('pricing_cp_opt_2th')}</span>
                                                         <span className="font-bold">Rp. 2,999,000</span>
-                                                        <span>Hemat 15%</span>
+                                                        <span>{t('pricing_cp_opt_2th_suffix')}</span>
                                                     </div>
                                                     <div className="flex items-center gap-1">
-                                                        <span className="w-16">1 Tahun</span>
+                                                        <span className="w-16">{t('pricing_cp_opt_1th')}</span>
                                                         <span className="font-bold">Rp. 1,750,000</span>
                                                         <span></span>
                                                     </div>
@@ -329,7 +329,7 @@ export function Pricing() {
                                             <span className="text-4xl text-gray-900">4,999,000</span>
                                             <span className="text-gray-500 text-lg">/ 2 tahun</span>
                                         </div>
-                                        <p className="text-gray-400 text-sm italic mb-4">Bayar di awal untuk 2 tahun dan hemat 23%</p>
+                                        <p className="text-gray-400 text-sm italic mb-4">{t('pricing_pay_early_to')}</p>
                                         
                                         <div className="w-full h-[1px] bg-gray-200 my-4"></div>
 
@@ -337,7 +337,7 @@ export function Pricing() {
                                             onClick={() => toggleOptions('toko-online')}
                                             className="text-gray-900 text-sm flex items-center gap-1 font-medium hover:text-brand transition-colors"
                                         >
-                                            {expandedOptions['toko-online'] ? 'Sembunyikan opsi' : 'Lihat opsi lainnya'}
+                                            {expandedOptions['toko-online'] ? t('pricing_hide_options') : t('pricing_show_options')}
                                             <Icon name={expandedOptions['toko-online'] ? 'chevron-up' : 'chevron-down'} className="w-4 h-4 text-gray-500" />
                                         </button>
 
@@ -351,12 +351,12 @@ export function Pricing() {
                                                     className="flex flex-col gap-3 text-sm md:text-base text-gray-800 overflow-hidden"
                                                 >
                                                     <div className="flex items-center gap-1">
-                                                        <span className="w-16">2 Tahun</span>
+                                                        <span className="w-16">{t('pricing_to_opt_2th')}</span>
                                                         <span className="font-bold">Rp. 4,999,000</span>
-                                                        <span>Hemat 23%</span>
+                                                        <span>{t('pricing_to_opt_2th_suffix')}</span>
                                                     </div>
                                                     <div className="flex items-center gap-1">
-                                                        <span className="w-16">1 Tahun</span>
+                                                        <span className="w-16">{t('pricing_to_opt_1th')}</span>
                                                         <span className="font-bold">Rp. 3,250,000</span>
                                                         <span></span>
                                                     </div>

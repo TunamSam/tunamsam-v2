@@ -34,26 +34,26 @@ export function Footer() {
           <div>
             <h2 className="text-white font-heading font-bold mb-6 uppercase tracking-wider">{t('services')}</h2>
             <ul className="space-y-4 text-sm text-gray-400 font-sans">
-              <li className="hover:text-brand-light cursor-pointer transition-colors">Website Development</li>
-              <li className="hover:text-brand-light cursor-pointer transition-colors">Landing Page</li>
-              <li className="hover:text-brand-light cursor-pointer transition-colors">Company Profile</li>
-              <li className="hover:text-brand-light cursor-pointer transition-colors">E-Commerce Website</li>
-              <li className="hover:text-brand-light cursor-pointer transition-colors">Custom Web App</li>
-              <li className="hover:text-brand-light cursor-pointer transition-colors">Website Maintenance</li>
-              <li className="hover:text-brand-light cursor-pointer transition-colors">Website Redesign</li>
-              <li className="hover:text-brand-light cursor-pointer transition-colors">UI/UX Design</li>
+              <li className="hover:text-brand-light cursor-pointer transition-colors">{t('footer_service_webdev')}</li>
+              <li className="hover:text-brand-light cursor-pointer transition-colors">{t('footer_service_landing')}</li>
+              <li className="hover:text-brand-light cursor-pointer transition-colors">{t('footer_service_cp')}</li>
+              <li className="hover:text-brand-light cursor-pointer transition-colors">{t('footer_service_ecom')}</li>
+              <li className="hover:text-brand-light cursor-pointer transition-colors">{t('footer_service_custom')}</li>
+              <li className="hover:text-brand-light cursor-pointer transition-colors">{t('footer_service_maintenance')}</li>
+              <li className="hover:text-brand-light cursor-pointer transition-colors">{t('footer_service_redesign')}</li>
+              <li className="hover:text-brand-light cursor-pointer transition-colors">{t('footer_service_uiux')}</li>
             </ul>
           </div>
 
           <div>
             <h2 className="text-white font-heading font-bold mb-6 uppercase tracking-wider">{t('footer_content')}</h2>
             <ul className="space-y-4 text-sm text-gray-400 font-sans flex flex-col">
-              <li><a href="#" className="hover:text-brand-light transition-colors">Home</a></li>
-              <li><a href="#pilihan-desain" className="hover:text-brand-light transition-colors">Pilihan Desain</a></li>
-              <li><a href="#pricing" className="hover:text-brand-light transition-colors">Harga Website</a></li>
-              <li><a href="#about" className="hover:text-brand-light transition-colors">Tentang Kami</a></li>
-              <li><a href="#contact" className="hover:text-brand-light transition-colors">Kontak</a></li>
-              <li><a href="/blog" className="hover:text-brand-light transition-colors">Blog</a></li>
+              <li><a href="#" className="hover:text-brand-light transition-colors">{t('footer_nav_home')}</a></li>
+              <li><a href="#pilihan-desain" className="hover:text-brand-light transition-colors">{t('footer_nav_design')}</a></li>
+              <li><a href="#pricing" className="hover:text-brand-light transition-colors">{t('footer_nav_pricing')}</a></li>
+              <li><a href="#about" className="hover:text-brand-light transition-colors">{t('footer_nav_about')}</a></li>
+              <li><a href="#contact" className="hover:text-brand-light transition-colors">{t('footer_nav_contact')}</a></li>
+              <li><a href="/blog" className="hover:text-brand-light transition-colors">{t('footer_nav_blog')}</a></li>
             </ul>
           </div>
 
