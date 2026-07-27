@@ -22,6 +22,7 @@ import { TestimonialsPage } from './components/TestimonialsPage';
 import { ContactPage } from './components/ContactPage';
 import { BlogPage } from './components/BlogPage';
 import { BlogPostPage } from './components/BlogPostPage';
+import { NotFoundPage } from './components/NotFoundPage';
 
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
@@ -159,6 +160,20 @@ function BlogPostPageRoute() {
   );
 }
 
+function NotFoundPageRoute() {
+  return (
+    <>
+      <Header />
+      <main className="font-sans antialiased bg-white flex flex-col min-h-[70vh]">
+        <div className="flex-grow flex items-center justify-center">
+          <NotFoundPage />
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
 function AppContent() {
   const { lang } = useI18n();
   useRevealOnScroll();
@@ -179,6 +194,7 @@ function AppContent() {
         <Route path="/kontak" element={<ContactPageRoute />} />
         <Route path="/blog" element={<BlogPageRoute />} />
         <Route path="/blog/:slug" element={<BlogPostPageRoute />} />
+        <Route path="*" element={<NotFoundPageRoute />} />
       </Routes>
     </Router>
   );

@@ -273,6 +273,10 @@ export type TranslationKey =
   | 'design_underdev_title'
   | 'design_underdev_desc'
   | 'design_default_desc'
+  /* NotFoundPage */
+  | 'not_found_title'
+  | 'not_found_desc'
+  | 'not_found_btn'
   /* PricingPage - hero & sections */
   | 'pricing_hero_title'
   | 'pricing_hero_desc'
@@ -689,6 +693,10 @@ export const translations: Record<Lang, Partial<Record<TranslationKey, string>>>
     design_underdev_title: 'Under Development',
     design_underdev_desc: 'Tampilan preview lengkap sedang dalam tahap pengembangan.',
     design_default_desc: 'Desain website yang ceria dan ramah pengguna, dirancang khusus untuk {category}. Desain ini menonjolkan tampilan yang bersih dan modern. Fitur-fitur utama meliputi galeri yang menarik, halaman produk dengan deskripsi lengkap, sistem pencarian yang canggih, serta proses yang mudah digunakan. Template ini sangat cocok untuk bisnis yang ingin memberikan pengalaman online yang nyaman dan menyenangkan bagi para pengunjung.',
+    /* NotFoundPage */
+    not_found_title: 'Waduh, Halaman Tidak Ditemukan',
+    not_found_desc: 'Sepertinya halaman yang Anda cari sudah dipindahkan atau ada kesalahan penulisan link. Tenang, mari kita kembali ke beranda!',
+    not_found_btn: 'Kembali ke Beranda',
     /* PricingPage - hero & sections */
     pricing_hero_title: 'Jasa Pembuatan Website Profesional untuk Bisnis Anda',
     pricing_hero_desc: 'Kami hadir untuk membantu Anda membangun website yang sesuai kebutuhan dengan harga yang transparan dan fitur premium. Pilih paket jasa pembuatan website yang paling cocok untuk bisnis Anda',
@@ -1101,6 +1109,10 @@ export const translations: Record<Lang, Partial<Record<TranslationKey, string>>>
     design_underdev_title: 'Under Development',
     design_underdev_desc: 'Full preview display is currently under development.',
     design_default_desc: 'A cheerful and user-friendly website design, specially crafted for {category}. This design highlights a clean and modern look. Key features include an attractive gallery, product pages with complete descriptions, an advanced search system, and an easy-to-use process. This template is perfect for businesses that want to provide a comfortable and enjoyable online experience for their visitors.',
+    /* NotFoundPage */
+    not_found_title: 'Oops, Page Not Found',
+    not_found_desc: 'It looks like the page you are looking for has been moved or the link is incorrect. Don\'t worry, let\'s head back to the homepage!',
+    not_found_btn: 'Back to Home',
     /* PricingPage - hero & sections */
     pricing_hero_title: 'Professional Website Creation Service for Your Business',
     pricing_hero_desc: 'We are here to help you build a website that suits your needs with transparent pricing and premium features. Choose the website creation package that best fits your business.',

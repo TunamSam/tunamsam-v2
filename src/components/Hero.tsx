@@ -1,17 +1,27 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useI18n } from '../context/I18nContext';
 
-const SLIDE_IMAGES = [
+const SLIDE_IMAGES_ID = [
   { src: '/assets/hero-section-assets/banner1.webp', altKey: 'hero_alt_1' as const },
   { src: '/assets/hero-section-assets/banner2.webp', altKey: 'hero_alt_2' as const },
   { src: '/assets/hero-section-assets/banner3.webp', altKey: 'hero_alt_3' as const },
   { src: '/assets/hero-section-assets/banner4.webp', altKey: 'hero_alt_4' as const },
 ];
+
+const SLIDE_IMAGES_EN = [
+  { src: '/assets/hero-section-assets/banner1english.webp', altKey: 'hero_alt_1' as const },
+  { src: '/assets/hero-section-assets/banner2english.webp', altKey: 'hero_alt_2' as const },
+  { src: '/assets/hero-section-assets/banner3english.webp', altKey: 'hero_alt_3' as const },
+  { src: '/assets/hero-section-assets/banner4english.webp', altKey: 'hero_alt_4' as const },
+];
+
 const INTERVAL_MS = 5000;
 
 export function Hero() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slideImages = lang === 'EN' ? SLIDE_IMAGES_EN : SLIDE_IMAGES_ID;
 
   const goToSlide = useCallback((index: number) => {
     setCurrentSlide(index);
@@ -19,10 +29,10 @@ export function Hero() {
 
   useEffect(() => {
     const timer = window.setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % SLIDE_IMAGES.length);
+      setCurrentSlide((prev) => (prev + 1) % slideImages.length);
     }, INTERVAL_MS);
     return () => window.clearInterval(timer);
-  }, []);
+  }, [slideImages.length]);
 
   return (
     <section id="home" className="relative bg-brand pb-24 lg:pb-16 xl:pb-24 overflow-hidden">
@@ -30,7 +40,7 @@ export function Hero() {
         <h1 className="sr-only">{t('seo_title')}</h1>
         <div className="relative">
           <div className="slider-container aspect-[21/9] md:aspect-[16/7] rounded-none md:rounded-[1.5rem] overflow-hidden shadow-2xl bg-black">
-            {SLIDE_IMAGES.map(({ src, altKey }, index) => (
+            {slideImages.map(({ src, altKey }, index) => (
               <div key={src} className={`slide${index === currentSlide ? ' active' : ''}`}>
                 <img src={src} alt={t(altKey)} className="w-full h-full object-cover" />
               </div>
@@ -38,7 +48,7 @@ export function Hero() {
           </div>
 
           <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-30">
-            {SLIDE_IMAGES.map((_, index) => (
+            {slideImages.map((_, index) => (
               <button
                 key={index}
                 type="button"

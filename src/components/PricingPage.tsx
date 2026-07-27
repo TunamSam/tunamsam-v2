@@ -227,7 +227,7 @@ export function PricingPage() {
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading mb-6 text-gray-900 leading-tight">
                         {t('pricing_hero_title')}
                     </h1>
-                    <p className="text-lg md:text-xl max-w-3xl mx-auto text-gray-600 font-light leading-relaxed mb-12 md:mb-16">
+                    <p className="text-lg md:text-xl max-w-3xl mx-auto font-light leading-relaxed mb-12 md:mb-16">
                         {t('pricing_hero_desc')}
                     </p>
                 </div>
@@ -389,7 +389,7 @@ export function PricingPage() {
                                         <h4 className="text-md md:text-lg font-medium mb-4 md:mb-6 border-b border-gray-200 pb-3 md:pb-4">{t('pricing_dapat_label')}</h4>
                                         <ul className="space-y-4">
                                             {pkg.gets.map((item, idx) => (
-                                                <li key={idx} className="flex items-start gap-3 text-sm">
+                                                <li key={idx} className="flex items-start gap-3 text-md">
                                                     <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
                                                     <span className="leading-relaxed">{t(item as TranslationKey)}</span>
                                                 </li>

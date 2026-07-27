@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import { ArrowLeft, Monitor, Smartphone, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { ArrowLeft, Monitor, Smartphone, ChevronLeft, ChevronRight, ArrowUpRight } from 'lucide-react';
+import { CATEGORY_KEYS } from './DesignCatalog';
 import { useI18n } from '../context/I18nContext';
 
 export interface Design {
@@ -17,12 +18,24 @@ export interface Design {
 interface DesignDetailProps {
   design: Design;
   onBack: () => void;
+  allDesigns?: Design[];
+  onSelectRelated?: (design: Design) => void;
 }
 
-export function DesignDetail({ design, onBack }: DesignDetailProps) {
+export function DesignDetail({ design, onBack, allDesigns, onSelectRelated }: DesignDetailProps) {
   const { t } = useI18n();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [previewMode, setPreviewMode] = useState<'desktop' | 'mobile'>('desktop');
+
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = 'auto';
+    window.scrollTo(0, 0);
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        document.documentElement.style.scrollBehavior = '';
+      }, 50);
+    });
+  }, [design.id]);
 
   const images = design.images || (design.image ? [design.image] : [
     '/assets/design-catalog-assets/design-banner/designbanner1.webp',
@@ -34,6 +47,22 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
   const nextImage = () => setCurrentImageIndex((prev) => (prev + 1) % images.length);
   const prevImage = () => setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
 
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeftRelated = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -320, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRightRelated = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 320, behavior: 'smooth' });
+    }
+  };
+
+  const relatedDesigns = allDesigns?.filter(d => d.category === design.category && d.id !== design.id) || [];
+
   return (
     <div className="w-full bg-white min-h-screen pb-24 pt-12 md:pt-20">
       <div className="max-w-7xl mx-auto px-6">
@@ -44,7 +73,7 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
             <span>{t('design_back')}</span>
           </button>
           <span>/</span>
-          <span className="font-bold text-gray-900">{design.category}</span>
+          <span className="font-bold text-gray-900">{design.title}</span>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start mb-20">
@@ -117,8 +146,8 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
               <button
                 onClick={() => setPreviewMode('desktop')}
                 className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold transition-all ${previewMode === 'desktop'
-                    ? 'bg-white text-black'
-                    : 'text-white hover:text-gray-300'
+                  ? 'bg-white text-black'
+                  : 'text-white hover:text-gray-300'
                   }`}
               >
                 <Monitor className="w-4 h-4" />
@@ -127,8 +156,8 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
               <button
                 onClick={() => setPreviewMode('mobile')}
                 className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold transition-all ${previewMode === 'mobile'
-                    ? 'bg-white text-black'
-                    : 'text-white hover:text-gray-300'
+                  ? 'bg-white text-black'
+                  : 'text-white hover:text-gray-300'
                   }`}
               >
                 <Smartphone className="w-4 h-4" />
@@ -164,6 +193,93 @@ export function DesignDetail({ design, onBack }: DesignDetailProps) {
             </div>
           </div>
         </div>
+
+        {/* Related Designs */}
+        {relatedDesigns.length > 0 && (
+          <div className="mt-24 border-t border-gray-100 pt-16">
+            <div className="flex items-center justify-between mb-8">
+              <h3 className="text-2xl md:text-3xl font-heading text-gray-900">Pilihan Serupa Lainnya</h3>
+
+              {/* Navigation Buttons */}
+              <div className="hidden md:flex gap-2">
+                <button
+                  onClick={scrollLeftRelated}
+                  className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-brand hover:text-white transition-colors"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={scrollRightRelated}
+                  className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-brand hover:text-white transition-colors"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            <div className="relative group">
+              {/* Left Fade */}
+              <div className="absolute top-0 left-0 bottom-8 w-12 bg-gradient-to-r from-gray-900/10 to-transparent z-10 pointer-events-none hidden md:block"></div>
+
+              {/* Right Fade */}
+              <div className="absolute top-0 right-0 bottom-8 w-24 bg-gradient-to-l from-gray-900/10 to-transparent z-10 pointer-events-none hidden md:block"></div>
+
+              <div
+                ref={scrollContainerRef}
+                className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory hide-scrollbar scroll-smooth"
+              >
+                {relatedDesigns.map((relDesign, idx) => (
+                  <div
+                    key={`${relDesign.id}-${idx}`}
+                    className="snap-start shrink-0 w-[280px] md:w-[320px] bg-white overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 group/card transform border border-gray-100"
+                  >
+                    <div className="relative aspect-video bg-gray-900 overflow-hidden cursor-pointer" onClick={() => onSelectRelated?.(relDesign)}>
+                      <img
+                        src={relDesign.image || '/assets/design-catalog-assets/design-banner/designbanner1.webp'}
+                        alt={relDesign.title}
+                        className="w-full h-full object-cover opacity-90 group-hover/card:opacity-100 group-hover/card:scale-105 transition-all duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full transform translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">
+                        <ArrowUpRight className="w-5 h-5 text-brand" />
+                      </div>
+                    </div>
+
+                    <div className="p-6">
+                      <div className="flex items-center gap-2 mb-3">
+                        <div className="p-1.5 bg-brand/10 rounded-lg text-brand">
+                          <relDesign.icon className="w-4 h-4" />
+                        </div>
+                        <span className="text-xs font-bold text-brand uppercase tracking-wider">
+                          {t(CATEGORY_KEYS[relDesign.category])}
+                        </span>
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900 mb-2 truncate">
+                        {relDesign.title}
+                      </h3>
+
+                      <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <button
+                          onClick={() => onSelectRelated?.(relDesign)}
+                          className="text-sm font-bold text-gray-900 hover:text-brand transition-colors flex items-center gap-2"
+                        >
+                          {t('design_lihat_detail')}
+                        </button>
+                        <a
+                          href="https://wa.me/+6285655639206"
+                          className="px-4 py-2 bg-gray-900 hover:bg-brand text-white text-xs font-bold rounded-full transition-colors"
+                        >
+                          {t('design_pesan_desain')}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
       </div>
     </div>
   );

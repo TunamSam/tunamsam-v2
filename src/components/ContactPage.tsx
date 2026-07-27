@@ -11,7 +11,7 @@ export function ContactPage() {
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading mb-6 leading-tight text-gray-900">
                         {t('contact_hero_title')}
                     </h1>
-                    <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+                    <p className="text-lg md:text-xl leading-relaxed font-light max-w-3xl mx-auto">
                         {t('contact_hero_desc')}
                     </p>
                 </div>
@@ -26,10 +26,10 @@ export function ContactPage() {
                             <Icon name="message-square" className="w-7 h-7" strokeWidth={1.5} />
                         </div>
                         <h3 className="text-2xl font-bold font-heading text-gray-900 mb-3">{t('contact_sales_title')}</h3>
-                        <p className="text-gray-600 mb-8 flex-grow leading-relaxed text-sm md:text-base">
+                        <p className="mb-8 flex-grow leading-relaxed text-sm md:text-lg text-gray-600">
                             {t('contact_sales_desc')}
                         </p>
-                        <a href="https://wa.me/+6285655639206" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-full font-medium hover:bg-brand transition-colors w-fit">
+                        <a href="https://wa.me/+6285195901406" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-full font-medium hover:bg-brand transition-colors w-fit">
                             <Icon name="message-circle" className="w-4 h-4" />
                             {t('contact_sales_btn')}
                         </a>
@@ -41,7 +41,7 @@ export function ContactPage() {
                             <Icon name="code" className="w-7 h-7" strokeWidth={1.5} />
                         </div>
                         <h3 className="text-2xl font-bold font-heading text-gray-900 mb-3">{t('contact_support_title')}</h3>
-                        <p className="text-gray-600 mb-8 flex-grow leading-relaxed text-sm md:text-base">
+                        <p className="text-gray-600 mb-8 flex-grow leading-relaxed text-sm md:text-lg">
                             {t('contact_support_desc')}
                         </p>
                         <a href="mailto:tunamsam@gmail.com" className="inline-flex items-center justify-center gap-2 bg-white text-gray-900 border border-gray-300 px-6 py-3 rounded-full font-medium hover:border-brand hover:text-brand transition-colors w-fit">
@@ -62,7 +62,7 @@ export function ContactPage() {
                     </div>
                     
                     <div className="reveal-on-scroll stagger-1">
-                        <p className="text-gray-600 mb-8 text-sm md:text-base leading-relaxed">
+                        <p className="text-gray-600 mb-8 text-sm md:text-lg leading-relaxed">
                             {t('contact_form_desc')}
                         </p>
                         <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>

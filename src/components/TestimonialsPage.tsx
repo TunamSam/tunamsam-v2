@@ -27,7 +27,7 @@ export function TestimonialsPage() {
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading mb-6 text-gray-900 leading-tight">
                         {t('testi_page_title')}
                     </h1>
-                    <p className="text-lg md:text-xl max-w-3xl mx-auto text-gray-600 font-light leading-relaxed mb-12 md:mb-16">
+                    <p className="text-lg md:text-xl max-w-3xl mx-auto font-light leading-relaxed mb-12 md:mb-16">
                         {t('testi_page_desc')}
                     </p>
                 </div>
@@ -47,7 +47,7 @@ export function TestimonialsPage() {
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading mb-4 text-gray-900">
                         {t('testi_section_title')}
                     </h2>
-                    <p className="text-sm md:text-lg text-gray-600">
+                    <p className="text-sm md:text-xl text-gray-600">
                         {t('testi_section_desc')}
                     </p>
                 </div>

@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { ArrowUpRight, Monitor, ShoppingCart, Layout, ChevronLeft, ChevronRight } from 'lucide-react';
 import { SuccessCtaSection } from './SuccessCtaSection';
 import { FaqSection } from './FaqSection';
-import { DesignDetail } from './DesignDetail';
+import { DesignDetail, type Design } from './DesignDetail';
 import { useI18n } from '../context/I18nContext';
 import type { TranslationKey } from '../i18n/translations';
 
@@ -16,7 +16,7 @@ const SLIDE_IMAGES = [
 ];
 const INTERVAL_MS = 5000;
 
-const MOCK_DESIGNS = [
+const MOCK_DESIGNS: Design[] = [
   { id: 1, title: 'Modern Landing Page', category: 'Landing Page', image: '/assets/design-catalog-assets/design/landing-page/landing-page1.webp', icon: Layout },
   { id: 2, title: 'Corporate Profile', category: 'Company Profile', image: '/assets/design-catalog-assets/design/company-profile/company-profile1.webp', icon: Monitor },
   { id: 3, title: 'E-Commerce Plus', category: 'Online Store', image: '/assets/design-catalog-assets/design/online-store/online-store1.webp', icon: ShoppingCart },
@@ -41,7 +41,7 @@ const MOCK_DESIGNS = [
 ];
 
 const CATEGORIES: Category[] = ['Semua', 'Landing Page', 'Company Profile', 'Online Store'];
-const CATEGORY_KEYS: Record<string, TranslationKey> = {
+export const CATEGORY_KEYS: Record<string, TranslationKey> = {
   'Landing Page': 'design_landing',
   'Company Profile': 'design_company',
   'Online Store': 'design_toko',
@@ -59,7 +59,7 @@ export function DesignCatalog() {
   const [activeCategory, setActiveCategory] = useState<Category>('Semua');
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedDesign, setSelectedDesign] = useState<typeof MOCK_DESIGNS[0] | null>(null);
+  const [selectedDesign, setSelectedDesign] = useState<Design | null>(null);
 
   const goToSlide = useCallback((index: number) => {
     setCurrentSlide(index);
@@ -90,7 +90,12 @@ export function DesignCatalog() {
   if (selectedDesign) {
     return (
       <div className="w-full">
-        <DesignDetail design={selectedDesign} onBack={() => setSelectedDesign(null)} />
+        <DesignDetail 
+          design={selectedDesign} 
+          onBack={() => setSelectedDesign(null)}
+          allDesigns={MOCK_DESIGNS}
+          onSelectRelated={(d) => setSelectedDesign(d)}
+        />
         <SuccessCtaSection />
         <FaqSection />
       </div>
@@ -102,7 +107,7 @@ export function DesignCatalog() {
       {/* Header & Banner Section in 2 Columns */}
       <div className="max-w-8xl mx-auto px-6 pt-12 md:pt-20 pb-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          
+
           {/* Section Header (Left on Desktop, Bottom on Mobile) */}
           <div className="max-w-xl order-2 lg:order-1 text-center lg:text-left">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900 mb-6 leading-tight">
@@ -154,8 +159,8 @@ export function DesignCatalog() {
               key={category}
               onClick={() => handleCategoryChange(category)}
               className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${activeCategory === category
-                  ? 'bg-brand text-white shadow-lg shadow-brand/30 scale-105'
-                  : 'bg-white text-gray-600 hover:bg-gray-100 hover:text-gray-900 border border-gray-200'
+                ? 'bg-brand text-white shadow-lg shadow-brand/30 scale-105'
+                : 'bg-white text-gray-600 hover:bg-gray-100 hover:text-gray-900 border border-gray-200'
                 }`}
             >
               {t(CATEGORY_LABELS[category])}
@@ -233,8 +238,8 @@ export function DesignCatalog() {
                 key={i}
                 onClick={() => setCurrentPage(i + 1)}
                 className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all ${currentPage === i + 1
-                    ? 'bg-brand text-white shadow-md'
-                    : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
+                  ? 'bg-brand text-white shadow-md'
+                  : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
                   }`}
               >
                 {i + 1}

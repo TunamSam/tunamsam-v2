@@ -10,7 +10,11 @@ export function BlogPostPage() {
     const post = slug ? getBlogPost(slug, lang) : undefined;
 
     useEffect(() => {
+        document.documentElement.style.scrollBehavior = 'auto';
         window.scrollTo(0, 0);
+        requestAnimationFrame(() => {
+            document.documentElement.style.scrollBehavior = '';
+        });
     }, [slug]);
 
     if (!post) {
