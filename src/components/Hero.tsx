@@ -29,7 +29,7 @@ export function Hero() {
       <div className="max-w-7xl mx-auto px-6 mt-7 md:mt-7 lg:mt-4 xl:mt-7 md:px-12 lg:px-24 xl:px-12 relative z-20">
         <h1 className="sr-only">{t('seo_title')}</h1>
         <div className="relative">
-          <div className="slider-container aspect-[21/9] md:aspect-[16/7] rounded-none md:rounded-[2.5rem] overflow-hidden shadow-2xl bg-black">
+          <div className="slider-container aspect-[21/9] md:aspect-[16/7] rounded-none md:rounded-[1.5rem] overflow-hidden shadow-2xl bg-black">
             {SLIDE_IMAGES.map(({ src, altKey }, index) => (
               <div key={src} className={`slide${index === currentSlide ? ' active' : ''}`}>
                 <img src={src} alt={t(altKey)} className="w-full h-full object-cover" />

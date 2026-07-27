@@ -586,7 +586,7 @@ export const translations: Record<Lang, Partial<Record<TranslationKey, string>>>
     footer_tag: 'Membangun masa depan digital yang lebih cerah, satu website dalam satu waktu.',
     footer_quick: 'Tautan Cepat',
     footer_connect: 'Terhubung',
-    footer_rights: 'Hak Cipta Dilindungi.',
+    footer_rights: '© 2026 TunamSam. All Rights Reserved.',
     footer_about:
       'Kami membantu bisnis membangun website modern yang cepat, profesional, dan dirancang untuk meningkatkan kredibilitas serta pertumbuhan bisnis di era digital.',
     footer_content: 'Konten',
@@ -1025,7 +1025,7 @@ export const translations: Record<Lang, Partial<Record<TranslationKey, string>>>
     footer_tag: 'Building a brighter digital future, one website at a time.',
     footer_quick: 'Quick Links',
     footer_connect: 'Connect',
-    footer_rights: '© 2024 TunamSam. All rights reserved.',
+    footer_rights: '© 2026 TunamSam. All Rights Reserved.',
     /* AboutPage */
     about_badge: 'About Us',
     about_title: 'Designing Digital Solutions, Overcoming Technical Challenges, and Synergizing as Your Long-Term Business Partner.',
