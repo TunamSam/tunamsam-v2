@@ -3,10 +3,10 @@ import { Icon } from './Icon';
 import { useI18n } from '../context/I18nContext';
 
 const CARDS = [
-  { id: 'card-1', position: 'card-top-left', icon: 'file-search', titleKey: 'c1_title' as const, descKey: 'c1_desc' as const },
-  { id: 'card-2', position: 'card-top-right', icon: 'monitor-smartphone', titleKey: 'c2_title' as const, descKey: 'c2_desc' as const },
-  { id: 'card-3', position: 'card-bottom-left', icon: 'network', titleKey: 'c3_title' as const, descKey: 'c3_desc' as const },
-  { id: 'card-4', position: 'card-bottom-right', icon: 'palette', titleKey: 'c4_title' as const, descKey: 'c4_desc' as const },
+  { id: 'card-1', position: 'card-top-left', icon: 'heart-handshake', titleKey: 'c1_title' as const, descKey: 'c1_desc' as const },
+  { id: 'card-2', position: 'card-top-right', icon: 'person-standing', titleKey: 'c2_title' as const, descKey: 'c2_desc' as const },
+  { id: 'card-3', position: 'card-bottom-left', icon: 'headset', titleKey: 'c3_title' as const, descKey: 'c3_desc' as const },
+  { id: 'card-4', position: 'card-bottom-right', icon: 'trending-up', titleKey: 'c4_title' as const, descKey: 'c4_desc' as const },
 ];
 
 export function Criteria() {
@@ -56,7 +56,7 @@ export function Criteria() {
   return (
     <section ref={sectionRef} className="criteria-section" id="criteria-trigger">
       <div className="criteria-sticky">
-        <h2 className="text-3xl lg:text-5xl font-heading text-gray-900 leading-[1.2] text-center max-w-7xl mx-auto px-4 criteria-dynamic-title">
+        <h2 className="text-3xl md:mt-4 lg:text-5xl font-heading text-gray-900 leading-[1.2] text-center max-w-[850px] mx-auto px-4 criteria-dynamic-title">
           {t('criteria_title')}
         </h2>
 

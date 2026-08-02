@@ -90,8 +90,8 @@ export function DesignCatalog() {
   if (selectedDesign) {
     return (
       <div className="w-full">
-        <DesignDetail 
-          design={selectedDesign} 
+        <DesignDetail
+          design={selectedDesign}
           onBack={() => setSelectedDesign(null)}
           allDesigns={MOCK_DESIGNS}
           onSelectRelated={(d) => setSelectedDesign(d)}

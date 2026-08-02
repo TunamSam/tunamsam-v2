@@ -32,7 +32,7 @@ export function ProblemSolution() {
   const { t } = useI18n();
 
   return (
-    <section className="py-16 lg:py-24 bg-white overflow-hidden">
+    <section className="pt-[360px] pb-16 lg:pb-24 bg-white overflow-hidden">
       <div className="max-w-8xl mx-auto px-6 md:px-12 space-y-20 lg:space-y-40">
         <div className="flex flex-col md:flex-row items-center gap-10 lg:gap-20">
           <div className="md:w-1/2 space-y-6">

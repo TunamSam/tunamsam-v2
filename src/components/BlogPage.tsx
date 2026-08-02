@@ -5,18 +5,20 @@ import { getBlogPosts } from '../data/blogData';
 import { useI18n } from '../context/I18nContext';
 import type { TranslationKey } from '../i18n/translations';
 
-const CATEGORIES = ['all', 'website', 'technology', 'digital_marketing'] as const;
+const CATEGORIES = ['all', 'website', 'seo', 'bali_business', 'hospitality'] as const;
 type Category = (typeof CATEGORIES)[number];
 const CATEGORY_KEYS: Record<string, TranslationKey> = {
   'all': 'blog_cat_all',
   'website': 'blog_cat_web',
-  'technology': 'blog_cat_tek',
-  'digital_marketing': 'blog_cat_dm',
+  'seo': 'blog_cat_seo',
+  'bali_business': 'blog_cat_bali',
+  'hospitality': 'blog_cat_hosp',
 };
 const CATEGORY_BADGE_KEYS: Record<string, TranslationKey> = {
   'website': 'blog_cat_web',
-  'technology': 'blog_cat_tek',
-  'digital_marketing': 'blog_cat_dm',
+  'seo': 'blog_cat_seo',
+  'bali_business': 'blog_cat_bali',
+  'hospitality': 'blog_cat_hosp',
 };
 const POSTS_PER_PAGE = 6;
 
@@ -57,12 +59,12 @@ export function BlogPage() {
                     <div className="absolute inset-0 bg-black/70"></div>
                 </div>
                 
-                <div className="max-w-8xl mx-auto px-6 relative z-10">
-                    <div className="max-w-6xl">
+                <div className="max-w-7xl mx-auto px-6 relative z-10">
+                    <div className="max-w-8xl">
                         <p className="text-brand-light font-bold text-sm md:text-base uppercase tracking-widest mb-4 reveal-on-scroll">
                             {t('blog_badge')}
                         </p>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading mb-6 reveal-on-scroll stagger-1 leading-tight text-white/95">
+                        <h1 className="text-4xl md:text-5xl font-heading mb-6 reveal-on-scroll stagger-1 leading-tight text-white/95">
                             {t('blog_title')}
                         </h1>
                     </div>

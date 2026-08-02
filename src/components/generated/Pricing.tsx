@@ -27,7 +27,8 @@ export function Pricing() {
 
                             <div className="md:w-1/3 space-y-8">
                                 <div>
-                                    <h3 className="text-5xl font-heading text-gray-900 mb-6">{t('price_landing_page')}</h3>
+                                    <h3 className="text-4xl md:text-5xl font-heading text-gray-900 mb-2">{t('price_landing_page')}</h3>
+                                    <h4 className="text-xl md:text-2xl font-heading text-gray-900 mb-6 font-light">{t('price_landing_page_sub')}</h4>
                                     <div className="space-y-1">
                                         <p className="text-lg">{t('price_start_from')} <span className="line-through text-gray-400">Rp.
                                             2,750,000</span></p>
@@ -37,7 +38,7 @@ export function Pricing() {
                                             <span className="text-gray-500 text-lg">/ 3 tahun</span>
                                         </div>
                                         <p className="text-gray-400 text-sm italic mb-4">{t('pricing_pay_early_lp')}</p>
-                                        
+
                                         <div className="w-full h-[1px] bg-gray-200 my-4"></div>
 
                                         <button
@@ -172,7 +173,8 @@ export function Pricing() {
                         <div className="flex flex-col md:flex-row gap-12 md:gap-20 mb-12">
                             <div className="md:w-1/3 space-y-8">
                                 <div>
-                                    <h3 className="text-5xl font-heading text-gray-900 mb-6">{t('price_company_profile')}</h3>
+                                    <h3 className="text-5xl font-heading text-gray-900 mb-2">{t('price_company_profile')}</h3>
+                                    <h4 className="text-2xl font-heading text-gray-900 mb-6 font-light">{t('price_company_profile_sub')}</h4>
                                     <div className="space-y-1">
                                         <p className="text-lg">{t('price_start_from')} <span className="line-through text-gray-400">Rp.
                                             3,500,000</span></p>
@@ -182,7 +184,7 @@ export function Pricing() {
                                             <span className="text-gray-500 text-lg">/ 2 tahun</span>
                                         </div>
                                         <p className="text-gray-400 text-sm italic mb-4">{t('pricing_pay_early_cp')}</p>
-                                        
+
                                         <div className="w-full h-[1px] bg-gray-200 my-4"></div>
 
                                         <button
@@ -218,7 +220,7 @@ export function Pricing() {
                                     </div>
                                 </div>
                                 <a href="https://wa.me/+6285655639206"
-                                    className="inline-block bg-black text-white px-10 py-4 rounded-full text-lg hover:bg-gray-800 transition-all shadow-xl shadow-black/10">
+                                    className="inline-block bg-black text-white px-10 py-4 md:px-9 rounded-full text-lg hover:bg-gray-800 transition-all shadow-xl shadow-black/10">
                                     {t('price_btn_cp')}
                                 </a>
                             </div>
@@ -320,7 +322,8 @@ export function Pricing() {
                         <div className="flex flex-col md:flex-row gap-12 md:gap-20 mb-12">
                             <div className="md:w-1/3 space-y-8">
                                 <div>
-                                    <h3 className="text-5xl font-heading text-gray-900 mb-6">{t('price_online_store')}</h3>
+                                    <h3 className="text-5xl font-heading text-gray-900 mb-2">{t('price_online_store')}</h3>
+                                    <h4 className="text-2xl font-heading text-gray-900 mb-6 font-light">{t('price_online_store_sub')}</h4>
                                     <div className="space-y-1">
                                         <p className="text-lg">{t('price_start_from')} <span className="line-through text-gray-400">Rp.
                                             6.500.000</span></p>
@@ -330,7 +333,7 @@ export function Pricing() {
                                             <span className="text-gray-500 text-lg">/ 2 tahun</span>
                                         </div>
                                         <p className="text-gray-400 text-sm italic mb-4">{t('pricing_pay_early_to')}</p>
-                                        
+
                                         <div className="w-full h-[1px] bg-gray-200 my-4"></div>
 
                                         <button
@@ -468,14 +471,15 @@ export function Pricing() {
                         <div className="flex flex-col md:flex-row gap-12 md:gap-20 mb-12">
                             <div className="md:w-1/3 space-y-8">
                                 <div>
-                                    <h3 className="text-5xl font-heading text-gray-900 mb-6">{t('price_custom_website')}</h3>
+                                    <h3 className="text-5xl font-heading text-gray-900 mb-2">{t('price_custom_website')}</h3>
+                                    <h4 className="text-2xl font-heading text-gray-900 mb-6 font-light">{t('price_custom_website_sub')}</h4>
                                     <div className="space-y-1">
                                         <h4 className="text-4xl font-heading text-gray-900">{t('price_custom_price')}</h4>
                                         <p className="text-gray-400 text-sm italic">{t('price_custom_desc')}</p>
                                     </div>
                                 </div>
                                 <a href="https://wa.me/+6285655639206"
-                                    className="inline-block bg-black text-white px-10 py-4 rounded-full text-md md:text-lg hover:bg-gray-800 transition-all shadow-xl shadow-black/10">
+                                    className="inline-block bg-black text-white px-10 py-4 rounded-full text-lg hover:bg-gray-800 transition-all shadow-xl shadow-black/10">
                                     {t('price_btn_custom')}
                                 </a>
                             </div>

@@ -678,7 +678,7 @@
                     class="hidden lg:flex items-center lg:space-x-6 xl:space-x-10 text-[14px] font-medium whitespace-nowrap">
                     <div class="flex items-center space-x-2">
                         <i data-lucide="map-pin" class="w-4 h-4 text-white opacity-80"></i>
-                        <span>Jl. Wonorejo, Wates, Kab. Kediri</span>
+                        <span>Bali, Indonesia</span>
                     </div>
                     <div class="flex items-center space-x-2">
                         <i data-lucide="mail" class="w-4 h-4 text-white opacity-80"></i>
@@ -823,16 +823,10 @@
             <!-- Block 1: Problem Website (Text Left, Image Right) -->
             <div class="flex flex-col lg:flex-row items-center gap-20">
                 <div class="lg:w-1/2 space-y-6">
-                    <h2 class="text-3xl lg:text-5xl font-heading leading-[1.3]" data-i18n="p1_title">Website Tanpa
-                        Strategi
-                        Akan Sulit Berkembang</h2>
+                    <h2 class="text-3xl lg:text-5xl font-heading leading-[1.3]" data-i18n="p1_title">Dibuat Khusus untuk Bisnis di Bali</h2>
                     <div class="space-y-4 text-md leading-relaxed">
-                        <p data-i18n="p1_desc1">Tidak semua website mampu menghasilkan traffic dan pelanggan. Tanpa SEO,
-                            struktur yang baik, dan pengalaman pengguna yang nyaman, website akan sulit bersaing di
-                            tengah banyaknya kompetitor digital saat ini.</p>
-                        <p data-i18n="p1_desc2">Begitu juga dengan dunia online. Website yang hanya ada tanpa strategi
-                            yang matang dan desain yang user-friendly akan sulit menarik perhatian, apalagi menghasilkan
-                            penjualan.</p>
+                        <p data-i18n="p1_desc1">Kami membantu villa, rental kendaraan, cafe, restoran, dan berbagai bisnis lokal membangun website profesional yang mencerminkan kualitas bisnis Anda. Setiap website dirancang untuk meningkatkan kepercayaan pelanggan dan memperkuat identitas brand.</p>
+                        <p data-i18n="p1_desc2">Dengan desain modern, performa yang cepat, dan pengalaman pengguna yang optimal, website Anda siap membantu menghasilkan lebih banyak reservasi, inquiry, dan peluang bisnis baru.</p>
                     </div>
                 </div>
                 <div class="lg:w-1/2">
@@ -916,7 +910,7 @@
                         <div class="feature-icon">
                             <i data-lucide="file-search" class="w-5 h-5"></i>
                         </div>
-                        <h3 class="text-2xl mb-2" data-i18n="c1_title">SEO Friendly</h3>
+                        <h3 class="text-2xl mb-2" data-i18n="c1_title">Bangun Kepercayaan Pelanggan</h3>
                         <p class="text-md leading-relaxed" data-i18n="c1_desc">
                             Membantu website Anda lebih mudah ditemukan di mesin pencari seperti Google. Website yang
                             dioptimalkan dengan baik
@@ -929,9 +923,9 @@
                         <div class="feature-icon">
                             <i data-lucide="monitor-smartphone" class="w-5 h-5"></i>
                         </div>
-                        <h3 class="text-2xl mb-2" data-i18n="c2_title">Cepat dan Responsif</h3>
+                        <h3 class="text-2xl mb-2" data-i18n="c2_title">Dapatkan Lebih Banyak Pelanggan</h3>
                         <p class="text-md leading-relaxed" data-i18n="c2_desc">
-                            Website yang cepat dan responsif memberikan pengalaman yang lebih nyaman di berbagai
+                            Website yang Fast & Responsive memberikan pengalaman yang lebih nyaman di berbagai
                             perangkat, termasuk mobile.
                             Pengunjung cenderung meninggalkan website yang lambat atau sulit digunakan.
                         </p>
@@ -942,7 +936,7 @@
                         <div class="feature-icon">
                             <i data-lucide="network" class="w-5 h-5"></i>
                         </div>
-                        <h3 class="text-2xl mb-2" data-i18n="c3_title">Navigasi Terstruktur</h3>
+                        <h3 class="text-2xl mb-2" data-i18n="c3_title">Permudah Pelanggan Menghubungi Anda</h3>
                         <p class="text-md leading-relaxed" data-i18n="c3_desc">
                             Struktur yang rapi dan navigasi yang jelas membantu pengunjung menemukan informasi dengan
                             lebih mudah dan nyaman
@@ -955,7 +949,7 @@
                         <div class="feature-icon">
                             <i data-lucide="palette" class="w-5 h-5"></i>
                         </div>
-                        <h3 class="text-2xl mb-2" data-i18n="c4_title">Desain Modern</h3>
+                        <h3 class="text-2xl mb-2" data-i18n="c4_title">Cepat, Responsif & Siap Berkembang</h3>
                         <p class="text-md leading-relaxed" data-i18n="c4_desc">
                             Tampilan yang modern dan konsisten membantu membangun kesan profesional serta meningkatkan
                             kepercayaan pengunjung
@@ -1073,7 +1067,7 @@
                         <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                             <i data-lucide="maximize" class="w-6 h-6 text-gray-900"></i>
                         </div>
-                        <h4 class="text-2xl font-heading mb-4">Sederhana dan Efektif</h4>
+                        <h4 class="text-2xl font-heading mb-4">Fokus pada Konversi</h4>
                         <p class="text-md leading-relaxed font-sans">Ideal untuk kampanye promosi produk atau layanan
                             tunggal dengan desain yang fokus pada satu tujuan spesifik.</p>
                     </div>
@@ -1086,7 +1080,7 @@
                         <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                             <i data-lucide="target" class="w-6 h-6 text-gray-900"></i>
                         </div>
-                        <h4 class="text-2xl font-heading mb-4">Optimal untuk Konversi</h4>
+                        <h4 class="text-2xl font-heading mb-4">Cepat Diluncurkan</h4>
                         <p class="text-md leading-relaxed font-sans">Setiap elemen pada landing page didesain untuk
                             mengarahkan pengunjung melakukan tindakan tertentu, seperti mengisi formulir, mendaftar,
                             atau melakukan pembelian.</p>
@@ -1097,7 +1091,7 @@
                         <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                             <i data-lucide="book-open" class="w-6 h-6 text-gray-900"></i>
                         </div>
-                        <h4 class="text-2xl font-heading mb-4">Cocok untuk Pemula</h4>
+                        <h4 class="text-2xl font-heading mb-4">Dioptimalkan untuk Mobile</h4>
                         <p class="text-md leading-relaxed font-sans">Dengan biaya yang lebih rendah dibanding website
                             lengkap, landing page adalah solusi cepat dan efisien untuk memulai kehadiran digital Anda.
                         </p>
@@ -1212,7 +1206,7 @@
                         <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                             <i data-lucide="gem" class="w-6 h-6 text-gray-900"></i>
                         </div>
-                        <h4 class="text-2xl font-heading mb-4">Citra Profesional</h4>
+                        <h4 class="text-2xl font-heading mb-4">Bangun Kepercayaan</h4>
                         <p class="text-md leading-relaxed font-sans">Mencerminkan profesionalisme dan nilai-nilai
                             perusahaan Anda, membantu meningkatkan kepercayaan calon klien.</p>
                     </div>
@@ -1225,7 +1219,7 @@
                         <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                             <i data-lucide="network" class="w-6 h-6 text-gray-900"></i>
                         </div>
-                        <h4 class="text-2xl font-heading mb-4">Informasi Terstruktur</h4>
+                        <h4 class="text-2xl font-heading mb-4">Informasi yang Jelas</h4>
                         <p class="text-md leading-relaxed font-sans">Memberikan informasi penting tentang perusahaan,
                             mulai dari sejarah, visi, misi, hingga portofolio layanan atau produk yang Anda tawarkan.
                         </p>
@@ -1236,7 +1230,7 @@
                         <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                             <i data-lucide="globe" class="w-6 h-6 text-gray-900"></i>
                         </div>
-                        <h4 class="text-2xl font-heading mb-4">Dikenal Lebih Luas</h4>
+                        <h4 class="text-2xl font-heading mb-4">Perkuat Kehadiran Digital</h4>
                         <p class="text-md leading-relaxed font-sans">Dengan kehadiran online, perusahaan Anda dapat
                             menjangkau pasar yang lebih besar dan memperkuat posisi di industri.</p>
                     </div>
@@ -1346,7 +1340,7 @@
                         <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                             <i data-lucide="shopping-bag" class="w-6 h-6 text-gray-900"></i>
                         </div>
-                        <h4 class="text-2xl font-heading mb-4">Solusi E-commerce Lengkap</h4>
+                        <h4 class="text-2xl font-heading mb-4">Mudah Dikelola</h4>
                         <p class="text-md leading-relaxed font-sans">Website toko online kami mendukung fitur
                             pengelolaan produk, keranjang belanja, pembayaran, dan pengiriman secara terintegrasi.</p>
                     </div>
@@ -1359,7 +1353,7 @@
                         <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                             <i data-lucide="building" class="w-6 h-6 text-gray-900"></i>
                         </div>
-                        <h4 class="text-2xl font-heading mb-4">Cocok untuk Bisnis Retail</h4>
+                        <h4 class="text-2xl font-heading mb-4">Pengalaman Belanja yang Nyaman</h4>
                         <p class="text-md leading-relaxed font-sans">Sangat direkomendasikan bagi bisnis yang menjual
                             produk fisik atau layanan langsung kepada pelanggan, memudahkan proses transaksi online.</p>
                     </div>
@@ -1369,7 +1363,7 @@
                         <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                             <i data-lucide="credit-card" class="w-6 h-6 text-gray-900"></i>
                         </div>
-                        <h4 class="text-2xl font-heading mb-4">Optimasi untuk Penjualan</h4>
+                        <h4 class="text-2xl font-heading mb-4">Siap Meningkatkan Penjualan</h4>
                         <p class="text-md leading-relaxed font-sans">Fitur checkout yang mudah digunakan dan integrasi
                             dengan metode pembayaran lokal membuat pengalaman belanja lebih nyaman bagi konsumen.</p>
                     </div>
@@ -1468,7 +1462,7 @@
                         <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                             <i data-lucide="palette" class="w-6 h-6 text-gray-900"></i>
                         </div>
-                        <h4 class="text-2xl font-heading mb-4">Desain dan Fitur Sepenuhnya Kustom</h4>
+                        <h4 class="text-2xl font-heading mb-4">Fitur Sesuai Kebutuhan</h4>
                         <p class="text-md leading-relaxed font-sans">Solusi yang fleksibel dan dirancang khusus untuk
                             memenuhi kebutuhan dan tujuan spesifik bisnis Anda.</p>
                     </div>
@@ -1481,7 +1475,7 @@
                         <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                             <i data-lucide="crosshair" class="w-6 h-6 text-gray-900"></i>
                         </div>
-                        <h4 class="text-2xl font-heading mb-4">Integrasi Sistem yang Komprehensif</h4>
+                        <h4 class="text-2xl font-heading mb-4">Integrasi Sistem</h4>
                         <p class="text-md leading-relaxed font-sans">Dapat diintegrasikan dengan sistem manajemen
                             perusahaan, seperti ERP, CRM, atau platform teknologi lainnya untuk mendukung efisiensi
                             operasional.</p>
@@ -1492,7 +1486,7 @@
                         <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-8">
                             <i data-lucide="shopping-basket" class="w-6 h-6 text-gray-900"></i>
                         </div>
-                        <h4 class="text-2xl font-heading mb-4">Ideal untuk Bisnis dengan Kebutuhan Khusus</h4>
+                        <h4 class="text-2xl font-heading mb-4">Siap Berkembang</h4>
                         <p class="text-md leading-relaxed font-sans">Direkomendasikan bagi perusahaan yang memerlukan
                             desain, fungsionalitas, atau integrasi yang sangat spesifik, serta solusi yang mampu
                             berkembang sesuai kebutuhan.</p>
@@ -1522,7 +1516,7 @@
         <div class="max-w-8xl mx-auto px-6 w-full relative z-10">
             <div class="max-w-3xl reveal-on-scroll">
                 <h2 class="text-4xl lg:text-6xl font-heading font-bold text-white mb-8 leading-tight">
-                    Kami membantu membuat website, mengelola, dan menyelesaikan hal teknis.
+                    Website yang Dirancang untuk Membantu Bisnis Anda Bertumbuh
                 </h2>
                 <p class="text-xl text-white/80 font-sans leading-relaxed">
                     TunamSam menyediakan layanan pembuatan dan pengelolaan website lengkap, serta menangani hal teknis
@@ -1550,7 +1544,7 @@
                 <div
                     class="lg:col-span-2 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                     <i data-lucide="award" class="w-8 h-8 text-gray-900 mb-6"></i>
-                    <h4 class="text-xl font-heading font-bold text-gray-900 mb-3">Lebih dari 10 tahun pengalaman</h4>
+                    <h4 class="text-xl font-heading font-bold text-gray-900 mb-3">Fokus pada Bisnis di Bali</h4>
                     <p class="text-gray-500 text-sm leading-relaxed font-sans">Berpengalaman lebih dari 10+ tahun dalam
                         transformasi digital di Indonesia. Ahli pada bidang pengembangan web dan digital marketing.</p>
                 </div>
@@ -1559,7 +1553,7 @@
                 <div
                     class="lg:col-span-4 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                     <i data-lucide="hand-heart" class="w-8 h-8 text-gray-900 mb-6"></i>
-                    <h4 class="text-xl font-heading font-bold text-gray-900 mb-3">Pendekatan Berorientasi Hasil</h4>
+                    <h4 class="text-xl font-heading font-bold text-gray-900 mb-3">Website yang Siap Menghasilkan Inquiry</h4>
                     <p class="text-gray-500 text-sm leading-relaxed font-sans">Tidak hanya membuat situs web, tapi juga
                         menciptakan pengalaman online yang menghasilkan hasil yang terukur untuk bisnis Anda, dan juga
                         memberikan bantuan dalam mengarahkan lalu lintas dan mengonversi lalu lintas tersebut menjadi
@@ -1570,7 +1564,7 @@
                 <div
                     class="lg:col-span-2 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                     <i data-lucide="user-check" class="w-8 h-8 text-gray-900 mb-6"></i>
-                    <h4 class="text-xl font-heading font-bold text-gray-900 mb-3">User Centric dan Desain kekinian</h4>
+                    <h4 class="text-xl font-heading font-bold text-gray-900 mb-3">SEO Friendly</h4>
                     <p class="text-gray-500 text-sm leading-relaxed font-sans">Menciptakan tampilan visual website yang
                         menawan dan memastikan setiap elemen website memberikan pengalaman pengguna yang menyenangkan
                         dan efektif.</p>
@@ -1659,7 +1653,7 @@
             <!-- Header -->
             <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-16 reveal-on-scroll">
                 <h2 class="text-4xl lg:text-5xl font-heading font-bold text-white lg:w-1/2 leading-tight">
-                    Pilihan Desain website yang memukau langkah awal menuju kesuksesan
+                    Temukan Inspirasi Website untuk Bisnis Anda
                 </h2>
                 <p class="text-gray-400 text-md lg:text-lg leading-relaxed lg:w-1/2">
                     Tampilan visual yang mengesankan dan pengalaman pengguna yang menyenangkan adalah kunci untuk
@@ -1904,7 +1898,7 @@
             <!-- Header -->
             <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-20 reveal-on-scroll">
                 <h2 class="text-3xl lg:text-5xl font-heading font-bold text-gray-900 lg:w-1/2 leading-tight">
-                    Layanan Tambahan untuk Optimasi website Anda
+                    Layanan Tambahan untuk Mengembangkan Bisnis Anda
                 </h2>
                 <p class="text-gray-500 text-sm lg:text-base leading-relaxed lg:w-1/2 self-center">
                     Kami menyediakan berbagai layanan tambahan yang dirancang untuk meningkatkan performa dan
@@ -2092,34 +2086,34 @@
                 contact: "Kontak",
                 contact_us: "Hubungi Kami",
                 trusted_by: "Telah dipercaya oleh:",
-                p1_title: "Website Tanpa Strategi Akan Sulit Berkembang",
-                p1_desc1: "Tidak semua website mampu menghasilkan traffic dan pelanggan. Tanpa SEO, struktur yang baik, dan pengalaman pengguna yang nyaman, website akan sulit bersaing di tengah banyaknya kompetitor digital saat ini.",
-                p1_desc2: "",
-                s1_title: "Lebih Dari Sekadar Tampilan Menarik",
-                s1_desc: "Website profesional dirancang untuk membantu bisnis Anda tumbuh. Mulai dari desain modern, navigasi yang jelas, hingga optimasi SEO, semuanya berperan penting dalam meningkatkan kredibilitas dan menjangkau lebih banyak pelanggan.",
+                p1_title: "Dibuat Khusus untuk Bisnis di Bali",
+                p1_desc1: "Kami membantu villa, rental kendaraan, cafe, restoran, dan berbagai bisnis lokal membangun website profesional yang mencerminkan kualitas bisnis Anda. Setiap website dirancang untuk meningkatkan kepercayaan pelanggan dan memperkuat identitas brand.",
+                p1_desc2: "Dengan desain modern, performa yang cepat, dan pengalaman pengguna yang optimal, website Anda siap membantu menghasilkan lebih banyak reservasi, inquiry, dan peluang bisnis baru.",
+                s1_title: "Lebih dari Sekadar Website yang Menarik",
+                s1_desc: "Website yang baik bukan hanya terlihat profesional, tetapi juga memberikan pengalaman terbaik bagi setiap pengunjung. Kami membangun website yang cepat, responsif, ramah SEO, dan mudah digunakan di semua perangkat untuk membantu bisnis Anda menjangkau lebih banyak pelanggan dan menghasilkan lebih banyak peluang.",
                 p2_title: "Sulit Mencari Talenta IT yang Tepat?",
                 p2_desc1: "Proses rekrutmen yang panjang, biaya overhead yang tinggi, dan risiko turnover seringkali menghambat inovasi perusahaan Anda. Menemukan tim yang tidak hanya bisa ngoding, tapi benar-benar mengerti visi bisnis Anda adalah tantangan besar.",
                 p2_desc2: "Banyak bisnis kehilangan waktu dan biaya besar hanya karena kesalahan dalam memilih partner teknologi atau kegagalan dalam menjaga stabilitas tim IT internal.",
                 s2_title: "TunamSam: IT Outsourcing & Talent Sourcing",
                 s2_desc: "Tingkatkan kapasitas bisnis Anda dengan tenaga ahli IT yang berdedikasi. Kami menyediakan pengembang, desainer, dan ahli IT yang sudah terkurasi dan siap bergabung dengan tim Anda. Dengan model outsourcing kami, Anda bisa fokus pada strategi bisnis utama sementara kami menangani talenta teknologi terbaik.",
                 s2_btn: "Cari Talenta IT",
-                criteria_title: "Website Anda perlu memiliki aspek berikut agar mampu menarik perhatian serta mempertahankan pengunjung dengan lebih efektif.",
-                c1_title: "SEO Friendly",
-                c1_desc: "Membantu website Anda lebih mudah ditemukan di mesin pencari seperti Google. Website yang dioptimalkan dengan baik memiliki peluang lebih besar untuk menjangkau calon pelanggan secara online.",
-                c2_title: "Cepat dan Responsif",
-                c2_desc: "Website yang cepat dan responsif memberikan pengalaman yang lebih nyaman di berbagai perangkat, termasuk mobile. Pengunjung cenderung meninggalkan website yang lambat atau sulit digunakan.",
-                c3_title: "Navigasi Terstruktur",
-                c3_desc: "Struktur yang rapi dan navigasi yang jelas membantu pengunjung menemukan informasi dengan lebih mudah dan nyaman saat menjelajahi website Anda.",
-                c4_title: "Desain Modern",
-                c4_desc: "Tampilan yang modern dan konsisten membantu membangun kesan profesional serta meningkatkan kepercayaan pengunjung terhadap bisnis Anda.",
+                criteria_title: "Kami Membangun Website untuk Membantu Bisnis Anda Bertumbuh.",
+                c1_title: "Bangun Kepercayaan Pelanggan",
+                c1_desc: "Website profesional memberikan kesan pertama yang kuat sehingga pelanggan lebih yakin untuk memilih bisnis Anda.",
+                c2_title: "Fast & Responsive",
+                c2_desc: "Website yang dioptimalkan membantu bisnis Anda lebih mudah ditemukan di Google dan menjangkau lebih banyak calon pelanggan.",
+                c3_title: "Permudah Pelanggan Menghubungi Anda",
+                c3_desc: "Integrasi WhatsApp, formulir kontak, dan tombol Call to Action memudahkan pelanggan melakukan reservasi maupun konsultasi.",
+                c4_title: "Cepat, Responsif & Siap Berkembang",
+                c4_desc: "Website yang cepat, mobile-friendly, dan mudah dikembangkan memastikan bisnis Anda siap tumbuh dalam jangka panjang.",
                 pkg_title: "Paket jasa pembuatan website sesuai kebutuhan bisnis Anda",
-                pkg_subtitle: "Pilih paket yang paling sesuai dengan tujuan bisnis Anda. Kami menawarkan transparansi harga dan fitur lengkap untuk setiap tingkat pertumbuhan.",
-                pkg_desc: "Paket ini ideal untuk bisnis pemula yang ingin mulai berjualan secara online dengan biaya terjangkau. Landing page kami fokus pada konversi, memastikan setiap pengunjung diarahkan untuk mengambil tindakan yang Anda inginkan, seperti mendaftar, membeli produk, atau menghubungi Anda. Solusi yang cepat dan efektif ini sangat cocok untuk peluncuran produk, promosi khusus, atau kampanye pemasaran yang berfokus pada satu tujuan utama.",
-                pkg_desc_cp: "Website company profile kami dirancang untuk meningkatkan kredibilitas perusahaan dan membuat bisnis Anda lebih terpercaya serta dikenal luas. Dengan tampilan profesional dan informasi yang terstruktur, paket ini membantu Anda membangun kepercayaan di antara calon pelanggan, mitra bisnis, dan investor. Solusi ini cocok bagi perusahaan yang ingin memperkuat kehadiran digital mereka dan memberikan citra profesional yang solid.",
-                pkg_desc_to: "Bagi bisnis atau UKM yang menjual produk atau jasa langsung ke konsumen, seperti kuliner, properti, konveksi, atau travel, paket Toko Online kami adalah solusi yang tepat. Website ini dilengkapi dengan sistem e-commerce lengkap untuk mengelola produk, transaksi, dan pengiriman, sehingga memudahkan bisnis Anda dalam menjual secara online dan meningkatkan omzet melalui pengalaman belanja yang nyaman bagi pelanggan.",
-                pkg_desc_custom: "Layanan custom kami dirancang untuk memenuhi kebutuhan unik dan spesifik dari bisnis Anda. Apapun visi dan kebutuhan Anda, kami siap merealisasikannya dengan solusi website yang sepenuhnya disesuaikan. Cocok bagi bisnis yang membutuhkan integrasi sistem tertentu, desain dan fungsi yang sangat spesifik, atau fitur yang tidak tercakup dalam paket standar. Paket ini menawarkan fleksibilitas tanpa batas, menjadikannya ideal untuk perusahaan yang memerlukan solusi khusus untuk mendukung operasional mereka.",
+                pkg_subtitle: "Setiap bisnis memiliki kebutuhan yang berbeda. Mulai dari landing page sederhana hingga website lengkap, kami membantu Anda memilih solusi yang sesuai dengan tujuan dan anggaran bisnis.",
+                pkg_desc: "Landing page adalah solusi ideal untuk bisnis yang ingin mulai membangun kehadiran online dengan cepat dan profesional. Cocok untuk villa, rental kendaraan, cafe, restoran, laundry, maupun promosi produk atau layanan tertentu. Dirancang dengan fokus pada konversi, setiap halaman mengarahkan pengunjung untuk melakukan tindakan seperti menghubungi WhatsApp, mengisi formulir, atau melakukan reservasi sehingga peluang mendapatkan pelanggan menjadi lebih besar.",
+                pkg_desc_cp: "Website Company Profile membantu bisnis membangun citra profesional, meningkatkan kepercayaan pelanggan, dan memperkuat kehadiran digital. Sangat cocok untuk villa management, hotel, restoran, kontraktor, travel agency, maupun perusahaan yang ingin tampil lebih kredibel. Tampilkan informasi bisnis, layanan, portofolio, dan kontak secara profesional dalam satu website yang mudah diakses kapan saja.",
+                pkg_desc_to: "Jual produk Anda secara online melalui website e-commerce yang profesional, cepat, dan mudah dikelola. Cocok untuk UMKM, fashion, skincare, makanan & minuman, souvenir, hingga produk lokal Bali yang ingin menjangkau lebih banyak pelanggan. Dilengkapi dengan fitur pengelolaan produk, checkout, dan pembayaran online untuk memberikan pengalaman belanja yang mudah sekaligus membantu meningkatkan penjualan.",
+                pkg_desc_custom: "Layanan Custom Website kami dirancang untuk bisnis yang membutuhkan fitur di luar website standar. Mulai dari sistem booking khusus, dashboard admin, integrasi API, CRM, hingga solusi yang disesuaikan dengan alur operasional bisnis Anda. Cocok untuk villa management, rental kendaraan, restoran, maupun bisnis lain di Bali yang membutuhkan website dengan fungsi yang lebih kompleks dan fleksibel.",
                 process: "Our Process",
-                proc_title: "Bagaimana Kami Membangun Kesuksesan Anda",
+                proc_title: "Proses Pembuatan Website yang Mudah dan Transparan",
                 step1_title: "Discovery",
                 step1_desc: "Kami mendalami visi bisnis Anda, memahami target audiens, dan mengidentifikasi tantangan yang perlu diselesaikan.",
                 step2_title: "Strategy",
@@ -2142,31 +2136,31 @@
                 contact: "Contact",
                 contact_us: "Contact Us",
                 trusted_by: "Trusted by:",
-                p1_title: "A Website Without Strategy Will Struggle to Grow",
-                p1_desc1: "Not all websites are capable of generating traffic and customers. Without SEO, a good structure, and a comfortable user experience, a website will find it hard to compete amidst today's digital competitors.",
-                p1_desc2: "",
-                s1_title: "More Than Just an Attractive Appearance",
-                s1_desc: "A professional website is designed to help your business grow. From modern design, clear navigation, to SEO optimization, everything plays an important role in increasing credibility and reaching more customers.",
+                p1_title: "Built for Businesses in Bali",
+                p1_desc1: "We help villas, vehicle rentals, cafés, restaurants, and other local businesses build professional websites that reflect the quality of their brand. Every website is designed to build customer trust and strengthen your online presence.",
+                p1_desc2: "With modern design, fast performance, and an excellent user experience, your website is built to generate more bookings, inquiries, and new business opportunities.",
+                s1_title: "More Than Just a Beautiful Website",
+                s1_desc: "A great website is more than just an attractive design—it should deliver an exceptional user experience. We build websites that are fast, responsive, SEO-friendly, and optimized for every device to help your business reach more customers and generate more opportunities.",
                 p2_title: "Finding the Right IT Talent is Hard?",
                 p2_desc1: "Long recruitment processes, high overhead costs, and turnover risks often hinder your company's innovation. Finding a team that doesn't just code, but truly understands your business vision is a major challenge.",
                 p2_desc2: "Many businesses lose a lot of time and money just because of choosing the wrong technology partner or failing to maintain internal IT team stability.",
                 s2_title: "TunamSam: IT Outsourcing & Talent Sourcing",
                 s2_desc: "Increase your business capacity with dedicated IT experts. We provide curated developers, designers, and IT experts ready to join your team. With our outsourcing model, you can focus on your core business strategy while we handle the best technology talents.",
                 s2_btn: "Find IT Talents",
-                criteria_title: "Your website needs the following elements to attract attention and retain visitors more effectively.",
-                c1_title: "SEO Friendly",
-                c1_desc: "Ensures your business is easily discoverable on search engines like Google. A well-optimized website significantly improves your chances of reaching more potential customers and outperforming your digital competitors.",
-                c2_title: "Fast and Responsive",
-                c2_desc: "Fast loading speeds and a responsive layout ensure a seamless experience across all devices, including mobile. This prevents visitors from leaving your site due to slow performance or poor usability on smartphones.",
-                c3_title: "Structured Navigation",
-                c3_desc: "A clean structure and intuitive navigation help visitors find exactly what they are looking for with minimal effort. Well-organized content keeps users engaged and encourages them to explore your website further.",
-                c4_title: "Modern Design",
-                c4_desc: "A modern, clean design that accurately reflects your brand identity creates a strong first impression. It signals to your visitors that your business is professional, trustworthy, and committed to high quality.",
-                pkg_title: "Website creation packages according to your business needs",
-                pkg_subtitle: "TunamSam's trusted website creation service understands that every business has different needs, we are ready to work with you.",
-                pkg_desc: "This package is ideal for start-up businesses that want to start selling online at an affordable cost. Our landing pages focus on conversion, ensuring every visitor is directed to take the action you want, such as registering, buying a product, or contacting you. This fast and effective solution is perfect for product launches, special promotions, or marketing campaigns focused on a single primary goal.",
+                criteria_title: "We Build Websites That Help Your Business Grow.",
+                c1_title: "Build Customer Trust",
+                c1_desc: "A professional website creates a strong first impression and gives customers more confidence in choosing your business.",
+                c2_title: "Reach More Customers",
+                c2_desc: "An optimized website helps your business appear in Google Search and reach more potential customers online.",
+                c3_title: "Make It Easy to Get in Touch",
+                c3_desc: "WhatsApp integration, contact forms, and clear call-to-action buttons make it simple for customers to contact or book your services.",
+                c4_title: "Fast, Responsive & Built to Grow",
+                c4_desc: "Fast loading, mobile-friendly, and scalable websites ensure your business is ready to grow in the long run.",
+                pkg_title: "Find the Right Website for Your Business",
+                pkg_subtitle: "Every business has unique needs. From simple landing pages to full-featured websites, we'll help you choose the right solution based on your goals and budget.",
+                pkg_desc: "A landing page is the perfect solution for businesses looking to establish a professional online presence quickly. Ideal for villas, vehicle rentals, cafés, restaurants, laundries, and businesses promoting a specific product or service. Built with conversion in mind, every page is designed to encourage visitors to take action whether it's contacting you via WhatsApp, submitting an inquiry, or making a reservation.",
                 process: "Our Process",
-                proc_title: "How We Build Your Success",
+                proc_title: "Our Website Development Process",
                 step1_title: "Discovery",
                 step1_desc: "We dive deep into your vision, understand your audience, and identify challenges.",
                 step2_title: "Strategy",

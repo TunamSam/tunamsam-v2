@@ -21,11 +21,11 @@ export function TechnicalSupportBanner() {
 
 
                 <div className="max-w-8xl mx-auto px-6 w-full relative z-10">
-                    <div className="max-w-3xl reveal-on-scroll">
-                        <h2 className="text-4xl lg:text-6xl font-heading font-bold text-white mb-8 leading-tight">
+                    <div className="max-w-5xl reveal-on-scroll">
+                        <h2 className="text-3xl lg:text-6xl font-heading font-bold text-white mb-8 leading-tight">
                             {t('tech_title')}
                         </h2>
-                        <p className="text-xl text-white/80 font-sans leading-relaxed">
+                        <p className="text-lg md:text-xl text-white/80 font-sans leading-relaxed">
                             {t('tech_desc')}
                         </p>
                     </div>

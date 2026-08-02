@@ -5,7 +5,6 @@ import { Criteria } from './components/Criteria';
 import { Process } from './components/Process';
 import { useRevealOnScroll } from './hooks/useRevealOnScroll';
 import { I18nProvider, useI18n } from './context/I18nContext';
-import { TrustedBy } from './components/generated/TrustedBy';
 import { ProblemSolution } from './components/generated/ProblemSolution';
 import { Pricing } from './components/generated/Pricing';
 import { TechnicalSupportBanner } from './components/generated/TechnicalSupportBanner';
@@ -18,7 +17,6 @@ import { Footer } from './components/generated/Footer';
 import { DesignCatalog } from './components/DesignCatalog';
 import { PricingPage } from './components/PricingPage';
 import { AboutPage } from './components/AboutPage';
-import { TestimonialsPage } from './components/TestimonialsPage';
 import { ContactPage } from './components/ContactPage';
 import { BlogPage } from './components/BlogPage';
 import { BlogPostPage } from './components/BlogPostPage';
@@ -27,7 +25,7 @@ import { NotFoundPage } from './components/NotFoundPage';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 function ScrollToHash() {
-  const { hash } = useLocation();
+  const { hash, pathname } = useLocation();
   useEffect(() => {
     if (hash) {
       const element = document.getElementById(hash.replace('#', ''));
@@ -35,9 +33,11 @@ function ScrollToHash() {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
+      document.documentElement.style.scrollBehavior = 'auto';
       window.scrollTo(0, 0);
+      document.documentElement.style.scrollBehavior = '';
     }
-  }, [hash]);
+  }, [hash, pathname]);
   return null;
 }
 
@@ -47,7 +47,6 @@ function HomePage() {
       <Header />
       <main className="font-sans antialiased">
         <Hero />
-        <TrustedBy />
         <ProblemSolution />
         <Criteria />
         <Pricing />
@@ -104,19 +103,7 @@ function AboutPageRoute() {
   );
 }
 
-function TestimonialsPageRoute() {
-  return (
-    <>
-      <Header />
-      <main className="font-sans antialiased min-h-screen bg-white">
-        <TestimonialsPage />
-        <SuccessCtaSection />
-        <FaqSection />
-      </main>
-      <Footer />
-    </>
-  );
-}
+
 
 function ContactPageRoute() {
   return (
@@ -190,7 +177,6 @@ function AppContent() {
         <Route path="/katalog-desain" element={<DesignCatalogRoute />} />
         <Route path="/harga-website" element={<PricingPageRoute />} />
         <Route path="/tentang-kami" element={<AboutPageRoute />} />
-        <Route path="/testimoni" element={<TestimonialsPageRoute />} />
         <Route path="/kontak" element={<ContactPageRoute />} />
         <Route path="/blog" element={<BlogPageRoute />} />
         <Route path="/blog/:slug" element={<BlogPostPageRoute />} />

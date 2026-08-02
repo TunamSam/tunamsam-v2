@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useI18n } from '../../context/I18nContext';
 
 export function Footer() {
@@ -48,12 +49,12 @@ export function Footer() {
           <div>
             <h2 className="text-white font-heading font-bold mb-6 uppercase tracking-wider">{t('footer_content')}</h2>
             <ul className="space-y-4 text-sm text-gray-400 font-sans flex flex-col">
-              <li><a href="#" className="hover:text-brand-light transition-colors">{t('footer_nav_home')}</a></li>
-              <li><a href="#pilihan-desain" className="hover:text-brand-light transition-colors">{t('footer_nav_design')}</a></li>
-              <li><a href="#pricing" className="hover:text-brand-light transition-colors">{t('footer_nav_pricing')}</a></li>
-              <li><a href="#about" className="hover:text-brand-light transition-colors">{t('footer_nav_about')}</a></li>
-              <li><a href="#contact" className="hover:text-brand-light transition-colors">{t('footer_nav_contact')}</a></li>
-              <li><a href="/blog" className="hover:text-brand-light transition-colors">{t('footer_nav_blog')}</a></li>
+              <li><Link to="/" className="hover:text-brand-light transition-colors">{t('footer_nav_home')}</Link></li>
+              <li><Link to="/katalog-desain" className="hover:text-brand-light transition-colors">{t('footer_nav_design')}</Link></li>
+              <li><Link to="/harga-website" className="hover:text-brand-light transition-colors">{t('footer_nav_pricing')}</Link></li>
+              <li><Link to="/tentang-kami" className="hover:text-brand-light transition-colors">{t('footer_nav_about')}</Link></li>
+              <li><Link to="/kontak" className="hover:text-brand-light transition-colors">{t('footer_nav_contact')}</Link></li>
+              <li><Link to="/blog" className="hover:text-brand-light transition-colors">{t('footer_nav_blog')}</Link></li>
             </ul>
           </div>
 
@@ -66,7 +67,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-brand-light" />
-                <span>Kediri, Indonesia</span>
+                <span>Bali, Indonesia</span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-brand-light" />

@@ -17,7 +17,6 @@ export function FaqSection() {
     { q: 'faq_7_q' as const, a: 'faq_7_a' as const },
     { q: 'faq_8_q' as const, a: 'faq_8_a' as const },
     { q: 'faq_9_q' as const, a: 'faq_9_a' as const },
-    { q: 'faq_10_q' as const, a: 'faq_10_a' as const },
   ];
 
   const faqs = faqKeys.map(({ q, a }) => ({

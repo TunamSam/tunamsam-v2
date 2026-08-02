@@ -60,7 +60,7 @@ export function WhyUs() {
       
                       
                       <div
-                          className="lg:col-span-3 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                          className="lg:col-span-2 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                           <Icon name="users" className="w-8 h-8 text-gray-900 mb-6" />
                           <h3 className="text-2xl font-heading text-gray-900 mb-3">{t('why_6_title')}</h3>
                           <p className="text-md leading-relaxed font-sans">{t('why_6_desc')}</p>
@@ -68,7 +68,7 @@ export function WhyUs() {
       
                       
                       <div
-                          className="lg:col-span-3 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                          className="lg:col-span-2 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                           <Icon name="life-buoy" className="w-8 h-8 text-gray-900 mb-6" />
                           <h3 className="text-2xl font-heading text-gray-900 mb-3">{t('why_7_title')}</h3>
                           <p className="text-md leading-relaxed font-sans">{t('why_7_desc')}</p>
@@ -81,23 +81,7 @@ export function WhyUs() {
                           <h3 className="text-2xl font-heading text-gray-900 mb-3">{t('why_8_title')}</h3>
                           <p className="text-md leading-relaxed font-sans">{t('why_8_desc')}</p>
                       </div>
-      
-                      
-                      <div
-                          className="lg:col-span-2 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                          <Icon name="bot" className="w-8 h-8 text-gray-900 mb-6" />
-                          <h3 className="text-2xl font-heading text-gray-900 mb-3">{t('why_9_title')}</h3>
-                          <p className="text-md leading-relaxed font-sans">{t('why_9_desc')}</p>
-                      </div>
-      
-                      
-                      <div
-                          className="lg:col-span-2 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                          <Icon name="headset" className="w-8 h-8 text-gray-900 mb-6" />
-                          <h3 className="text-2xl font-heading text-gray-900 mb-3">{t('why_10_title')}</h3>
-                          <p className="text-md leading-relaxed font-sans">{t('why_10_desc')}</p>
-                      </div>
-      
+
                   </div>
               </div>
           </section>

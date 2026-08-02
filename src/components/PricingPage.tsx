@@ -40,6 +40,8 @@ const PACKAGES = [
             'pricing_lp_get_4',
             'pricing_lp_get_5',
             'pricing_lp_get_6',
+            'pricing_lp_get_7',
+            'pricing_lp_get_8',
         ],
         targets: [
             'pricing_lp_target_1',
@@ -48,6 +50,8 @@ const PACKAGES = [
             'pricing_lp_target_4',
             'pricing_lp_target_5',
             'pricing_lp_target_6',
+            'pricing_lp_target_7',
+            'pricing_lp_target_8',
         ]
     },
     {
@@ -164,6 +168,7 @@ const PACKAGES = [
             'pricing_cw_get_4',
             'pricing_cw_get_5',
             'pricing_cw_get_6',
+            'pricing_cw_get_7',
         ],
         targets: [
             'pricing_cw_target_1',
@@ -172,6 +177,7 @@ const PACKAGES = [
             'pricing_cw_target_4',
             'pricing_cw_target_5',
             'pricing_cw_target_6',
+            'pricing_cw_target_7',
         ]
     }
 ];
@@ -223,8 +229,8 @@ export function PricingPage() {
         <div className="w-full bg-white pb-24 text-gray-900">
             {/* Hero Section */}
             <div className="pt-20 md:pt-32 pb-16 md:pb-24 bg-white relative overflow-hidden">
-                <div className="max-w-6xl mx-auto px-6 text-center relative z-10 reveal-on-scroll">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading mb-6 text-gray-900 leading-tight">
+                <div className="max-w-7xl mx-auto px-6 text-center relative z-10 reveal-on-scroll">
+                    <h1 className="text-4xl md:text-4xl lg:text-5xl font-heading mb-6 text-gray-900 leading-tight">
                         {t('pricing_hero_title')}
                     </h1>
                     <p className="text-lg md:text-xl max-w-3xl mx-auto font-light leading-relaxed mb-12 md:mb-16">
@@ -235,7 +241,7 @@ export function PricingPage() {
                 {/* Hero Image Collage Placeholder */}
                 <div className="max-w-6xl mx-auto px-6 relative z-10 reveal-on-scroll stagger-1">
                     <div className="relative w-full h-[300px] md:h-[500px] lg:h-[600px] bg-gray-50 md:rounded-[3rem] flex flex-col items-center justify-center text-gray-400">
-                        <img src="/assets/pricing-assets/pricing-hero.webp" alt="Pricing Hero" className="w-full h-full object-cover" />
+                        <img src="/assets/pricing-assets/pricing-hero.png" alt="Pricing Hero" className="w-full h-full object-cover" />
                     </div>
                 </div>
 
@@ -402,7 +408,7 @@ export function PricingPage() {
                                         <h4 className="text-md md:text-lg font-medium mb-4 md:mb-6 border-b border-gray-200 pb-3 md:pb-4">{t('pricing_target_label')}</h4>
                                         <ul className="space-y-4">
                                             {pkg.targets.map((item, idx) => (
-                                                <li key={idx} className="flex items-start gap-3 text-sm">
+                                                <li key={idx} className="flex items-start gap-3 text-md">
                                                     <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
                                                     <span className="leading-relaxed">{t(item as TranslationKey)}</span>
                                                 </li>

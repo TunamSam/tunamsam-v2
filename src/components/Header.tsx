@@ -10,7 +10,6 @@ const NAV_LINKS = [
   { href: '/katalog-desain', key: 'nav_design' as const },
   { href: '/harga-website', key: 'nav_pricing' as const },
   { href: '/tentang-kami', key: 'nav_about' as const },
-  { href: '/testimoni', key: 'nav_testimonials' as const },
   { href: '/kontak', key: 'contact' as const },
   { href: '/blog', key: 'nav_blog' as const },
 ];
@@ -49,7 +48,7 @@ export function Header() {
           <div className="hidden lg:flex items-center lg:space-x-4 xl:space-x-10 text-[13px] xl:text-[14px] font-medium whitespace-nowrap">
             <div className="flex items-center space-x-2">
               <MapPin className="w-4 h-4 text-white opacity-80" />
-              <span>Kediri, Indonesia</span>
+              <span>Bali, Indonesia</span>
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4 text-white opacity-80" />

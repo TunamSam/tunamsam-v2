@@ -1,5 +1,4 @@
 import { Icon } from '../Icon';
-import { TestimonialCarousel } from '../TestimonialCarousel';
 import { useI18n } from '../../context/I18nContext';
 
 export function AdditionalServices() {
@@ -99,7 +98,6 @@ export function AdditionalServices() {
       
                   </div>
 
-                  <TestimonialCarousel />
               </div>
           </section>
     </>

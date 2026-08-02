@@ -8,7 +8,7 @@ export function ContactPage() {
             {/* Hero Section */}
             <div className="pt-32 md:pt-40 pb-16 md:pb-24">
                 <div className="max-w-7xl mx-auto px-6 text-center reveal-on-scroll">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading mb-6 leading-tight text-gray-900">
+                    <h1 className="text-4xl md:text-5xl font-heading mb-6 leading-tight text-gray-900">
                         {t('contact_hero_title')}
                     </h1>
                     <p className="text-lg md:text-xl leading-relaxed font-light max-w-3xl mx-auto">

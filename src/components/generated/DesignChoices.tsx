@@ -25,7 +25,7 @@ export function DesignChoices() {
                             className="relative rounded-3xl overflow-hidden aspect-[16/9] lg:aspect-[21/9] bg-gray-900 group cursor-pointer">
                             <video autoPlay loop muted playsInline
                                 className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500">
-                                <source src="/assets/videos/landingpage.mp4" type="video/mp4" />
+                                <source src="/assets/video-assets/landingpage.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 
@@ -56,7 +56,7 @@ export function DesignChoices() {
                             <div className="relative rounded-3xl overflow-hidden aspect-video bg-gray-900 group cursor-pointer">
                                 <video autoPlay loop muted playsInline
                                     className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500">
-                                    <source src="/assets/videos/company-profile.mp4" type="video/mp4" />
+                                    <source src="/assets/video-assets/professional-business-website.mp4" type="video/mp4" />
                                 </video>
                                 <div className="absolute bottom-0 left-0 w-full">
                                     <div
@@ -81,7 +81,7 @@ export function DesignChoices() {
                             <div className="relative rounded-3xl overflow-hidden aspect-video bg-gray-900 group cursor-pointer">
                                 <video autoPlay loop muted playsInline
                                     className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500">
-                                    <source src="/assets/videos/toko-online.mp4" type="video/mp4" />
+                                    <source src="/assets/video-assets/ecommerce.mp4" type="video/mp4" />
                                 </video>
                                 <div className="absolute bottom-0 left-0 w-full">
                                     <div
