@@ -29,7 +29,7 @@ export function ContactPage() {
                         <p className="mb-8 flex-grow leading-relaxed text-sm md:text-lg text-gray-600">
                             {t('contact_sales_desc')}
                         </p>
-                        <a href="https://wa.me/+6285195901406" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-full font-medium hover:bg-brand transition-colors w-fit">
+                        <a href="https://wa.me/+6285190962301" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-full font-medium hover:bg-brand transition-colors w-fit">
                             <Icon name="message-circle" className="w-4 h-4" />
                             {t('contact_sales_btn')}
                         </a>

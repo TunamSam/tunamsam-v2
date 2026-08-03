@@ -56,7 +56,7 @@ export function Header() {
             </div>
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4 text-white opacity-80" />
-              <span>+62 856-5563-9206</span>
+              <span>+62 851-9096-2301</span>
             </div>
           </div>
 
@@ -141,7 +141,7 @@ export function Header() {
             </div>
 
             <a
-              href="https://wa.me/+6285655639206"
+              href="https://wa.me/+6285190962301"
               className="px-8 py-2 bg-brand-light hover:bg-white hover:text-brand-light text-white text-[13px] font-bold rounded-full flex items-center space-x-3 shadow-xl transition-all"
             >
               <i className="fa-brands fa-whatsapp text-xl" />
@@ -225,7 +225,7 @@ export function Header() {
               </div>
 
               <a
-                href="https://wa.me/+6285655639206"
+                href="https://wa.me/+6285190962301"
                 className="px-8 py-3 bg-brand-light hover:bg-white hover:text-brand-light text-white text-[13px] font-bold rounded-full flex items-center justify-center space-x-3 shadow-xl transition-all"
                 onClick={() => setMobileMenuOpen(false)}
               >

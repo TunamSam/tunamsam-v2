@@ -124,7 +124,7 @@ export function DesignDetail({ design, onBack, allDesigns, onSelectRelated }: De
               </p>
             </div>
             <a
-              href="https://wa.me/+6285655639206"
+              href="https://wa.me/+6285190962301"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-black text-white rounded-full font-bold hover:bg-brand transition-colors"
@@ -266,7 +266,7 @@ export function DesignDetail({ design, onBack, allDesigns, onSelectRelated }: De
                           {t('design_lihat_detail')}
                         </button>
                         <a
-                          href="https://wa.me/+6285655639206"
+                          href="https://wa.me/+6285190962301"
                           className="px-4 py-2 bg-gray-900 hover:bg-brand text-white text-xs font-bold rounded-full transition-colors"
                         >
                           {t('design_pesan_desain')}

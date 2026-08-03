@@ -105,7 +105,7 @@ export function SuccessCtaSection() {
               {t('cta_desc')}
             </p>
             <a
-              href="https://wa.me/+6285655639206"
+              href="https://wa.me/+6285190962301"
               className="inline-flex items-center gap-3 bg-white text-gray-900 px-8 py-3.5 rounded-full text-sm md:text-base font-bold hover:bg-gray-100 transition-colors shadow-xl"
             >
               <i className="fa-brands fa-whatsapp text-xl text-brand" />

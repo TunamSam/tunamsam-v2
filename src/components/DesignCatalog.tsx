@@ -211,7 +211,7 @@ export function DesignCatalog() {
                     {t('design_lihat_detail')}
                   </button>
                   <a
-                    href="https://wa.me/+6285655639206"
+                    href="https://wa.me/+6285190962301"
                     className="px-4 py-2 bg-gray-900 hover:bg-brand text-white text-xs md:text-md font-bold rounded-full transition-colors"
                   >
                     {t('design_pesan_desain')}

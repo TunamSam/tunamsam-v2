@@ -78,7 +78,7 @@ export function Pricing() {
                                         </AnimatePresence>
                                     </div>
                                 </div>
-                                <a href="https://wa.me/+6285655639206"
+                                <a href="https://wa.me/+6285190962301"
                                     className="inline-block bg-black text-white px-10 py-4 rounded-full text-lg hover:bg-gray-800 transition-all shadow-xl shadow-black/10">
                                     {t('price_btn_lp')}
                                 </a>
@@ -219,7 +219,7 @@ export function Pricing() {
                                         </AnimatePresence>
                                     </div>
                                 </div>
-                                <a href="https://wa.me/+6285655639206"
+                                <a href="https://wa.me/+6285190962301"
                                     className="inline-block bg-black text-white px-10 py-4 md:px-9 rounded-full text-lg hover:bg-gray-800 transition-all shadow-xl shadow-black/10">
                                     {t('price_btn_cp')}
                                 </a>
@@ -368,7 +368,7 @@ export function Pricing() {
                                         </AnimatePresence>
                                     </div>
                                 </div>
-                                <a href="https://wa.me/+6285655639206"
+                                <a href="https://wa.me/+6285190962301"
                                     className="inline-block bg-black text-white px-10 py-4 rounded-full text-lg hover:bg-gray-800 transition-all shadow-xl shadow-black/10">
                                     {t('price_btn_to')}
                                 </a>
@@ -478,7 +478,7 @@ export function Pricing() {
                                         <p className="text-gray-400 text-sm italic">{t('price_custom_desc')}</p>
                                     </div>
                                 </div>
-                                <a href="https://wa.me/+6285655639206"
+                                <a href="https://wa.me/+6285190962301"
                                     className="inline-block bg-black text-white px-10 py-4 rounded-full text-lg hover:bg-gray-800 transition-all shadow-xl shadow-black/10">
                                     {t('price_btn_custom')}
                                 </a>

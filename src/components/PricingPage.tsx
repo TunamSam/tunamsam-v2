@@ -27,7 +27,7 @@ const PACKAGES = [
             '/assets/products-assets/landing-page/3.webp',
         ],
         btnText: 'Buat Landing Page sekarang!',
-        btnLink: 'https://wa.me/+6285655639206',
+        btnLink: 'https://wa.me/+6285190962301',
         reasons: [
             { icon: 'maximize', titleKey: 'lp_f1_t', descKey: 'pricing_lp_reason_1_desc' },
             { icon: 'target', titleKey: 'lp_f2_t', descKey: 'pricing_lp_reason_2_desc' },
@@ -74,7 +74,7 @@ const PACKAGES = [
             '/assets/products-assets/company-profile/3.webp',
         ],
         btnText: 'Buat Company Profile sekarang!',
-        btnLink: 'https://wa.me/+6285655639206',
+        btnLink: 'https://wa.me/+6285190962301',
         reasons: [
             { icon: 'gem', titleKey: 'cp_f1_t', descKey: 'pricing_cp_reason_1_desc' },
             { icon: 'network', titleKey: 'cp_f2_t', descKey: 'pricing_cp_reason_2_desc' },
@@ -117,7 +117,7 @@ const PACKAGES = [
             '/assets/products-assets/toko-online/3.webp',
         ],
         btnText: 'Buat Toko Online sekarang!',
-        btnLink: 'https://wa.me/+6285655639206',
+        btnLink: 'https://wa.me/+6285190962301',
         reasons: [
             { icon: 'shopping-bag', titleKey: 'to_f1_t', descKey: 'pricing_to_reason_1_desc' },
             { icon: 'building', titleKey: 'to_f2_t', descKey: 'pricing_to_reason_2_desc' },
@@ -155,7 +155,7 @@ const PACKAGES = [
             '/assets/products-assets/custom-website/3.webp',
         ],
         btnText: 'Konsultasi Custom Website!',
-        btnLink: 'https://wa.me/+6285655639206',
+        btnLink: 'https://wa.me/+6285190962301',
         reasons: [
             { icon: 'palette', titleKey: 'cw_f1_t', descKey: 'pricing_cw_reason_1_desc' },
             { icon: 'crosshair', titleKey: 'cw_f2_t', descKey: 'pricing_cw_reason_2_desc' },
