@@ -6,7 +6,7 @@ export function TechnicalSupportBanner() {
         <>
             <section className="relative h-[600px] flex items-center overflow-hidden sticky top-0 z-0">
 
-                <div className="absolute inset-0 z-[-1] bg-[url('/assets/technical-support-assets/technical-support-banner.webp')] bg-cover bg-center">
+                <div className="absolute inset-0 z-[-1] bg-[url('/assets/technical-support-assets/technical-support-bannernew.webp')] bg-cover bg-center">
                     <div className="absolute inset-0 bg-black/60"></div>
                 </div>
 

@@ -7,7 +7,7 @@ import { useRevealOnScroll } from './hooks/useRevealOnScroll';
 import { I18nProvider, useI18n } from './context/I18nContext';
 import { ProblemSolution } from './components/generated/ProblemSolution';
 import { Pricing } from './components/generated/Pricing';
-import { TechnicalSupportBanner } from './components/generated/TechnicalSupportBanner';
+import { TechnicalSupportBanner } from './components/generated/TechnicalSupportBannernew';
 import { WhyUs } from './components/generated/WhyUs';
 import { DesignChoices } from './components/generated/DesignChoices';
 import { AdditionalServices } from './components/generated/AdditionalServices';

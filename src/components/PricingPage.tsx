@@ -22,9 +22,9 @@ const PACKAGES = [
             { periodKey: 'pricing_lp_opt_1th', price: 'Rp. 750,000', suffixKey: '' },
         ],
         images: [
-            '/assets/products-assets/landing-page/1.webp',
-            '/assets/products-assets/landing-page/2.webp',
-            '/assets/products-assets/landing-page/3.webp',
+            '/assets/products-assets/landing-page/1new.webp',
+            '/assets/products-assets/landing-page/2new.webp',
+            '/assets/products-assets/landing-page/3new.webp',
         ],
         btnText: 'Buat Landing Page sekarang!',
         btnLink: 'https://wa.me/+6285190962301',
@@ -241,7 +241,7 @@ export function PricingPage() {
                 {/* Hero Image Collage Placeholder */}
                 <div className="max-w-6xl mx-auto px-6 relative z-10 reveal-on-scroll stagger-1">
                     <div className="relative w-full h-[300px] md:h-[500px] lg:h-[600px] bg-gray-50 md:rounded-[3rem] flex flex-col items-center justify-center text-gray-400">
-                        <img src="/assets/pricing-assets/pricing-hero.png" alt="Pricing Hero" className="w-full h-full object-cover" />
+                        <img src="/assets/pricing-assets/pricing-heronew.webp" alt="Pricing Hero" className="w-full h-full object-cover" />
                     </div>
                 </div>
 

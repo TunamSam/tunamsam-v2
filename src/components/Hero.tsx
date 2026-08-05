@@ -2,17 +2,17 @@ import { useCallback, useEffect, useState } from 'react';
 import { useI18n } from '../context/I18nContext';
 
 const SLIDE_IMAGES_ID = [
-  { src: '/assets/hero-section-assets/banner1.webp', altKey: 'hero_alt_1' as const },
-  { src: '/assets/hero-section-assets/banner2.webp', altKey: 'hero_alt_2' as const },
-  { src: '/assets/hero-section-assets/banner3.webp', altKey: 'hero_alt_3' as const },
-  { src: '/assets/hero-section-assets/banner4.webp', altKey: 'hero_alt_4' as const },
+  { src: '/assets/hero-section-assets/banner1new.webp', altKey: 'hero_alt_1' as const },
+  { src: '/assets/hero-section-assets/banner2new.webp', altKey: 'hero_alt_2' as const },
+  { src: '/assets/hero-section-assets/banner3new.webp', altKey: 'hero_alt_3' as const },
+  { src: '/assets/hero-section-assets/banner4new.webp', altKey: 'hero_alt_4' as const },
 ];
 
 const SLIDE_IMAGES_EN = [
-  { src: '/assets/hero-section-assets/banner1english.webp', altKey: 'hero_alt_1' as const },
-  { src: '/assets/hero-section-assets/banner2english.webp', altKey: 'hero_alt_2' as const },
-  { src: '/assets/hero-section-assets/banner3english.webp', altKey: 'hero_alt_3' as const },
-  { src: '/assets/hero-section-assets/banner4english.webp', altKey: 'hero_alt_4' as const },
+  { src: '/assets/hero-section-assets/banner1englishnew.webp', altKey: 'hero_alt_1' as const },
+  { src: '/assets/hero-section-assets/banner2englishnew.webp', altKey: 'hero_alt_2' as const },
+  { src: '/assets/hero-section-assets/banner3englishnew.webp', altKey: 'hero_alt_3' as const },
+  { src: '/assets/hero-section-assets/banner4englishnew.webp', altKey: 'hero_alt_4' as const },
 ];
 
 const INTERVAL_MS = 5000;
