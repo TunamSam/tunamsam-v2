@@ -581,25 +581,34 @@ export const translations: Record<Lang, Partial<Record<TranslationKey, string>>>
     addserv_4_desc: 'Bangun kehadiran digital yang konsisten melalui pengelolaan media sosial, pembuatan konten, dan strategi komunikasi yang sesuai dengan karakter bisnis Anda.',
     addserv_5_title: 'Digital Advertising',
     addserv_5_desc: 'Jangkau lebih banyak calon pelanggan melalui kampanye Google Ads dan Meta Ads yang dirancang untuk meningkatkan trafik, prospek, dan konversi bisnis.',
-    faq_title: 'FAQ Jasa Pembuatan website di TunamSam',
+    faq_title: 'FAQ Jasa Pembuatan Website TunamSam',
+
     faq_1_q: 'Berapa lama proses pembuatan website?',
-    faq_1_a: 'Waktu pengerjaan bergantung pada jenis website dan kelengkapan materi yang diberikan. Rata-rata website company profile atau landing page selesai dalam 1–3 minggu, sedangkan website dengan fitur khusus membutuhkan waktu lebih lama.',
-    faq_2_q: 'Apakah saya harus menyiapkan desain terlebih dahulu?',
-    faq_2_a: 'Tidak. Kami akan membantu mulai dari diskusi kebutuhan, perencanaan struktur website, hingga desain yang sesuai dengan identitas bisnis Anda.',
-    faq_3_q: 'Apakah website bisa dibuka di HP dan tablet?',
-    faq_3_a: 'Ya. Semua website yang kami buat bersifat responsive sehingga tampil optimal di desktop, tablet, maupun smartphone.',
-    faq_4_q: 'Apakah saya bisa mengubah isi website sendiri?',
-    faq_4_a: 'Tentu. Kami menggunakan sistem yang memudahkan Anda mengubah teks, gambar, maupun informasi lainnya tanpa harus memiliki kemampuan teknis.',
-    faq_5_q: 'Apakah domain dan hosting sudah termasuk?',
-    faq_5_a: 'Tersedia pilihan paket yang sudah termasuk domain dan hosting, maupun paket yang menggunakan domain dan hosting milik Anda. Kami akan membantu memilih solusi yang paling sesuai.',
-    faq_6_q: 'Apakah ada layanan maintenance setelah website selesai?',
-    faq_6_a: 'Ya. Kami menyediakan layanan maintenance untuk pembaruan website, backup, monitoring keamanan, dan bantuan teknis agar website tetap berjalan dengan baik.',
-    faq_7_q: 'Bisnis apa saja yang Anda layani?',
-    faq_7_a: 'Kami melayani berbagai jenis bisnis, terutama villa, restoran, cafe, tour & travel, spa, serta berbagai bisnis lokal dan perusahaan yang ingin memiliki website profesional.',
-    faq_8_q: 'Bagaimana cara memulai kerja sama?',
-    faq_8_a: 'Hubungi kami melalui WhatsApp atau formulir kontak. Kami akan menjadwalkan konsultasi gratis untuk memahami kebutuhan bisnis Anda dan memberikan rekomendasi solusi yang paling sesuai.',
+    faq_1_a: 'Lama pengerjaan bergantung pada jenis dan kompleksitas website yang dibuat. Sebagian besar website bisnis, website villa, dan company profile dapat diselesaikan dalam waktu 2–4 minggu setelah seluruh materi dan kebutuhan proyek diterima.',
+
+    faq_2_q: 'Apakah Anda dapat membantu jika saya belum memiliki desain website?',
+    faq_2_a: 'Tentu. Kami membantu mulai dari konsultasi, perencanaan struktur website (sitemap), hingga desain UI/UX yang disesuaikan dengan identitas brand dan tujuan bisnis Anda.',
+
+    faq_3_q: 'Apakah website akan berfungsi dengan baik di perangkat mobile?',
+    faq_3_a: 'Ya. Semua website yang kami bangun bersifat responsive dan dioptimalkan untuk desktop, tablet, maupun smartphone sehingga memberikan pengalaman terbaik bagi setiap pengunjung.',
+
+    faq_4_q: 'Apakah saya bisa mengelola isi website sendiri setelah selesai?',
+    faq_4_a: 'Ya. Kami membangun website menggunakan Content Management System (CMS) yang mudah digunakan, sehingga Anda dapat mengubah teks, gambar, artikel, maupun konten lainnya tanpa memerlukan kemampuan teknis.',
+
+    faq_5_q: 'Apakah domain dan hosting sudah termasuk dalam paket?',
+    faq_5_a: 'Sebagian besar paket kami sudah termasuk domain dan hosting selama 1 tahun. Jika Anda sudah memiliki domain atau hosting sendiri, kami juga dapat menggunakan layanan yang sudah Anda miliki.',
+
+    faq_6_q: 'Apakah tersedia layanan maintenance setelah website selesai?',
+    faq_6_a: 'Ya. Kami menyediakan layanan maintenance yang mencakup pembaruan website, monitoring keamanan, backup data, optimasi performa, serta dukungan teknis agar website Anda tetap berjalan dengan optimal.',
+
+    faq_7_q: 'Jenis bisnis apa saja yang dilayani oleh TunamSam?',
+    faq_7_a: 'Kami berfokus membantu villa, hotel, restoran, café, tour & travel, spa, serta berbagai bisnis lokal di Bali memiliki website profesional. Selain itu, kami juga melayani perusahaan dan startup dari berbagai industri lainnya.',
+
+    faq_8_q: 'Apakah Anda bisa membuat website dengan sistem booking atau reservasi?',
+    faq_8_a: 'Ya. Kami dapat mengembangkan website dengan fitur booking atau reservasi untuk villa, hotel, restoran, aktivitas wisata, tour, maupun bisnis lain yang membutuhkan sistem pemesanan online.',
+
     faq_9_q: 'Apakah website saya akan muncul di Google?',
-    faq_9_a: 'Ya. Semua website kami dibuat dengan struktur yang ramah mesin pencari (SEO-friendly). Kami juga menyediakan layanan SEO jika Anda ingin meningkatkan peringkat website di Google.',
+    faq_9_a: 'Ya. Setiap website yang kami bangun mengikuti praktik terbaik SEO, mulai dari performa yang cepat, desain mobile-friendly, struktur kode yang rapi, hingga optimasi teknis agar website lebih mudah diindeks oleh Google. Kami juga menyediakan layanan SEO untuk membantu meningkatkan visibilitas website Anda.',
     footer_tag: 'Membangun masa depan digital yang lebih cerah, satu website dalam satu waktu.',
     footer_quick: 'Tautan Cepat',
     footer_connect: 'Terhubung',
@@ -1012,25 +1021,34 @@ export const translations: Record<Lang, Partial<Record<TranslationKey, string>>>
     addserv_4_desc: 'Build a stronger online presence with consistent social media management, engaging content, and strategies tailored to your brand.',
     addserv_5_title: 'Digital Advertising',
     addserv_5_desc: 'Reach more potential customers with strategic Google Ads and Meta Ads campaigns designed to increase traffic, leads, and conversions.',
-    faq_title: 'FAQ — Website Creation Services at TunamSam',
+    faq_title: 'FAQ Website Development Services by TunamSam',
+
     faq_1_q: 'How long does it take to build a website?',
-    faq_1_a: 'The development timeline depends on the type of website and the availability of your content. Most company profile and landing page websites are completed within 1–3 weeks, while custom websites may take longer.',
-    faq_2_q: 'Do I need to prepare a design first?',
-    faq_2_a: "No. We'll guide you from understanding your business needs and planning the website structure to creating a design that matches your brand.",
-    faq_3_q: 'Can the website be accessed on mobile phones and tablets?',
-    faq_3_a: 'Yes. Every website we build is fully responsive and optimized for desktops, tablets, and smartphones.',
-    faq_4_q: 'Can I update the website content myself?',
-    faq_4_a: 'Absolutely. We build websites with an easy-to-manage system, allowing you to update text, images, and other content without technical skills.',
-    faq_5_q: 'Are domain and hosting included?',
-    faq_5_a: "We offer packages that include domain and hosting, or we can work with your existing domain and hosting. We'll recommend the best option for your needs.",
-    faq_6_q: 'Is there any maintenance service after the website is completed?',
-    faq_6_a: 'Yes. We provide website maintenance services, including updates, backups, security monitoring, and technical support to keep your website running smoothly.',
-    faq_7_q: 'What types of businesses do you serve?',
-    faq_7_a: 'We work with a wide range of businesses, especially villas, restaurants, cafés, tour operators, spas, local businesses, and companies looking for a professional website.',
-    faq_8_q: 'How do we start working together?',
-    faq_8_a: "Simply contact us via WhatsApp or our contact form. We'll schedule a free consultation to understand your business needs and recommend the best solution.",
+    faq_1_a: 'The timeline depends on the type and complexity of your website. Most business websites, villa websites, and company profiles are completed within 2–4 weeks once all required materials have been provided.',
+
+    faq_2_q: 'Can you help if I do not have a website design yet?',
+    faq_2_a: 'Absolutely. We handle everything from planning and sitemap creation to UI/UX design, ensuring your website reflects your brand and business goals.',
+
+    faq_3_q: 'Will my website work well on mobile devices?',
+    faq_3_a: 'Yes. Every website we build is fully responsive and optimized for desktop, tablet, and smartphone, providing the best user experience across all devices.',
+
+    faq_4_q: 'Can I update the website myself after it is finished?',
+    faq_4_a: 'Yes. We build websites with an easy-to-manage content management system (CMS), allowing you to edit text, images, blog posts, and other content without technical knowledge.',
+
+    faq_5_q: 'Do your packages include domain and hosting?',
+    faq_5_a: 'Most of our packages include one year of domain registration and hosting. If you already have your own hosting or domain, we can also work with your existing setup.',
+
+    faq_6_q: 'Do you provide maintenance after the website is launched?',
+    faq_6_a: 'Yes. We offer ongoing maintenance, security monitoring, backups, performance optimization, and technical support to keep your website running smoothly.',
+
+    faq_7_q: 'What types of businesses do you work with?',
+    faq_7_a: 'We specialize in websites for villas, hotels, restaurants, cafés, tour operators, spas, and local businesses across Bali, while also serving companies and startups in other industries.',
+
+    faq_8_q: 'Can you build booking or reservation websites?',
+    faq_8_a: 'Yes. We can develop booking systems for villas, accommodations, restaurants, activities, tours, and other businesses that require online reservations.',
+
     faq_9_q: 'Will my website appear on Google?',
-    faq_9_a: 'Yes. Every website we build follows SEO-friendly best practices. We also offer SEO services if you\'d like to improve your rankings on Google.',
+    faq_9_a: 'Yes. Every website is built with SEO best practices, including fast performance, mobile optimization, clean code, and proper page structure to help search engines index your website effectively.',
     footer_about:
       'We help businesses build modern, fast, and professional websites designed to enhance credibility and drive business growth in the digital era.',
     footer_content: 'Content',
