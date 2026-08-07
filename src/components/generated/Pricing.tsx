@@ -107,30 +107,30 @@ export function Pricing() {
                                 <div className="flex marquee-content animate-marquee-slow whitespace-nowrap">
                                     <div className="flex gap-8 items-center flex-shrink-0 pr-8">
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products-assets/landing-page/1.webp" alt={t('pricing_lp_alt_1')} className="w-full h-auto" />
+                                            <img src="/assets/products-assets/landing-page/1new.webp" alt={t('pricing_lp_alt_1')} className="w-full h-auto" />
                                         </div>
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products-assets/landing-page/2.webp" alt={t('pricing_lp_alt_2')} className="w-full h-auto" />
+                                            <img src="/assets/products-assets/landing-page/2new.webp" alt={t('pricing_lp_alt_2')} className="w-full h-auto" />
                                         </div>
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products-assets/landing-page/3.webp" alt={t('pricing_lp_alt_3')} className="w-full h-auto" />
+                                            <img src="/assets/products-assets/landing-page/3new.webp" alt={t('pricing_lp_alt_3')} className="w-full h-auto" />
                                         </div>
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products-assets/landing-page/4.webp" alt={t('pricing_lp_alt_4')} className="w-full h-auto" />
+                                            <img src="/assets/products-assets/landing-page/4new.webp" alt={t('pricing_lp_alt_4')} className="w-full h-auto" />
                                         </div>
                                     </div>
                                     <div className="flex gap-8 items-center flex-shrink-0 pr-8" aria-hidden="true">
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products-assets/landing-page/1.webp" alt="" className="w-full h-auto" />
+                                            <img src="/assets/products-assets/landing-page/1new.webp" alt="" className="w-full h-auto" />
                                         </div>
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products-assets/landing-page/2.webp" alt="" className="w-full h-auto" />
+                                            <img src="/assets/products-assets/landing-page/2new.webp" alt="" className="w-full h-auto" />
                                         </div>
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products-assets/landing-page/3.webp" alt="" className="w-full h-auto" />
+                                            <img src="/assets/products-assets/landing-page/3new.webp" alt="" className="w-full h-auto" />
                                         </div>
                                         <div className="w-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-100 flex-shrink-0">
-                                            <img src="/assets/products-assets/landing-page/4.webp" alt="" className="w-full h-auto" />
+                                            <img src="/assets/products-assets/landing-page/4new.webp" alt="" className="w-full h-auto" />
                                         </div>
                                     </div>
                                 </div>

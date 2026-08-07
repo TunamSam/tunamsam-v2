@@ -228,7 +228,7 @@ export function PricingPage() {
     return (
         <div className="w-full bg-white pb-24 text-gray-900">
             {/* Hero Section */}
-            <div className="pt-20 md:pt-32 pb-16 md:pb-24 bg-white relative overflow-hidden">
+            <div className="pt-10 md:pt-20 pb-16 md:pb-24 bg-white relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 text-center relative z-10 reveal-on-scroll">
                     <h1 className="text-4xl md:text-4xl lg:text-5xl font-heading mb-6 text-gray-900 leading-tight">
                         {t('pricing_hero_title')}

@@ -2,24 +2,24 @@ import { useEffect, useRef, useState } from 'react';
 import { useI18n } from '../context/I18nContext';
 
 const TOP_STRIP_IMAGES = [
-  '/assets/products-assets/landing-page/1.webp',
-  '/assets/products-assets/landing-page/2.webp',
+  '/assets/products-assets/landing-page/1new.webp',
+  '/assets/products-assets/landing-page/2new.webp',
   '/assets/products-assets/company-profile/1.webp',
   '/assets/products-assets/company-profile/2.webp',
   '/assets/products-assets/toko-online/1.webp',
   '/assets/products-assets/custom-website/1.webp',
-  '/assets/products-assets/landing-page/3.webp',
+  '/assets/products-assets/landing-page/3new.webp',
   '/assets/products-assets/company-profile/3.webp',
 ];
 
 const BOTTOM_STRIP_IMAGES = [
   '/assets/products-assets/toko-online/2.webp',
   '/assets/products-assets/custom-website/2.webp',
-  '/assets/products-assets/landing-page/4.webp',
+  '/assets/products-assets/landing-page/4new.webp',
   '/assets/products-assets/company-profile/4.webp',
   '/assets/products-assets/toko-online/3.webp',
   '/assets/products-assets/custom-website/3.webp',
-  '/assets/products-assets/landing-page/2.webp',
+  '/assets/products-assets/landing-page/2new.webp',
   '/assets/products-assets/toko-online/4.webp',
 ];
 
